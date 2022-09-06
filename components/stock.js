@@ -17,32 +17,72 @@ export default class Stock extends React.Component {
         axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCC.php`)
           .then(res => {
             const ccs = res.data;
+            console.log("Liste ccs : " . ccs);
             this.setState({ ccs });
           })
+          .catch(function (error) {
+            if (error.response) {
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            }
+          });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
           .then(res => {
             const brands = res.data;
+            console.log("Liste brands : " . brands);
             this.setState({ brands });
           })
+          .catch(function (error) {
+            if (error.response) {
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            }
+          });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctGamme.php`)
           .then(res => {
             const gammes = res.data;
+            console.log("Liste gamme : " . gammes);
             this.setState({ gammes });
           })
+          .catch(function (error) {
+            if (error.response) {
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            }
+          });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctEtat.php`)
           .then(res => {
             const etats = res.data;
+            console.log("Liste etat : " . etats);
             this.setState({ etats });
           })
+          .catch(function (error) {
+            if (error.response) {
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            }
+          });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctPorteur.php`)
           .then(res => {
             const porteurs = res.data;
+            console.log("Liste porteur : " . porteurs);
             this.setState({ porteurs });
           })
+          .catch(function (error) {
+            if (error.response) {
+              console.log(error.response.data);
+              console.log(error.response.status);
+              console.log(error.response.headers);
+            }
+          });
 
           this.setState({
             affiche: true,
