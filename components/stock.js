@@ -14,7 +14,7 @@ function IsSearch(props){
 
 export default class Stock extends React.Component {
     componentDidMount() {
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCC.php`)
+        axios.get(`http://51.91.16.66/getAllCC.php`)
           .then(res => {
             const ccs = res.data;
             console.log("Liste ccs : " . ccs);
