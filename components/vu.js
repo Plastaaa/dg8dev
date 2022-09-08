@@ -3,7 +3,6 @@ import axios from 'axios'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {useEffect} from 'react'
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -146,21 +145,18 @@ export default class VehiculeUnique extends React.Component {
           .then(res => {
             const campingcar = res.data;
             this.setState({ campingcar });
-            console.log(campingcar);
         })
 
         axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllVisualsByCC.php?id=${window.location.pathname.split('/')[1]}`)
           .then(res => {
             const imgCC = res.data;
             this.setState({ imgCC });
-            console.log(imgCC);
         })
         
         axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllEquipByCC.php?id=${window.location.pathname.split('/')[1]}`)
           .then(res => {
             const equips = res.data;
             this.setState({ equips });
-            console.log(equips);
         })
     }
 

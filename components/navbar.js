@@ -54,7 +54,7 @@ export default function Navbar() {
                         <NavLink to="/stock">
                             Stock
                         </NavLink>
-                        <NavLink to="/stock">
+                        <NavLink to="/nos-concessions">
                             Nos concessions
                         </NavLink>
                     </div>

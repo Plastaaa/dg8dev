@@ -4,10 +4,7 @@ import NoSearchMarque from "./search/searchResult";
 import SearchFiltered from "./search/searchResultFiltered";
 
 function IsSearch(props){
-  console.log(props.affiche);
-  console.log("cc props marque " + props.marque);
   const ccsBis = props.ccs;
-  console.log(ccsBis);
   if(props.affiche){
       return <NoSearchMarque/>
   }
@@ -24,71 +21,31 @@ export default class Stock extends React.Component {
         })
           .then(res => {
             const ccs = res.data;
-            console.log("Liste ccs : " . ccs);
             this.setState({ ccs });
-          })
-          .catch(function (error) {
-            if (error.response) {
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
-            }
           });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
           .then(res => {
             const brands = res.data;
-            console.log("Liste brands : " . brands);
             this.setState({ brands });
-          })
-          .catch(function (error) {
-            if (error.response) {
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
-            }
           });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctGamme.php`)
           .then(res => {
             const gammes = res.data;
-            console.log("Liste gamme : " . gammes);
             this.setState({ gammes });
-          })
-          .catch(function (error) {
-            if (error.response) {
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
-            }
           });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctEtat.php`)
           .then(res => {
             const etats = res.data;
-            console.log("Liste etat : " . etats);
             this.setState({ etats });
-          })
-          .catch(function (error) {
-            if (error.response) {
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
-            }
           });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctPorteur.php`)
           .then(res => {
             const porteurs = res.data;
-            console.log("Liste porteur : " . porteurs);
             this.setState({ porteurs });
-          })
-          .catch(function (error) {
-            if (error.response) {
-              console.log(error.response.data);
-              console.log(error.response.status);
-              console.log(error.response.headers);
-            }
           });
 
           this.setState({
@@ -121,9 +78,6 @@ export default class Stock extends React.Component {
           const ccs2 = res.data;
           this.setState({ccs2: ccs2 });
           this.setState({affiche: false});
-          return(
-            console.log(ccs2)
-          )
         })
     }
 
