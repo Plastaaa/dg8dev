@@ -2,7 +2,7 @@ import React from "react";
 import CardCC from "../cardCC";
 
 export default function SearchFiltered(props) {
-    console.log(props.ccs)
+    console.log("FILTRÉ " + props.ccs)
     //const ccsBis = Array.from(props.ccs);
     //const ccsBis = JSON.parse(props.ccs);
     //console.log(ccsBis);

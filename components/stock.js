@@ -4,17 +4,24 @@ import NoSearchMarque from "./search/searchResult";
 import SearchFiltered from "./search/searchResultFiltered";
 
 function IsSearch(props){
-  console.log(props.affiche)
-  console.log(props.marque)
+  console.log(props.affiche);
+  console.log("cc props marque " + props.marque);
+  const ccsBis = props.ccs;
+  console.log(ccsBis);
   if(props.affiche){
       return <NoSearchMarque/>
   }
-  return <SearchFiltered ccs={props.ccs}/>
+  return <SearchFiltered ccs={ccsBis}/>
 }
 
 export default class Stock extends React.Component {
     componentDidMount() {
-        axios.get(`http://51.91.16.66/getAllCC.php`)
+        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCC.php`, {
+          auth: {
+            username: 'admin-dev',
+            password: 'mdpTropSEcU51-561'
+          }
+        })
           .then(res => {
             const ccs = res.data;
             console.log("Liste ccs : " . ccs);
@@ -112,8 +119,7 @@ export default class Stock extends React.Component {
       })
         .then(res => {
           const ccs2 = res.data;
-          this.setState({ ccs2 });
-          console.log(ccs2);
+          this.setState({ccs2: ccs2 });
           this.setState({affiche: false});
           return(
             console.log(ccs2)
@@ -129,6 +135,7 @@ export default class Stock extends React.Component {
         etats: [],
         porteurs: [],
         affiche: true,
+        ccs2: [],
     }
   
     render() {

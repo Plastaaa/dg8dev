@@ -13,18 +13,21 @@ function MobileNav({open, setOpen}) {
             <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
                 <CardImage/>
             </div>
-            <div className="flex flex-col ml-4">
-                <a className="text-xl font-normal my-4" href="/stock" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
+            <div className="flex flex-col ml-5">
+                <a className="text-xl font-normal my-5" href="/stock" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
                     Neufs
                 </a>
-                <a className="text-xl font-normal my-4" href="/stock" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
+                <a className="text-xl font-normal my-5" href="/stock" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
                     Occasion
                 </a>
-                <a className='text-xl font-normal my-4' href="/atelier" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
+                <a className='text-xl font-normal my-5' href="/atelier" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
                     RDV Atelier
                 </a>
-                <a className='text-xl font-normal my-4' href="/stock" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
+                <a className='text-xl font-normal my-5' href="/stock" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
                     Stock
+                </a>
+                <a className='text-xl font-normal my-5' href="/nos-concessions" onClick={() => setTimeout(() => {setOpen(!open)}, 50)}>
+                    Nos concessions
                 </a>
             </div>  
         </div>
@@ -36,7 +39,7 @@ export default function Navbar() {
         return (
             <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
                 <MobileNav open={open} setOpen={setOpen}/>
-                <div className="w-4/12 flex items-center">
+                <div className="w-6/12 flex items-center">
                     <CardImage/>
                     <div className="hidden md:flex">
                         <NavLink to="/stock?etat=Neuf">
@@ -51,9 +54,12 @@ export default function Navbar() {
                         <NavLink to="/stock">
                             Stock
                         </NavLink>
+                        <NavLink to="/stock">
+                            Nos concessions
+                        </NavLink>
                     </div>
                 </div>
-                <div className="w-9/12 flex justify-end items-center">
+                <div className="w-6/12 flex justify-end items-center">
                     <div className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
                         
                         setOpen(!open)
@@ -75,6 +81,9 @@ export default function Navbar() {
                             
                         </NavLink>
                         <NavLink to="/stock">
+                            
+                        </NavLink>
+                        <NavLink to="/nos-concessions">
                             
                         </NavLink>
                     </div>
