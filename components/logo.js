@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import logoImg from '../public/logo/groupe/gdglogo.png'
 
-export default function CardImage({imageSrc, imageAltText}) {
+export default function CardImage(){
     return (
         <div className="cardImageWrapper">
             <a className="text-2xl font-semibold" href="/">

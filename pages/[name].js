@@ -9,9 +9,9 @@ export default function Home(props){
     return (
         <div>
             <div>
-                {
-                    <NavBar/>
-                }
+            {
+                <NavBar/>
+            }
             </div>
             <VehiculeUnique/>
             <div>
