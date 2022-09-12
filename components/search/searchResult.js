@@ -2,33 +2,24 @@ import React from "react";
 import axios from 'axios';
 import CardCC from "../cardCC";
 
-/*
-function Test(props){
-  axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
-    params:{
-      marque: props.marque,
-      annee: props.annee,
-      gamme: props.gamme,
-      etat: props.etat,
-      ref: props.ref
-    }
-  })
-    .then(res => {
-      const ccs2 = res.data;
-      this.setState({ ccs2 });
-      console.log(ccs2 + "d");
-      return(ccs2)
-    })
-}*/
-
-
 export default class SearchResult extends React.Component {
     componentDidMount() {
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCC.php`)
-            .then(res => {
-                const ccs = res.data;
-                this.setState({ ccs });
-            })
+        const queryParams = new URLSearchParams(window.location.search);
+        const etatURL = queryParams.get('etat');
+        const gammeURL = queryParams.get('gamme');
+        const marqueURL = queryParams.get('marque');
+        console.log(etatURL);
+        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
+          params:{
+            etat: etatURL,
+            marque: marqueURL,
+            gamme: gammeURL,
+          }
+        })
+          .then(res => {
+            const ccs = res.data;
+            this.setState({ ccs });
+          });
     }
 
     stateChange = (f) => {
@@ -43,7 +34,7 @@ export default class SearchResult extends React.Component {
         brands: [],
         gammes: [],
         refs: [],
-        etats: []
+        etats: [],
     }
 
     

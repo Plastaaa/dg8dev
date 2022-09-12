@@ -13,16 +13,6 @@ function IsSearch(props){
 
 export default class Stock extends React.Component {
     componentDidMount() {
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCC.php`, {
-          auth: {
-            username: 'admin-dev',
-            password: 'mdpTropSEcU51-561'
-          }
-        })
-          .then(res => {
-            const ccs = res.data;
-            this.setState({ ccs });
-          });
 
           axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
           .then(res => {
