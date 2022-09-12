@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
 import img1 from '../public/slider/marques/11836.png';
 import img2 from '../public/slider/marques/dethleffs.png';
 import img3 from '../public/slider/marques/11826.png';
@@ -42,137 +45,212 @@ import img38 from '../public/slider/marques/weins.png';
 
 export default class SimpleSlider extends Component {
   render() {
-    const settings = {
-      dots: false,
-      infinite: true,
-      lazyLoad: false,
-      speed: 100,
-      slidesToShow: 6,
-      slidesToScroll: 3,
-      centerMode: true,
-      arrows: true,
-      variableWidth: false,
-      adaptiveHeight: false,
-    };
     return (
-      <div className="p-0">
-        <Slider {...settings}>
-            <div className="grid place-items-center">
-                <Image alt="Image Slider Marque" src={img1} layout="responsive"/>
+        <div>
+            <div className="p-0 pt-16">
+            <Splide
+                    options={{
+                        type: "loop",
+                        gap: "4.5rem",
+                        drag: "free",
+                        arrows: false,
+                        pagination: false,
+                        perPage: 9,
+                    }}
+                >
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img1} alt="MCLOUIS LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img2} alt="DETHLEFFS LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img3} alt="BENIMAR LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img4} alt="NIESMANN LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img5} alt="RIMOR LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img6} alt="MOBILVETTA LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img7} alt="ELIOS LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img8} alt="LEVOYAGEUR LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img9} alt="BAVARIA LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img10} alt="BURSTNER LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img11} alt="CHALLENGER LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img12} alt="CHAUSSON LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img13} alt="CI LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img14} alt="CROSSCAMP LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img15} alt="CARTHAGO LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img16} alt="RAPIDO LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img17} alt="ECOCAMPERS LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img18} alt="EURAMOBIL LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img19} alt="GLOBECAR LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img20} alt="HYMERCV LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img21} alt="HYMER LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img22} alt="JOACAMP LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img23} alt="KNAUS LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img24} alt="CAMPSTER LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img25} alt="CARADO LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img26} alt="MALIBU LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img27} alt="LMC LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img28} alt="FLEURETTE LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img29} alt="WESTFALIA LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img30} alt="ROADCAR LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img31} alt="SUNLIGHT LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img32} alt="ETRUSCO LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img33} alt="PILOTE LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img34} alt="POSSL LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img35} alt="STYLEVAN LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img36} alt="RANDGER LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img37} alt="FONTVENDOME LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img38} alt="WEINSBERG LOGO" />
+                        </div>
+                    </SplideSlide>
+                </Splide>
             </div>
-            <div className="grid place-items-center">
-                <Image alt="Image Slider Marque" src={img2} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img3} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img4} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img5} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img6} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img7} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img8} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img9} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img10} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img11} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img12} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img13} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img14} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img15} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img16} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img17} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img18} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img19} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img20} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img21} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img22} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img23} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img24} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img25} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img26} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img27} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img28} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img29} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img30} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img31} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img32} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img33} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img34} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img35} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img36} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img37} layout="responsive"/>
-            </div>
-            <div>
-                <Image alt="Image Slider Marque" src={img38} layout="responsive"/>
-            </div>
-        </Slider>
-      </div>
+        </div>
     );
   }
 }

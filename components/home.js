@@ -5,6 +5,7 @@ import Footer from "./footer";
 import Carou from "./carousel";
 import MiniSearch from "./minisearch";
 import SlideMarque from "./slideMarc";
+import FourCC from "./fourcc";
 
 export default class HomePage extends React.Component {
     render(){
@@ -28,7 +29,7 @@ export default class HomePage extends React.Component {
                     </div>
 
                     <div class="my-2 px-2 w-full overflow-hidden">
-
+                        <FourCC/>
                     </div>
 
                     <div class="my-2 px-2 w-full overflow-hidden">
