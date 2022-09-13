@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.dropdown{
+    -webkit-appearance: none;
+}
+
 .slick-track {
     z-index: -1;
 }

@@ -19,7 +19,7 @@ export default class MiniSearch extends React.Component {
         return (
             <div className="flex flex-wrap overflow-hidden">
                 <div className="w-full overflow-hidden">
-                    <div className="flex flex-wrap -mx-1 overflow-hidden px-32">
+                    <div className="flex flex-wrap -mx-1 overflow-hidden px-8 md:px-16 lg:px-24 xl:32">
                         {
                             this.state.ccs.map(cc =>
                                 <div class="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
@@ -41,9 +41,9 @@ export default class MiniSearch extends React.Component {
                                 </div>
                             )
                         }
-                        <div className="bottom-0 right-0">
+                        <div className="relative bottom-0 right-0">
                             <a href="./stock">
-                                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bottom-0 right-0">
+                                <button className="">
                                     Voir plus
                                 </button>
                             </a>

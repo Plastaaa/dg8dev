@@ -46,7 +46,7 @@ export default class MiniSearch extends React.Component {
                     <div className="stats-vertical md:stats-horizontal lg:stats-horizontal">
                         <div className="stat md:w-64 lg:w-80">
                             <label className="stat-title">Marque du véhicule</label>
-                            <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="marque" onChange={this.stateChange}>
+                            <select className="dropdown bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="marque" onChange={this.stateChange}>
                                 <option value="0">Choisir la marque</option>
                                 {
                                     this.state.brands.map(marques => 
@@ -57,7 +57,7 @@ export default class MiniSearch extends React.Component {
                         </div>
                         <div className="stat md:w-64 lg:w-80">
                             <label className="stat-title">Type de véhicule</label>
-                            <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="gamme" onChange={this.stateChange}>
+                            <select className="dropdown bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="gamme" onChange={this.stateChange}>
                                 <option value="0">Choisir la gamme</option>
                                 {
                                     this.state.gammes.map(gammes => 
@@ -68,7 +68,7 @@ export default class MiniSearch extends React.Component {
                         </div>
                         <div className="stat md:w-64 lg:w-80">
                             <div className="stat-title">Etat du véhicule</div>
-                            <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="etat" onChange={this.stateChange}>
+                            <select className="dropdown bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="etat" onChange={this.stateChange}>
                                 <option value="0">Etat</option>
                                 {
                                     this.state.etats.map(etats => 

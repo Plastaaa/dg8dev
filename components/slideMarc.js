@@ -55,7 +55,24 @@ export default class SimpleSlider extends Component {
                         drag: "free",
                         arrows: false,
                         pagination: false,
-                        perPage: 9,
+                        breakpoints: {
+                            4000: {
+                                perPage: 9,
+                               
+                            },
+                            1024: {
+                              perPage: 6,
+                             
+                            },
+                            767: {
+                              perPage: 4,
+                          
+                            },
+                            640: {
+                              perPage: 3,
+                        
+                            },
+                          },
                     }}
                 >
                     <SplideSlide>
