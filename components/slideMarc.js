@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import Slider from "react-slick";
 import Image from "next/image";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 import img1 from '../public/slider/marques/11836.png';
 import img2 from '../public/slider/marques/dethleffs.png';
@@ -47,7 +45,7 @@ export default class SimpleSlider extends Component {
   render() {
     return (
         <div>
-            <div className="p-0 pt-16">
+            <div className="p-0 xl:pt-6 lg:pt-6 md:pt-6 sm:pt-2">
             <Splide
                     options={{
                         type: "loop",
@@ -55,13 +53,14 @@ export default class SimpleSlider extends Component {
                         drag: "free",
                         arrows: false,
                         pagination: false,
+                        autoplay: true,
                         breakpoints: {
-                            4000: {
+                            8000: {
                                 perPage: 9,
                                
                             },
-                            1024: {
-                              perPage: 6,
+                            1200: {
+                              perPage: 5,
                              
                             },
                             767: {

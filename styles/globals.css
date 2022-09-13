@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.leaflet {
+    height: 300px;
+    width: 100%;
+}
+
 .dropdown{
     -webkit-appearance: none;
 }
