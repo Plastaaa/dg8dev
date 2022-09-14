@@ -1,4 +1,3 @@
-import NavBar from "./navbar";
 import React from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
@@ -7,7 +6,7 @@ import MiniSearch from "./minisearch";
 import SlideMarque from "./slideMarc";
 import FourCC from "./fourcc";
 import FamilleCC from "./famCC";
-import MapConcess from "./mapConcess";
+import Contact from "./contact";
 
 export default class HomePage extends React.Component {
     render(){
@@ -39,11 +38,11 @@ export default class HomePage extends React.Component {
                     </div>
 
                     <div class="my-2 w-full overflow-hidden">
-                        <MapConcess/>
+                        
                     </div>
 
                     <div class="my-2 w-full overflow-hidden">
-
+                        <Contact/>
                     </div>
                 </div>
                 <div>

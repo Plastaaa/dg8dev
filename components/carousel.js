@@ -11,16 +11,6 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 export default class SimpleSlider extends Component {
   render() {
-    const settings = {
-      dots: false,
-      infinite: true,
-      lazyLoad: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      centerMode: false,
-      arrows: false,
-    };
     return (
       <div>
         {/*
@@ -36,7 +26,12 @@ export default class SimpleSlider extends Component {
           </div>
         </Slider>
     */}
-        <Splide aria-label="My Favorite Images">
+        <Splide
+          options={{
+            type: "loop",
+            autoplay: true,
+          }}
+        >
           <SplideSlide>
             <Image alt="Image Slider" src={img1} width={800} layout="responsive" height={320}/>
           </SplideSlide>
@@ -47,7 +42,6 @@ export default class SimpleSlider extends Component {
             <Image alt="Image Slider" src={img3} width={800} layout="responsive" height={320}/>  
           </SplideSlide>
         </Splide>
-        
       </div>
     );
   }

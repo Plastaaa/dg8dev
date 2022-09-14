@@ -20,8 +20,8 @@ export default class MiniSearch extends React.Component {
     
     render(){
         return (
-            <div className="px-10 flex flex-wrap -mx-2 overflow-hidden">
-                    <div class="my-2 px-2 w-full overflow-hidden w-1/3">
+            <div className="px-10 sm:px-10 md:px-20 lg:px-28 flex flex-wrap -mx-2 overflow-hidden">
+                    <div class="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
                         <a href='./stock?gamme=profile' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div class="p-4">
                                 <h2 class="mt-2 mb-2  font-bold">
@@ -38,7 +38,7 @@ export default class MiniSearch extends React.Component {
                             </div>
                         </a>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden w-1/3">
+                    <div class="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
                         <a href='./stock?gamme=capucine' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div class="p-4">
                                 <h2 class="mt-2 mb-2  font-bold">
@@ -55,7 +55,7 @@ export default class MiniSearch extends React.Component {
                             </div>
                         </a>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden w-1/3">
+                    <div class="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
                         <a href='./stock?gamme=integral' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div class="p-4">
                                 <h2 class="mt-2 mb-2  font-bold">
@@ -72,7 +72,7 @@ export default class MiniSearch extends React.Component {
                             </div>
                         </a>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden w-1/3">
+                    <div class="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
                         <a href='./stock?gamme=fourgon' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div class="p-4">
                                 <h2 class="mt-2 mb-2  font-bold">
@@ -89,7 +89,7 @@ export default class MiniSearch extends React.Component {
                             </div>
                         </a>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden w-1/3">
+                    <div class="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
                         <a href='./stock?gamme=van' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div class="p-4">
                                 <h2 class="mt-2 mb-2  font-bold">
@@ -106,7 +106,7 @@ export default class MiniSearch extends React.Component {
                             </div>
                         </a>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden w-1/3">
+                    <div class="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
                         <a href='./stock?gamme=CAMPING-CAR/FOURGON' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div class="p-4">
                                 <h2 class="mt-2 mb-2  font-bold">

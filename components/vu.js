@@ -3,6 +3,9 @@ import axios from 'axios'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "@splidejs/splide/dist/css/splide.min.css";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import Image from 'next/image';
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -189,7 +192,7 @@ export default class VehiculeUnique extends React.Component {
                     <div className="xl:w-3/6 lg:w-3/5 w-80 md:block hidden">
                         {
                             //Emplacement slider desktop & tablette
-                            <Slider {...settings}>
+                            /*<Slider {...settings}>
                                 {
                                     this.state.imgCC.map((img) => (
                                         <div className='' style={"width: 600px; height: 400px"}>
@@ -198,8 +201,22 @@ export default class VehiculeUnique extends React.Component {
                                     ))
                                 }
                                 
-                            </Slider>
+                            </Slider>*/
                     
+                            <Splide
+                                options={{
+                                    type: "loop",
+                                    autoplay: true,
+                                }}
+                                >
+                                    {
+                                        this.state.imgCC.map((img) => (
+                                            <SplideSlide>
+                                                <Image alt="Image Slider" src={img.linkIMG} width={800} layout="responsive" height={500}/>
+                                            </SplideSlide>
+                                        ))}
+                                
+                            </Splide>
                         }
                     </div>
                     <div className="md:hidden">
