@@ -20,7 +20,11 @@ function NoHauteur(props){
 }
 function Hauteur(props){
     const isSet = props.isSet;
-    return  "Hauteur : " + props.isSet + " m"
+    return  (
+        <div>
+            <p>Hauteur : {props.isSet} m</p>
+        </div>
+    );
 }
 
 function IsThereWidth(props){
@@ -226,15 +230,19 @@ export default class VehiculeUnique extends React.Component {
                                 type: "loop",
                                 autoplay: true,
                                 heightRatio: 0.7,
+                                autoWidth: true,
                             }}
                             >
                                 {
                                     this.state.imgCC.map((img) => (
-                                        <SplideSlide>
-                                            <a href={img.linkIMG}>
-                                                <img alt="Image Slider" src={img.linkIMG} layout="responsive"/>
-                                            </a>
-                                        </SplideSlide>
+                                        <div>
+                                            <SplideSlide>
+                                                <a href={img.linkIMG}>
+                                                    <img alt="Image Slider" src={img.linkIMG} layout="responsive"/>
+                                                </a>
+                                            </SplideSlide>
+                                        </div>
+                                        
                                     ))}
                             
                             </Splide>
@@ -258,44 +266,51 @@ export default class VehiculeUnique extends React.Component {
                             </h1>
                         </div>
                         <div>
-                            <p className="text-base leading-4 mt-7 text-gray-600">
+                            <p className="text-base leading-4 mt-7">
                                 <IsThereRef isSet={cc.idCC}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereConcess isSet={cc.libelle}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereType isSet={cc.gamme}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereModel isSet={cc.modele}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereMileage isSet={cc.kilometrage}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereYear isSet={cc.annee}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereLenght isSet={cc.longueur}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereWidth isSet={cc.largeur}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereHeight isSet={cc.hauteur}/>
                             </p>
-                            <p className="text-base leading-4 mt-4 text-gray-600">
+                            <p className="text-base leading-4 mt-4">
                                 <IsThereBed isSet={cc.typeLit}/>
                             </p>
                         </div>
                         <div>
-                            <div className="border-t border-b py-4 mt-7 border-gray-200">
-                                <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 w-full rounded-lg">
-                                    {
-                                        Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cc.prixTTC)
-                                    }
-                                </button>
+                            <div className="border-t flex flex-wrap border-b py-4 mt-7 border-gray-200">
+                                <div className='w-1/2 px-4'>
+                                    <button class="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
+                                        {
+                                            Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cc.prixTTC)
+                                        }
+                                    </button>
+                                </div>
+                                <div className='w-1/2 px-4'>
+                                    <button onClick={console.log("cc")} class="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
+                                        Me faire recontacter
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -470,7 +485,6 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-
                     <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 bg-gray-700">
                         <div className=''>
 

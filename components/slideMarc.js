@@ -52,7 +52,6 @@ export default class SimpleSlider extends Component {
                         type: "loop",
                         rewind: true,
                         gap: "4.5rem",
-                        drag: "free",
                         arrows: false,
                         pagination: false,
                         autoplay: true,
