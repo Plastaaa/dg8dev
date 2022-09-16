@@ -66,10 +66,16 @@ export default function NavBar() {
                                 <a href="/stock?etat=occasion">Occasion</a>
                             </li>
                             <li className="text-gray-600 hover:text-gray-400">
+                                <a href="/nos-concessions">Location</a>
+                            </li>
+                            <li className="text-gray-600 hover:text-gray-400">
                                 <a href="/atelier">RDV Atelier</a>
                             </li>
                             <li className="text-gray-600 hover:text-gray-400">
-                                <a href="/nos-concessions">Nos concessions</a>
+                                <a href="/nos-concessions">Groupe David Gerbier</a>
+                            </li>
+                            <li className="text-gray-600 hover:text-gray-400">
+                                <a href="/nos-concessions">Rachat Cash</a>
                             </li>
                         </ul>
                     </div>

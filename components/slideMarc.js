@@ -40,6 +40,7 @@ import img35 from '../public/slider/marques/stylevan.png';
 import img36 from '../public/slider/marques/randger.png';
 import img37 from '../public/slider/marques/font.png';
 import img38 from '../public/slider/marques/weins.png';
+import img39 from '../public/slider/marques/autostar.png';
 
 export default class SimpleSlider extends Component {
   render() {
@@ -49,11 +50,14 @@ export default class SimpleSlider extends Component {
             <Splide
                     options={{
                         type: "loop",
+                        rewind: true,
                         gap: "4.5rem",
                         drag: "free",
                         arrows: false,
                         pagination: false,
                         autoplay: true,
+                        lazyLoad: false,
+                        arrows: true,
                         breakpoints: {
                             8000: {
                                 perPage: 9,
@@ -262,6 +266,11 @@ export default class SimpleSlider extends Component {
                     <SplideSlide>
                         <div className="flex items-center justify-center h-36">
                             <Image src={img38} alt="WEINSBERG LOGO" />
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="flex items-center justify-center h-36">
+                            <Image src={img39} alt="AUTOSTAR LOGO" />
                         </div>
                     </SplideSlide>
                 </Splide>

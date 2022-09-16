@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Image from 'next/image';
+import CardCC from './cardCC';
+import SlideMarc from './slideMarc';
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -142,6 +143,21 @@ function Mileage(props){
     return  "Kilométrage : " + props.isSet + " km"
 }
 
+function IsThereBed(props){
+    const isSet = props.isSet;
+    if(isSet == ""){
+        return <NoBed/>
+    }
+    return <Bed isSet={isSet}/>
+}
+function NoBed(props){
+    return <p></p>
+}
+function Bed(props){
+    const isSet = props.isSet;
+    return  "Type de lit : " + props.isSet + "."
+}
+
 export default class VehiculeUnique extends React.Component {
     componentDidMount() {
         axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[1]}`)
@@ -161,91 +177,70 @@ export default class VehiculeUnique extends React.Component {
             const equips = res.data;
             this.setState({ equips });
         })
+
+        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/get2CCSimi.php?id=${window.location.pathname.split('/')[1]}`)
+          .then(res => {
+            const ccsSimi = res.data;
+            this.setState({ ccsSimi });
+        })
     }
 
     state = {
         campingcar: [],
         imgCC: [],
-        equips: []
+        equips: [],
+        ccsSimi: []
     }
 
     render() {
-        const settings = {
-            dots: true,
-            infinite: true,
-            lazyLoad: true,
-            speed: 500,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false,
-            adaptiveHeight: false,
-            arrows: true,
-            variableWidth: false,
-        };
-        
         return (
         <div>
             {
             this.state.campingcar.map((cc) => (
                 <div>
-                <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
-                    <div className="xl:w-3/6 lg:w-3/5 w-80 md:block hidden">
+                <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-8 px-4">
+                    <div className="xl:w-3/6 lg:w-3/5 md:block hidden">
                         {
-                            //Emplacement slider desktop & tablette
-                            /*<Slider {...settings}>
-                                {
-                                    this.state.imgCC.map((img) => (
-                                        <div className='' style={"width: 600px; height: 400px"}>
-                                            <img src={img.linkIMG} className="" layout="fill" objectFit='contains'/>
-                                        </div>
-                                    ))
-                                }
-                                
-                            </Slider>*/
-                    
                             <Splide
                                 options={{
                                     type: "loop",
                                     autoplay: true,
+                                    heightRatio: 0.7,
                                 }}
                                 >
                                     {
                                         this.state.imgCC.map((img) => (
                                             <SplideSlide>
-                                                <Image alt="Image Slider" src={img.linkIMG} width={800} layout="responsive" height={500}/>
+                                                <a href={img.linkIMG}>
+                                                    <img alt="Image Slider" src={img.linkIMG} layout="responsive"/>
+                                                </a>
                                             </SplideSlide>
                                         ))}
-                                
                             </Splide>
                         }
                     </div>
                     <div className="md:hidden">
                         {
-                            //Emplacement slider mobile
-                            <Slider {...settings}>
+                            <Splide
+                            options={{
+                                type: "loop",
+                                autoplay: true,
+                                heightRatio: 0.7,
+                            }}
+                            >
                                 {
                                     this.state.imgCC.map((img) => (
-                                        <div className='' style={"width: 600px; height: 400px"}>
-                                            <img src={img.linkIMG} layout="fill" objectFit='contains'/>
-                                        </div>
-                                    ))
-                                }
-                            </Slider>
-                        }
-                        
-                        <div className="flex items-center justify-between mt-3 space-x-4 md:space-x-0">
-                            {
-                                /*
-                                <img alt="img-tag-one" className="md:w-48 md:h-48 w-full" src="https://i.ibb.co/cYDrVGh/Rectangle-245.png" />
-                                <img alt="img-tag-one" className="md:w-48 md:h-48 w-full" src="https://i.ibb.co/f17NXrW/Rectangle-244.png" />
-                                <img alt="img-tag-one" className="md:w-48 md:h-48 w-full" src="https://i.ibb.co/cYDrVGh/Rectangle-245.png" />
-                                <img alt="img-tag-one" className="md:w-48 md:h-48 w-full" src="https://i.ibb.co/f17NXrW/Rectangle-244.png" />
-                                */
-                            }
+                                        <SplideSlide>
+                                            <a href={img.linkIMG}>
+                                                <img alt="Image Slider" src={img.linkIMG} layout="responsive"/>
+                                            </a>
+                                        </SplideSlide>
+                                    ))}
                             
-                        </div>
+                            </Splide>
+                        }
                     </div>
-                    <div className="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
+                    <div className="xl:w-2/5 md:w-2/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
                         <div className="border-b border-gray-200 pb-6">
                             <p className="text-sm leading-none text-gray-600">{cc.famille}</p>
                             <h1
@@ -290,31 +285,11 @@ export default class VehiculeUnique extends React.Component {
                             <p className="text-base leading-4 mt-4 text-gray-600">
                                 <IsThereHeight isSet={cc.hauteur}/>
                             </p>
-                            <p className="md:w-96 text-base leading-normal text-gray-600 mt-4">
-                            {
-                                /*Zone à couper en 4 pour intégration icon SVG sympa*/
-                                cc.porteur + " " + cc.energie + " " + cc.version
-                            }
-                                
+                            <p className="text-base leading-4 mt-4 text-gray-600">
+                                <IsThereBed isSet={cc.typeLit}/>
                             </p>
                         </div>
                         <div>
-                        {/*<div className="border-t py-4 mt-7 border-gray-200">
-                                <div className="flex justify-between items-center cursor-pointer">
-                                    <p className="text-base leading-4 text-gray-800">
-                                        <h1>Kilométrage du véhicule : {cc.kilometrage + " " + "km"} </h1>
-                                    </p>
-                                </div>
-                                <div className={"pt-4 text-base leading-normal pr-12 mt-4"} id="sect">
-                                    <p>
-                                        <h1>Type de lit : {cc.typeLit} </h1>
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="border-t py-4 mt-7 border-gray-200">
-                                
-                            </div>*/}
-
                             <div className="border-t border-b py-4 mt-7 border-gray-200">
                                 <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 w-full rounded-lg">
                                     {
@@ -322,28 +297,187 @@ export default class VehiculeUnique extends React.Component {
                                     }
                                 </button>
                             </div>
-                            <div className="py-4 mt-2">
-                                <div class="collapse">
-                                    <input type="checkbox" /> 
-                                    <div class="collapse-title text-xl font-medium">
-                                        Voir les équipements
-                                    </div>
-                                    <div class="collapse-content"> 
-                                        <ul>
-                                            {
-                                                this.state.equips.map((equip) => (
-                                                        <li>
-                                                            {equip.libelle}
-                                                        </li>
-                                                ))
-                                            }
-                                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-2 overflow-hidden">
+                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                        <div className="2xl:px-20 xl:px-20 md:px-8 px-4">
+                            <div class="">
+                                <div class="text-xl font-medium">
+                                    Fiche technique
+                                </div>
+                                <div class=""> 
+                                    <div class="flex flex-wrap -mx-2 overflow-hidden">
+                                        <div class="my-2 px-2 w-1/2 overflow-hidden">
+                                            <ul className='px-4'>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Puissance Fiscale
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.puissFisc + " cv."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Réservoir d'eau propre
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.reservoirPropre + " l."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Énergie
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.energie + "."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Boîte de vitesse
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.bdv + "."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Moteur
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.porteur + "."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Cylindrée
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.cylindre + " cm3."}
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="my-2 px-2 w-1/2 overflow-hidden">
+                                            <ul className='px-4'>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Puissance DIN
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.puissDin + " cv."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Réservoir d'eau sale
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.reservoirSale + " l."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Nombre de places carte grise
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.placeCG}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Poids à vide
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.poidsVide + " kg."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Poids en charge
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.poidsCharge + " kg."}
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Nombre de portes
+                                                    </p>
+                                                    <p className='text-gray-800 px-2'>
+                                                        {cc.nbPortes}
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                        <div className="">
+                            <div class="px-4">
+                                <div class="text-xl font-medium">
+                                    Équipements
+                                </div>
+                                <div class=""> 
+                                    <ul className='px-4'>
+                                        {
+                                            this.state.equips.map((equip) => (
+                                                    <li>
+                                                        {equip.libelle}
+                                                    </li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                        <div className="flex flex-wrap overflow-hidden">
+                            <div className="w-full overflow-hidden">
+                                <div className="text-xl font-medium 2xl:px-20 xl:px-20 md:px-8 px-4">
+                                    D'autres véhicules de la même marque :
+                                </div>
+                                <div className="flex flex-wrap -mx-1 overflow-hidden px-8 md:px-16 lg:px-24 xl:32">
+                                    {
+                                        this.state.ccsSimi.map(cc =>
+                                            <div class="w-screen items-center sm:w-full md:w-full xl:w-1/2 p-4">
+                                                <CardCC 
+                                                    refe={cc.RefDMS}
+                                                    marque={cc.marque} 
+                                                    modele={cc.modele} 
+                                                    ver={cc.ver} 
+                                                    prix={cc.prixTTC} 
+                                                    photo={cc.linkIMG} 
+                                                    km={cc.kilometrage} 
+                                                    bdv={cc.boitedevitesse}
+                                                    etat={cc.etat}
+                                                    famille={cc.famille}
+                                                    gamme={cc.gamme}
+                                                    annee={cc.année}
+                                                    premiereMain={cc.premiereMain}
+                                                />
+                                            </div>
+                                        )
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 bg-gray-700">
+                        <div className=''>
+
+                        </div>
+                    </div>
                 </div>
+                <SlideMarc/>
             </div>                 
             ))
         }
