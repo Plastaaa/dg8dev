@@ -9,7 +9,7 @@ export default function SearchFiltered(props) {
                     <div className="flex flex-wrap -mx-1 overflow-hidden">
                         {
                             props.ccs.map(cc =>
-                                <div class="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                                <div className="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
                                     <CardCC 
                                         refe={cc.RefDMS}
                                         marque={cc.marque} 

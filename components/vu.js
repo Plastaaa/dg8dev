@@ -300,14 +300,14 @@ export default class VehiculeUnique extends React.Component {
                         <div>
                             <div className="border-t flex flex-wrap border-b py-4 mt-7 border-gray-200">
                                 <div className='w-1/2 px-4'>
-                                    <button class="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
+                                    <button className="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
                                         {
                                             Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cc.prixTTC)
                                         }
                                     </button>
                                 </div>
                                 <div className='w-1/2 px-4'>
-                                    <button onClick={console.log("cc")} class="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
+                                    <button onClick={console.log("cc")} className="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
                                         Me faire recontacter
                                     </button>
                                 </div>
@@ -315,16 +315,16 @@ export default class VehiculeUnique extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap -mx-2 overflow-hidden">
-                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                <div className="flex flex-wrap -mx-2 overflow-hidden">
+                    <div className="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
                         <div className="2xl:px-20 xl:px-20 md:px-8 px-4">
-                            <div class="">
-                                <div class="text-xl font-medium">
+                            <div className="">
+                                <div className="text-xl font-medium">
                                     Fiche technique
                                 </div>
-                                <div class=""> 
-                                    <div class="flex flex-wrap -mx-2 overflow-hidden">
-                                        <div class="my-2 px-2 w-1/2 overflow-hidden">
+                                <div className=""> 
+                                    <div className="flex flex-wrap -mx-2 overflow-hidden">
+                                        <div className="my-2 px-2 w-1/2 overflow-hidden">
                                             <ul className='px-4'>
                                                 <li>
                                                     <p className='text-gray-400'>
@@ -376,7 +376,7 @@ export default class VehiculeUnique extends React.Component {
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="my-2 px-2 w-1/2 overflow-hidden">
+                                        <div className="my-2 px-2 w-1/2 overflow-hidden">
                                             <ul className='px-4'>
                                                 <li>
                                                     <p className='text-gray-400'>
@@ -433,13 +433,13 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                    <div className="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
                         <div className="">
-                            <div class="px-4">
-                                <div class="text-xl font-medium">
+                            <div className="px-4">
+                                <div className="text-xl font-medium">
                                     Équipements
                                 </div>
-                                <div class=""> 
+                                <div className=""> 
                                     <ul className='px-4'>
                                         {
                                             this.state.equips.map((equip) => (
@@ -453,7 +453,7 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                    <div className="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
                         <div className="flex flex-wrap overflow-hidden">
                             <div className="w-full overflow-hidden">
                                 <div className="text-xl font-medium 2xl:px-20 xl:px-20 md:px-8 px-4">
@@ -462,7 +462,7 @@ export default class VehiculeUnique extends React.Component {
                                 <div className="flex flex-wrap -mx-1 overflow-hidden px-8 md:px-16 lg:px-24 xl:32">
                                     {
                                         this.state.ccsSimi.map(cc =>
-                                            <div class="w-screen items-center sm:w-full md:w-full xl:w-1/2 p-4">
+                                            <div className="w-screen items-center sm:w-full md:w-full xl:w-1/2 p-4">
                                                 <CardCC 
                                                     refe={cc.RefDMS}
                                                     marque={cc.marque} 
@@ -485,7 +485,7 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div class="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 bg-gray-700">
+                    <div className="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 bg-gray-700">
                         <div className=''>
 
                         </div>

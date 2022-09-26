@@ -7,6 +7,7 @@ import SlideMarque from "./slideMarc";
 import FourCC from "./fourcc";
 import FamilleCC from "./famCC";
 import Contact from "./contact";
+import RachatCash from "./rachatcash";
 
 export default class HomePage extends React.Component {
     render(){
@@ -15,34 +16,40 @@ export default class HomePage extends React.Component {
                 <div>
                     <Navbar/>
                 </div>
-                <div class="flex flex-wrap mx-2 overflow-hidden">
-                    <div class="my-2 w-full overflow-hidden">
+                <div className="flex flex-wrap mx-2 overflow-hidden">
+                    <div className="my-2 w-full overflow-hidden">
                         <Carou/>
                     </div>
-                    <div class="my-2 w-full overflow-hidden">
+                    <div className="my-2 w-full overflow-hidden">
                         <div className="grid place-items-center">
                             <MiniSearch/>
                         </div>
                     </div>
 
-                    <div class="my-2 w-full overflow-hidden">
+                    <div className="my-2 w-full overflow-hidden">
                         <SlideMarque/>
                     </div>
 
-                    <div class="my-2 w-full overflow-hidden">
+                    <div className="my-2 w-full overflow-hidden">
                         <FourCC/>
                     </div>
 
-                    <div class="my-2 w-full overflow-hidden">
+                    <div className="my-2 w-full overflow-hidden">
                         <FamilleCC/>
                     </div>
 
-                    <div class="my-2 w-full overflow-hidden">
+                    <div className="my-2 w-full overflow-hidden">
                         
                     </div>
 
-                    <div class="my-2 w-full overflow-hidden">
+                    <div className="my-2 w-full md:w-full lg:w-1/2 xl:w-1/2 overflow-hidden">
+                       <RachatCash/> 
+                    </div>
+                    <div className="my-2 w-full md:w-full lg:w-1/2 xl:w-1/2 overflow-hidden">
                         <Contact/>
+                    </div>
+                    <div>
+                    
                     </div>
                 </div>
                 <div>

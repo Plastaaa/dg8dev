@@ -22,7 +22,7 @@ export default class MiniSearch extends React.Component {
                     <div className="flex flex-wrap -mx-1 overflow-hidden px-8 md:px-16 lg:px-24 xl:32">
                         {
                             this.state.ccs.map(cc =>
-                                <div class="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                                <div className="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
                                     <CardCC 
                                         refe={cc.RefDMS}
                                         marque={cc.marque} 

@@ -8,7 +8,6 @@ export default class SearchResult extends React.Component {
         const etatURL = queryParams.get('etat');
         const gammeURL = queryParams.get('gamme');
         const marqueURL = queryParams.get('marque');
-        console.log(etatURL);
         axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
           params:{
             etat: etatURL,
@@ -46,7 +45,7 @@ export default class SearchResult extends React.Component {
                         <div className="flex flex-wrap -mx-1 overflow-hidden">
                             {
                                 this.state.ccs.map(cc =>
-                                    <div class="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                                    <div className="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
                                         <CardCC 
                                             refe={cc.RefDMS}
                                             marque={cc.marque} 
