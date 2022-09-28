@@ -15,7 +15,21 @@ export default function Footer() {
                             <a href="./contact" className="mr-4 hover:underline md:mr-6">Contact</a>
                         </li>
                         <li>
-                            <a href="./mentions-legales" className="hover:underline">Mentions Légales</a>
+                            <a href="./mentions-legales" className="mr-4 hover:underline">Mentions Légales</a>
+                        </li>
+                        <li>
+                            <label htmlFor="my-modal-4" className=" hover:underline">
+                                Cookies
+                            </label>
+                            <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+                            <label htmlFor="my-modal-4" className="modal cursor-pointer">
+                                <label className="modal-box relative" for="">
+                                <h3 className="text-lg font-bold">Notre politique en matière de cookies !</h3>
+                                <p className="py-4">
+                                    Sur nos sites les cookies sont limités à la génération de statistiques afin de toujours vous proposer la meilleure expérience de navigation en continu.
+                                </p>
+                                </label>
+                            </label>
                         </li>
                     </ul>
                 </div>

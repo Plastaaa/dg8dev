@@ -203,14 +203,14 @@ export default class VehiculeUnique extends React.Component {
             this.state.campingcar.map((cc) => (
                 <div>
                 <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-8 px-4">
-                    <div className="xl:w-3/6 lg:w-3/5 md:block hidden">
+                    <div className="md:w-3/6 xl:w-3/6 lg:w-3/5 md:block">
                         {
                             <Splide
                                 options={{
                                     type: "loop",
                                     autoplay: true,
                                     heightRatio: 0.7,
-                                }}
+                                    }}
                                 >
                                     {
                                         this.state.imgCC.map((img) => (
@@ -220,31 +220,6 @@ export default class VehiculeUnique extends React.Component {
                                                 </a>
                                             </SplideSlide>
                                         ))}
-                            </Splide>
-                        }
-                    </div>
-                    <div className="md:hidden">
-                        {
-                            <Splide
-                            options={{
-                                type: "loop",
-                                autoplay: true,
-                                heightRatio: 0.7,
-                                autoWidth: true,
-                            }}
-                            >
-                                {
-                                    this.state.imgCC.map((img) => (
-                                        <div>
-                                            <SplideSlide>
-                                                <a href={img.linkIMG}>
-                                                    <img alt="Image Slider" src={img.linkIMG} layout="responsive"/>
-                                                </a>
-                                            </SplideSlide>
-                                        </div>
-                                        
-                                    ))}
-                            
                             </Splide>
                         }
                     </div>

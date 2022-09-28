@@ -10,20 +10,11 @@ function MyApp({ Component, pageProps }) {
 
     <meta name="description" content="DG8Camping-car est un site officiel du groupe David Gerbier proposant des véhicules neufs et d'occasions dans toutes les gammes."/>
     <title>DG8 Camping-car</title>
-    <div>
-      {
-        //<Navbar/>
-      }
-    </div>
     <Component {...pageProps}/>
     <div>
       <div className="toast toast-end">
         <script src="//code.tidio.co/nb4oopnrsjljbfmnow1aizxexoz2q1gg.js" async></script>
       </div>
-      {
-        //<Footer/>
-      }
-      
     </div>
   </>
 }
