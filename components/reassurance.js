@@ -1,84 +1,84 @@
 import Image from "next/image"
+import atelierIMG from '../public/reass/atelier.png'
+import teamIMG from '../public/reass/team.png'
+import spareIMG from '../public/reass/spare.png'
+import garantieIMG from '../public/reass/shield.png'
 
 export default function Home(){
     return (
         <div>
             <div className='flex flex-wrap'>
-                <div className='w-1/4 p-10'>
-                    <div class="p-6 max-w-sm">
-                        <div className="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400">
-                            <Image/>
+                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                    <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex flex-col items-center pb-10">
+                            <Image className="mb-3 shadow-lg" width={36} height={36} src={atelierIMG} alt="Nos ateliers"/>
+                            <h5 class="mb-1 text-2xl font-medium text-gray-900 pt-4">Nos ateliers</h5>
+                            <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos ateliers sont équipés pour recevoir votre véhicule de loisirs.</p>
                         </div>
-                            <a href="">
-                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Nos ateliers</h5>
-                        </a>
-                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
                     </div>
                 </div>
-                <div className='w-1/4 p-10'>
-                    <div class="p-6 max-w-sm">
-                        <div className="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400">
-                            <Image/>
+
+                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                    <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex flex-col items-center pb-10">
+                            <Image className="mb-3 shadow-lg" width={36} height={36} src={teamIMG} alt="Notre équipe"/>
+                            <h5 class="mb-1 text-2xl font-medium text-gray-900 pt-4">Nos équipes</h5>
+                            <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos équipes sont à votre écoute pour vous garantir la meilleure expérience en magasion et par téléphone.</p>
                         </div>
-                            <a href="">
-                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Nos équipes</h5>
-                        </a>
-                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos équipes sont à votre écoute pour vous garantir la meilleire expérience en magasion et par téléphone.</p>
                     </div>
                 </div>
-                <div className='w-1/4 p-10'>
-                    <div class="p-6 max-w-sm">
-                        <div className="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400">
-                            <Image/>
+
+                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                    <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex flex-col items-center pb-10">
+                            <Image className="mb-3 shadow-lg" width={36} height={36} src={spareIMG} alt="Bonnie image"/>
+                            <h5 class="mb-1 text-2xl font-medium text-gray-900 pt-4">Pièces détachées</h5>
+                            <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos ateliers vous garantissent l'utilisation de pièces d'origine, testées, contrôlées et homologuées vous permettant de bénéficier de la garantie constructeur.</p>
                         </div>
-                            <a href="">
-                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Pièces détachées</h5>
-                        </a>
-                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos ateliers vous garantissent l'utilisation de pièces d'origine, testées, contrôlées et homologuées vous permettant de bénéficier de la garantie constructeur.</p>
                     </div>
                 </div>
-                <div className='w-1/4 p-10'>
-                    <div class="p-6 max-w-sm">
-                        <div className="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400">
-                            <Image/>
+                
+                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                    <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex flex-col items-center pb-10">
+                            <Image className="mb-3 shadow-lg" width={28} height={36} src={garantieIMG} alt="Bonnie image"/>
+                            <h5 class="mb-1 text-2xl font-medium text-gray-900 pt-4">Garantie incluse</h5>
+                            <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos véhicules sont garanties pour 6 mois minimum.</p>
                         </div>
-                            <a href="">
-                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Nos ateliers</h5>
-                        </a>
-                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
                     </div>
                 </div>
-                <div className='w-1/3 p-10'>
-                    <div class="p-6 max-w-sm">
+
+                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
+                    <div class="p-6">
                         <div className="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400">
                             <Image/>
                         </div>
                             <a href="">
-                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Nos ateliers</h5>
+                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Financement sur mesure</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">DG8 Camping-car vous propose des mensualités adaptées à votre budget.</p>
                     </div>
                 </div>
-                <div className='w-1/3 p-10'>
-                    <div class="p-6 max-w-sm">
+                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
+                    <div class="p-6">
                         <div className="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400">
                             <Image/>
                         </div>
                             <a href="">
-                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Nos ateliers</h5>
+                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">TITRE</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">DESC</p>
                     </div>
                 </div>
-                <div className='w-1/3 p-10'>
-                    <div class="p-6 max-w-sm">
+                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
+                    <div class="p-6">
                         <div className="mb-2 w-10 h-10 text-gray-500 dark:text-gray-400">
                             <Image/>
                         </div>
                             <a href="">
-                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">Nos ateliers</h5>
+                            <h5 class="mb-2 text-2xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">TITRE</h5>
                         </a>
-                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Go to this step by step guideline process on how to certify for your weekly benefits:</p>
+                        <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">DESC</p>
                     </div>
                 </div>
             </div>
