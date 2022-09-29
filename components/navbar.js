@@ -79,10 +79,13 @@ export default function NavBar() {
                                     <a href="/rachat-cash">Rachat Cash</a>
                                 </li>
                                 <li>
-                                    <button onClick={console.log("cc")} className='hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
-                                        09 69 39 69 73
-                                    </button>
-                                    <Image />
+                                    <a href="tel:+33 0969396973">
+                                        <button className='hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
+                                            09 69 39 69 73
+                                        </button>
+                                        <Image />
+                                    </a>
+                                    
                                 </li>
                             </ul>
                         </div>
