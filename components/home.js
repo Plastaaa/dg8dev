@@ -7,7 +7,8 @@ import SlideMarque from "./slideMarc";
 import FourCC from "./fourcc";
 import FamilleCC from "./famCC";
 import Contact from "./contact";
-import RachatCash from "./rachatcash";
+import RachatCash from "./rachatcashImg";
+import Reassurance from './reassurance';
 
 export default class HomePage extends React.Component {
     render(){
@@ -39,10 +40,10 @@ export default class HomePage extends React.Component {
                     </div>
 
                     <div className="my-2 w-full overflow-hidden">
-                        
+                        <Reassurance/>
                     </div>
 
-                    <div className="my-2 w-full md:w-full lg:w-1/2 xl:w-1/2 overflow-hidden">
+                    <div className="my-2 w-full py-16 md:w-full lg:w-1/2 xl:w-1/2 overflow-hidden">
                        <RachatCash/> 
                     </div>
                     <div className="my-2 w-full md:w-full lg:w-1/2 xl:w-1/2 overflow-hidden">

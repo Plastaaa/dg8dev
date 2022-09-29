@@ -5,11 +5,11 @@ import ReCAPTCHA from "react-google-recaptcha";
 function CVideOuQuoiLaVariable(props){
     const isSetName = props.isSetName;
     const isSetCp = props.isSetCp;
-    const isSetTel = props.isSetCp;
-    const isSetMail = props.isSetCp;
-    const isSetObj = props.isSetCp;
+    const isSetTel = props.isSetTel;
+    const isSetMail = props.isSetMail;
+    const isSetObj = props.isSetObj;
 
-    if(isSetName == "" || isSetTel == "" || isSetMail == "" || isSetCp == "" || isSetObj == ""){
+    if(((isSetName == "" || isSetName == undefined) || (isSetTel == "" || isSetTel == undefined) || (isSetMail == "" || isSetMail == undefined) || (isSetCp == "" || isSetCp == undefined) || (isSetObj == "" || isSetObj == undefined)) && (props.dejaSend === false)){
         return(
             <div className="toast toast-bottom">
                 <div className="alert alert-error">
@@ -20,6 +20,14 @@ function CVideOuQuoiLaVariable(props){
             </div>
         )
     }
+
+    if(props.dejaSend === true){
+        return(
+            <div>
+                <p>Message envoyé</p>
+            </div>
+        )
+    }
 }
 
 export default class Contact extends React.Component {
@@ -27,11 +35,13 @@ export default class Contact extends React.Component {
         resCapt: [],
     }
 
+    
     stateSend = () => {
-        if(this.state.nom == "" || this.state.tel == "" || this.state.mail == "" || this.state.codepostal == "" || this.state.objet == ""){
-
-        }else{
-            if(this.state.resCapt.success){
+        if((this.state.nom == "" || this.state.nom == undefined) || (this.state.tel == ""  || this.state.tel == undefined) || (this.state.mail == "" || this.state.mail == undefined) || (this.state.codepostal == ""  || this.state.codepostal == undefined) || (this.state.objet == "" || this.state.objet == undefined)){
+            this.setState({dejaSend: false});
+        }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.codepostal != "" && this.state.codepostal != undefined) || (this.state.objet != "" && this.state.objet != undefined)){
+            if(this.state.dejaSend != true && (this.state.resCapt.success)){
+                this.setState({dejaSend:  true});
                 this.setState({nom: ""});
                 this.setState({tel: ""});
                 this.setState({mail: ""});
@@ -77,6 +87,7 @@ export default class Contact extends React.Component {
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact</h2>
                     <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Prendre contact avec nos équipes.</p>
                     <CVideOuQuoiLaVariable 
+                        dejaSend={this.state.dejaSend}
                         isSetName={this.state.nom} 
                         isSetCp={this.state.codepostal}
                         isSetMail={this.state.mail}

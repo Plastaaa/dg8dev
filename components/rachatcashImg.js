@@ -8,7 +8,9 @@ export default class RachatCash extends React.Component {
         return (
             <div className="overflow-hidden">
                 <div className="flex flex-wrap py-8">
-                    <Image src={imgRachat}/>           
+                    <a href="./rachat-cash">
+                        <Image src={imgRachat}/>   
+                    </a>
                 </div>
             </div>
         )

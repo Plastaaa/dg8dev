@@ -363,7 +363,7 @@ export default class VehiculeUnique extends React.Component {
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
-                                                        Réservoir d'eau sale
+                                                        Réservoir d'eau usée
                                                     </p>
                                                     <p className='text-gray-800 px-2'>
                                                         {cc.reservoirSale + " l."}
