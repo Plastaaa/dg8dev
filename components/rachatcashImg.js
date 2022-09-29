@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import imgRachat from "../public/rachatcash.JPG"
+import imgRachat from "../public/rachatcash.jpg"
 
 export default class RachatCash extends React.Component {
 
