@@ -3,19 +3,19 @@ import axios from "axios";
 
 export default class MiniSearch extends React.Component {
     componentDidMount(){
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
             .then(res => {
                 const brands = res.data;
                 this.setState({ brands });
             });
 
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctGamme.php`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctGamme.php`)
             .then(res => {
                 const gammes = res.data;
                 this.setState({ gammes });
             });
 
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctEtat.php`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctEtat.php`)
             .then(res => {
                 const etats = res.data;
                 this.setState({ etats });

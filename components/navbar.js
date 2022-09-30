@@ -89,7 +89,6 @@ export default function NavBar() {
                                             <div className='w-6/8'>
                                                 09 69 39 69 73
                                             </div>
-                                            
                                         </button>
                                     </a>
                                 </li>
