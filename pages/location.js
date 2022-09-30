@@ -1,17 +1,15 @@
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
-import Contact from '../components/contact'
+import ContactLoc from "../components/contactLoc"
 
 export default function Home(){
     return (
-        <div>
+        <div className='h-screen'>
             <div>
-                {
-                    <NavBar/>
-                }
+                <NavBar/>
             </div>
-            <section className="bg-white dark:bg-gray-900">
-                <Contact/>
+            <section>
+                <ContactLoc/>
             </section>
             <div>
                 <Footer/>

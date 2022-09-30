@@ -3,6 +3,8 @@ import CardImage from '../components/logo'
 
 import { useState } from "react";
 
+import phoneIMG from '../public/phone.png'
+
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
 
@@ -80,12 +82,16 @@ export default function NavBar() {
                                 </li>
                                 <li>
                                     <a href="tel:+33 0969396973">
-                                        <button className='hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
-                                            09 69 39 69 73
+                                        <button className='flex flex-wrap hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
+                                            <div className='w-2/8 px-2'>
+                                                <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
+                                            </div>
+                                            <div className='w-6/8'>
+                                                09 69 39 69 73
+                                            </div>
+                                            
                                         </button>
-                                        <Image />
                                     </a>
-                                    
                                 </li>
                             </ul>
                         </div>
