@@ -17,6 +17,16 @@ export default function NavBar() {
                                 {
                                     <CardImage/>
                                 }
+                                <a href="tel:+33 0969396973" className='md:hidden'>
+                                    <button className='flex flex-wrap hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
+                                        <div className='w-2/8 px-2'>
+                                            <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
+                                        </div>
+                                        <div className='w-6/8'>
+                                            09 69 39 69 73
+                                        </div>
+                                    </button>
+                                </a>
                             <div className="md:hidden">
                                 <button
                                     className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -74,8 +84,18 @@ export default function NavBar() {
                                 <li className="text-gray-600 hover:text-gray-400">
                                     <a href="/atelier">RDV Atelier</a>
                                 </li>
-                                <li className="text-gray-600 hover:text-gray-400">
-                                    <a href="/notre-groupe">Groupe David Gerbier</a>
+                                <li>
+                                <div className="dropdown dropdown-hover">
+                                    <a href='/notre-groupe'>
+                                        <label tabIndex={0} className="text-gray-600 hover:text-gray-400 m-1">Groupe David Gerbier</label>
+                                    </a>
+                                    
+                                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-gray-100 rounded-box w-52">
+                                        <li><a href='/nos-concessions'>Nos concessions</a></li>
+                                        <li><a href='/marques'>Marques distribuées</a></li>
+                                        <li><a href='/recrutement'>Recrutement</a></li>
+                                    </ul>
+                                </div>
                                 </li>
                                 <li className="text-gray-600 hover:text-gray-400">
                                     <a href="/rachat-cash">Rachat Cash</a>

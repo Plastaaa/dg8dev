@@ -1,6 +1,6 @@
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
-import Concessions from '../components/concessions'
+import Marques from '../components/nosMarques'
 
 export default function Home(){
     return (
@@ -10,8 +10,8 @@ export default function Home(){
                     <NavBar/>
                 }
             </div>
-            <div className='pt-10'>
-                <Concessions/>
+            <div>
+                <Marques/>
             </div>
             <div>
                 <Footer/>
