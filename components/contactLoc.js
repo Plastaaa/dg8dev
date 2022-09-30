@@ -62,7 +62,7 @@ export default class Contact extends React.Component {
                 this.setState({nett: ""});
                 this.setState({tabchaise: ""});
                 this.setState({enfant: ""});
-                axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/sendMailLoc.php`,{
+                axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailLoc.php`,{
                 params:{
                     nom: this.state.nom,
                     prenom: this.state.prenom,

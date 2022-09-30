@@ -14,7 +14,7 @@ export default class FormConnexion extends React.Component {
     }
 
     stateSend = (props) => {
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/seConnecter.php`,{
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/seConnecter.php`,{
             params:{
                 login: this.state.mdp,
                 mdp: this.state.mail

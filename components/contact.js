@@ -47,7 +47,7 @@ export default class Contact extends React.Component {
                 this.setState({mail: ""});
                 this.setState({codepostal: ""});
                 this.setState({objet: ""});
-                axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/sendMail.php`,{
+                axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMail.php`,{
                 params:{
                     nom: this.state.nom,
                     tel: this.state.tel,

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default class MiniSearch extends React.Component {
     componentDidMount(){
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/get4CC.php`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/get4CC.php`)
             .then(res => {
                 const ccs = res.data;
                 this.setState({ ccs });

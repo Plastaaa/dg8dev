@@ -59,7 +59,7 @@ export default class RDVAtelier extends React.Component {
                 this.setState({km: ""});
                 this.setState({annee: ""});
                 this.setState({inter: ""});
-                axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/sendMailAtelier.php`,{
+                axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailAtelier.php`,{
                 params:{
                     nom: this.state.nom,
                     tel: this.state.tel,

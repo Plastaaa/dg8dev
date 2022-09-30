@@ -14,25 +14,25 @@ function IsSearch(props){
 export default class Stock extends React.Component {
     componentDidMount() {
 
-          axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
+          axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
           .then(res => {
             const brands = res.data;
             this.setState({ brands });
           });
 
-          axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctGamme.php`)
+          axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctGamme.php`)
           .then(res => {
             const gammes = res.data;
             this.setState({ gammes });
           });
 
-          axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctEtat.php`)
+          axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctEtat.php`)
           .then(res => {
             const etats = res.data;
             this.setState({ etats });
           });
 
-          axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctPorteur.php`)
+          axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCDstctPorteur.php`)
           .then(res => {
             const porteurs = res.data;
             this.setState({ porteurs });
@@ -51,7 +51,7 @@ export default class Stock extends React.Component {
     }
 
     stateSend = (props) => {
-      axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
+      axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
         params:{
           marque: this.state.marque,
           annee: this.state.year,

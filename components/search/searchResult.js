@@ -8,7 +8,7 @@ export default class SearchResult extends React.Component {
         const etatURL = queryParams.get('etat');
         const gammeURL = queryParams.get('gamme');
         const marqueURL = queryParams.get('marque');
-        axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
           params:{
             etat: etatURL,
             marque: marqueURL,
