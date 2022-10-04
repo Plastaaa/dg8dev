@@ -1,8 +1,6 @@
-import Head from 'next/head';
-
 import dynamic from 'next/dynamic';
 
-const MapWithNoSSR = dynamic(() => import('./Map'), {
+const MapWithNoSSR = dynamic(() => import('./map'), {
   ssr: false,
 });
 
