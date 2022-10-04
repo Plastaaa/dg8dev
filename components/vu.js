@@ -7,6 +7,8 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import CardCC from './cardCC';
 import SlideMarc from './slideMarc';
+import Contact from '../components/contactVU'
+import MapBis from '../components/mapBis'
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -202,6 +204,9 @@ export default class VehiculeUnique extends React.Component {
             {
             this.state.campingcar.map((cc) => (
                 <div>
+                    {
+                        console.log(cc.libelle)
+                    }
                 <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-8 px-4">
                     <div className="md:w-3/6 xl:w-3/6 lg:w-3/5 md:block">
                         {
@@ -282,15 +287,23 @@ export default class VehiculeUnique extends React.Component {
                                     </button>
                                 </div>
                                 <div className='w-1/2 px-4'>
-                                    <button onClick={console.log("cc")} className="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
-                                        Me faire recontacter
-                                    </button>
+                                    <div className='w-full bg-red-600 hover:bg-red-700 text-white w-full text-center font-bold py-2 px-4 rounded-lg'>
+                                        <label htmlFor="my-modal-3" className="bg-red-600 hover:bg-red-700 text-center text-white w-full font-bold py-2 px-4 rounded-lg">Me faire recontacter</label>
+                                    </div>
+
+                                    <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+                                    <div className="modal">
+                                    <div className="modal-box relative">
+                                        <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                        <Contact/>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-wrap -mx-2 overflow-hidden">
+                <div className="flex flex-wrap overflow-hidden py-16">
                     <div className="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
                         <div className="2xl:px-20 xl:px-20 md:px-8 px-4">
                             <div className="">
@@ -428,7 +441,7 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
+                    <div className="my-2 pt-16 px-2 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
                         <div className="flex flex-wrap overflow-hidden">
                             <div className="w-full overflow-hidden">
                                 <div className="text-xl font-medium 2xl:px-20 xl:px-20 md:px-8 px-4">
@@ -437,7 +450,7 @@ export default class VehiculeUnique extends React.Component {
                                 <div className="flex flex-wrap -mx-1 overflow-hidden px-8 md:px-16 lg:px-24 xl:32">
                                     {
                                         this.state.ccsSimi.map(cc =>
-                                            <div className="w-screen items-center sm:w-full md:w-full xl:w-1/2 p-4">
+                                            <div className="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/2 p-4">
                                                 <CardCC 
                                                     refe={cc.RefDMS}
                                                     marque={cc.marque} 
@@ -460,9 +473,9 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="my-2 px-2 w-full overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 bg-gray-700">
-                        <div className=''>
-
+                    <div className="my-2 px-2 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+                        <div className='p-16 border border-gray-400 rounded-2xl'>
+                            <MapBis concess={cc.libelle}/>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ export default function Home(){
     return (
         <div>
             <div className='flex flex-wrap'>
-                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
                     <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={36} height={36} src={atelierIMG} alt="Nos ateliers"/>
@@ -21,7 +21,7 @@ export default function Home(){
                     </div>
                 </div>
 
-                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
                     <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={36} height={36} src={teamIMG} alt="Notre équipe"/>
@@ -31,7 +31,7 @@ export default function Home(){
                     </div>
                 </div>
 
-                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
                     <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={36} height={36} src={spareIMG} alt="Bonnie image"/>
@@ -41,7 +41,7 @@ export default function Home(){
                     </div>
                 </div>
                 
-                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4 2xl:w-1/4 lg p-16">
                     <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={28} height={36} src={garantieIMG} alt="Bonnie image"/>
@@ -51,7 +51,7 @@ export default function Home(){
                     </div>
                 </div>
 
-                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
                     <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={36} height={36} src={tirelireIMG} alt="Bonnie image"/>
@@ -61,7 +61,7 @@ export default function Home(){
                     </div>
                 </div>
 
-                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
                     <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={36} height={36} src={cleIMG} alt="Bonnie image"/>
@@ -71,7 +71,7 @@ export default function Home(){
                     </div>
                 </div>
 
-                <div className="w-full sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
+                <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 2xl:w-1/3 lg p-16">
                     <div class="w-full max-w-sm dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={36} height={36} src={accessIMG} alt="Bonnie image"/>

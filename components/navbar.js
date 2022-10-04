@@ -90,7 +90,7 @@ export default function NavBar() {
                                         <label tabIndex={0} className="text-gray-600 hover:text-gray-400 m-1">Groupe David Gerbier</label>
                                     </a>
                                     
-                                    <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-gray-100 rounded-box w-52">
+                                    <ul tabIndex={0} className="dropdown-content card p-2 shadow bg-gray-100 rounded-box w-52">
                                         <li><a href='/nos-concessions'>Nos concessions</a></li>
                                         <li><a href='/marques'>Marques distribuées</a></li>
                                         <li><a href='/recrutement'>Recrutement</a></li>
