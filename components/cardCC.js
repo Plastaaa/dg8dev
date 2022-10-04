@@ -83,7 +83,7 @@ function KM(props){
 export default function CardCC(props) {
     return (  
         <div>
-            <a href={`/${slugify(props.refe)}`} className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+            <a href={`/stock/${slugify(props.refe)}`} className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                 <div className="relative pb-48 overflow-hidden">
                     <ImgCard link={props.photo}/>                
                 </div>

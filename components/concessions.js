@@ -33,6 +33,7 @@ export default class Concessions extends React.Component {
                                 mail={concess.mail}
                                 tel={concess.tel}
                                 linkIMG={concess.linkIMG}
+                                soc={concess.societe}
                             />
                         </div>
                     )

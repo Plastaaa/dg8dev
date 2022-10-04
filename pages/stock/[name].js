@@ -1,7 +1,7 @@
-import ConcessionUnique from "../components/cu"
+import VehiculeUnique from "../../components/vu"
 import React from 'react';
-import NavBar from '../components/navbar'
-import Footer from '../components/footer'
+import NavBar from '../../components/navbar'
+import Footer from '../../components/footer'
 
 export default function Home(props){
 
@@ -12,9 +12,7 @@ export default function Home(props){
                 <NavBar/>
             }
             </div>
-
-            <ConcessionUnique/>
-
+            <VehiculeUnique/>
             <div>
                 <Footer/>
             </div>

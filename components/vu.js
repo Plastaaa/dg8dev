@@ -166,25 +166,25 @@ function Bed(props){
 
 export default class VehiculeUnique extends React.Component {
     componentDidMount() {
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[1]}`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[2]}`)
           .then(res => {
             const campingcar = res.data;
             this.setState({ campingcar });
         })
 
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllVisualsByCC.php?id=${window.location.pathname.split('/')[1]}`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllVisualsByCC.php?id=${window.location.pathname.split('/')[2]}`)
           .then(res => {
             const imgCC = res.data;
             this.setState({ imgCC });
         })
         
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllEquipByCC.php?id=${window.location.pathname.split('/')[1]}`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllEquipByCC.php?id=${window.location.pathname.split('/')[2]}`)
           .then(res => {
             const equips = res.data;
             this.setState({ equips });
         })
 
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/get2CCSimi.php?id=${window.location.pathname.split('/')[1]}`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/get2CCSimi.php?id=${window.location.pathname.split('/')[2]}`)
           .then(res => {
             const ccsSimi = res.data;
             this.setState({ ccsSimi });
