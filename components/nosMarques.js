@@ -24,7 +24,7 @@ export default class Concessions extends React.Component {
                 <div className="flex flex-wrap">
                 {
                     this.state.marque.map(marque =>
-                        <div className="w-1/4 xl:w-1/4 md:w-1/2 sm:w-1/2 items-center p-4">
+                        <div className="w-full xl:w-1/4 md:w-1/2 sm:w-1/2 items-center p-4">
                             <MarqueCard 
                                 marque={marque.marque}
                                 description={marque.description}
