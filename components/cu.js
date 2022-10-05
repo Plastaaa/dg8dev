@@ -3,14 +3,28 @@ import axios from 'axios'
 import Image from 'next/image';
 import CardCC from './cardCC';
 
+function IsThereStock(props){
+    const ccs = props.ccs;
+    if(ccs == ""){
+        return <NoStock/>
+    }
+    return <Stock libelle={props.libelle}/>
+}
+function NoStock(props){
+    return <p></p>
+}
+function Stock(props){
+    return  (
+        <h2 className="pb-8 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+            Notre stock à {props.libelle}.
+        </h2>
+    );
+}
+
 export default class ConcessionUnique extends React.Component {
     componentDidMount() {
-
         var splitted = window.location.pathname.split('/')[1];
         var splittedSquare = splitted.split('-')[0];
-        console.log(splittedSquare);
-
-        //var splittedSquare = "expo";
 
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getConcessByName.php?concess=${splittedSquare}`)
           .then(res => {
@@ -55,7 +69,9 @@ export default class ConcessionUnique extends React.Component {
                             </div>
                         </div>
                         <div>
-                            <h2 className="pb-8 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Notre stock à {concess.libelle}</h2>
+                            <h2 className="pb-8 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                                <IsThereStock libelle={concess.libelle} ccs={this.state.ccs}/>
+                            </h2>
                         </div>
                         <div>
                             <div className="flex flex-wrap overflow-hidden">

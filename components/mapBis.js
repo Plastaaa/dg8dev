@@ -8,7 +8,8 @@ const MapWithNoSSR = dynamic(() => import('./map'), {
 export default function Home(props) {
   return (
     <div>
-      <MapWithNoSSR concess={props.concess}/>
+      <MapWithNoSSR concess={props.concess} latitude={props.latitude} longitude={props.longitude}/>
     </div>
   );
 }
+ 
