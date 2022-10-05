@@ -86,7 +86,7 @@ export default function NavBar() {
                                 </li>
                                 <li>
                                 <div className="dropdown dropdown-hover">
-                                    <a href='/notre-groupe'>
+                                    <a href='/le-groupe-david-gerbier'>
                                         <label tabIndex={0} className="text-gray-600 hover:text-gray-400 m-1">Groupe David Gerbier</label>
                                     </a>
                                     

@@ -3,12 +3,12 @@ import imgLogo from '../public/logo/groupe/gdglogo.png'
 
 export default function Groupe() {
     return (
-        <div>
-            <div className="flex flex-wrap">
+        <div className="px-4 md:px-12 pb-12">
+            <div className="flex flex-wrap shadow-lg border border-gray-100 rounded-2xl pb-4">
                 <div className="w-full">
-                    <h2 className="mb-4 text-2xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white pb-10">Le groupe David Gerbier</h2>
+                    <h2 className="mb-4 pt-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white pb-10">Le groupe David Gerbier</h2>
                 </div>
-                <div className="w-1/2 px-8">
+                <div className="w-full md:w-full lg:w-1/2 px-8">
                     <p>
                         Depuis sa création en 1984, le groupe David Gerbier est spécialisé dans le secteur automobile. 
                     </p>
@@ -71,7 +71,7 @@ export default function Groupe() {
                         Dans le groupe David Gerbier, votre satisfaction est notre priorité ! 
                     </p>
                 </div>
-                <div className="w-1/2 px-8">
+                <div className="w-full md:w-full lg:w-1/2 px-8">
                     <div className="p-10">
                         <Image src={imgLogo}/>
                     </div>

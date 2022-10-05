@@ -47,7 +47,7 @@ export default class Recrutement extends React.Component {
                 this.setState({mail: ""});
                 this.setState({codepostal: ""});
                 this.setState({objet: ""});
-                axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMail.php`,{
+                axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailRecru.php`,{
                 params:{
                     nom: this.state.nom,
                     tel: this.state.tel,
@@ -82,9 +82,9 @@ export default class Recrutement extends React.Component {
 
     render(){
         return (
-            <div className="overflow-hidden">
+            <div className="overflow-hidden pt-4">
                 <div className="py-2 lg:py-2 px-4 mx-auto max-w-screen-md">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact</h2>
+                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Candidature spontanée</h2>
                     <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Prendre contact avec nos équipes.</p>
                     <CVideOuQuoiLaVariable 
                         dejaSend={this.state.dejaSend}

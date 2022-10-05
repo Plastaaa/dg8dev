@@ -475,7 +475,7 @@ export default class VehiculeUnique extends React.Component {
                     </div>
                     <div className="my-2 pb-4 pt-12 pr-8 px-2 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
                         <div className='p-4 pb-2 border border-gray-100 rounded-2xl shadow-lg'>
-                            <p className='pb-2 font-bold text-center'>09 69 39 69 73</p>
+                            <p className='pb-2 font-bold text-center'>{cc.tel}</p>
                             <MapBis concess={cc.libelle} latitude={cc.latitude} longitude={cc.longitude}/>
                         </div>
                     </div>

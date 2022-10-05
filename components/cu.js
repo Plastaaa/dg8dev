@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import Image from 'next/image';
 import CardCC from './cardCC';
-
 function IsThereStock(props){
     const ccs = props.ccs;
     if(ccs == ""){
@@ -25,43 +24,38 @@ export default class ConcessionUnique extends React.Component {
     componentDidMount() {
         var splitted = window.location.pathname.split('/')[1];
         var splittedSquare = splitted.split('-')[0];
-
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getConcessByName.php?concess=${splittedSquare}`)
           .then(res => {
             const concess = res.data;
             this.setState({ concess });
         })
-
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCByConcess.php?concess=${splittedSquare}`)
             .then(res => {
                 const ccs = res.data;
                 this.setState({ ccs });
             })
     }
-
     state = {
         concess: [],
         ccs: [],
     }
-
     
-
     render() {
         return (
-            <div className='p-16'>
+            <div className='p-4'>
                 {
                 this.state.concess.map((concess) => (
                     <div>
                         <div>
                             <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">{concess.libelle}</h2>
                         </div>
-                        <div className='flex felx-wrap'>
-                            <div className='w-2/3 pt-16'>
+                        <div className='flex flex-wrap'>
+                            <div className='w-full sm:w-1/2 sm:pt-4 pt-4'>
                                 {
                                     concess.description
                                 }
                             </div>
-                            <div className='w-1/3'>
+                            <div className='w-full sm:w-1/2'>
                                 {
                                     <Image src={concess.linkIMG} height={250} width={500} layout={'responsive'}/>
                                     
@@ -69,7 +63,7 @@ export default class ConcessionUnique extends React.Component {
                             </div>
                         </div>
                         <div>
-                            <h2 className="pb-8 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                            <h2 className="pb-4 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
                                 <IsThereStock libelle={concess.libelle} ccs={this.state.ccs}/>
                             </h2>
                         </div>
