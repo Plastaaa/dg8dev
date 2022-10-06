@@ -1,14 +1,14 @@
 import React from 'react'
 import axios from 'axios'
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import CardCC from './cardCC';
 import SlideMarc from './slideMarc';
 import Contact from '../components/contactVU'
 import MapBis from '../components/mapBis'
+import Image from 'next/image';
+import NavBar from '../components/navbar'
+import Footer from '../components/footer'
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -189,18 +189,63 @@ export default class VehiculeUnique extends React.Component {
             const ccsSimi = res.data;
             this.setState({ ccsSimi });
         })
+
+
     }
 
     state = {
         campingcar: [],
         imgCC: [],
         equips: [],
-        ccsSimi: []
+        ccsSimi: [],
+        show: false,
     }
 
+    showModal = e => {
+        if(this.state.show){
+            this.setState({
+                show: false
+            });
+        }else{
+            this.setState({
+                show: true
+            });
+        }        
+    };
+
     render() {
+        if(this.state.show == true){
+            return (
+                <div className='px-32'>
+                    <Splide
+                        options={{
+                            type: "loop",
+                            autoplay: false,
+                            heightRatio: 0.67,
+                            keyboard: true,
+                            drag: false,
+                            }}
+                        >
+                            {
+                                this.state.imgCC.map((img) => (
+                                        <SplideSlide>
+                                            <a onClick={e => {this.showModal();}}>
+                                                <Image src={img.linkIMG} layout={"fill"}/>
+                                            </a>
+                                        </SplideSlide>
+                                ))
+                            }
+                    </Splide>
+                </div>
+            )
+        }
         return (
         <div>
+            <div>
+            {
+                <NavBar/>
+            }
+            </div>
             {
             this.state.campingcar.map((cc) => (
                 <div>
@@ -219,29 +264,21 @@ export default class VehiculeUnique extends React.Component {
                                 >
                                     {
                                         this.state.imgCC.map((img) => (
-                                            <SplideSlide>
-                                                <a href={img.linkIMG}>
-                                                    <img alt="Image Slider" src={img.linkIMG} layout="responsive"/>
-                                                </a>
-                                            </SplideSlide>
-                                        ))}
+                                                <SplideSlide>
+                                                    <a onClick={e => {this.showModal();}}>
+                                                        <Image src={img.linkIMG} layout={"fill"}/>
+                                                    </a>
+                                                </SplideSlide>
+                                        ))
+                                    }
                             </Splide>
                         }
                     </div>
+                     
                     <div className="xl:w-2/5 md:w-2/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
                         <div className="border-b border-gray-200 pb-6">
                             <p className="text-sm leading-none text-gray-600">{cc.famille}</p>
-                            <h1
-                                className="
-                                    lg:text-2xl
-                                    text-xl
-                                    font-semibold
-                                    lg:leading-6
-                                    leading-7
-                                    text-gray-800
-                                    mt-2
-                                "
-                            >
+                            <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2">
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
                         </div>
@@ -484,6 +521,9 @@ export default class VehiculeUnique extends React.Component {
             </div>                 
             ))
         }
+        <div>
+            <Footer/>
+        </div>
         </div>
         )
     }

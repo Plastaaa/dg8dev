@@ -17,16 +17,19 @@ export default function NavBar() {
                                 {
                                     <CardImage/>
                                 }
-                                <a href="tel:+33 0969396973" className='md:hidden'>
-                                    <button className='flex flex-wrap hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
-                                        <div className='w-2/8 px-2'>
-                                            <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
-                                        </div>
-                                        <div className='w-6/8'>
-                                            09 69 39 69 73
-                                        </div>
-                                    </button>
-                                </a>
+                                {/*
+                                    <a href="tel:+33 0969396973" className='md:hidden'>
+                                        <button className='flex flex-wrap hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
+                                            <div className='w-2/8 px-2'>
+                                                <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
+                                            </div>
+                                            <div className='w-6/8'>
+                                                09 69 39 69 73
+                                            </div>
+                                        </button>
+                                    </a>*/
+                                }
+                                
                             <div className="md:hidden">
                                 <button
                                     className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
@@ -100,10 +103,11 @@ export default function NavBar() {
                                 <li className="text-gray-600 hover:text-gray-400">
                                     <a href="/rachat-cash">Rachat Cash</a>
                                 </li>
+                                {
                                 <li>
                                     <a href="tel:+33 0969396973">
-                                        <button className='flex flex-wrap hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
-                                            <div className='w-2/8 px-2'>
+                                        <button className='flex flex-wrap text-gray-600 hover:bg-gray-100 hover:text-gray-600 border shadow-lg border-red-700 rounded-lg p-2'>
+                                            <div className='w-2/8 px-1 pt-0.5'>
                                                 <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
                                             </div>
                                             <div className='w-6/8'>
@@ -112,6 +116,7 @@ export default function NavBar() {
                                         </button>
                                     </a>
                                 </li>
+                                }
                             </ul>
                         </div>
                     </div>

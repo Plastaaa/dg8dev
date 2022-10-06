@@ -29,6 +29,7 @@ export default class Concessions extends React.Component {
                                 marque={marque.marque}
                                 description={marque.description}
                                 linkIMG={marque.linkIMG}
+                                linkMarque={marque.linkMarque}
                             />
                         </div>
                     )

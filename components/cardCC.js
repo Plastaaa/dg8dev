@@ -100,6 +100,9 @@ export default function CardCC(props) {
                     <p className="text-sm">
                         {props.ver}
                     </p>
+                    <p className="text-sm">
+                        {props.libelle}
+                    </p>
                     <div className="mt-3 flex items-center">
                         <span className="font-bold text-xl">
                             {
