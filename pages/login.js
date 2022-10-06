@@ -1,21 +1,15 @@
-import FormConnexion from "../components/formConnexion"
-import NavBar from '../components/navbar'
-import Footer from '../components/footer'
+import Connexion from "../components/dashboard/connexion"
+import React from "react";
 
-export default function Home(){
-    return (
-        <div>
+export default class Login extends React.Component {
+    
+    render(){
+        return (
             <div>
-                {
-                    <NavBar/>
-                }
+                <div className="flex items-center justify-center min-h-screen bg-gray-100">
+                    <Connexion/>
+                </div>
             </div>
-            <div className="flex items-center justify-center min-h-screen bg-gray-100">
-                <FormConnexion/>
-            </div>
-            <div>
-                <Footer/>
-            </div>
-        </div>
-    )
+        )
+    }
 }

@@ -1,6 +1,9 @@
 import '../styles/globals.css'
 import LogRocket from 'logrocket'
 LogRocket.init('6xe330/dg8-cc');
+import ReactGA from 'react-ga';
+const TRACKING_ID = "UA-229544101-1"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 function MyApp({ Component, pageProps }) {
   return <>
