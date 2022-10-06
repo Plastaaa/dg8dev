@@ -216,12 +216,12 @@ export default class VehiculeUnique extends React.Component {
     render() {
         if(this.state.show == true){
             return (
-                <div className='px-32'>
+                <div className='px-8 md:px-16 lg:px-32'>
                     <Splide
                         options={{
                             type: "loop",
                             autoplay: false,
-                            heightRatio: 0.67,
+                            heightRatio: 0.70,
                             keyboard: true,
                             drag: false,
                             }}
