@@ -1,9 +1,16 @@
 import React from "react";
 import axios from "axios";
 
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
 export default class Connexion extends React.Component {
     state = {
-        resLog: [],
+        //resLog: [],
     }
     // Vérifier : const doesPasswordMatch = bcrypt.compareSync(yourPasswordFromLoginForm, yourHashedPassword)
     stateSend = () => {
@@ -17,13 +24,15 @@ export default class Connexion extends React.Component {
         })
         .then(res => {
             const resLog = res.data;
-            this.setState({ resLog });
-            console.log(resLog);
-        })
+            //this.setState({ resLog });
 
-        if(this.resLog.identifiant !== ""){
-            window.location.href = "./dashboard/principal"
-        }
+            if(resLog.length == 1){
+                setCookie("log", "true", 2);
+                window.location.href = "./dashboard/principal"
+            }else{
+                window.location.href = "./login"
+            }
+        })
     }
 
     stateChange = (f) => {

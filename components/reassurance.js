@@ -26,7 +26,7 @@ export default function Home(){
                         <div class="flex flex-col items-center pb-10">
                             <Image className="mb-3 shadow-lg" width={36} height={36} src={teamIMG} alt="Notre équipe"/>
                             <h5 class="mb-1 text-2xl font-medium text-gray-900 pt-4">Nos équipes</h5>
-                            <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos équipes sont à votre écoute pour vous garantir la meilleure expérience en magasion et par téléphone.</p>
+                            <p class="mb-3 font-normal text-gray-500 text-center dark:text-gray-400">Nos équipes sont à votre écoute pour vous garantir la meilleure expérience en magasin et par téléphone.</p>
                         </div>
                     </div>
                 </div>

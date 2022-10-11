@@ -33,13 +33,13 @@ export default class SimpleSlider extends Component {
           }}
         >
           <SplideSlide>
-            <Image alt="Image Slider" src={img1} width={800} layout="responsive" height={320}/>
+            <Image alt="Image Slider" priority={true} src={img1} width={800} layout="responsive" height={320}/>
           </SplideSlide>
           <SplideSlide>
-            <Image alt="Image Slider" src={img2} width={800} layout="responsive" height={320}/>
+            <Image alt="Image Slider" priority={true} src={img2} width={800} layout="responsive" height={320}/>
           </SplideSlide>
           <SplideSlide>
-            <Image alt="Image Slider" src={img3} width={800} layout="responsive" height={320}/>  
+            <Image alt="Image Slider" priority={true} src={img3} width={800} layout="responsive" height={320}/>  
           </SplideSlide>
         </Splide>
       </div>
