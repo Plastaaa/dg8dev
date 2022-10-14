@@ -12,4 +12,5 @@ module.exports = {
       domains: ['hegerys.wsvehiculescrm.selectup.com'],
     },
   plugins: [],
+  
 }

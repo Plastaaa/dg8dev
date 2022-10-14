@@ -83,35 +83,35 @@ function KM(props){
 export default function CardCC(props) {
     return (  
         <div>
-            <a href={`/stock/${slugify(props.refe)}`} className="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+            <a href={`/stock/${slugify(props.refe)}`} className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                 <div className="relative pb-48 overflow-hidden">
                     <ImgCard link={props.photo}/>                
                 </div>
                 <div className="p-4">
-                    <span className="inline-block px-2 py-1 leading-none bg-red-200 text-red-800 rounded-full font-semibold uppercase tracking-wide text-xs">
+                    <span className="inline-block px-2 py-1 leading-none dark:bg-red-600 dark:text-white bg-red-200 text-red-800 rounded-full font-semibold uppercase tracking-wide text-xs">
                         {props.etat + " " + props.annee}
                     </span>
-                    <h2 className="mt-2 mb-2  font-bold">
+                    <h2 className="mt-2 mb-2 dark:text-gray-200 font-bold">
                         {props.marque}
                     </h2>
-                    <p className="text-sm">
+                    <p className="text-sm dark:text-gray-200">
                         {props.modele}
                     </p>
-                    <p className="text-sm">
+                    <p className="text-sm dark:text-gray-200">
                         {props.ver}
                     </p>
-                    <p className="text-sm">
+                    <p className="text-sm dark:text-gray-200">
                         {props.libelle}
                     </p>
                     <div className="mt-3 flex items-center">
-                        <span className="font-bold text-xl">
+                        <span className="font-bold dark:text-gray-200 text-xl">
                             {
                                 Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(props.prix)
                             }
                         </span>
                     </div>
                 </div>
-                <div className="p-4 border-t border-b text-xs text-gray-700">
+                <div className="p-4 dark:border-gray-600 dark:text-gray-200 border-t border-b text-xs text-gray-700">
                     <div className="flex flex-wrap overflow-hidden">
                     {
                         <BotInfoKm km={props.km}/>

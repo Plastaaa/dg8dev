@@ -29,7 +29,10 @@ export default class Concessions extends React.Component {
                                 idBDD={concess.idBDD}
                                 nom={concess.libelle}
                                 adress={concess.adress1 + ", " + concess.adress3}
-                                desc={concess.description}
+                                desc1={concess.desc1}
+                                desc2={concess.desc2}
+                                desc3={concess.desc3}
+                                desc4={concess.desc4}
                                 mail={concess.mail}
                                 tel={concess.tel}
                                 linkIMG={concess.linkIMG}

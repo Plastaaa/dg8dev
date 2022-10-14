@@ -75,38 +75,38 @@ export default function NavBar() {
                             }`}
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                                <li className="text-gray-600 hover:text-gray-400">
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/stock?etat=neuf">Neuf</a>
                                 </li>
-                                <li className="text-gray-600 hover:text-gray-400">
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/stock?etat=occasion">Occasion</a>
                                 </li>
-                                <li className="text-gray-600 hover:text-gray-400">
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/location">Location</a>
                                 </li>
-                                <li className="text-gray-600 hover:text-gray-400">
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/atelier">RDV Atelier</a>
                                 </li>
                                 <li>
                                 <div className="dropdown dropdown-hover">
                                     <a href='/le-groupe-david-gerbier'>
-                                        <label tabIndex={0} className="text-gray-600 hover:text-gray-400 m-1">Groupe David Gerbier</label>
+                                        <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Groupe David Gerbier</label>
                                     </a>
                                     
-                                    <ul tabIndex={0} className="dropdown-content card p-2 shadow bg-gray-100 rounded-box w-52">
+                                    <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
                                         <li><a href='/nos-concessions'>Nos concessions</a></li>
                                         <li><a href='/marques'>Marques distribuées</a></li>
                                         <li><a href='/recrutement'>Recrutement</a></li>
                                     </ul>
                                 </div>
                                 </li>
-                                <li className="text-gray-600 hover:text-gray-400">
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/rachat-cash">Rachat Cash</a>
                                 </li>
                                 {
                                 <li>
                                     <a href="tel:+33 0969396973">
-                                        <button className='flex flex-wrap text-gray-600 hover:bg-gray-100 hover:text-gray-600 border shadow-lg border-red-700 rounded-lg p-2'>
+                                        <button className='flex flex-wrap text-gray-600 hover:bg-gray-100 hover:dark:text-white hover:dark:bg-red-700 dark:text-gray-100 hover:text-gray-600 border shadow-lg border-red-700 rounded-lg p-2'>
                                             <div className='w-2/8 px-1 pt-0.5'>
                                                 <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
                                             </div>

@@ -20,6 +20,44 @@ function Stock(props){
     );
 }
 
+function IsThereDesc(props){
+    if(props.desc1 == ""){
+        return ("")
+    }else if(props.desc2 == ""){
+        return(props.desc1 + " ")
+    }else if(props.desc3 == ""){
+        return(
+            <div className='sm:pt-4 pt-4 px-16'>
+                {props.desc1}
+                    <br></br><br></br>
+                {props.desc2}
+            </div>
+        )
+    }else if(props.desc4 == ""){
+        return(
+            <div className='sm:pt-4 pt-4'>
+                {props.desc1}
+                <br></br><br></br>
+                {props.desc2}
+                <br></br><br></br>
+                {props.desc3}
+            </div>
+        )
+    }else{
+        return(
+            <div className='sm:pt-4 pt-4'>
+                {props.desc1}
+                <br></br><br></br>
+                {props.desc2}
+                <br></br><br></br>
+                {props.desc3}
+                <br></br><br></br>
+                {props.desc4}
+            </div>            
+        )
+    }
+}
+
 export default class ConcessionUnique extends React.Component {
     componentDidMount() {
         var splitted = window.location.pathname.split('/')[1];
@@ -52,7 +90,12 @@ export default class ConcessionUnique extends React.Component {
                         <div className='flex flex-wrap'>
                             <div className='w-full sm:w-1/2 sm:pt-4 pt-4'>
                                 {
-                                    concess.description
+                                    <IsThereDesc 
+                                        desc1={concess.desc1}
+                                        desc2={concess.desc2}
+                                        desc3={concess.desc3}
+                                        desc4={concess.desc4}
+                                    />
                                 }
                             </div>
                             <div className='w-full sm:w-1/2'>

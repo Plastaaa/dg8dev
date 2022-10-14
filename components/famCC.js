@@ -22,7 +22,7 @@ export default class MiniSearch extends React.Component {
         return (
             <div className="px-10 sm:px-10 md:px-20 lg:px-28 flex flex-wrap -mx-2 overflow-hidden">
                     <div className="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
-                        <a href='./stock?gamme=profile' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                        <a href='./stock?gamme=profile' className="border c-card block bg-white dark:bg-gray-800 shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div className="p-4">
                                 <h2 className="mt-2 mb-2  font-bold">
                                     Profilé
@@ -39,7 +39,7 @@ export default class MiniSearch extends React.Component {
                         </a>
                     </div>
                     <div className="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
-                        <a href='./stock?gamme=capucine' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                        <a href='./stock?gamme=capucine' className="border c-card block bg-white dark:bg-gray-800 shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div className="p-4">
                                 <h2 className="mt-2 mb-2  font-bold">
                                     Capucine
@@ -56,7 +56,7 @@ export default class MiniSearch extends React.Component {
                         </a>
                     </div>
                     <div className="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
-                        <a href='./stock?gamme=integral' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                        <a href='./stock?gamme=integral' className="border c-card block bg-white dark:bg-gray-800 shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div className="p-4">
                                 <h2 className="mt-2 mb-2  font-bold">
                                     Intégral
@@ -73,7 +73,7 @@ export default class MiniSearch extends React.Component {
                         </a>
                     </div>
                     <div className="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
-                        <a href='./stock?gamme=fourgon' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                        <a href='./stock?gamme=fourgon' className="border c-card block bg-white dark:bg-gray-800 shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div className="p-4">
                                 <h2 className="mt-2 mb-2  font-bold">
                                     Fourgon
@@ -90,7 +90,7 @@ export default class MiniSearch extends React.Component {
                         </a>
                     </div>
                     <div className="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
-                        <a href='./stock?gamme=van' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                        <a href='./stock?gamme=van' className="border c-card block bg-white dark:bg-gray-800 shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div className="p-4">
                                 <h2 className="mt-2 mb-2  font-bold">
                                     Van
@@ -107,7 +107,7 @@ export default class MiniSearch extends React.Component {
                         </a>
                     </div>
                     <div className="my-2 px-2 w-full overflow-hidden w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-full">
-                        <a href='./stock?gamme=CAMPING-CAR/FOURGON' className="border c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                        <a href='./stock?gamme=CAMPING-CAR/FOURGON' className="border c-card block bg-white dark:bg-gray-800 shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                             <div className="p-4">
                                 <h2 className="mt-2 mb-2  font-bold">
                                     Camping-car
