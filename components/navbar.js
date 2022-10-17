@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import CardImage from '../components/logo'
-
 import { useState } from "react";
-
 import phoneIMG from '../public/phone.png'
+import youtubeIMG from '../public/logo/social/yt.png'
+import fbIMG from '../public/logo/social/fb.png'
+import pintIMG from '../public/logo/social/pint.png'
+import instaIMG from '../public/logo/social/insta.png'
+
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
@@ -11,23 +14,45 @@ export default function NavBar() {
     return (
         <div>
             <nav className="w-full bg-fixed shadow">
+                <div className='text-end flex-end pt-2'>
+                    <a href='https://www.youtube.com/channel/UCAL-Abx50ylrHpykSGsehUQ' className='pl-4'>
+                        <div className='inline-block'>
+                            <Image height={12} width={12} src={youtubeIMG}/>
+                        </div>
+                        <div className='inline-block pl-1'>
+                            <p>Youtube</p>
+                        </div>
+                    </a>
+                    <a href='https://www.facebook.com/dg8campingcars' className='pl-4'>
+                        <div className='inline-block'>
+                            <Image height={12} width={12} src={fbIMG}/>
+                        </div>
+                        <div className='inline-block pl-1'>
+                            <p>Facebook</p>
+                        </div>
+                    </a>
+                    <a href='https://www.instagram.com/dg8campingcar' className='pl-4'>
+                        <div className='inline-block'>
+                            <Image height={12} width={12} src={instaIMG}/>
+                        </div>
+                        <div className='inline-block pl-1'>
+                            <p>Instagram</p>
+                        </div>
+                    </a>
+                    <a href='https://www.pinterest.fr/dg8cars/' className='pl-4'>
+                        <div className='inline-block'>
+                            <Image height={12} width={12} src={pintIMG}/>
+                        </div>
+                        <div className='inline-block pl-1 pr-4'>
+                            <p>Pinterest</p>
+                        </div>
+                    </a>
+                </div>
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-2 md:py-2 md:block">
                                 {
                                     <CardImage/>
-                                }
-                                {/*
-                                    <a href="tel:+33 0969396973" className='md:hidden'>
-                                        <button className='flex flex-wrap hover:bg-gray-200 bg-gray-300 text-gray-600 hover:text-gray-400 rounded-lg p-2'>
-                                            <div className='w-2/8 px-2'>
-                                                <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
-                                            </div>
-                                            <div className='w-6/8'>
-                                                09 69 39 69 73
-                                            </div>
-                                        </button>
-                                    </a>*/
                                 }
                                 
                             <div className="md:hidden">
@@ -123,6 +148,5 @@ export default function NavBar() {
                 </div>
             </nav>
         </div>
-        
     );
 }
