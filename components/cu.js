@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import Image from 'next/image';
 import CardCC from './cardCC';
+import MapBis from '../components/mapBis';
+
 function IsThereStock(props){
     const ccs = props.ccs;
     if(ccs == ""){
@@ -103,6 +105,9 @@ export default class ConcessionUnique extends React.Component {
                                     <Image src={concess.linkIMG} height={250} width={500} layout={'responsive'}/>
                                     
                                 }
+                            </div>
+                            <div className='w-full pb-8 px-8'>
+                                <MapBis concess={concess.libelle} latitude={concess.latitude} longitude={concess.longitude}/>
                             </div>
                         </div>
                         <div>

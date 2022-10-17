@@ -3,7 +3,7 @@ import LogRocket from 'logrocket'
 LogRocket.init('6xe330/dg8-cc');
 import ReactGA from 'react-ga';
 import React from 'react';
-const TRACKING_ID = "UA-229544101-1"; // OUR_TRACKING_ID
+const TRACKING_ID = "UA-144053228-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 const Tidio = React.lazy(() => import('../components/tidio'));
