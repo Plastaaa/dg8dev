@@ -2,7 +2,6 @@ import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 import Image from 'next/image'
 import rachat from '../public/rachatcash.jpg'
-import React from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useEffect } from 'react';

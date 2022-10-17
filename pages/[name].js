@@ -1,5 +1,4 @@
 import ConcessionUnique from "../components/cu"
-import React from 'react';
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 import React, { useEffect } from 'react';
