@@ -43,6 +43,8 @@ function CVideOuQuoiLaVariable(props){
 }
 
 export default class Contact extends React.Component {
+
+    
     state = {
         resCapt: [],
     }
@@ -127,6 +129,11 @@ export default class Contact extends React.Component {
             this.setState({ resCapt: resCapt });
         });
     }
+
+    componentDidMount(){
+        useEffect (() => {ReactGA.pageview("RachatCash");}, []);
+    }
+
     render(){
         return(
             <div>

@@ -3,6 +3,7 @@ import Footer from '../components/footer'
 import RDVAtelier from "../components/rdvAtelier"
 
 export default function Home(){
+    useEffect (() => {ReactGA.pageview("RDV Atelier");}, []);
     return (
         <div>
             <div>

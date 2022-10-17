@@ -3,6 +3,7 @@ import Footer from '../components/footer'
 import ContactLoc from "../components/contactLoc"
 
 export default function Home(){
+    useEffect (() => {ReactGA.pageview("Location");}, []);
     return (
         <div className='h-screen'>
             <div>

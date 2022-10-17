@@ -3,6 +3,7 @@ import Footer from '../components/footer'
 import Contact from '../components/contact'
 
 export default function Home(){
+    useEffect (() => {ReactGA.pageview("Contact");}, []);
     return (
         <div>
             <div>

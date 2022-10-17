@@ -3,6 +3,7 @@ import Footer from '../components/footer'
 import Marques from '../components/nosMarques'
 
 export default function Home(){
+    useEffect (() => {ReactGA.pageview("Marques");}, []);
     return (
         <div>
             <div>

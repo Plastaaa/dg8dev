@@ -3,6 +3,7 @@ import Footer from '../components/footer'
 import Concessions from '../components/concessions'
 
 export default function Home(){
+    useEffect (() => {ReactGA.pageview("Nos Concessions");}, []);
     return (
         <div>
             <div>

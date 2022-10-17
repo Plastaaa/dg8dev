@@ -5,6 +5,7 @@ import Confidentialite from '../components/confidentialite'
 import Cookies from '../components/cookies'
 
 export default function Home(){
+    useEffect (() => {ReactGA.pageview("Mentions Legales");}, []);
     return (
         <div>
             <div>

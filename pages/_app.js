@@ -12,8 +12,7 @@ const ScriptImport = React.lazy(() => import('../components/scriptImport'))
 
 
 function MyApp({ Component, pageProps }) {
-
-  useEffect (() => {ReactGA.pageview("Home");}, []);
+  useEffect (() => {ReactGA.pageview("Accueil");}, []);
   
   return <>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>

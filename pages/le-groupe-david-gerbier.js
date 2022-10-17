@@ -3,6 +3,7 @@ import Footer from '../components/footer'
 import Groupe from "../components/groupe"
 
 export default function Home(){
+    useEffect (() => {ReactGA.pageview("LeGroupeDavidGerbier");}, []);
     return (
         <div>
             <div>
