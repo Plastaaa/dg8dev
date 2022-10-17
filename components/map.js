@@ -8,7 +8,7 @@ export default function Map(props) {
     var center = [geoData.lat, geoData.lng];
 
     return (
-        <MapContainer center={center} zoom={12} scrollWheelZoom={false} style={{ height: '60vh' }}>
+        <MapContainer center={center} zoom={12} scrollWheelZoom={false} style={{ height: '50vh' }}>
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> Contributeurs'
                 url="http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'"

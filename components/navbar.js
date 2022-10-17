@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import CardImage from '../components/logo'
+import CardImageDark from '../components/logoBis'
 import { useState } from "react";
 import phoneIMG from '../public/phone.png'
 import youtubeIMG from '../public/logo/social/yt.png'
@@ -51,10 +52,11 @@ export default function NavBar() {
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-2 md:py-2 md:block">
-                                {
-                                    <CardImage/>
-                                }
-                                
+                                <div className='dark:hidden'>
+                                    {
+                                        <CardImage/>
+                                    }
+                                </div>
                             <div className="md:hidden">
                                 <button
                                     className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
