@@ -133,7 +133,7 @@ export default class Contact extends React.Component {
     }
 
     componentDidMount(){
-        useEffect (() => {ReactGA.pageview("RachatCash");}, []);
+        ReactGA.pageview("RachatCash");
     }
 
     render(){
