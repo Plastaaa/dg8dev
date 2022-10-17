@@ -5,6 +5,9 @@ import rachat from '../public/rachatcash.jpg'
 import React from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+
 
 function CVideOuQuoiLaVariable(props){
     var isSetNom = props.isSetNom;
