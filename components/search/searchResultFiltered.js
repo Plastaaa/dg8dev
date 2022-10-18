@@ -14,7 +14,7 @@ export default function SearchFiltered(props) {
                                         refe={cc.RefDMS}
                                         marque={cc.marque} 
                                         modele={cc.modele} 
-                                        ver={cc.ver} 
+                                        ver={cc.ver}
                                         prix={cc.prixTTC} 
                                         photo={cc.linkIMG} 
                                         km={cc.kilometrage} 
