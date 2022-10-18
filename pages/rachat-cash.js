@@ -297,7 +297,7 @@ export default class Contact extends React.Component {
                                     </div>
                                 </div>
                                 <div className='w-1/2 pt-10 px-8 py-2'>
-                                    <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                                    <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-800 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                         <button onClick={this.stateSend} className="w-full">Envoyer</button>
                                     </div>
                                 </div>

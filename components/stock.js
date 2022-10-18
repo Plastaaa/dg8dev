@@ -173,7 +173,7 @@ export default class Stock extends React.Component {
                 <div className="my-1 px-1 w-1/2 overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2">
                   <input placeholder="Réference" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" type="text" name="ref" onSubmit={this.stateChange} onChange={this.stateChange}/>
                 </div>
-                  <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 w-full rounded-lg" onClick={this.stateSend}>
+                  <button className="bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 w-full rounded-lg" onClick={this.stateSend}>
                     Rechercher
                   </button>
               </div>

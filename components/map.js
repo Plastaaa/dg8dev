@@ -13,11 +13,7 @@ export default function Map(props) {
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> Contributeurs'
                 url="http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'"
             />
-            
             <MarkerConcess/>
-            {
-                //<ChangeView concess={props.concess}/>
-            }
         </MapContainer>
     );
 }

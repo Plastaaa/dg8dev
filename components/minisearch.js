@@ -80,7 +80,7 @@ export default class MiniSearch extends React.Component {
                     </div>
                 </div>
                 <div className="pt-4 grid place-items-center">
-                    <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 w-full lg:w-96 md:w-64 sm:w-32 rounded-lg" onClick={this.stateSend}>
+                    <button className="bg-green-700 hover:bg-red-700 text-white font-bold py-2 px-4 w-full lg:w-96 md:w-64 sm:w-32 rounded-lg" onClick={this.stateSend}>
                         Rechercher
                     </button>
                 </div>

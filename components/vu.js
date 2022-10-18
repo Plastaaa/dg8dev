@@ -317,15 +317,15 @@ export default class VehiculeUnique extends React.Component {
                         <div>
                             <div className="border-t flex flex-wrap border-b py-4 mt-7 border-gray-200">
                                 <div className='w-1/2 px-4'>
-                                    <button className="bg-red-600 hover:bg-red-700 text-white w-full font-bold py-2 px-4 rounded-lg">
+                                    <button className="bg-green-700 hover:bg-green-800 text-white w-full font-bold py-2 px-4 rounded-lg">
                                         {
                                             Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cc.prixTTC)
                                         }
                                     </button>
                                 </div>
                                 <div className='w-1/2 px-4'>
-                                    <div className='w-full bg-red-600 hover:bg-red-700 text-white w-full text-center font-bold py-2 px-4 rounded-lg'>
-                                        <label htmlFor="my-modal-3" className="bg-red-600 hover:bg-red-700 text-center text-white w-full font-bold py-2 px-4 rounded-lg">Me faire recontacter</label>
+                                    <div className='w-full bg-green-700 hover:bg-green-800 text-white w-full text-center font-bold py-2 px-4 rounded-lg'>
+                                        <label htmlFor="my-modal-3" className="bg-green-700 hover:bg-green-800 text-center text-white w-full font-bold py-2 px-4 rounded-lg">Me faire recontacter</label>
                                     </div>
 
                                     <input type="checkbox" id="my-modal-3" className="modal-toggle" />

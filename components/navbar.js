@@ -130,10 +130,13 @@ export default function NavBar() {
                                 <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/rachat-cash">Rachat Cash</a>
                                 </li>
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                    <a href="/contact">Contact</a>
+                                </li>
                                 {
                                 <li>
                                     <a href="tel:+33 0969396973">
-                                        <button className='flex flex-wrap text-gray-600 hover:bg-gray-100 hover:dark:text-white hover:dark:bg-red-700 dark:text-gray-100 hover:text-gray-600 border shadow-lg border-red-700 rounded-lg p-2'>
+                                        <button className='flex flex-wrap text-gray-600 hover:bg-green-700 hover:dark:text-white hover:dark:bg-red-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
                                             <div className='w-2/8 px-1 pt-0.5'>
                                                 <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
                                             </div>

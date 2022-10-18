@@ -88,7 +88,7 @@ export default function CardCC(props) {
                     <ImgCard link={props.photo}/>                
                 </div>
                 <div className="p-4">
-                    <span className="inline-block px-2 py-1 leading-none dark:bg-red-600 dark:text-white bg-red-200 text-red-800 rounded-full font-semibold uppercase tracking-wide text-xs">
+                    <span className="inline-block px-2 py-1 leading-none dark:bg-green-600 dark:text-white bg-green-800 text-white rounded-full font-semibold uppercase tracking-wide text-xs">
                         {props.etat + " " + props.annee}
                     </span>
                     <h2 className="mt-2 mb-2 dark:text-gray-200 font-bold">
