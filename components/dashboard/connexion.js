@@ -1,12 +1,8 @@
 import React from "react";
 import axios from "axios";
+import Cookies from 'universal-cookie';
 
-function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+const cookies = new Cookies();
 
 export default class Connexion extends React.Component {
     state = {
@@ -27,10 +23,10 @@ export default class Connexion extends React.Component {
             //this.setState({ resLog });
 
             if(resLog.length == 1){
-                setCookie("log", "true", 2);
-                window.location.href = "./dashboard/principal"
+                cookies.set('logging', 'true', {path: '/'});
+                window.location.reload(true);
             }else{
-                window.location.href = "./login"
+
             }
         })
     }

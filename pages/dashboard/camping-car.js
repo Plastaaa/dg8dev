@@ -1,8 +1,7 @@
 import Cookies from 'universal-cookie';
 import Connexion from '../../components/dashboard/connexion';
 import React from 'react';
-import DashBoard from '../../components/dashboard/dash';
-import AsideMenuBis from '../../components/dashboard/asideMenu';
+import CampingCarListAdmin from '../../components/dashboard/ccListAdmin'
 
 function IsLogged(props){
     const cook = props.cookiee;
@@ -17,7 +16,7 @@ function IsLogged(props){
 }
 function Logged(){
     return (
-        console.log("log")
+        <CampingCarListAdmin/>
     )
 }
 function NotLogged(){
@@ -30,7 +29,7 @@ function NotLogged(){
     )
 }
 
-export default class Principal extends React.Component {
+export default class CampingCar extends React.Component {
     render(){
         const cookies = new Cookies();
         console.log(cookies.get('logging'))

@@ -1,25 +1,42 @@
-import React from 'react'
-import axios from 'axios'
+import Cookies from 'universal-cookie';
+import Connexion from '../../components/dashboard/connexion';
+import React from 'react';
+import AsideMenuBis from './asideMenu';
+import StatDash from './dash'
 
-export default class VehiculeUnique extends React.Component {
-    componentDidMount() {
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[2]}`)
-          .then(res => {
-            const campingcar = res.data;
-            this.setState({ campingcar });
-        })
-    }
-
-    state = {
-        campingcar: [],
-    }
-
-
-    render() {
+function IsLogged(props){
+    const cook = props.cookiee;
+    if(cook == "true"){
         return (
-        <div>
-            
-        </div>
+            <Logged/>
         )
     }
-  }
+    return (
+        <NotLogged/>
+    )
+}
+function Logged(){
+    return (
+        <div>
+            <div className='flex'>
+                <AsideMenuBis/>
+                <StatDash/>
+            </div>
+        </div>
+    )
+}
+function NotLogged(){
+    return (
+        <Connexion/>
+    )
+}
+
+export default class DashBoardHome extends React.Component {
+    render(){
+        const cookies = new Cookies();
+        console.log(cookies.get('logging'))
+        return(
+            <IsLogged cookiee={cookies.get('logging')}/>
+        )
+    }
+}

@@ -9,7 +9,8 @@ module.exports = {
     extend: {},
   },
   images: {
-      domains: ['hegerys.wsvehiculescrm.selectup.com'],
+      domains: 
+      ['hegerys.wsvehiculescrm.selectup.com',"dg8campingcar63.com"], 
     },
   plugins: [],
   
