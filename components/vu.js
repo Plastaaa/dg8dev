@@ -230,7 +230,10 @@ export default class VehiculeUnique extends React.Component {
                                 this.state.imgCC.map((img) => (
                                         <SplideSlide>
                                             <a onClick={e => {this.showModal();}}>
-                                                <Image src={img.linkIMG} layout={"fill"}/>
+                                                {
+                                                    //<Image src={img.linkIMG} layout={"fill"}/>
+                                                }
+                                                <img src={img.linkIMG}></img>
                                             </a>
                                         </SplideSlide>
                                 ))

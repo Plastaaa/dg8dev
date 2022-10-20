@@ -10,7 +10,7 @@ module.exports = {
   },
   images: {
       domains: 
-      ['hegerys.wsvehiculescrm.selectup.com',"dg8campingcar63.com"], 
+      ['hegerys.wsvehiculescrm.selectup.com',"dg8campingcar63.com","nunesaccount.alwaysdata.net"], 
     },
   plugins: [],
   

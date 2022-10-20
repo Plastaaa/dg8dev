@@ -15,7 +15,8 @@ export default class ListCCAdmin extends React.Component {
 
     state = {
         ccs: [],
-        isComponentVisible: false
+        isComponentVisible: false,
+        isTableVisible: true,
     }
 
     stateModif = () => {
@@ -32,6 +33,10 @@ export default class ListCCAdmin extends React.Component {
             isComponentVisible: !this.state.isComponentVisible 
         }); 
 
+        this.setState({
+            isTableVisible: !this.state.isTableVisible
+        })
+
         this.stateModif();
     }
 
@@ -42,13 +47,16 @@ export default class ListCCAdmin extends React.Component {
                     <div className='w-2/12'>
                         <AsideMenu/>
                     </div>
-                    {this.state.isComponentVisible ? <AddCC/> : null} 
-                    <div className='w-10/12 bg-gray-50 pl-4 pt-4'>
+                    
+                    <div className='w-10/12 pl-4 pt-4'>
                         <button onClick={this.stateChange} type="button" class="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Ajouter un camping-car
                             <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </button>
-                        <div className="overflow-x-auto p-8">
+                        {this.state.isComponentVisible ? <AddCC/> : null} 
+                        {
+                            this.state.isTableVisible ? 
+                            <div className="overflow-x-auto p-8">
                             <table className="table w-full">
                                 <thead>
                                     <tr>
@@ -60,7 +68,9 @@ export default class ListCCAdmin extends React.Component {
                                         <th>Gamme</th>
                                         <th>Année</th>
                                         <th>Prix TTC</th>
-                                        <th></th>
+                                        {
+                                            //<th></th>
+                                        }
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -75,20 +85,26 @@ export default class ListCCAdmin extends React.Component {
                                                 <td>{cc.gamme}</td>
                                                 <td>{cc.année}</td>
                                                 <td>{cc.prixTTC}</td>
-                                                <td>
-                                                    <button id='nom' name='nom' value={cc.RefDMS} onClick={this.stateChange} className='bg-red-500 rounded-lg p-2 text-white line-through'>
-                                                        Modifier
-                                                    </button>
-                                                    <button>
-                                                        Supprimer
-                                                    </button>
-                                                </td>
+                                                {/*
+                                                    <td>
+                                                        <button id='nom' name='nom' value={cc.RefDMS} onClick={this.stateChange} className='bg-red-500 rounded-lg p-2 text-white line-through'>
+                                                            Modifier
+                                                        </button>
+                                                        <button>
+                                                            Supprimer
+                                                        </button>
+                                                    </td>*/
+                                                }
+                                                
                                             </tr>
                                         )
                                     }
                                 </tbody>
                             </table>
                         </div>
+                             : null
+                        }
+                        
                     </div>
                 </div>
             </div>
