@@ -122,7 +122,7 @@ export default class Contact extends React.Component {
     onChange = (value) => {
         axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
             params: {
-                secret: '6LfMji8iAAAAAP_ylvLKZkg1BRuan4bn1H6sa4eF',
+                secret: '6LcBGZ4iAAAAAGdQHFoM8HVX0Oz_g1Nanzi5jJOy',
                 response: value,
             }
         })

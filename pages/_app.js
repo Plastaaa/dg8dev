@@ -18,7 +18,6 @@ function MyApp({ Component, pageProps }) {
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
     <link rel="manifest" href="/site.webmanifest"/>
 
-    <meta name="description" content="DG8Camping-car est un site officiel du groupe David Gerbier proposant des véhicules neufs et d'occasions dans toutes les gammes."/>
     <title>DG8 Camping-car</title>
     <Component {...pageProps}/>
     <div>
