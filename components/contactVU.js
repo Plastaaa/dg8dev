@@ -125,7 +125,7 @@ export default class Contact extends React.Component {
                         <div className="w-full xs:w-full sm:w-full md:w-1/2 content-center">
                             <div className="pt-4 px-4">
                                 <ReCAPTCHA
-                                    sitekey="6LfMji8iAAAAAI57trdQtuu8HZLx9QpjrscbFiMk"
+                                    sitekey="6LcBGZ4iAAAAAFAjIXUXagKVqG2zOn2TSwXMETc5"
                                     onChange={this.onChange}
                                     badge="inline"
                                 />
