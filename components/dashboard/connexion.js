@@ -20,10 +20,11 @@ export default class Connexion extends React.Component {
         })
         .then(res => {
             const resLog = res.data;
-            //this.setState({ resLog });
+            console.log(resLog.id);
 
             if(resLog.length == 1){
                 cookies.set('logging', 'true', {path: '/'});
+                cookies.set('logId', resLog[0].id ,{path: '/'})
                 window.location.reload(true);
             }else{
 

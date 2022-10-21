@@ -1,10 +1,12 @@
 import React from "react"
 import axios from "axios";
-import ImportPhoto from './importPhoto'
+import Cookies from "universal-cookie";
 
 export default class AddCC extends React.Component {
 
     componentDidMount(){
+        const cookies = new Cookies();
+
         this.setState({ selectedFile1: "" });
         this.setState({ selectedFile2: "" });
         this.setState({ selectedFile3: "" });
@@ -13,11 +15,21 @@ export default class AddCC extends React.Component {
         this.setState({ selectedFile6: "" });
         this.setState({ selectedFile7: "" });
         this.setState({ selectedFile8: "" });
-        this.setState({ famille: "CAMPING-CAR" })
+        this.setState({ famille: "CAMPING-CAR" });
+        this.setState({ concess: cookies.get('logId') });
     }
 
     state = {
         resCapt: [],
+    }
+
+    handleChange = (e) => {
+        this.setState({ etat: e.target.value });
+        console.log(this.state.etat);
+    }
+    handleChangePremMain = (e) => {
+        this.setState({ premmain: e.target.value });
+        console.log(this.state.premmain);
     }
     
     stateSend = () => {
@@ -128,6 +140,46 @@ export default class AddCC extends React.Component {
                 img8: img8,
             }
         })
+
+        this.setState({ selectedFile1: "" });
+        this.setState({ selectedFile2: "" });
+        this.setState({ selectedFile3: "" });
+        this.setState({ selectedFile4: "" });
+        this.setState({ selectedFile5: "" });
+        this.setState({ selectedFile6: "" });
+        this.setState({ selectedFile7: "" });
+        this.setState({ selectedFile8: "" });
+        this.setState({ famille: "CAMPING-CAR" });
+        this.setState({ concess: cookies.get('logId') });
+        this.setState({ marque: "" });
+        this.setState({ model: "" });
+        this.setState({ version: "" });
+        this.setState({ km: "" });
+        this.setState({ bdv: "" });
+        this.setState({ prix: "" });
+        this.setState({ ref: "" });
+        this.setState({ top: "" });
+        this.setState({ etat: "" });
+        this.setState({ gamme: "" });
+        this.setState({ annee: "" });
+        this.setState({ premiere: "" });
+        this.setState({ tva: "" });
+        this.setState({ moteur: "" });
+        this.setState({ nbportes: "" });
+        this.setState({ porteur: "" });
+        this.setState({ puissdin: "" });
+        this.setState({ puissfisc: "" });
+        this.setState({ cylindre: "" });
+        this.setState({ placecg: "" });
+        this.setState({ energie: "" });
+        this.setState({ haut: "" });
+        this.setState({ larg: "" });
+        this.setState({ long: "" });
+        this.setState({ pdsvide: "" });
+        this.setState({ pdscharge: "" });
+        this.setState({ respro: "" });
+        this.setState({ ressale: "" });
+        this.setState({ typelit: "" });
     }
 
     stateChange = (f) => {
@@ -454,7 +506,7 @@ export default class AddCC extends React.Component {
                 <div className="flex flex-wrap">
                     <div className="w-1/4 pt-4 px-4 py-2">
                         <label htmlFor="nom" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ref DMS (DBS)</label>
-                        <input type="number" id="nom" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.ref} required/>
+                        <input type="text" id="nom" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.ref} required/>
                     </div>
                     
                     <div className="w-1/4 pt-4 px-4 py-2">
@@ -483,7 +535,11 @@ export default class AddCC extends React.Component {
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Etat</label>
-                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Etat" name="etat" onChange={this.stateChange} value={this.state.etat} required/>
+                        <select value={this.state.etat} onChange={this.handleChange} className="dropdown bg-gray-50 border border-gray-300 p-3 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="etat" required>
+                            <option key={0}>Choix de l'état</option>
+                            <option key={1}>Neuf</option>
+                            <option key={2}>Occasion</option>
+                        </select>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Famille</label>
@@ -499,8 +555,11 @@ export default class AddCC extends React.Component {
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Première main</label>
-                        <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Première main" name="premmain" onChange={this.stateChange} value={this.state.premmain} required/>
-                    </div>
+                        <select value={this.state.premmain} onChange={this.handleChangePremMain} className="dropdown bg-gray-50 border border-gray-300 p-3 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="etat" required>
+                            <option key={0}>Première main</option>
+                            <option value={1} key={1}>Oui</option>
+                            <option value={0} key={2}>Non</option>
+                        </select>                    </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Concession</label>
                         <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Concession" name="concess" onChange={this.stateChange} value={this.state.concess} required/>
@@ -535,15 +594,15 @@ export default class AddCC extends React.Component {
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Hauteur</label>
-                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Hauteur" name="haut" onChange={this.stateChange} value={this.state.haut} required/>
+                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Hauteur 2.34" name="haut" onChange={this.stateChange} value={this.state.haut} required/>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Largeur</label>
-                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Largeur" name="larg" onChange={this.stateChange} value={this.state.larg} required/>
+                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Largeur 2.14" name="larg" onChange={this.stateChange} value={this.state.larg} required/>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Longueur</label>
-                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Longueur" name="long" onChange={this.stateChange} value={this.state.long} required/>
+                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Longueur 6.99" name="long" onChange={this.stateChange} value={this.state.long} required/>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Poids à vide (kg)</label>

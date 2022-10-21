@@ -15,7 +15,7 @@ function IsLogged(props){
         <NotLogged/>
     )
 }
-function Logged(){
+function Logged(props){
     return (
         <div>
             <div className='flex'>
@@ -34,9 +34,9 @@ function NotLogged(){
 export default class DashBoardHome extends React.Component {
     render(){
         const cookies = new Cookies();
-        console.log(cookies.get('logging'))
+        console.log(cookies.get('logging'));
         return(
-            <IsLogged cookiee={cookies.get('logging')}/>
+            <IsLogged cookiee={cookies.get('logging')} cookiee2={cookies.get('logId')}/>
         )
     }
 }
