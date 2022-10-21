@@ -23,8 +23,9 @@ export default class Connexion extends React.Component {
             console.log(resLog.id);
 
             if(resLog.length == 1){
-                cookies.set('logging', 'true', {path: '/'});
-                cookies.set('logId', resLog[0].id ,{path: '/'})
+                cookies.set('logging', 'true', {path: '/', expires: new Date(Date.now()+4592000)});
+                cookies.set('logId', resLog[0].id ,{path: '/', expires: new Date(Date.now()+4592000)})
+                cookies.set('logPref', resLog[0].prefix, {path: '/', expires: new Date(Date.now()+4592000)})
                 window.location.reload(true);
             }else{
 

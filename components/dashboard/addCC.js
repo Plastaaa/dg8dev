@@ -17,6 +17,10 @@ export default class AddCC extends React.Component {
         this.setState({ selectedFile8: "" });
         this.setState({ famille: "CAMPING-CAR" });
         this.setState({ concess: cookies.get('logId') });
+        this.setState({ prefix: cookies.get('logPref') })
+        this.setState({
+            ref: Math.floor(Math.random() * 999999) + 1
+        })
     }
 
     state = {
@@ -227,279 +231,138 @@ export default class AddCC extends React.Component {
         this.setState({ selectedFile8: event.target.files[0] });
     };
 
-    onFileUpload1 = () => {
-        const formData = new FormData();
-        formData.append(
+    onFileUploadAll = () => {
+        const formData1 = new FormData();
+        formData1.append(
             "myFile",
             this.state.selectedFile1,
             this.state.selectedFile1.name
         );
         console.log(this.state.selectedFile1);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData1, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData1 = () => {
-        if (this.state.selectedFile1) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile1.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile1.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
 
-    onFileUpload2 = () => {
-        const formData = new FormData();
-        formData.append(
+        const formData2 = new FormData();
+        formData2.append(
             "myFile",
             this.state.selectedFile2,
             this.state.selectedFile2.name
         );
         console.log(this.state.selectedFile2);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData2, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData2 = () => {
-        if (this.state.selectedFile2) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile2.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile2.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
 
-    onFileUpload3 = () => {
-        const formData = new FormData();
-        formData.append(
+        const formData3 = new FormData();
+        formData3.append(
             "myFile",
             this.state.selectedFile3,
             this.state.selectedFile3.name
         );
         console.log(this.state.selectedFile3);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData3, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData3 = () => {
-        if (this.state.selectedFile3) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile3.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile3.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
 
-    onFileUpload4 = () => {
-        const formData = new FormData();
-        formData.append(
+        const formData4 = new FormData();
+        formData4.append(
             "myFile",
             this.state.selectedFile4,
             this.state.selectedFile4.name
         );
         console.log(this.state.selectedFile4);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData4, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData4 = () => {
-        if (this.state.selectedFile4) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile4.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile4.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
 
-    onFileUpload5 = () => {
-        const formData = new FormData();
-        formData.append(
+        const formData5 = new FormData();
+        formData5.append(
             "myFile",
             this.state.selectedFile5,
             this.state.selectedFile5.name
         );
         console.log(this.state.selectedFile5);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData5, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData5 = () => {
-        if (this.state.selectedFile5) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile5.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile5.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
 
-    onFileUpload6 = () => {
-        const formData = new FormData();
-        formData.append(
+        const formData6 = new FormData();
+        formData6.append(
             "myFile",
             this.state.selectedFile6,
             this.state.selectedFile6.name
         );
         console.log(this.state.selectedFile6);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData6, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData6 = () => {
-        if (this.state.selectedFile6) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile6.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile6.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
 
-    onFileUpload7 = () => {
-        const formData = new FormData();
-        formData.append(
+        const formData7 = new FormData();
+        formData7.append(
             "myFile",
             this.state.selectedFile7,
             this.state.selectedFile7.name
         );
         console.log(this.state.selectedFile7);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData7, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData7 = () => {
-        if (this.state.selectedFile7) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile7.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile7.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
 
-    onFileUpload8 = () => {
-        const formData = new FormData();
-        formData.append(
+        const formData8 = new FormData();
+        formData8.append(
             "myFile",
             this.state.selectedFile8,
             this.state.selectedFile8.name
         );
         console.log(this.state.selectedFile8);
 
-        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData, {
+        axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData8, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
             console.log(res);
         });
-    };
-    fileData8 = () => {
-        if (this.state.selectedFile8) {
-            return (
-                <div>
-                    <p>Nom fichier: {this.state.selectedFile8.name}</p>
-                    <p>Type de fichier: {this.state.selectedFile8.type}</p>      
-                </div>
-            );
-        }else{
-            return (
-                <div className="py-2">
-                    <h4>Intégrer une photo avant d'envoyer celle-ci</h4>
-                </div>
-            );
-        }
-    };
+    }
 
     render(){
+        const cookies = new Cookies();
         return (
         <div className="w-10/12 pt-8">
             <div className="py-2 lg:py-2 px-4 mx-auto max-w-screen-md">
@@ -508,8 +371,11 @@ export default class AddCC extends React.Component {
                 <div className="flex flex-wrap">
                     <div className="w-1/4 pt-4 px-4 py-2">
                         <label htmlFor="nom" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ref DMS (DBS)</label>
-                        <input type="text" id="nom" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.ref} required/>
-                    </div>
+                        <div className="flex">
+                            <input type="text" disabled id="nom" className="w-1/2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.prefix} required/>
+                            <input type="text" id="nom" className="w-1/2 shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.ref} required/>
+                        </div>
+                   </div>
                     
                     <div className="w-1/4 pt-4 px-4 py-2">
                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Marque</label>
@@ -629,104 +495,74 @@ export default class AddCC extends React.Component {
                     <div className="pt-4 px-4 flex w-full">
                         {
                             // Test d'import fichier random
-                            <div className="w-full">
+                            <div className="">
                                 <h2 className="mb-4 text-2xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Section photos</h2>
                                 <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Pensez à bien ajouter chaque photo une par une.</p>
-                                {/*Import 1*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange1} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload1} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                <div className="flex flex-wrap">
+                                    <div className="w-1/2">
+                                        {/*Import 1*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange1} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData1()}
-                                </div>
-                                {/*Import 2*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange2} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload2} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                    <div className="w-1/2">
+                                        {/*Import 2*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange2} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData2()}
-                                </div>
-                                {/*Import 3*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange3} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload3} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                    <div className="w-1/2">
+                                        {/*Import 3*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange3} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData3()}
-                                </div>
-                                {/*Import 4*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange4} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload4} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                    <div className="w-1/2">
+                                        {/*Import 4*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange4} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData4()}
-                                </div>
-                                {/*Import 5*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange5} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload5} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                    <div className="w-1/2">
+                                        {/*Import 5*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange5} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData5()}
-                                </div>
-                                {/*Import 6*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange6} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload6} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                    <div className="w-1/2">
+                                        {/*Import 6*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange6} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData6()}
-                                </div>
-                                {/*Import 7*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange7} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload7} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                    <div className="w-1/2">
+                                        {/*Import 7*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange7} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData7()}
-                                </div>
-                                {/*Import 8*/}
-                                <div>
-                                    <div className='flex'>
-                                        <input type="file" onChange={this.onFileChange8} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                        <div className='p-2'>
-                                            <button onClick={this.onFileUpload8} className={"bg-red-600 text-white p-4 rounded-lg"}>
-                                                Ajouter
-                                            </button>
+                                    <div className="w-1/2">
+                                        {/*Import 8*/}
+                                        <div>
+                                            <div className='w-full'>
+                                                <input type="file" onChange={this.onFileChange8} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                            </div>
                                         </div>
                                     </div>
-                                {this.fileData8()}
                                 </div>
                                 {
                                     //<ImportPhoto/>
@@ -734,7 +570,11 @@ export default class AddCC extends React.Component {
                             </div>
                         }
                     </div>
-                    
+                    <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
+                        <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            <button onClick={this.onFileUploadAll} className="w-full">Envoyer les photos</button>
+                        </div>
+                    </div>
                     <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
                         <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                             <button onClick={this.stateSend} className="w-full">Envoyer</button>

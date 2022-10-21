@@ -43,6 +43,14 @@ export default class ListCCAdmin extends React.Component {
         this.stateModif();
     }
 
+    suppSend = (f) => {
+        //const {name, value} = f.value;
+        //this.setState({
+        //  [name]: value,
+        //});
+        console.log(f)
+    }
+
     render(){
         return(
             <div>
@@ -69,7 +77,7 @@ export default class ListCCAdmin extends React.Component {
                                         <th>Modele</th>
                                         <th>Prix TTC</th>
                                         {
-                                            //<th>Actions</th>
+                                            <th>Actions</th>
                                         }
                                     </tr>
                                 </thead>
@@ -98,7 +106,15 @@ export default class ListCCAdmin extends React.Component {
                                                             <div className="modal">
                                                                 <div className="modal-box relative">
                                                                     <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                                                                    
+                                                                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Suppression</h2>
+                                                                    <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400">Etes vous vraiment sûr de vouloir supprimer ce véhicule ?</p>
+
+                                                                    <input value={cc.RefDMS} type={'hidden'} id={"2"} name={"refSupp"}/>
+
+                                                                    <div className='w-full bg-red-600 hover:bg-red-800 text-white w-full text-center py-2 px-4 rounded-lg'>
+                                                                        
+                                                                        <label name={"supp"} value={cc.RefDMS} className="bg-red-600 hover:bg-red-800 text-center text-white w-full py-2 px-4 rounded-lg">Oui, supprimer</label>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
