@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import img1 from '../public/slider/slide1.jpg';
-import img2 from '../public/slider/slide2.png';
+import img2 from '../public/slider/slide2.jpg';
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
