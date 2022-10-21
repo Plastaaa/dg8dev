@@ -8,6 +8,7 @@ export default function Home(){
 
     return (
       <div>
+        <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
         <HomePage/>
       </div>
     )

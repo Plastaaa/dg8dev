@@ -9,6 +9,7 @@ export default function Home(){
     useEffect (() => {ReactGA.pageview("Stock");}, []);
     return (
         <div>
+            <meta name="description" content="Choisissez la marque de camping car qui vous correspond et découvrez tous nos véhicules pour conduire confortablement . "/>
             <NavBar/>
             <Stock/>
             <Footer/>

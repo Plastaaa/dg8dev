@@ -138,6 +138,8 @@ export default class AddCC extends React.Component {
             var img8 = "";
         }
 
+        console.log(img3);
+
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/addCC3.php`,{
             params:{
                 ref: refv2,
@@ -151,7 +153,9 @@ export default class AddCC extends React.Component {
                 img8: img8,
             }
         })
-
+        this.setState({
+            ref: Math.floor(Math.random() * 999999) + 1
+        })
         this.setState({ selectedFile1: "" });
         this.setState({ selectedFile2: "" });
         this.setState({ selectedFile3: "" });
@@ -462,8 +466,8 @@ export default class AddCC extends React.Component {
                         <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Puissance DIN" name="puissdin" onChange={this.stateChange} value={this.state.puissdin} required/>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
-                        <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cylindrée</label>
-                        <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Cylindrée" name="cyl" onChange={this.stateChange} value={this.state.cyl} required/>
+                        <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cylindrée (cm3)</label>
+                        <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="2200" name="cyl" onChange={this.stateChange} value={this.state.cyl} required/>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Places carte grises</label>

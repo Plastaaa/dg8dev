@@ -8,6 +8,7 @@ export default function Home(){
     useEffect (() => {ReactGA.pageview("Contact");}, []);
     return (
         <div>
+            <meta name="description" content="Prenez contact avec notre équipe, afin de parler de votre projet d'acquisition ou de vente de véhicule. Elle sera heureuse de répondre à vos questions."/>
             <div>
                 {
                     <NavBar/>

@@ -82,12 +82,19 @@ export default class ConcessionUnique extends React.Component {
     
     render() {
         return (
-            <div className='p-4'>
+            <div className=''>
                 {
                 this.state.concess.map((concess) => (
                     <div>
                         <div>
-                            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">{concess.libelle}</h2>
+                            <body class="">
+                                <div class="relative">
+                                    <img src={"/bannTest.png"} />
+                                    <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        {concess.libelle}
+                                    </h1>
+                                </div>
+                            </body>
                         </div>
                         <div className='flex flex-wrap'>
                             <div className='w-full sm:w-1/2 sm:pt-4 pt-4'>

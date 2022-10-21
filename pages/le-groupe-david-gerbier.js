@@ -8,6 +8,7 @@ export default function Home(){
     useEffect (() => {ReactGA.pageview("LeGroupeDavidGerbier");}, []);
     return (
         <div>
+            <meta name="description" content="Spécialiste dans le secteur automobile, le groupe Gerbier s'est développer il y a 10ans dans les véhicules de loisir et créé la filiale DG8 camping-car."/>
             <div>
                 {
                     <NavBar/>

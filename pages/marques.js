@@ -8,6 +8,7 @@ export default function Home(){
     useEffect (() => {ReactGA.pageview("Marques");}, []);
     return (
         <div>
+            <meta name="description" content="DG8 camping-car à su depuis sa création se créer un réseaux, plus de quarante marques lui font confiance. Découvrez toutes nos marques partenaires. "/>
             <div>
                 {
                     <NavBar/>

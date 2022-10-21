@@ -8,6 +8,7 @@ export default function Home(){
     useEffect (() => {ReactGA.pageview("Nos Concessions");}, []);
     return (
         <div>
+            <meta name="description" content="Découvrez nos différentes concessions, plus d'une dizaines situées de la frontière Suisse jusqu'à Lyon. Contactez nous pour plus d'informations. "/>
             <div>
                 {
                     <NavBar/>

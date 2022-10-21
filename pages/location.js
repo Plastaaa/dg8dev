@@ -8,6 +8,7 @@ export default function Home(){
     useEffect (() => {ReactGA.pageview("Location");}, []);
     return (
         <div className='h-screen'>
+            <meta name="description" content="Pour partir en vacances plus sereinement, découvrez notre gamme de camping car en location. Prenez contact pour discuter de votre projet voyage. "/>
             <div>
                 <NavBar/>
             </div>

@@ -139,6 +139,7 @@ export default class Contact extends React.Component {
     render(){
         return(
             <div>
+                <meta name="description" content="Vous désirez vendre votre véhicules ? DG8 camping car vous propose un service de rachat cash. Prenez contact avec notre équipe. "/>
                 <div>
                     <NavBar/>
                 </div>
