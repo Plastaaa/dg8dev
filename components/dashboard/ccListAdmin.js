@@ -2,15 +2,18 @@ import AsideMenu from './asideMenu'
 import React from 'react'
 import axios from 'axios';
 import AddCC from './addCC'
+import Cookies from 'universal-cookie';
 
 export default class ListCCAdmin extends React.Component {
 
     componentDidMount(){
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCC.php`)
+        const cookies = new Cookies();
+        var idcc = cookies.get('logId');
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCByConcessBis.php?concess=${idcc}`)
         .then(res => {
             const ccs = res.data;
             this.setState({ ccs });
-        });
+        })
     }
 
     state = {
@@ -64,12 +67,9 @@ export default class ListCCAdmin extends React.Component {
                                         <th>Concession</th>
                                         <th>Marque</th>
                                         <th>Modele</th>
-                                        <th>Boite de vitesse</th>
-                                        <th>Gamme</th>
-                                        <th>Année</th>
                                         <th>Prix TTC</th>
                                         {
-                                            //<th></th>
+                                            //<th>Actions</th>
                                         }
                                     </tr>
                                 </thead>
@@ -81,21 +81,30 @@ export default class ListCCAdmin extends React.Component {
                                                 <td>{cc.libelle}</td>
                                                 <td>{cc.marque}</td>
                                                 <td>{cc.modele}</td>
-                                                <td>{cc.boitedevitesse}</td>
-                                                <td>{cc.gamme}</td>
-                                                <td>{cc.année}</td>
-                                                <td>{cc.prixTTC}</td>
+                                                <td>{cc.prixTTC} €</td>
                                                 {/*
-                                                    <td>
-                                                        <button id='nom' name='nom' value={cc.RefDMS} onClick={this.stateChange} className='bg-red-500 rounded-lg p-2 text-white line-through'>
-                                                            Modifier
-                                                        </button>
-                                                        <button>
-                                                            Supprimer
-                                                        </button>
-                                                    </td>*/
-                                                }
-                                                
+                                                <td>
+                                                    <div className='flex flex-wrap'>
+                                                        <div>
+                                                            <button className='rounded-lg p-2 bg-gray-300'>
+                                                                Modifier
+                                                            </button>
+                                                        </div>
+                                                        <div className='pl-2'>
+                                                            <div className='w-full bg-red-600 hover:bg-red-800 text-white w-full text-center py-2 px-4 rounded-lg'>
+                                                                <label htmlFor="my-modal-3" className="bg-red-600 hover:bg-red-800 text-center text-white w-full py-2 px-4 rounded-lg">Supprimer</label>
+                                                            </div>
+                                                            <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+                                                            <div className="modal">
+                                                                <div className="modal-box relative">
+                                                                    <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                */}
                                             </tr>
                                         )
                                     }

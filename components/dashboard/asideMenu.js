@@ -9,6 +9,7 @@ export default class AsideMenu extends React.Component {
     stateDisconnect(){
 
         cookies.set('logging', '', {path: '/'});
+        cookies.set('logId', '', {path: '/'})
         window.location.reload(false);
     }
 
