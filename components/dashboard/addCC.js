@@ -35,10 +35,15 @@ export default class AddCC extends React.Component {
         this.setState({ premmain: e.target.value });
         console.log(this.state.premmain);
     }
+    handleChangeGamme = (e) => {
+        this.setState({ gamme: e.target.value });
+        console.log(this.state.gamme);
+    }
     
     stateSend = () => {
         this.setState({marque: ""});
         var top = "http://nunesaccount.alwaysdata.net/APIDG8/IMG/CC/"+this.state.selectedFile1.name;
+        var refv2 = this.state.prefix + this.state.ref;
 
         const cookies = new Cookies();
 
@@ -50,7 +55,7 @@ export default class AddCC extends React.Component {
                 km: this.state.km,
                 bdv: this.state.bdv,
                 prix: this.state.prix,
-                ref: this.state.ref,
+                ref: refv2,
                 top: top,
                 concess: this.state.concess,
                 etat: this.state.etat,
@@ -63,7 +68,7 @@ export default class AddCC extends React.Component {
 
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/addCC2.php`,{
             params:{
-                ref: this.state.ref,
+                ref: refv2,
                 etat: this.state.etat,
                 concess: this.state.concess,
                 stockage: this.state.concess,
@@ -135,7 +140,7 @@ export default class AddCC extends React.Component {
 
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/addCC3.php`,{
             params:{
-                ref: this.state.ref,
+                ref: refv2,
                 top: top,
                 img2: img2,
                 img3: img3,
@@ -415,7 +420,15 @@ export default class AddCC extends React.Component {
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Gamme</label>
-                        <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Gamme" name="gamme" onChange={this.stateChange} value={this.state.gamme} required/>
+                        <select value={this.state.gamme} onChange={this.handleChangeGamme} className="dropdown bg-gray-50 border border-gray-300 p-3 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="etat" required>
+                            <option key={0}>Choisir la gamme</option>
+                            <option key={1}>Intégral</option>
+                            <option key={2}>Profile</option>
+                            <option key={3}>Capucine</option>
+                            <option key={4}>Fourgon</option>
+                            <option key={5}>Van</option>
+                            <option key={6}>Caravane</option>
+                        </select>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Année</label>
