@@ -36,6 +36,8 @@ export default class AddCC extends React.Component {
         this.setState({marque: ""});
         var top = "http://nunesaccount.alwaysdata.net/APIDG8/IMG/CC/"+this.state.selectedFile1.name;
 
+        const cookies = new Cookies();
+
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/addCC1.php`,{
             params:{
                 marque: this.state.marque,
@@ -153,7 +155,7 @@ export default class AddCC extends React.Component {
         this.setState({ concess: cookies.get('logId') });
         this.setState({ marque: "" });
         this.setState({ model: "" });
-        this.setState({ version: "" });
+        this.setState({ ver: "" });
         this.setState({ km: "" });
         this.setState({ bdv: "" });
         this.setState({ prix: "" });
@@ -162,24 +164,24 @@ export default class AddCC extends React.Component {
         this.setState({ etat: "" });
         this.setState({ gamme: "" });
         this.setState({ annee: "" });
-        this.setState({ premiere: "" });
+        this.setState({ premmain: "" });
         this.setState({ tva: "" });
         this.setState({ moteur: "" });
         this.setState({ nbportes: "" });
         this.setState({ porteur: "" });
         this.setState({ puissdin: "" });
         this.setState({ puissfisc: "" });
-        this.setState({ cylindre: "" });
-        this.setState({ placecg: "" });
+        this.setState({ cyl: "" });
+        this.setState({ placeCG: "" });
         this.setState({ energie: "" });
         this.setState({ haut: "" });
         this.setState({ larg: "" });
         this.setState({ long: "" });
-        this.setState({ pdsvide: "" });
-        this.setState({ pdscharge: "" });
-        this.setState({ respro: "" });
-        this.setState({ ressale: "" });
-        this.setState({ typelit: "" });
+        this.setState({ pdsVide: "" });
+        this.setState({ pdsCharge: "" });
+        this.setState({ resPro: "" });
+        this.setState({ resUsed: "" });
+        this.setState({ lit: "" });
     }
 
     stateChange = (f) => {
