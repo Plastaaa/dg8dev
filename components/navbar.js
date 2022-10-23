@@ -52,7 +52,7 @@ export default function NavBar() {
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-2 md:py-2 md:block">
-                                <div className='dark:hidden'>
+                                <div className=''>
                                     {
                                         <CardImage/>
                                     }
@@ -136,7 +136,7 @@ export default function NavBar() {
                                 {
                                 <li>
                                     <a href="tel:+33 0969396973">
-                                        <button className='flex flex-wrap text-gray-600 hover:bg-green-700 hover:dark:text-white hover:dark:bg-red-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
+                                        <button className='flex flex-wrap text-gray-600 hover:bg-green-700 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
                                             <div className='w-2/8 px-1 pt-0.5'>
                                                 <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
                                             </div>

@@ -280,8 +280,8 @@ export default class VehiculeUnique extends React.Component {
                      
                     <div className="xl:w-2/5 md:w-2/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
                         <div className="border-b border-gray-200 pb-6">
-                            <p className="text-sm leading-none text-gray-600">{cc.famille}</p>
-                            <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2">
+                            <p className="text-sm leading-none text-gray-600 dark:text-gray-300">{cc.famille}</p>
+                            <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
                         </div>
@@ -358,48 +358,48 @@ export default class VehiculeUnique extends React.Component {
                                                     <p className='text-gray-400'>
                                                         Puissance Fiscale
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.puissFisc + " cv."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.puissFisc + " cv"}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Réservoir d'eau propre
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.reservoirPropre + " l."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.reservoirPropre + " l"}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Énergie
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.energie + "."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.energie}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Boîte de vitesse
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.bdv + "."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.bdv}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Moteur
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.porteur + "."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.porteur}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Cylindrée
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.cylindre + " cm3."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.cylindre + " cm3"}
                                                     </p>
                                                 </li>
                                             </ul>
@@ -410,23 +410,23 @@ export default class VehiculeUnique extends React.Component {
                                                     <p className='text-gray-400'>
                                                         Puissance DIN
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.puissDin + " cv."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.puissDin + " cv"}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Réservoir d'eau usée
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.reservoirSale + " l."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.reservoirSale + " l"}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Nombre de places carte grise
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
+                                                    <p className='text-gray-800 dark:text-white px-2'>
                                                         {cc.placeCG}
                                                     </p>
                                                 </li>
@@ -434,23 +434,23 @@ export default class VehiculeUnique extends React.Component {
                                                     <p className='text-gray-400'>
                                                         Poids à vide
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.poidsVide + " kg."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.poidsVide + " kg"}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Poids en charge
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
-                                                        {cc.poidsCharge + " kg."}
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.poidsCharge + " kg"}
                                                     </p>
                                                 </li>
                                                 <li>
                                                     <p className='text-gray-400'>
                                                         Nombre de portes
                                                     </p>
-                                                    <p className='text-gray-800 px-2'>
+                                                    <p className='text-gray-800 dark:text-white px-2'>
                                                         {cc.nbPortes}
                                                     </p>
                                                 </li>
