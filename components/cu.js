@@ -110,16 +110,21 @@ export default class ConcessionUnique extends React.Component {
                             <div className='w-full sm:w-1/2'>
                                 <div className='p-4 pr-8 pt-16'>
                                     {
-                                        <Image src={concess.linkIMG2} height={350} width={600} className={'rounded-xl'} layout={'responsive'}/>
+                                        <Image src={concess.linkIMG} height={350} width={600} className={'rounded-xl'} layout={'responsive'}/>
                                     }
                                 </div>
                             </div>
-                            <div className='w-full sm:w-1/2 p-4 pr-8 pt-16'>
-                                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Nos points forts</h2>
-                            </div>
-                            <div className='w-full sm:w-1/2 p-4 pr-8 pt-16'>
-                                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Coordonnées</h2>
-                            </div>
+                            {
+                                /*
+                                <div className='w-full sm:w-1/2 p-4 pr-8 pt-16'>
+                                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Nos points forts</h2>
+                                </div>
+                                <div className='w-full sm:w-1/2 p-4 pr-8 pt-16'>
+                                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Coordonnées</h2>
+                                </div>
+                                */
+                            }
+                            
                             <div className='w-full pb-8 px-8'>
                                 <MapBis concess={concess.libelle} latitude={concess.latitude} longitude={concess.longitude}/>
                             </div>

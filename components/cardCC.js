@@ -91,7 +91,7 @@ export default function CardCC(props) {
                     <span className="inline-block px-2 py-1 leading-none dark:bg-green-600 dark:text-white bg-green-800 text-white rounded-full font-semibold uppercase tracking-wide text-xs">
                         {props.etat + " " + props.annee}
                     </span>
-                    <h2 className="mt-2 mb-2 dark:text-gray-200 font-bold">
+                    <h2 className="mt-2 mb-2 dark:text-gray-200 font-bold notranslate">
                         {props.marque}
                     </h2>
                     <p className="text-sm dark:text-gray-200">
