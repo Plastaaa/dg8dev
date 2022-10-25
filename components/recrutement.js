@@ -70,7 +70,7 @@ export default class Recrutement extends React.Component {
     onChange = (value) => {
         axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
             params: {
-                secret: '6LfMji8iAAAAAP_ylvLKZkg1BRuan4bn1H6sa4eF',
+                secret: '6LcBGZ4iAAAAAGdQHFoM8HVX0Oz_g1Nanzi5jJOy',
                 response: value,
             }
         })
@@ -119,7 +119,7 @@ export default class Recrutement extends React.Component {
                         <div className="w-full xs:w-full sm:w-full md:w-1/2 content-center">
                             <div className="pt-4 px-4">
                                 <ReCAPTCHA
-                                    sitekey="6LfMji8iAAAAAI57trdQtuu8HZLx9QpjrscbFiMk"
+                                    sitekey="6LcBGZ4iAAAAAFAjIXUXagKVqG2zOn2TSwXMETc5"
                                     onChange={this.onChange}
                                     badge="inline"
                                 />
