@@ -73,7 +73,7 @@ export default function Groupe() {
                 </div>
                 <div className="w-full md:w-full lg:w-1/2 px-8">
                     <div className="p-10">
-                        <Image src={imgLogo}/>
+                        <Image alt="Logo groupe david gerbier" src={imgLogo}/>
                     </div>
                 </div>
             </div>

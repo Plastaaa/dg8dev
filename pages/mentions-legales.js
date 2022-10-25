@@ -10,6 +10,7 @@ export default function Home(){
     useEffect (() => {ReactGA.pageview("Mentions Legales");}, []);
     return (
         <div>
+            <title>DG8 Camping-cars - Mentions légales</title>
             <div>
                 {
                     <NavBar/>

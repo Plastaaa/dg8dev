@@ -3,6 +3,7 @@ import axios from 'axios'
 import Image from 'next/image';
 import CardCC from './cardCC';
 import MapBis from '../components/mapBis';
+import { MetaTags } from 'react-meta-tags';
 
 function IsThereStock(props){
     const ccs = props.ccs;
@@ -86,10 +87,17 @@ export default class ConcessionUnique extends React.Component {
                 {
                 this.state.concess.map((concess) => (
                     <div>
+                        <MetaTags>
+                            <title>DG8 Camping-cars - {concess.libelle}</title>
+                            <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
+                            <meta property="og:title" content="DG8 Camping-cars" />
+                            {//<meta property="og:image" content="path/to/image.jpg" />
+                            }
+                        </MetaTags>
                         <div>
                             <body class="">
                                 <div class="relative">
-                                    <img src={"/bannTest.png"} />
+                                    <img alt='banniere concession' src={"/bannTest.png"} />
                                     <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                         {concess.libelle}
                                     </h1>
@@ -110,7 +118,7 @@ export default class ConcessionUnique extends React.Component {
                             <div className='w-full sm:w-1/2'>
                                 <div className='p-4 pr-8 pt-16'>
                                     {
-                                        <Image src={concess.linkIMG} height={350} width={600} className={'rounded-xl'} layout={'responsive'}/>
+                                        <Image alt='Logo concession' src={concess.linkIMG} height={350} width={600} className={'rounded-xl'} layout={'responsive'}/>
                                     }
                                 </div>
                             </div>

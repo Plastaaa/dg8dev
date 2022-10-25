@@ -4,6 +4,7 @@ import Footer from '../components/footer'
 export default function Home(){
     return (
       <div>
+        <title>DG8 Camping-cars - Contact Administrateur</title>
         <div>
                 {
                     <NavBar/>

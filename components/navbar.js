@@ -18,7 +18,7 @@ export default function NavBar() {
                 <div className='text-end flex-end pt-2'>
                     <a href='https://www.youtube.com/channel/UCAL-Abx50ylrHpykSGsehUQ' className='pl-4'>
                         <div className='inline-block'>
-                            <Image height={12} width={12} src={youtubeIMG}/>
+                            <Image height={12} width={12} alt={"Youtube logo"} src={youtubeIMG}/>
                         </div>
                         <div className='inline-block pl-1'>
                             <p>Youtube</p>
@@ -26,7 +26,7 @@ export default function NavBar() {
                     </a>
                     <a href='https://www.facebook.com/dg8campingcars' className='pl-4'>
                         <div className='inline-block'>
-                            <Image height={12} width={12} src={fbIMG}/>
+                            <Image height={12} width={12} alt={"Facbook logo"} src={fbIMG}/>
                         </div>
                         <div className='inline-block pl-1'>
                             <p>Facebook</p>
@@ -34,7 +34,7 @@ export default function NavBar() {
                     </a>
                     <a href='https://www.instagram.com/dg8campingcar' className='pl-4'>
                         <div className='inline-block'>
-                            <Image height={12} width={12} src={instaIMG}/>
+                            <Image height={12} width={12} alt={"Instagram logo"} src={instaIMG}/>
                         </div>
                         <div className='inline-block pl-1'>
                             <p>Instagram</p>
@@ -42,7 +42,7 @@ export default function NavBar() {
                     </a>
                     <a href='https://www.pinterest.fr/dg8cars/' className='pl-4'>
                         <div className='inline-block'>
-                            <Image height={12} width={12} src={pintIMG}/>
+                            <Image height={12} width={12} alt={"Pinterest logo"} src={pintIMG}/>
                         </div>
                         <div className='inline-block pl-1 pr-4'>
                             <p>Pinterest</p>
@@ -138,7 +138,7 @@ export default function NavBar() {
                                     <a href="tel:+33 0969396973">
                                         <button className='flex flex-wrap text-gray-600 hover:bg-green-700 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
                                             <div className='w-2/8 px-1 pt-0.5'>
-                                                <Image height={16} width={16} src={phoneIMG} className={"px-4"}/>
+                                                <Image height={16} width={16} src={phoneIMG} alt={"Phone logo"} className={"px-4"}/>
                                             </div>
                                             <div className='w-6/8'>
                                                 09 69 39 69 73

@@ -6,7 +6,7 @@ import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-
+import { MetaTags } from 'react-meta-tags';
 
 function CVideOuQuoiLaVariable(props){
     var isSetNom = props.isSetNom;
@@ -139,12 +139,18 @@ export default class Contact extends React.Component {
     render(){
         return(
             <div>
-                <meta name="description" content="Vous désirez vendre votre véhicules ? DG8 camping car vous propose un service de rachat cash. Prenez contact avec notre équipe. "/>
+                <MetaTags>
+                    <title>DG8 Camping-cars - Rachat Cash</title>
+                    <meta name="description" content="Vous désirez vendre votre véhicules ? DG8 camping car vous propose un service de rachat cash. Prenez contact avec notre équipe. "/>
+                    <meta property="og:title" content="DG8 Camping-cars - Rachat Cash" />
+                    {//<meta property="og:image" content="path/to/image.jpg" />
+                    }
+                </MetaTags>
                 <div>
                     <NavBar/>
                 </div>
                 <div className='p-8'>
-                    <Image src={rachat} />
+                    <Image alt='image rachat cash' src={rachat} />
                     <div className='flex flex-wrap pt-10'>
                         <div className='w-full xl:w-1/3 lg:w-1/3 md:w-full xs:w-full p-8'>
                             <div className='pt-10 text-center'>

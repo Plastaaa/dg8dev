@@ -12,9 +12,7 @@ export default function Home(props){
                 <NavBar/>
             }
             </div>
-
             <ConcessionUnique/>
-
             <div>
                 <Footer/>
             </div>

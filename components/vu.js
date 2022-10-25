@@ -243,15 +243,21 @@ export default class VehiculeUnique extends React.Component {
             )
         }
         return (
-        <div>
             <div>
-            {
-                <NavBar/>
-            }
-            </div>
+                <title>DG8 Camping-cars - test</title>
+
+                <div>
+                {
+                    <NavBar/>
+                }
+                </div>
+            
             {
             this.state.campingcar.map((cc) => (
+                
                 <div>
+                                    <title>DG8 Camping-cars - {cc.libelle}</title>
+
                     {
                         console.log(cc.libelle)
                     }
