@@ -244,24 +244,24 @@ export default class VehiculeUnique extends React.Component {
         }
         return (
             <div>
-                <title>DG8 Camping-cars - test</title>
-
                 <div>
                 {
                     <NavBar/>
                 }
                 </div>
-            
             {
             this.state.campingcar.map((cc) => (
                 
                 <div>
-                                    <title>DG8 Camping-cars - {cc.libelle}</title>
-
-                    {
-                        console.log(cc.libelle)
-                    }
-                <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-8 px-4">
+                    <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
+                        <ul>
+                            <li><a href='/'>Accueil</a></li> 
+                            <li><a href={"/stock?etat="+cc.typeVehicule}>{cc.typeVehicule}</a></li> 
+                            <li>{cc.marque + " " + cc.modele + " " + cc.version}</li>
+                        </ul>
+                    </div>
+                    <title>DG8 Camping-cars - {cc.libelle}</title>
+                <div className="md:flex items-start justify-center 2xl:px-16 md:px-6 px-4">
                     <div className="md:w-3/6 xl:w-3/6 lg:w-3/5 md:block">
                         {
                             <Splide

@@ -101,7 +101,7 @@ export default function NavBar() {
                                 navbar ? "block" : "hidden"
                             }`}
                         >
-                            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                            <ul className="items-center justify-center space-y-8 md:flex md:space-x-4 md:space-y-0">
                                 <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/stock?etat=neuf">Neuf</a>
                                 </li>
