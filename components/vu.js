@@ -228,12 +228,12 @@ export default class VehiculeUnique extends React.Component {
                         >
                             {
                                 this.state.imgCC.map((img) => (
-                                        <SplideSlide>
+                                        <SplideSlide className={"rounded-xl"}>
                                             <a onClick={e => {this.showModal();}}>
                                                 {
-                                                    //<Image src={img.linkIMG} layout={"fill"}/>
+                                                    <Image src={img.linkIMG} objectFit={"contain"} layout={"fill"}/>
+                                                    //<img src={img.linkIMG}></img>
                                                 }
-                                                <img src={img.linkIMG}></img>
                                             </a>
                                         </SplideSlide>
                                 ))
@@ -275,7 +275,7 @@ export default class VehiculeUnique extends React.Component {
                                         this.state.imgCC.map((img) => (
                                                 <SplideSlide>
                                                     <a onClick={e => {this.showModal();}}>
-                                                        <Image src={img.linkIMG} layout={"fill"}/>
+                                                        <Image className={"rounded-xl"} src={img.linkIMG} objectFit={"cover"} layout={"fill"}/>
                                                     </a>
                                                 </SplideSlide>
                                         ))
@@ -520,8 +520,8 @@ export default class VehiculeUnique extends React.Component {
                         </div>
                     </div>
                     <div className="my-2 pb-4 pt-12 pr-8 px-2 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
-                        <div className='p-4 pb-2 border border-gray-100 rounded-2xl shadow-lg'>
-                            <p className='pb-2 font-bold text-center'>{cc.tel}</p>
+                        <div className='border dark:border-gray-100 border-gray-200 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-2xl shadow-lg'>
+                            <p className='pb-2 pt-2 font-bold text-center dark:text-white'>{cc.tel}</p>
                             <MapBis concess={cc.libelle} latitude={cc.latitude} longitude={cc.longitude}/>
                         </div>
                     </div>

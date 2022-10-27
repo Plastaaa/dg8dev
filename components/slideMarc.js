@@ -18,9 +18,9 @@ export default class SimpleSlider extends Component {
     }
     render() {
         return (
-            <div>
-                <div className="p-0 xl:pt-6 lg:pt-6 md:pt-6 sm:pt-2">
-                <Splide
+            <div className="">
+                <div className="pb-4 xl:pt-6 lg:pt-6 md:pt-6 sm:pt-2">
+                    <Splide
                         options={{
                             type: "loop",
                             rewind: true,
@@ -52,11 +52,11 @@ export default class SimpleSlider extends Component {
                     >
                         {
                             this.state.marque.map(marque =>
-                                <SplideSlide>
-                                    <div className="flex items-center justify-center h-36">
-                                        <Image src={marque.linkIMG} layout={"intrinsic"} height={100} width={300} alt="LOGO MARQUE" />
-                                    </div>
-                                </SplideSlide>
+                                    <SplideSlide className="pb-4">
+                                        <div className="flex hover:bg-gray-100 items-center dark:border dark:border-gray-400 dark:bg-gray-600 dark:hover:bg-gray-200 rounded-xl shadow-lg hover:shadow-xl justify-center h-36">
+                                            <Image src={marque.linkIMG} layout={"intrinsic"} height={100} width={300} alt="LOGO MARQUE" />
+                                        </div>
+                                    </SplideSlide>
                             )
                         }
                     </Splide>

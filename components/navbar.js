@@ -21,7 +21,7 @@ export default function NavBar() {
                             <Image height={12} width={12} alt={"Youtube logo"} src={youtubeIMG}/>
                         </div>
                         <div className='inline-block pl-1'>
-                            <p>Youtube</p>
+                            <p className='sm:hidden md:hidden'>Youtube</p>
                         </div>
                     </a>
                     <a href='https://www.facebook.com/dg8campingcars' className='pl-4'>
