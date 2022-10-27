@@ -20,15 +20,15 @@ export default function NavBar() {
                         <div className='inline-block'>
                             <Image height={12} width={12} alt={"Youtube logo"} src={youtubeIMG}/>
                         </div>
-                        <div className='inline-block pl-1'>
-                            <p className='sm:hidden md:hidden'>Youtube</p>
+                        <div className='md:inline-block hidden pl-1'>
+                            <p className=''>Youtube</p>
                         </div>
                     </a>
                     <a href='https://www.facebook.com/dg8campingcars' className='pl-4'>
                         <div className='inline-block'>
                             <Image height={12} width={12} alt={"Facbook logo"} src={fbIMG}/>
                         </div>
-                        <div className='inline-block pl-1'>
+                        <div className='md:inline-block hidden pl-1'>
                             <p>Facebook</p>
                         </div>
                     </a>
@@ -36,15 +36,15 @@ export default function NavBar() {
                         <div className='inline-block'>
                             <Image height={12} width={12} alt={"Instagram logo"} src={instaIMG}/>
                         </div>
-                        <div className='inline-block pl-1'>
+                        <div className='md:inline-block hidden pl-1'>
                             <p>Instagram</p>
                         </div>
                     </a>
                     <a href='https://www.pinterest.fr/dg8cars/' className='pl-4'>
-                        <div className='inline-block'>
+                        <div className='inline-block md:pr-0 pr-4'>
                             <Image height={12} width={12} alt={"Pinterest logo"} src={pintIMG}/>
                         </div>
-                        <div className='inline-block pl-1 pr-4'>
+                        <div className='md:inline-block hidden pl-1 pr-4'>
                             <p>Pinterest</p>
                         </div>
                     </a>
