@@ -49,15 +49,15 @@ export default function NavBar() {
                         </div>
                     </a>
                 </div>
-                <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+                <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
                     <div>
-                        <div className="flex items-center justify-between py-2 md:py-2 md:block">
+                        <div className="flex items-center justify-between py-2 lg:py-2 lg:block">
                                 <div className=''>
                                     {
                                         <CardImage/>
                                     }
                                 </div>
-                            <div className="md:hidden">
+                            <div className="lg:hidden">
                                 <button
                                     className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                                     onClick={() => setNavbar(!navbar)}
@@ -97,11 +97,11 @@ export default function NavBar() {
                     </div>
                     <div>
                         <div
-                            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                            className={`flex-1 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
                                 navbar ? "block" : "hidden"
                             }`}
                         >
-                            <ul className="items-center justify-center space-y-8 md:flex md:space-x-4 md:space-y-0">
+                            <ul className="items-center justify-center space-y-8 lg:flex lg:space-x-4 lg:space-y-0">
                                 <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/stock?etat=neuf">Neuf</a>
                                 </li>

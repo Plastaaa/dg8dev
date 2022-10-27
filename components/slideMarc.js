@@ -45,7 +45,7 @@ export default class SimpleSlider extends Component {
                                 },
                                 640: {
                                 perPage: 3,
-                            
+                                gap: "1.5rem",
                                 },
                             },
                         }}
