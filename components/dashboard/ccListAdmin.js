@@ -4,6 +4,7 @@ import axios from 'axios';
 import AddCC from './addCC'
 import Cookies from 'universal-cookie';
 import Image from "next/image";
+import { slugify } from '../../utils/helpers'
 
 export default class ListCCAdmin extends React.Component {
 
