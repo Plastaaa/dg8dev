@@ -12,6 +12,9 @@ function IsSearch(props){
 }
 
 export default class Stock extends React.Component {
+  state = {
+    isComponentVisible: false,
+  }
     componentDidMount() {
 
           axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllMarque.php`)
@@ -48,6 +51,10 @@ export default class Stock extends React.Component {
         this.setState({
           [name]: value,
         });
+
+        this.setState({ 
+          isComponentVisible: !this.state.isComponentVisible 
+      }); 
     }
 
     stateSend = (props) => {
@@ -91,7 +98,7 @@ export default class Stock extends React.Component {
           
 
 
-          <div className="w-full lg:w-1/5 pl-4 pt-4 pr-4">
+          <div className="w-full lg:w-1/5 px-16 pt-8 pb-8 md:px-48 md:pt-8 md:pb-8 lg:pl-4 lg:pt-4 lg:pr-4">
           <div className="flex flex-wrap overflow-hidden border border-gray-200 rounded-lg shadow-lg">
             <div className="w-full overflow-hidden">
               <h1 className="text-center pt-4 pb-4 text-2xl font-bold">
@@ -132,10 +139,6 @@ export default class Stock extends React.Component {
                   </form>
                 </div>
 
-                
-
-                
-
                 <div className="my-1 px-1 w-full">
                   <form>
                     <label>
@@ -150,6 +153,13 @@ export default class Stock extends React.Component {
                     </label>
                   </form>
                 </div>
+{/*
+                <button onClick={this.stateChange} type="button" class="w-full text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                  Voir plus de critères 
+                  <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                {this.state.isComponentVisible ? <AddCC/> : null} 
+                          */}
 
                 <div className="my-1 px-1 w-1/2">
                   <input placeholder="Année min" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" type="text" name="yearMin" onChange={this.stateChange}/>

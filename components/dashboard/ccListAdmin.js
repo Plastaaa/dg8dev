@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios';
 import AddCC from './addCC'
 import Cookies from 'universal-cookie';
+import Image from "next/image";
 
 export default class ListCCAdmin extends React.Component {
 
@@ -44,11 +45,38 @@ export default class ListCCAdmin extends React.Component {
     }
 
     suppSend = (f) => {
-        //const {name, value} = f.value;
-        //this.setState({
-        //  [name]: value,
-        //});
-        console.log(f)
+        const {name, value} = f.target;
+        this.setState({
+            [name]: value,
+        });
+        console.log(this.state.supp)
+
+        const cookies = new Cookies();
+        var idcc = cookies.get('logId');
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById1.php`,{
+            params:{
+                concess: idcc,
+                supp: this.state.supp,
+            }
+        })
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById2.php`,{
+            params:{
+                concess: idcc,
+                supp: this.state.supp,
+            }
+        })
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById3.php`,{
+            params:{
+                concess: idcc,
+                supp: this.state.supp,
+            }
+        })
+
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCByConcessBis.php?concess=${idcc}`)
+            .then(res => {
+                const ccs = res.data;
+                this.setState({ ccs });
+            })
     }
 
     render(){
@@ -71,6 +99,7 @@ export default class ListCCAdmin extends React.Component {
                             <table className="table w-full">
                                 <thead>
                                     <tr>
+                                        <th>Image</th>
                                         <th>Ref DBS</th>
                                         <th>Concession</th>
                                         <th>Marque</th>
@@ -85,16 +114,19 @@ export default class ListCCAdmin extends React.Component {
                                     {
                                         this.state.ccs.map(cc =>
                                             <tr className='hover'>
+                                                <td>
+                                                    <Image className={"rounded-xl"} src={cc.linkIMG} width={50} height={50} objectFit={"cover"} /*layout={"fill"}*//>
+                                                </td>
                                                 <td>{cc.RefDMS}</td>
                                                 <td>{cc.libelle}</td>
                                                 <td>{cc.marque}</td>
                                                 <td>{cc.modele}</td>
                                                 <td>{cc.prixTTC} €</td>
-                                                {/*
+                                                {
                                                 <td>
                                                     <div className='flex flex-wrap'>
                                                         <div>
-                                                            <button className='rounded-lg p-2 bg-gray-300'>
+                                                            <button className='line-through rounded-lg p-2 bg-gray-300'>
                                                                 Modifier
                                                             </button>
                                                         </div>
@@ -109,18 +141,19 @@ export default class ListCCAdmin extends React.Component {
                                                                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Suppression</h2>
                                                                     <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400">Etes vous vraiment sûr de vouloir supprimer ce véhicule ?</p>
 
-                                                                    <input value={cc.RefDMS} type={'hidden'} id={"2"} name={"refSupp"}/>
+                                                                    <input value={this.RefDMS} type={'hidden'} id={"2"} name={"refSupp"}/>
 
                                                                     <div className='w-full bg-red-600 hover:bg-red-800 text-white w-full text-center py-2 px-4 rounded-lg'>
-                                                                        
-                                                                        <label name={"supp"} value={cc.RefDMS} className="bg-red-600 hover:bg-red-800 text-center text-white w-full py-2 px-4 rounded-lg">Oui, supprimer</label>
+                                                                        <button onClick={this.suppSend} name={"supp"} value={cc.RefDMS} className="bg-red-600 hover:bg-red-800 text-center text-white w-full py-2 px-4 rounded-lg">
+                                                                            Oui, supprimer
+                                                                        </button>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                */}
+                                                }
                                             </tr>
                                         )
                                     }
