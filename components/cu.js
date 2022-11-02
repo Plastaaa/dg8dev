@@ -88,9 +88,9 @@ export default class ConcessionUnique extends React.Component {
                 this.state.concess.map((concess) => (
                     <div>
                         <MetaTags>
-                            <title>DG8 Camping-cars - {concess.libelle}</title>
+                            <title>DG8 Camping-car - {concess.libelle}</title>
                             <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
-                            <meta property="og:title" content="DG8 Camping-cars" />
+                            <meta property="og:title" content="DG8 Camping-car" />
                             {//<meta property="og:image" content="path/to/image.jpg" />
                             }
                         </MetaTags>
@@ -104,39 +104,90 @@ export default class ConcessionUnique extends React.Component {
                                 </div>
                             </body>
                         </div>
-                        <div className='flex flex-wrap'>
-                            <div className='w-full sm:w-1/2 sm:pt-12 pt-16'>
-                                {
-                                    <IsThereDesc 
-                                        desc1={concess.desc1}
-                                        desc2={concess.desc2}
-                                        desc3={concess.desc3}
-                                        desc4={concess.desc4}
-                                    />
-                                }
-                            </div>
-                            <div className='w-full sm:w-1/2'>
-                                <div className='p-4 pr-8 pt-16'>
-                                    {
-                                        <Image alt='Logo concession' src={concess.linkIMG} height={350} width={600} className={'rounded-xl'} layout={'responsive'}/>
-                                    }
+
+                        <div className='px-8 pb-8 sm:px-16 md:px-24 xl:px-36 '>
+                            <div className='flex flex-wrap'>
+                                <div className='w-full sm:w-full md:w-full xl:w-2/3 sm:pt-12 pt-16'>
+                                    <p className='pl-4'>{concess.desc1}</p>
+                                    <br></br>
+                                    <p className='pl-4'>{concess.desc2}</p>
+                                    <br></br>
+                                    <h2 className="mb-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">{concess.fonted1}</h2>
+                                    <p className='pl-4'>{concess.desc3}</p>
+                                    <br></br>
+                                    <p className='pl-4'>{concess.desc4}</p>
+                                    <br></br>
+                                    <p className='pl-4'>{concess.desc5}<a className='font-bold hover:text-green-700' href={concess.rs1}>{concess.libellers1}</a></p>
+                                    <br></br>
+                                    <h2 className="mb-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">{concess.fonted2}</h2>
+                                    <p className='pl-4'>{concess.desc6}</p>
+                                    <br></br>
+                                    <h2 className="mb-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">{concess.fonted3}</h2>
+                                    <p className='pl-4'>{concess.desc7}</p>
+                                    <br></br>
+                                    <h2 className="mb-4 text-xl tracking-tight font-bold text-gray-900 dark:text-white">{concess.fonted4}</h2>
+                                    <p className='pl-4'>{concess.desc8}</p>
+                                    <br></br>
+                                    <p className='pl-4'>{concess.desc9}</p>
+                                    <ul className='pl-8'>
+                                        <li><a className='font-bold hover:text-green-700' href={concess.rs2}>{concess.libellers2}</a></li>
+                                        <li><a className='font-bold hover:text-green-700' href={concess.rs3}>{concess.libellers3}</a></li>
+                                        <li><a className='font-bold hover:text-green-700' href={concess.rs4}>{concess.libellers4}</a></li>
+                                    </ul>
                                 </div>
-                            </div>
-                            {
-                                /*
-                                <div className='w-full sm:w-1/2 p-4 pr-8 pt-16'>
-                                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Nos points forts</h2>
+                                <div className='w-full sm:w-full md:w-full xl:w-1/3 sm:pt-12 pt-16 pb-16'>
+                                    <div className='p-8 pr-16'>
+                                        <div className='p-4 border border-gray-200 rounded-lg shadow-lg'>
+                                            <Image alt='Logo concession' src={concess.linkIMG2Concess} objectFit={"cover"} layout={"responsive"} height={150} width={250} className={'rounded-xl'}/>
+                                        </div>
+                                    </div>
+                                    <div className='lg:pl-32'>
+                                        <div className='p-4 border border-gray-200 rounded-lg shadow-lg'>
+                                            <Image alt='Logo concession' src={concess.linkIMGConcess} className={'rounded-xl'} objectFit={"cover"} layout={"responsive"} height={150} width={400}/>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className='w-full sm:w-1/2 p-4 pr-8 pt-16'>
-                                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Coordonnées</h2>
+                                <div className='w-1/2'>
+                                    <h2 className="mb-4 text-2xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Nos horaires</h2>
+                                    <div className='flex flex-wrap'>
+                                        <div className='w-full sm:w-full md:w-full xl:w-1/2'>
+                                            <h2 className="mb-4 pt-4 text-xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Été</h2>
+                                            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-l">{concess.dateEte}.</p>
+                                            <br></br>
+                                            <ul>
+                                                <li><p className='text-center'>Lundi : {concess.lundiEte}</p></li>
+                                                <li><p className='text-center'>Mardi : {concess.mardiEte}</p></li>
+                                                <li><p className='text-center'>Mercredi : {concess.mercrediEte}</p></li>
+                                                <li><p className='text-center'>Jeudi : {concess.jeudiEte}</p></li>
+                                                <li><p className='text-center'>Vendredi : {concess.vendrediEte}</p></li>
+                                                <li><p className='text-center'>Samedi : {concess.samediEte}</p></li>
+                                                <li><p className='text-center'>Dimanche : {concess.dimancheEte}</p></li>
+                                            </ul>
+                                        </div>
+                                        <div className='w-full sm:w-full md:w-full xl:w-1/2'>
+                                            <h2 className="mb-4 pt-4 text-xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Hiver</h2>
+                                            <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-l">{concess.dateHiver}.</p>
+                                            <br></br>
+                                            <ul>
+                                                <li><p className='text-center'>Lundi : {concess.lundi}</p></li>
+                                                <li><p className='text-center'>Mardi : {concess.mardi}</p></li>
+                                                <li><p className='text-center'>Mercredi : {concess.mercredi}</p></li>
+                                                <li><p className='text-center'>Jeudi : {concess.jeudi}</p></li>
+                                                <li><p className='text-center'>Vendredi : {concess.vendredi}</p></li>
+                                                <li><p className='text-center'>Samedi : {concess.samedi}</p></li>
+                                                <li><p className='text-center'>Dimanche : {concess.dimanche}</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                                */
-                            }
-                            
-                            <div className='w-full pb-8 px-8'>
-                                <MapBis concess={concess.libelle} latitude={concess.latitude} longitude={concess.longitude}/>
+                                <div className='w-1/2'>
+                                    <MapBis concess={concess.libelle} latitude={concess.latitude} longitude={concess.longitude}/>
+                                </div>
                             </div>
                         </div>
+
+                            
                         <div>
                             <h2 className="pb-4 mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
                                 <IsThereStock libelle={concess.libelle} ccs={this.state.ccs}/>

@@ -150,7 +150,7 @@ export default class Contact extends React.Component {
                     <NavBar/>
                 </div>
                 <div className='p-8'>
-                    <Image alt='image rachat cash' src={rachat} />
+                    <Image className='rounded rounded-xl' alt='image rachat cash' src={rachat} />
                     <div className='flex flex-wrap pt-10'>
                         <div className='w-full xl:w-1/3 lg:w-1/3 md:w-full xs:w-full p-8'>
                             <div className='pt-10 text-center'>

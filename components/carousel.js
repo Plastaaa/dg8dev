@@ -10,7 +10,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 export default class SimpleSlider extends Component {
   render() {
     return (
-      <div className={"px-48 pb-8"}>
+      <div className={"px-4 md:px-8 lg:px-24 xl:px-48 pb-8"}>
         <Splide
           options={{
             type: "loop",
