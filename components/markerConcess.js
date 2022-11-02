@@ -34,7 +34,7 @@ export default class MarkerConcess extends React.Component {
                             </Tooltip>
                             <Popup>
                                 <h2>
-                                    <Image height={75} width={125} src={concess.linkIMG} layout={"responsive"}/>
+                                    <Image height={75} width={125} src={concess.linkIMGConcess} layout={"responsive"}/>
                                 </h2>
                                 <p>
                                     {concess.libelle}<br></br>

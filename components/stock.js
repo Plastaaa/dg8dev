@@ -41,6 +41,12 @@ export default class Stock extends React.Component {
             this.setState({ porteurs });
           });
 
+          axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getConcess.php`)
+          .then(res => {
+            const concess = res.data;
+            this.setState({ concess });
+          });
+
           this.setState({
             affiche: true,
           });
@@ -72,6 +78,7 @@ export default class Stock extends React.Component {
           prixMax: this.state.prixMax,
           kmMin: this.state.kmMin,
           kmMax: this.state.kmMax,
+          concess: this.state.concession,
         }
       })
         .then(res => {
@@ -90,6 +97,7 @@ export default class Stock extends React.Component {
         porteurs: [],
         affiche: true,
         ccs2: [],
+        concess: [],
     }
   
     render() {
@@ -209,6 +217,21 @@ export default class Stock extends React.Component {
                 </div>
                 <div className="my-1 px-1 w-1/2">
                   <input placeholder="Réference" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" type="text" name="ref" onSubmit={this.stateChange} onChange={this.stateChange}/>
+                </div>
+
+                <div className="my-1 px-1 w-full">
+                  <form>
+                    <label>
+                        <select className="dropdown bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" name="concession" onChange={this.stateChange}>
+                            <option value="0">Choisir la concession</option>
+                            {
+                                this.state.concess.map(concess => 
+                                    <option value={concess.libelle}>{"(" + concess.postal + ") " + concess.libelle}</option>
+                                )
+                            }
+                        </select>
+                    </label>
+                  </form>
                 </div>
                 
                 <button className="bg-green-800 hover:bg-green-700 text-white font-bold py-2 px-4 w-full rounded-lg" onClick={this.stateSend}>
