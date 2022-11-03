@@ -70,26 +70,12 @@ export default class Contact extends React.Component {
     }
 
     stateSend = () => {
-        console.log(this.state.nom);
-        console.log(this.state.prenom);
-        console.log(this.state.mail)
-        console.log(this.state.codepostal)
-        console.log(this.state.tel)
-        console.log(this.state.immat)
-        console.log(this.state.model)
-        console.log(this.state.finition)
-        console.log(this.state.km)
-        console.log(this.state.annee)
-        console.log(this.state.optadd)
-        console.log(this.state.porteur)
-
         if((this.state.nom == "" || this.state.nom == undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.mail == "" || this.state.mail == undefined) || (this.state.codepostal == "" || this.state.codepostal == undefined) || (this.state.tel == "" || this.state.tel == undefined) || (this.state.immat == "" || this.state.immat == undefined) || (this.state.model == "" || this.state.model == undefined) || (this.state.finition == "" || this.state.finition == undefined) || (this.state.km == "" || this.state.km == undefined) || (this.state.annee == "" || this.state.annee == undefined) || (this.state.optadd == "" || this.state.optadd == undefined) || (this.state.porteur == "" || this.state.porteur == undefined)){
             this.setState({dejaSend: false});
             console.log(this.state.nom);
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom != "" && this.state.prenom != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.codepostal != "" && this.state.codepostal != undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.immat != "" && this.state.immat != undefined) || (this.state.model != "" && this.state.model != undefined) || (this.state.finition != "" && this.state.finition != undefined) || (this.state.km != "" && this.state.km != undefined) || (this.state.annee != "" && this.state.annee != undefined) || (this.state.optadd != "" && this.state.optadd != undefined) || (this.state.porteur != "" && this.state.porteur != undefined)){
-            console.log("passed");
             if(this.state.dejaSend != true && (this.state.resCapt.success)){
-                console.log("passed bis");
+                console.log("passed");
                 this.setState({dejaSend:  true});
                 this.setState({nom: ""});
                 this.setState({prenom: ""});
