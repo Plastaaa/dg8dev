@@ -46,7 +46,7 @@ export default class HomePage extends React.Component {
                     </div>
 
                     <div className="my-2 w-full py-16 md:w-full lg:w-1/2 xl:w-1/2 overflow-hidden">
-                       <RachatCash/> 
+                        <RachatCash/> 
                     </div>
                     <div className="my-2 w-full md:w-full lg:w-1/2 xl:w-1/2 overflow-hidden">
                         <Contact/>
