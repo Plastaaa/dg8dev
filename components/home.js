@@ -16,13 +16,6 @@ export default class HomePage extends React.Component {
         
         return(
             <div>
-                <MetaTags>
-                    <title>DG8 Camping-car</title>
-                    <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
-                    <meta property="og:title" content="DG8 Camping-car" />
-                    {//<meta property="og:image" content="path/to/image.jpg" />
-                    }
-                </MetaTags>
                 <div>
                     <Navbar/>
                 </div>

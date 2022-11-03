@@ -1,6 +1,8 @@
 import ImgCard from './imgCard'
 import { slugify } from '../utils/helpers'
 import Link from 'next/link';
+import Image from 'next/image';
+import gearbox from '../public/icon/gearbox.png'
 
 function BotInfoBdv(props){
     const bdv = props.bdv;
@@ -30,7 +32,7 @@ function BDV(props){
             <div className="flex flex-wrap -mx-2 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2 xl:-mx-2">
                 <div className="my-2 px-2 w-1/8 overflow-hidden sm:my-2 sm:px-2 sm:w-1/8 md:my-2 md:px-2 md:w-1/8 lg:my-2 lg:px-2 lg:w-1/8 xl:my-2 xl:px-2 xl:w-1/8">
                     {
-                    <img alt='bdv' className='h-4' src='../icon/gearbox.png'/>
+                        <Image alt='icone kilometrage' src={"https://nunesaccount.alwaysdata.net/APIDG8/IMG/ICON/road.png"} height={20} width={20}/>
                     }
                 </div>
                 <div className="my-2 px-2 w-7/8 overflow-hidden sm:my-2 sm:px-2 sm:w-7/8 md:my-2 md:px-2 md:w-7/8 lg:my-2 lg:px-2 lg:w-7/8 xl:my-2 xl:px-2 xl:w-7/8">
@@ -69,9 +71,11 @@ function KM(props){
         <div className="w-full overflow-hidden">
             <div className="flex flex-wrap -mx-2 overflow-hidden sm:-mx-2 md:-mx-2 lg:-mx-2 xl:-mx-2">
                 <div className="my-2 px-2 w-1/8 overflow-hidden sm:my-2 sm:px-2 sm:w-1/8 md:my-2 md:px-2 md:w-1/8 lg:my-2 lg:px-2 lg:w-1/8 xl:my-2 xl:px-2 xl:w-1/8">
-                {
-                    <img alt='km' className='h-4' src='../icon/road.png'/>
-                }
+                
+                    <Image alt='icone boite de vitesse' src={"https://nunesaccount.alwaysdata.net/APIDG8/IMG/ICON/gearbox.png"} height={20} width={20}/>
+                    {
+                        //<img alt='km' className='h-4' src='../icon/road.png'/>
+                    }
                 </div>
                 <div className="my-2 px-2 w-7/8 overflow-hidden sm:my-2 sm:px-2 sm:w-7/8 md:my-2 md:px-2 md:w-7/8 lg:my-2 lg:px-2 lg:w-7/8 xl:my-2 xl:px-2 xl:w-7/8">
                     {km + " km"}
