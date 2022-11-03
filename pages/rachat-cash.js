@@ -6,7 +6,8 @@ import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-import { MetaTags } from 'react-meta-tags';
+import {Helmet} from "react-helmet";
+
 
 function CVideOuQuoiLaVariable(props){
     var isSetNom = props.isSetNom;
@@ -141,13 +142,10 @@ export default class Contact extends React.Component {
     render(){
         return(
             <div>
-                <MetaTags>
+                <Helmet>
                     <title>DG8 Camping-cars - Rachat Cash</title>
                     <meta name="description" content="Vous désirez vendre votre véhicules ? DG8 camping car vous propose un service de rachat cash. Prenez contact avec notre équipe. "/>
-                    <meta property="og:title" content="DG8 Camping-cars - Rachat Cash" />
-                    {//<meta property="og:image" content="path/to/image.jpg" />
-                    }
-                </MetaTags>
+                </Helmet>
                 <div>
                     <NavBar/>
                 </div>

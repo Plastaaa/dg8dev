@@ -9,6 +9,8 @@ import MapBis from '../components/mapBis'
 import Image from 'next/image';
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
+import {Helmet} from "react-helmet";
+
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -253,6 +255,9 @@ export default class VehiculeUnique extends React.Component {
             this.state.campingcar.map((cc) => (
                 
                 <div>
+                    <Helmet>
+                        <title>DG8 Camping-cars - {cc.libelle}</title>
+                    </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
                             <li><a href='/'>Accueil</a></li> 
@@ -260,7 +265,6 @@ export default class VehiculeUnique extends React.Component {
                             <li>{cc.marque + " " + cc.modele + " " + cc.version}</li>
                         </ul>
                     </div>
-                    <title>DG8 Camping-cars - {cc.libelle}</title>
                 <div className="md:flex items-start justify-center 2xl:px-16 md:px-6 px-4">
                     <div className="md:w-3/6 xl:w-3/6 lg:w-3/5 md:block">
                         {

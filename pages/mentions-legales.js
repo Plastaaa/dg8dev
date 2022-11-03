@@ -5,12 +5,16 @@ import Confidentialite from '../components/confidentialite'
 import Cookies from '../components/cookies'
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
+import {Helmet} from "react-helmet";
 
 export default function Home(){
     useEffect (() => {ReactGA.pageview("Mentions Legales");}, []);
     return (
         <div>
-            <title>DG8 Camping-cars - Mentions légales</title>
+            <Helmet>
+                <title>DG8 Camping-cars - Mentions légales</title>
+            </Helmet>
+            
             <div>
                 {
                     <NavBar/>
