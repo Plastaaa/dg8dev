@@ -202,8 +202,11 @@ export default class ConcessionUnique extends React.Component {
                         <div>
                             <body class="">
                                 <div class="relative">
-                                    <img alt='banniere concession' src={"/bannTest.png"} />
-                                    <h1 class="absolute text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    <Image alt='banniere concession' src={"/bannTest.png"} layout={"responsive"} objectFit={"fill"} height={150} width={1500}/>
+                                    {
+                                    //    <img alt='banniere concession' src={"/bannTest.png"} />
+                                    }
+                                    <h1 class="absolute text-xl md:text-2xl lg:text-5xl text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                         {concess.libelle}
                                     </h1>
                                 </div>

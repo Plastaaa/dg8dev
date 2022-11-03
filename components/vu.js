@@ -233,7 +233,7 @@ export default class VehiculeUnique extends React.Component {
                                         <SplideSlide className={"rounded-xl"}>
                                             <a onClick={e => {this.showModal();}}>
                                                 {
-                                                    <Image src={img.linkIMG} objectFit={"contain"} layout={"fill"}/>
+                                                    <Image src={img.linkIMG} objectFit={"contain"} alt={"image camping car"} layout={"fill"}/>
                                                     //<img src={img.linkIMG}></img>
                                                 }
                                             </a>
@@ -256,7 +256,7 @@ export default class VehiculeUnique extends React.Component {
                 
                 <div>
                     <Helmet>
-                        <title>DG8 Camping-cars - {cc.libelle}</title>
+                        <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
@@ -279,7 +279,7 @@ export default class VehiculeUnique extends React.Component {
                                         this.state.imgCC.map((img) => (
                                                 <SplideSlide>
                                                     <a onClick={e => {this.showModal();}}>
-                                                        <Image className={"rounded-xl"} src={img.linkIMG} objectFit={"cover"} layout={"fill"}/>
+                                                        <Image className={"rounded-xl"} src={img.linkIMG} objectFit={"cover"} alt={"Image camping car"} layout={"fill"}/>
                                                     </a>
                                                 </SplideSlide>
                                         ))

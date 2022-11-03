@@ -111,21 +111,30 @@ export default function NavBar() {
                                 <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/location">Location</a>
                                 </li>
-                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
-                                    <a href="/atelier">RDV Atelier</a>
+                                <li>
+                                    <div className="dropdown dropdown-hover">
+                                        <a href='/le-groupe-david-gerbier'>
+                                            <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Prendre RDV</label>
+                                        </a>
+                                        
+                                        <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
+                                            <li><a href='/atelier'>Rendez-vous atelier</a></li>
+                                            <li><a href='/controle-humidite'>Contrôle d'humidité</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li>
-                                <div className="dropdown dropdown-hover">
-                                    <a href='/le-groupe-david-gerbier'>
-                                        <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Groupe David Gerbier</label>
-                                    </a>
-                                    
-                                    <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
-                                        <li><a href='/nos-concessions'>Nos concessions</a></li>
-                                        <li><a href='/marques'>Marques distribuées</a></li>
-                                        <li><a href='/recrutement'>Recrutement</a></li>
-                                    </ul>
-                                </div>
+                                    <div className="dropdown dropdown-hover">
+                                        <a href='/le-groupe-david-gerbier'>
+                                            <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Groupe David Gerbier</label>
+                                        </a>
+                                        
+                                        <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
+                                            <li><a href='/nos-concessions'>Nos concessions</a></li>
+                                            <li><a href='/marques'>Marques distribuées</a></li>
+                                            <li><a href='/recrutement'>Recrutement</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/rachat-cash">Rachat Cash</a>
