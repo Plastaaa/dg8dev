@@ -105,7 +105,7 @@ export default class Contact extends React.Component {
                 this.setState({optadd: ""});
                 this.setState({tFin: ""});
                 this.setState({tHum: ""});
-                axios.get(`http://nunesaccount.alwaysdata.net/APIDG8/sendMailRC.php`,{
+                axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailRC.php`,{
                 params:{
                     nom: this.state.nom,
                     prenom: this.state.prenom,
