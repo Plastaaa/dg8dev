@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import AsideMenu from "./asideMenu";
+import Image from "next/image";
 
 export default class Stat extends React.Component {
     state = {
@@ -25,6 +26,15 @@ export default class Stat extends React.Component {
             this.setState({ ccs });
         });
 
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllVisualsByCC.php`,{
+            params:{
+                id: idURL,
+            }
+        }).then(res => {
+            const imgCC = res.data;
+            this.setState({ imgCC });
+        });
+
         this.handleStatement();
 
     }
@@ -47,9 +57,9 @@ export default class Stat extends React.Component {
                                         <div className="w-1/6 pt-4 px-4 py-2">
                                             <label htmlFor="nom" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ref</label>
                                             <div className="flex">
-                                                <input type="text" id="nom" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.refdms} required/>
+                                                <input type="text" id="nom" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={cc.idCC} required/>
                                             </div>
-                                    </div>
+                                        </div>
                                         
                                         <div className="w-2/6 pt-4 px-4 py-2">
                                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Marque</label>
@@ -185,6 +195,31 @@ export default class Stat extends React.Component {
                                                     <h2 className="mb-4 text-2xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Section photos</h2>
                                                     <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Pensez à bien ajouter chaque photo une par une.</p>
                                                     <div className="flex flex-wrap">
+                                                        {
+                                                            this.state.imgCC.map((img) => (
+                                                                <div className="flex flex-wrap">
+                                                                    <div className="w-1/2">
+                                                                        {/*Import 1*/}
+                                                                        <div className="w-full">
+                                                                            <div className='w-full'>
+                                                                                <input type="file" onChange={this.onFileChange1} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="w-1/2">
+                                                                        {/*Import 1*/}
+                                                                        <div className="flex justify-end">
+                                                                            <div className='w-full'>
+                                                                                <Image src={img.linkIMG} objectFit={"cover"} height={50} width={100}/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            ))
+                                                        }
+
+
+
                                                         <div className="w-1/2">
                                                             {/*Import 1*/}
                                                             <div>
@@ -193,6 +228,7 @@ export default class Stat extends React.Component {
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        
                                                         <div className="w-1/2">
                                                             {/*Import 2*/}
                                                             <div>

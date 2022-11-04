@@ -130,15 +130,15 @@ export default class ListCCAdmin extends React.Component {
                                                 {
                                                 <td>
                                                     <div className='flex flex-wrap'>
-                                                        {/*
+                                                        {
                                                         <div>
-                                                            <div className='hidden w-full bg-gray-300 hover:bg-gray-400 text-white w-full text-center py-2 px-4 rounded-lg'>
-                                                                <label htmlFor="my-modal-4" className="bg-gray-300 hover:bg-gray-400 text-center text-black w-full py-2 px-4 rounded-lg">Modifier</label>
+                                                            <div className=' w-full bg-gray-300 hover:bg-gray-400 text-white w-full text-center py-2 px-4 rounded-lg'>
+                                                                <label htmlFor={cc.RefDMS+"2"} className="bg-gray-300 hover:bg-gray-400 text-center text-black w-full py-2 px-4 rounded-lg">Modifier</label>
                                                             </div>
-                                                            <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+                                                            <input type="checkbox" id={cc.RefDMS+"2"} className="modal-toggle" />
                                                             <div className="modal">
                                                                 <div className="modal-box relative">
-                                                                    <label htmlFor="my-modal-4" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                                                    <label htmlFor={cc.RefDMS+"2"} className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                                                                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Modification</h2>
                                                                     <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400">Etes vous vraiment sûr de vouloir modifier ce véhicule ?</p>
 
@@ -153,7 +153,7 @@ export default class ListCCAdmin extends React.Component {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>*/
+                                                        </div>
                                                         }
                                                         <div className='pl-2'>
                                                             <div className='w-full bg-red-600 hover:bg-red-800 text-white w-full text-center py-2 px-4 rounded-lg'>

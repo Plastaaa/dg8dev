@@ -21,6 +21,22 @@ export default class AddCC extends React.Component {
         this.setState({
             ref: Math.floor(Math.random() * 999999) + 1
         })
+        this.setState({status1: "Pas ok"});
+        this.setState({color1: "bg-red-500"});
+        this.setState({status2: "Pas ok"});
+        this.setState({color2: "bg-red-500"});
+        this.setState({status3: "Pas ok"});
+        this.setState({color3: "bg-red-500"});
+        this.setState({status4: "Pas ok"});
+        this.setState({color4: "bg-red-500"});
+        this.setState({status5: "Pas ok"});
+        this.setState({color5: "bg-red-500"});
+        this.setState({status6: "Pas ok"});
+        this.setState({color6: "bg-red-500"});
+        this.setState({status7: "Pas ok"});
+        this.setState({color7: "bg-red-500"});
+        this.setState({status8: "Pas ok"});
+        this.setState({color8: "bg-red-500"});
     }
 
     state = {
@@ -29,15 +45,12 @@ export default class AddCC extends React.Component {
 
     handleChange = (e) => {
         this.setState({ etat: e.target.value });
-        console.log(this.state.etat);
     }
     handleChangePremMain = (e) => {
         this.setState({ premmain: e.target.value });
-        console.log(this.state.premmain);
     }
     handleChangeGamme = (e) => {
         this.setState({ gamme: e.target.value });
-        console.log(this.state.gamme);
     }
     
     stateSend = () => {
@@ -138,8 +151,6 @@ export default class AddCC extends React.Component {
             var img8 = "";
         }
 
-        console.log(img3);
-
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/addCC3.php`,{
             params:{
                 ref: refv2,
@@ -195,6 +206,25 @@ export default class AddCC extends React.Component {
         this.setState({ resPro: "" });
         this.setState({ resUsed: "" });
         this.setState({ lit: "" });
+        this.setState({
+            ref: Math.floor(Math.random() * 999999) + 1
+        })
+        this.setState({status1: "Pas ok"});
+        this.setState({color1: "bg-red-500"});
+        this.setState({status2: "Pas ok"});
+        this.setState({color2: "bg-red-500"});
+        this.setState({status3: "Pas ok"});
+        this.setState({color3: "bg-red-500"});
+        this.setState({status4: "Pas ok"});
+        this.setState({color4: "bg-red-500"});
+        this.setState({status5: "Pas ok"});
+        this.setState({color5: "bg-red-500"});
+        this.setState({status6: "Pas ok"});
+        this.setState({color6: "bg-red-500"});
+        this.setState({status7: "Pas ok"});
+        this.setState({color7: "bg-red-500"});
+        this.setState({status8: "Pas ok"});
+        this.setState({color8: "bg-red-500"});
     }
 
     stateChange = (f) => {
@@ -247,14 +277,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile1,
             this.state.selectedFile1.name
         );
-        console.log(this.state.selectedFile1);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData1, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status1: "Prêt à l'envoi"})
+                this.setState({color1: "bg-green-300"})
+            }
         });
 
         const formData2 = new FormData();
@@ -263,14 +295,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile2,
             this.state.selectedFile2.name
         );
-        console.log(this.state.selectedFile2);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData2, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status2: "Prêt à l'envoi"})
+                this.setState({color2: "bg-green-300"})
+            }
         });
 
         const formData3 = new FormData();
@@ -279,14 +313,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile3,
             this.state.selectedFile3.name
         );
-        console.log(this.state.selectedFile3);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData3, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status3: "Prêt à l'envoi"})
+                this.setState({color3: "bg-green-300"})
+            }
         });
 
         const formData4 = new FormData();
@@ -295,14 +331,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile4,
             this.state.selectedFile4.name
         );
-        console.log(this.state.selectedFile4);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData4, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status4: "Prêt à l'envoi"})
+                this.setState({color4: "bg-green-300"})
+            }
         });
 
         const formData5 = new FormData();
@@ -311,14 +349,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile5,
             this.state.selectedFile5.name
         );
-        console.log(this.state.selectedFile5);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData5, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status5: "Prêt à l'envoi"})
+                this.setState({color5: "bg-green-300"})
+            }
         });
 
         const formData6 = new FormData();
@@ -327,14 +367,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile6,
             this.state.selectedFile6.name
         );
-        console.log(this.state.selectedFile6);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData6, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status6: "Prêt à l'envoi"})
+                this.setState({color6: "bg-green-300"})
+            }
         });
 
         const formData7 = new FormData();
@@ -343,14 +385,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile7,
             this.state.selectedFile7.name
         );
-        console.log(this.state.selectedFile7);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData7, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status7: "Prêt à l'envoi"})
+                this.setState({color7: "bg-green-300"})
+            }
         });
 
         const formData8 = new FormData();
@@ -359,14 +403,16 @@ export default class AddCC extends React.Component {
             this.state.selectedFile8,
             this.state.selectedFile8.name
         );
-        console.log(this.state.selectedFile8);
 
         axios.post('https://nunesaccount.alwaysdata.net/APIDG8/IMG/handleIMG.php', formData8, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
         }).then(res => {
-            console.log(res);
+            if(res.status == "200"){
+                this.setState({status8: "Prêt à l'envoi"})
+                this.setState({color8: "bg-green-300"})
+            }
         });
     }
 
@@ -511,16 +557,25 @@ export default class AddCC extends React.Component {
                     </div>
                     <div className="pt-4 px-4 flex w-full">
                         {
-                            // Test d'import fichier random
+                            // Test d'import fichier
                             <div className="">
                                 <h2 className="mb-4 text-2xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Section photos</h2>
                                 <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Pensez à bien ajouter chaque photo une par une.</p>
-                                <div className="flex flex-wrap">
+                                <div className="flex flex-wrap bg-gray-100 rounded-xl">
                                     <div className="w-1/2">
                                         {/*Import 1*/}
-                                        <div>
-                                            <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange1} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                        <div className="">
+                                            <div className=''>
+                                                <input type="file" onChange={this.onFileChange1} className={"text-black p-4 inline-block"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 1 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color1 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status1}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -528,7 +583,16 @@ export default class AddCC extends React.Component {
                                         {/*Import 2*/}
                                         <div>
                                             <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange2} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                <input type="file" onChange={this.onFileChange2} className={"text-black p-4"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 2 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color2 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status2}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -536,7 +600,16 @@ export default class AddCC extends React.Component {
                                         {/*Import 3*/}
                                         <div>
                                             <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange3} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                <input type="file" onChange={this.onFileChange3} className={"text-black p-4"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 3 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color3 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status3}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -544,7 +617,16 @@ export default class AddCC extends React.Component {
                                         {/*Import 4*/}
                                         <div>
                                             <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange4} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                <input type="file" onChange={this.onFileChange4} className={"text-black p-4"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 4 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color4 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status4}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -552,7 +634,16 @@ export default class AddCC extends React.Component {
                                         {/*Import 5*/}
                                         <div>
                                             <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange5} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                <input type="file" onChange={this.onFileChange5} className={"text-black p-4"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 5 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color5 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status5}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -560,7 +651,16 @@ export default class AddCC extends React.Component {
                                         {/*Import 6*/}
                                         <div>
                                             <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange6} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                <input type="file" onChange={this.onFileChange6} className={"text-black p-4"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 6 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color6 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status6}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -568,7 +668,16 @@ export default class AddCC extends React.Component {
                                         {/*Import 7*/}
                                         <div>
                                             <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange7} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                <input type="file" onChange={this.onFileChange7} className={"text-black p-4"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 7 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color7 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status7}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -576,7 +685,16 @@ export default class AddCC extends React.Component {
                                         {/*Import 8*/}
                                         <div>
                                             <div className='w-full'>
-                                                <input type="file" onChange={this.onFileChange8} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                <input type="file" onChange={this.onFileChange8} className={"text-black p-4"}/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="w-1/2">
+                                        {/*Import 8 VERIF*/}
+                                        <div className="">
+                                            <div className="">
+                                                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-sm">Etat de l'import de la photo :</p>
+                                                <p className={this.state.color8 + " font-light text-center dark:text-gray-400 sm:text-sm rounded-xl"}>{this.state.status8}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -588,12 +706,12 @@ export default class AddCC extends React.Component {
                         }
                     </div>
                     <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
-                        <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                             <button onClick={this.onFileUploadAll} className="w-full">Envoyer les photos</button>
                         </div>
                     </div>
                     <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
-                        <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                             <button onClick={this.stateSend} className="w-full">Envoyer</button>
                         </div>
                     </div>
