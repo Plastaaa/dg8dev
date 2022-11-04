@@ -52,7 +52,7 @@ export default class ListCCAdmin extends React.Component {
         });
         console.log(this.state.supp);
 
-        {/*
+        {
             const cookies = new Cookies();
             var idcc = cookies.get('logId');
             axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById1.php`,{
@@ -78,7 +78,7 @@ export default class ListCCAdmin extends React.Component {
                 .then(res => {
                     const ccs = res.data;
                     this.setState({ ccs });
-                })*/
+                })
         }
 
         
