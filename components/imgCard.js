@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function imgCard(props) {
     return (
         <div className="cardImageWrapper">
-            <Image alt='Logo concession' src={props.link} objectFit={"cover"} layout={"responsive"} height={200} width={250} className={'rounded-xl'}/>
+            <Image alt="Image d'un camping car" src={props.link} objectFit={"cover"} layout={"responsive"} height={200} width={250} className={'rounded-xl'}/>
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import CardImage from '../components/logo'
-import CardImageDark from '../components/logoBis'
 import { useState } from "react";
 import phoneIMG from '../public/phone.png'
 import youtubeIMG from '../public/logo/social/yt.png'
@@ -123,6 +122,24 @@ export default function NavBar() {
                                         </ul>
                                     </div>
                                 </li>
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                    <a href="/rachat-cash">Rachat Cash</a>
+                                </li>
+                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                    <a href="/contact">Contact</a>
+                                </li>
+                                <li>
+                                    <div className="dropdown dropdown-hover">
+                                        <a href='/le-groupe-david-gerbier'>
+                                            <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Guide d'achat</label>
+                                        </a>
+                                        <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-64">
+                                            <li><a href='/guide/le-guide-poids-lourd'>Guide d'achat poids lourd</a></li>
+                                            <li><a href='/guide/le-guide-camping-car'>Guide d'achat Camping-car</a></li>
+                                            <li><a href='/guide/le-guide-van-et-fourgon'>Guide d'achat Van et Fourgon</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
                                 <li>
                                     <div className="dropdown dropdown-hover">
                                         <a href='/le-groupe-david-gerbier'>
@@ -135,12 +152,6 @@ export default function NavBar() {
                                             <li><a href='/recrutement'>Recrutement</a></li>
                                         </ul>
                                     </div>
-                                </li>
-                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
-                                    <a href="/rachat-cash">Rachat Cash</a>
-                                </li>
-                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
-                                    <a href="/contact">Contact</a>
                                 </li>
                                 {
                                 <li>
