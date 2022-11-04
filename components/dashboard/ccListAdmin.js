@@ -132,7 +132,7 @@ export default class ListCCAdmin extends React.Component {
                                                     <div className='flex flex-wrap'>
                                                         {
                                                         <div>
-                                                            <div className=' w-full bg-gray-300 hover:bg-gray-400 text-white w-full text-center py-2 px-4 rounded-lg'>
+                                                            <div className='hidden w-full bg-gray-300 hover:bg-gray-400 text-white w-full text-center py-2 px-4 rounded-lg'>
                                                                 <label htmlFor={cc.RefDMS+"2"} className="bg-gray-300 hover:bg-gray-400 text-center text-black w-full py-2 px-4 rounded-lg">Modifier</label>
                                                             </div>
                                                             <input type="checkbox" id={cc.RefDMS+"2"} className="modal-toggle" />
