@@ -50,7 +50,8 @@ export default class ListCCAdmin extends React.Component {
         this.setState({
             [name]: value,
         });
-        console.log(this.state.supp);
+        var suppValue = f.target.value;
+        console.log(suppValue);
 
         {
             const cookies = new Cookies();
@@ -58,19 +59,19 @@ export default class ListCCAdmin extends React.Component {
             axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById1.php`,{
                 params:{
                     concess: idcc,
-                    supp: this.state.supp,
+                    supp: suppValue
                 }
             })
             axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById2.php`,{
                 params:{
                     concess: idcc,
-                    supp: this.state.supp,
+                    supp: suppValue
                 }
             })
             axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById3.php`,{
                 params:{
                     concess: idcc,
-                    supp: this.state.supp,
+                    supp: suppValue
                 }
             })
     
@@ -80,8 +81,7 @@ export default class ListCCAdmin extends React.Component {
                     this.setState({ ccs });
                 })
         }
-
-        
+        //window.location.reload();
     }
 
     render(){

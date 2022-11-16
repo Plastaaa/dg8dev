@@ -55,7 +55,7 @@ export default class AddCC extends React.Component {
     
     stateSend = () => {
         var top = "http://nunesaccount.alwaysdata.net/APIDG8/IMG/CC/"+this.state.selectedFile1.name;
-        var refv2 = this.state.prefix + this.state.ref;
+        var refv2 = this.state.prefix + "" + this.state.ref;
 
         const cookies = new Cookies();
 
