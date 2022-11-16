@@ -54,7 +54,6 @@ export default class AddCC extends React.Component {
     }
     
     stateSend = () => {
-        this.setState({marque: ""});
         var top = "http://nunesaccount.alwaysdata.net/APIDG8/IMG/CC/"+this.state.selectedFile1.name;
         var refv2 = this.state.prefix + this.state.ref;
 
@@ -112,6 +111,32 @@ export default class AddCC extends React.Component {
                 respro: this.state.resPro,
                 ressale: this.state.resUsed,
                 typelit: this.state.lit,
+            }
+        })
+
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/addCC4.php`,{
+            params:{
+                ref: refv2,
+                equip1: this.state.equip1,
+                equip2: this.state.equip2,
+                equip3: this.state.equip3,
+                equip4: this.state.equip4,
+                equip5: this.state.equip5,
+                equip6: this.state.equip6,
+                equip7: this.state.equip7,
+                equip8: this.state.equip8,
+                equip9: this.state.equip9,
+                equip10: this.state.equip10,
+                equip11: this.state.equip11,
+                equip12: this.state.equip12,
+                equip13: this.state.equip13,
+                equip14: this.state.equip14,
+                equip15: this.state.equip15,
+                equip16: this.state.equip16,
+                equip17: this.state.equip17,
+                equip18: this.state.equip18,
+                equip19: this.state.equip19,
+                equip20: this.state.equip20,
             }
         })
 
@@ -206,6 +231,26 @@ export default class AddCC extends React.Component {
         this.setState({ resPro: "" });
         this.setState({ resUsed: "" });
         this.setState({ lit: "" });
+        this.setState({ equip1: "" });
+        this.setState({ equip2: "" });
+        this.setState({ equip3: "" });
+        this.setState({ equip4: "" });
+        this.setState({ equip5: "" });
+        this.setState({ equip6: "" });
+        this.setState({ equip7: "" });
+        this.setState({ equip8: "" });
+        this.setState({ equip9: "" });
+        this.setState({ equip10: "" });
+        this.setState({ equip11: "" });
+        this.setState({ equip12: "" });
+        this.setState({ equip13: "" });
+        this.setState({ equip14: "" });
+        this.setState({ equip15: "" });
+        this.setState({ equip16: "" });
+        this.setState({ equip17: "" });
+        this.setState({ equip18: "" });
+        this.setState({ equip19: "" });
+        this.setState({ equip20: "" });
         this.setState({
             ref: Math.floor(Math.random() * 999999) + 1
         })
@@ -555,6 +600,92 @@ export default class AddCC extends React.Component {
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Type lit</label>
                         <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Type de lit" name="lit" onChange={this.stateChange} value={this.state.lit} required/>
                     </div>
+                    <div className="w-full pt-8">
+                        <h2 className="mb-4 text-2xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Section équipement</h2>
+                        <div className="flex flex-wrap">
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip1" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 1</label>
+                                <input type="text" id="equip1" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip1" onChange={this.stateChange} value={this.state.equip1} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip2" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 2</label>
+                                <input type="text" id="equip2" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip2" onChange={this.stateChange} value={this.state.equip2} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip3" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 3</label>
+                                <input type="text" id="equip3" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip3" onChange={this.stateChange} value={this.state.equip3} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip4" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 4</label>
+                                <input type="text" id="equip4" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip4" onChange={this.stateChange} value={this.state.equip4} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip5" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 5</label>
+                                <input type="text" id="equip5" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip5" onChange={this.stateChange} value={this.state.equip5} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip6" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 6</label>
+                                <input type="text" id="equip6" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip6" onChange={this.stateChange} value={this.state.equip6} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip7" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 7</label>
+                                <input type="text" id="equip7" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip7" onChange={this.stateChange} value={this.state.equip7} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip8" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 8</label>
+                                <input type="text" id="equip8" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip8" onChange={this.stateChange} value={this.state.equip8} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip9" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 9</label>
+                                <input type="text" id="equip9" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip9" onChange={this.stateChange} value={this.state.equip9} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip10" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 10</label>
+                                <input type="text" id="equip10" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip10" onChange={this.stateChange} value={this.state.equip10} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip11" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 11</label>
+                                <input type="text" id="equip11" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip11" onChange={this.stateChange} value={this.state.equip11} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip12" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 12</label>
+                                <input type="text" id="equip12" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip12" onChange={this.stateChange} value={this.state.equip12} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip13" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 13</label>
+                                <input type="text" id="equip13" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip13" onChange={this.stateChange} value={this.state.equip13} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip14" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 14</label>
+                                <input type="text" id="equip14" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip14" onChange={this.stateChange} value={this.state.equip14} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip15" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 15</label>
+                                <input type="text" id="equip15" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip15" onChange={this.stateChange} value={this.state.equip15} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip16" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 16</label>
+                                <input type="text" id="equip16" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip16" onChange={this.stateChange} value={this.state.equip16} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip17" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 17</label>
+                                <input type="text" id="equip17" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip17" onChange={this.stateChange} value={this.state.equip17} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip18" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 18</label>
+                                <input type="text" id="equip18" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip18" onChange={this.stateChange} value={this.state.equip18} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip19" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 19</label>
+                                <input type="text" id="equip19" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip19" onChange={this.stateChange} value={this.state.equip19} required/>
+                            </div>
+                            <div className="w-1/2 pt-2 px-4">
+                                <label htmlFor="equip20" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Équipement 20</label>
+                                <input type="text" id="equip20" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="" name="equip20" onChange={this.stateChange} value={this.state.equip20} required/>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div className="pt-4 px-4 flex w-full">
                         {
                             // Test d'import fichier
