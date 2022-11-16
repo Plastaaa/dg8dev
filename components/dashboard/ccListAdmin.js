@@ -74,6 +74,12 @@ export default class ListCCAdmin extends React.Component {
                     supp: suppValue
                 }
             })
+            axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/suppCCById4.php`,{
+                params:{
+                    concess: idcc,
+                    supp: suppValue
+                }
+            })
     
             axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCByConcessBis.php?concess=${idcc}`)
                 .then(res => {

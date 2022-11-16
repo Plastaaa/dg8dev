@@ -28,7 +28,7 @@ export default class MiniSearch extends React.Component {
                                     Profilé
                                 </h2>
                                 <p className="text-sm">
-                                    Nos camping-cars profilé
+                                    Nos camping-cars profilé.
                                 </p>
                                 <div className="mt-3 flex items-center">
                                     <span className="font-bold text-xl">
@@ -45,7 +45,7 @@ export default class MiniSearch extends React.Component {
                                     Capucine
                                 </h2>
                                 <p className="text-sm">
-                                    Nos camping-cars capucine
+                                    Nos camping-cars capucine.
                                 </p>
                                 <div className="mt-3 flex items-center">
                                     <span className="font-bold text-xl">
