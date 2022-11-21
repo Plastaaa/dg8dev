@@ -97,7 +97,7 @@ export default function CardCC(props) {
             <Link href={`/stock/${slugify(props.refe)}`}>
                 <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden">
                     <div className="relative overflow-hidden">
-                        <ImgCard link={props.photo}/>
+                        <ImgCard link={props.photo} nom={props.marque+""+props.modele+""+props.ver}/>
                     </div>
                     <div className="p-4">
                         <span className="inline-block px-2 py-1 leading-none dark:bg-green-600 dark:text-white bg-green-800 text-white rounded-full font-semibold uppercase tracking-wide text-xs">

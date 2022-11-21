@@ -16,7 +16,7 @@ export default function NavBar() {
     return (
         <div>
             <nav className="w-full bg-fixed shadow">
-                <div className='text-end flex-end pt-2'>
+                <div className='text-end flex-end pt-2 pr-4'>
                     <a href='https://www.youtube.com/channel/UCAL-Abx50ylrHpykSGsehUQ' className='inline-block dark:hidden pl-4'>
                         <div className='inline-block'>
                             <Image height={12} width={12} alt={"Youtube logo"} src={youtubeIMG}/>
