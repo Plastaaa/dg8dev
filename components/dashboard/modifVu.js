@@ -9,9 +9,11 @@ export default class Stat extends React.Component {
     }
 
     handleStatement = () => {
-        this.state.ccs.map(cc =>
-            this.setState({ refdms: cc.idCC })
-        )
+        //this.state.ccs.map(cc =>
+            //this.setState({ refdms: cc.idCC }),
+            //this.setState({ typeLit: cc.typeLit}),
+            //this.setState({ reservoirSale: cc.reservoirSale}),
+        //)
     }
 
     componentDidMount() {
@@ -36,7 +38,6 @@ export default class Stat extends React.Component {
         });
 
         this.handleStatement();
-
     }
 
     render(){
@@ -49,15 +50,16 @@ export default class Stat extends React.Component {
                     <div className="w-10/12">
                         {
                             this.state.ccs.map(cc =>
+                                
                             <div className="pt-8">
-                                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Modifier le véhicule {cc.idCC}</h2>
+                                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Modifier le véhicule {this.state.idCC}</h2>
                                 <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">{cc.marque + " " + cc.modele}.</p>
                                 <div className="py-2 lg:py-2 px-4 mx-auto max-w-screen-md">
                                     <div className="flex flex-wrap">
                                         <div className="w-1/6 pt-4 px-4 py-2">
                                             <label htmlFor="nom" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ref</label>
                                             <div className="flex">
-                                                <input type="text" id="nom" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={cc.idCC} required/>
+                                                <input type="text" id="nom" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.idCC} required/>
                                             </div>
                                         </div>
                                         
@@ -182,11 +184,11 @@ export default class Stat extends React.Component {
                                         </div>
                                         <div className="w-1/6 pt-4 px-4">
                                             <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Eau usée</label>
-                                            <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Reservoir eau usée" name="resUsed" onChange={this.stateChange} value={cc.reservoirSale} required/>
+                                            <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Reservoir eau usée" name="resUsed" onChange={this.stateChange} value={this.state.reservoirSale} required/>
                                         </div>
                                         <div className="w-5/6 pt-4 px-4">
                                             <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Type lit</label>
-                                            <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Type de lit" name="lit" onChange={this.stateChange} value={cc.typeLit} required/>
+                                            <input type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Type de lit" name="lit" onChange={this.stateChange} value={this.state.typeLit} required/>
                                         </div>
                                         <div className="pt-4 px-4 flex w-full">
                                             {
@@ -198,93 +200,25 @@ export default class Stat extends React.Component {
                                                         {
                                                             this.state.imgCC.map((img) => (
                                                                 <div className="flex flex-wrap">
-                                                                    <div className="w-1/2">
-                                                                        {/*Import 1*/}
-                                                                        <div className="w-full">
-                                                                            <div className='w-full'>
-                                                                                <input type="file" onChange={this.onFileChange1} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                                        <div className="w-1/2">
+                                                                            {/*Import 1*/}
+                                                                            <div className="">
+                                                                                <div className=''>
+                                                                                    <input type="file" onChange={this.onFileChange1} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div className="w-1/2">
-                                                                        {/*Import 1*/}
-                                                                        <div className="flex justify-end">
-                                                                            <div className='w-full'>
-                                                                                <Image src={img.linkIMG} objectFit={"cover"} height={50} width={100}/>
+                                                                        <div className="w-1/2">
+                                                                            {/*Import 1*/}
+                                                                            <div className="flex justify-end">
+                                                                                <div className=''>
+                                                                                    <Image src={img.linkIMG} objectFit={"cover"} height={50} width={100}/>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
                                                                 </div>
                                                             ))
-                                                        }
-
-
-
-                                                        <div className="w-1/2">
-                                                            {/*Import 1*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange1} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <div className="w-1/2">
-                                                            {/*Import 2*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange2} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-1/2">
-                                                            {/*Import 3*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange3} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-1/2">
-                                                            {/*Import 4*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange4} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-1/2">
-                                                            {/*Import 5*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange5} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-1/2">
-                                                            {/*Import 6*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange6} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-1/2">
-                                                            {/*Import 7*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange7} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="w-1/2">
-                                                            {/*Import 8*/}
-                                                            <div>
-                                                                <div className='w-full'>
-                                                                    <input type="file" onChange={this.onFileChange8} className={"bg-gray-200 text-black p-4 rounded-lg"}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        }                                           
                                                     </div>
                                                     {
                                                         //<ImportPhoto/>

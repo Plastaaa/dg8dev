@@ -2,11 +2,13 @@ import Image from 'next/image'
 import CardImage from '../components/logo'
 import { useState } from "react";
 import phoneIMG from '../public/phone.png'
+import whitephoneIMG from '../public/whitephone.png'
 import youtubeIMG from '../public/logo/social/yt.png'
 import fbIMG from '../public/logo/social/fb.png'
-import pintIMG from '../public/logo/social/pint.png'
 import instaIMG from '../public/logo/social/insta.png'
-
+import whiteyoutubeIMG from '../public/logo/social/ytwhite.png'
+import whitefbIMG from '../public/logo/social/fbwhite.png'
+import whiteinstaIMG from '../public/logo/social/instawhite.png'
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
@@ -15,7 +17,7 @@ export default function NavBar() {
         <div>
             <nav className="w-full bg-fixed shadow">
                 <div className='text-end flex-end pt-2'>
-                    <a href='https://www.youtube.com/channel/UCAL-Abx50ylrHpykSGsehUQ' className='pl-4'>
+                    <a href='https://www.youtube.com/channel/UCAL-Abx50ylrHpykSGsehUQ' className='inline-block dark:hidden pl-4'>
                         <div className='inline-block'>
                             <Image height={12} width={12} alt={"Youtube logo"} src={youtubeIMG}/>
                         </div>
@@ -23,7 +25,16 @@ export default function NavBar() {
                             <p className=''>Youtube</p>
                         </div>
                     </a>
-                    <a href='https://www.facebook.com/dg8campingcars' className='pl-4'>
+                    <a href='https://www.youtube.com/channel/UCAL-Abx50ylrHpykSGsehUQ' className='hidden dark:inline-block pl-4'>
+                        <div className='inline-block'>
+                            <Image height={12} width={12} alt={"Youtube logo dark"} src={whiteyoutubeIMG}/>
+                        </div>
+                        <div className='md:inline-block hidden pl-1'>
+                            <p className='text-white'>Youtube</p>
+                        </div>
+                    </a>
+
+                    <a href='https://www.facebook.com/dg8campingcars' className='pl-4 inline-block dark:hidden'>
                         <div className='inline-block'>
                             <Image height={12} width={12} alt={"Facbook logo"} src={fbIMG}/>
                         </div>
@@ -31,7 +42,16 @@ export default function NavBar() {
                             <p>Facebook</p>
                         </div>
                     </a>
-                    <a href='https://www.instagram.com/dg8campingcar' className='pl-4'>
+                    <a href='https://www.facebook.com/dg8campingcars' className='hidden dark:inline-block pl-4'>
+                        <div className='inline-block'>
+                            <Image height={12} width={12} alt={"Facbook logo"} src={whitefbIMG}/>
+                        </div>
+                        <div className='md:inline-block hidden pl-1'>
+                            <p className='text-white'>Facebook</p>
+                        </div>
+                    </a>
+                    
+                    <a href='https://www.instagram.com/dg8campingcar' className='pl-4 inline-block dark:hidden'>
                         <div className='inline-block'>
                             <Image height={12} width={12} alt={"Instagram logo"} src={instaIMG}/>
                         </div>
@@ -39,12 +59,12 @@ export default function NavBar() {
                             <p>Instagram</p>
                         </div>
                     </a>
-                    <a href='https://www.pinterest.fr/dg8cars/' className='pl-4'>
-                        <div className='inline-block md:pr-0 pr-4'>
-                            <Image height={12} width={12} alt={"Pinterest logo"} src={pintIMG}/>
+                    <a href='https://www.instagram.com/dg8campingcar' className='hidden dark:inline-block pl-4'>
+                        <div className='inline-block'>
+                            <Image height={12} width={12} alt={"Instagram logo"} src={whiteinstaIMG}/>
                         </div>
-                        <div className='md:inline-block hidden pl-1 pr-4'>
-                            <p>Pinterest</p>
+                        <div className='md:inline-block hidden pl-1'>
+                            <p className='text-white'>Instagram</p>
                         </div>
                     </a>
                 </div>
@@ -160,7 +180,12 @@ export default function NavBar() {
                                     <a href="tel:+33 0969396973">
                                         <button className='flex flex-wrap text-gray-600 hover:bg-green-700 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
                                             <div className='w-2/8 px-1 pt-0.5'>
-                                                <Image height={16} width={16} src={phoneIMG} objectFit={"contain"} alt={"Phone logo"} className={"px-4"}/>
+                                                <div className='block dark:hidden'>
+                                                    <Image height={16} width={16} src={phoneIMG} objectFit={"contain"} alt={"Phone logo"} className={"px-4"}/>
+                                                </div>
+                                                <div className='hidden dark:block'>
+                                                    <Image height={16} width={16} src={whitephoneIMG} objectFit={"contain"} alt={"Phone logo dark"} className={"px-4"}/>
+                                                </div>
                                             </div>
                                             <div className='w-6/8'>
                                                 09 69 39 69 73
