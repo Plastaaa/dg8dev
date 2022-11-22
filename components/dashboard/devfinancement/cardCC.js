@@ -90,8 +90,8 @@ export default class CardCC extends React.Component{
         return (  
             <div>
                 <script type="text/javascript" language="javascript" ></script>
-                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
+                <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
 
                 <button onClick={initBOXA('VEHICLE')}>coucou1</button>
                 <button onClick={reloadVehicleData()}>coucou2</button>
