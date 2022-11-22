@@ -129,20 +129,20 @@ export default class CardCC extends React.Component{
                                     <div className='mt-3 items-center font-bold text-xl'>
                                         A partir de 
                                         <div class='apartirde'>
-                                                <input 
-                                                    type='hidden' 
-                                                    name='box-auto-infos' 
-                                                    wmName='mozac_loisirs_63200' 
-                                                    vehicleCategory="V" 
-                                                    vehicleIsNewBo="N" 
-                                                    dateMiseCirc="" 
-                                                    vehicleMileAge="" 
-                                                    proposalPrice="" 
-                                                    vehicleEngineRating="" 
-                                                    vehicleHorsePower="" 
-                                                    vehicleEnergy=""
-                                                />
-                                            </div>
+                                            <input 
+                                                type='hidden' 
+                                                name='box-auto-infos' 
+                                                wmName='mozac_loisirs_63200' 
+                                                vehicleCategory="V" 
+                                                vehicleIsNewBo="N" 
+                                                dateMiseCirc="2022-10-10" 
+                                                vehicleMileAge="0" 
+                                                proposalPrice="57000" 
+                                                vehicleEngineRating="4" 
+                                                vehicleHorsePower="130" 
+                                                vehicleEnergy="D"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='w-1/2'>
