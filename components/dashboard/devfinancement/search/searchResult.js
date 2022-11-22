@@ -20,7 +20,7 @@ export default class SearchResult extends React.Component {
             this.setState({ ccs });
         });
 
-        initBOXA('CATALOG');
+        //initBOXA('CATALOG');
 
     }
 

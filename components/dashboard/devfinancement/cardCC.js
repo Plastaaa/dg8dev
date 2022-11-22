@@ -93,7 +93,8 @@ export default class CardCC extends React.Component{
                 <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
                 <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
 
-                <button onClick={reloadVehicleData()}>coucou</button>
+                <button onClick={initBOXA('VEHICLE')}>coucou1</button>
+                <button onClick={reloadVehicleData()}>coucou2</button>
 
                 <Link href={`/stock/${slugify(this.props.refe)}`}>
                     <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
@@ -131,7 +132,7 @@ export default class CardCC extends React.Component{
                                                 <input 
                                                     type='hidden' 
                                                     name='box-auto-infos' 
-                                                    wmName='cap_liberte_63800' 
+                                                    wmName='mozac_loisirs_63200' 
                                                     vehicleCategory="V" 
                                                     vehicleIsNewBo="N" 
                                                     dateMiseCirc="" 
