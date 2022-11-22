@@ -44,8 +44,8 @@ export default class SearchResult extends React.Component {
         return (
             <div>
                 <script type="text/javascript" language="javascript"></script>
-                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
+                <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
 
                 {
                 }
