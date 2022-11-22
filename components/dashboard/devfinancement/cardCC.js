@@ -2,6 +2,7 @@ import ImgCard from './imgCard'
 import { slugify } from '../../../utils/helpers'
 import Link from 'next/link';
 import Image from 'next/image';
+import React from 'react';
 
 function BotInfoBdv(props){
     const bdv = props.bdv;
@@ -83,90 +84,90 @@ function KM(props){
     )
 }
 
-export default function CardCC(props) {
-    return (  
-        <div>
-            <script type="text/javascript" language="javascript" ></script>
-            <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-            <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
+export default class CardCC extends React.Component{
+    
+    render(){
+        return (  
+            <div>
+                <script type="text/javascript" language="javascript" ></script>
+                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
 
-            <button onClick={reloadVehicleData()}>
-                                    coucou
-                                </button>
+                <button onClick={reloadVehicleData()}>coucou</button>
 
-            <Link href={`/stock/${slugify(props.refe)}`}>
-                <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
-                    <div className="relative overflow-hidden">
-                        <ImgCard link={props.photo}/>
-                    </div>
-                    <div className="p-4">
-                        <span className="inline-block px-2 py-1 leading-none dark:bg-green-600 dark:text-white bg-green-800 text-white rounded-full font-semibold uppercase tracking-wide text-xs">
-                            {props.etat + " " + props.annee}
-                        </span>
-                        <h2 className="mt-2 mb-2 dark:text-gray-200 font-bold notranslate">
-                            {props.marque}
-                        </h2>
-                        <p className="text-sm dark:text-gray-200">
-                            {props.modele}
-                        </p>
-                        <p className="text-sm dark:text-gray-200">
-                            {props.ver}
-                        </p>
-                        <p className="text-sm dark:text-gray-200">
-                            {props.libelle}
-                        </p>
-                        <div className='flex flex-wrap'>
-                            <div className='w-1/2'>
-                                {
-                                    function() {
-                                        initBOXA('VEHICLE');
-                                        reloadVehicleData();
-                                    }
-                            
-                                }
-                                
-                                <div className='mt-3 items-center font-bold text-xl'>
-                                    A partir de 
-                                    <div class='apartirde'>
-                                            <input 
-                                                type='hidden' 
-                                                name='box-auto-infos' 
-                                                wmname='cap_liberte_63800' 
-                                                vehiclecategory="V" 
-                                                vehicleisnewbo="N" 
-                                                datemisecirc="" 
-                                                vehiclemileage="" 
-                                                proposalprice="" 
-                                                vehicleenginerating="" 
-                                                vehiclehorsepower="" 
-                                                vehicleenergy=""
-                                            />
-                                        </div>
-                                </div>
-                            </div>
-                            <div className='w-1/2'>
-                                <div className="mt-3 items-center">
-                                    <span className="font-bold dark:text-gray-200">
-                                        {
-                                            Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(props.prix)
+                <Link href={`/stock/${slugify(this.props.refe)}`}>
+                    <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+                        <div className="relative overflow-hidden">
+                            <ImgCard link={this.props.photo}/>
+                        </div>
+                        <div className="p-4">
+                            <span className="inline-block px-2 py-1 leading-none dark:bg-green-600 dark:text-white bg-green-800 text-white rounded-full font-semibold uppercase tracking-wide text-xs">
+                                {this.props.etat + " " + this.props.annee}
+                            </span>
+                            <h2 className="mt-2 mb-2 dark:text-gray-200 font-bold notranslate">
+                                {this.props.marque}
+                            </h2>
+                            <p className="text-sm dark:text-gray-200">
+                                {this.props.modele}
+                            </p>
+                            <p className="text-sm dark:text-gray-200">
+                                {this.props.ver}
+                            </p>
+                            <p className="text-sm dark:text-gray-200">
+                                {this.props.libelle}
+                            </p>
+                            <div className='flex flex-wrap'>
+                                <div className='w-1/2'>
+                                    {
+                                        function() {
+                                            initBOXA('VEHICLE');
+                                            reloadVehicleData();
                                         }
-                                    </span>
+                                
+                                    }
+                                    <div className='mt-3 items-center font-bold text-xl'>
+                                        A partir de 
+                                        <div class='apartirde'>
+                                                <input 
+                                                    type='hidden' 
+                                                    name='box-auto-infos' 
+                                                    wmName='cap_liberte_63800' 
+                                                    vehicleCategory="V" 
+                                                    vehicleIsNewBo="N" 
+                                                    dateMiseCirc="" 
+                                                    vehicleMileAge="" 
+                                                    proposalPrice="" 
+                                                    vehicleEngineRating="" 
+                                                    vehicleHorsePower="" 
+                                                    vehicleEnergy=""
+                                                />
+                                            </div>
+                                    </div>
+                                </div>
+                                <div className='w-1/2'>
+                                    <div className="mt-3 items-center">
+                                        <span className="font-bold dark:text-gray-200">
+                                            {
+                                                Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(this.props.prix)
+                                            }
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div className="p-4 dark:border-gray-600 dark:text-gray-200 border-t border-b text-xs text-gray-700">
+                            <div className="flex flex-wrap overflow-hidden">
+                            {
+                                <BotInfoKm km={this.props.km}/>
+                            }
+                            {    
+                                <BotInfoBdv bdv={this.props.bdv}/>
+                            }
+                            </div>      
+                        </div>
                     </div>
-                    <div className="p-4 dark:border-gray-600 dark:text-gray-200 border-t border-b text-xs text-gray-700">
-                        <div className="flex flex-wrap overflow-hidden">
-                        {
-                            <BotInfoKm km={props.km}/>
-                        }
-                        {    
-                            <BotInfoBdv bdv={props.bdv}/>
-                        }
-                        </div>      
-                    </div>
-                </div>
-            </Link>
-        </div>
-    )
+                </Link>
+            </div>
+        )
+    }
 }

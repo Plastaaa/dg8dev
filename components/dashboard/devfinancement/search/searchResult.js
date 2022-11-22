@@ -48,8 +48,6 @@ export default class SearchResult extends React.Component {
                 <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
 
                 {
-
-                    
                 }
                 
                 <div className="flex flex-wrap overflow-hidden">
