@@ -9,6 +9,8 @@ import instaIMG from '../public/logo/social/insta.png'
 import whiteyoutubeIMG from '../public/logo/social/ytwhite.png'
 import whitefbIMG from '../public/logo/social/fbwhite.png'
 import whiteinstaIMG from '../public/logo/social/instawhite.png'
+import gift from '../public/gift.png'
+import whitegift from '../public/whitegift.png'
 
 export default function NavBar() {
     const [navbar, setNavbar] = useState(false);
@@ -68,7 +70,7 @@ export default function NavBar() {
                         </div>
                     </a>
                 </div>
-                <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8">
+                <div className="justify-between px-4 mx-auto lg:items-center lg:flex lg:px-8">
                     <div>
                         <div className="flex items-center justify-between py-2 lg:py-2 lg:block">
                                 <div className=''>
@@ -175,10 +177,29 @@ export default function NavBar() {
                                         </ul>
                                     </div>
                                 </li>
+                                <li>
+                                    <a href="/calendrier">
+                                        <button className='flex flex-wrap text-gray-600 bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
+                                            <div className='w-2/8 px-1 pt-0.5'>
+                                                <div className='block dark:hidden pr-2'>
+                                                    <Image height={16} width={16} src={whitegift} objectFit={"contain"} alt={"Gift logo"} className={"px-4"}/>
+                                                </div>
+                                                <div className='hidden dark:block'>
+                                                    <Image height={16} width={16} src={whitegift} objectFit={"contain"} alt={"Gift logo dark"} className={"px-4"}/>
+                                                </div>
+                                            </div>
+                                            <div className='w-6/8'>
+                                                <p className='text-white pr-2'>
+                                                    JEU CONCOURS
+                                                </p>
+                                            </div>
+                                        </button>
+                                    </a>
+                                </li>
                                 {
                                 <li>
                                     <a href="tel:+33 0969396973">
-                                        <button className='flex flex-wrap text-gray-600 hover:bg-green-700 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
+                                        <button className='flex flex-wrap text-gray-600 hover:bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
                                             <div className='w-2/8 px-1 pt-0.5'>
                                                 <div className='block dark:hidden'>
                                                     <Image height={16} width={16} src={phoneIMG} objectFit={"contain"} alt={"Phone logo"} className={"px-4"}/>

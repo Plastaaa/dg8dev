@@ -233,6 +233,19 @@ export default class Contact extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <div className="w-1/2 pl-4">
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Concession</label>
+                            <select value={this.state.concess} onChange={this.handleChange} className="dropdown bg-gray-50 border border-gray-300 p-3 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="marque" required>
+                                <option key={0}>Partir depuis la concession</option>
+                                <option key={1}>(38430) Expo Clavel</option>
+                                <option key={2}>(74330) Curioz Loisirs</option>
+                                <option key={3}>(63370) Evasion 63</option>
+                                <option key={4}>(63800) Cap Liberté</option>
+                            </select>
+                        </div>
+                        <div className="w-1/2 pt-8 pl-4 pr-4">
+                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Choisir la concession depuis laquelle vous souhaitez partir.</p>
+                        </div>
                         <div className="w-full">
                             <h2 className="pt-6 text-lg tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Options</h2>
                         </div>
@@ -242,7 +255,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="animaux" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tHum" class="font-medium text-gray-900 dark:text-gray-300">Animaux</label>
+                                    <label for="tHum" class="font-medium text-gray-900 dark:text-gray-300">Animaux (3€/jour)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Cette option vous permet de prendre vos animaux avec vous.</p>
                                 </div>
                             </div>
@@ -253,7 +266,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="barbecue" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Barbecue gaz</label>
+                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Barbecue gaz (5€/jour)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Mise à disposition d'un barbecue.</p>
                                 </div>
                             </div>
@@ -264,7 +277,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="veille" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Départ la veille</label>
+                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Départ la veille (70€)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Permet de récupérer le véhicule le jour d'avant, après 18h.</p>
                                 </div>
                             </div>
@@ -275,7 +288,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="cuisine" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tHum" class="font-medium text-gray-900 dark:text-gray-300">Kit cuisine & vaisselle</label>
+                                    <label for="tHum" class="font-medium text-gray-900 dark:text-gray-300">Kit cuisine & vaisselle (88€)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Assortiment d'ustensiles de cuisine.</p>
                                 </div>
                             </div>
@@ -286,7 +299,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="gps" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">GPS</label>
+                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">GPS (5€/jour)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Mise à disposition d'un GPS avec gestion du gabarit.</p>
                                 </div>
                             </div>
@@ -297,7 +310,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="soplair" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Kit Soplair</label>
+                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Kit Soplair (10€/jour)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Kit d'isolation extérieur (chaud / froid).</p>
                                 </div>
                             </div>
@@ -308,7 +321,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="nett" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tHum" class="font-medium text-gray-900 dark:text-gray-300">Nettoyage</label>
+                                    <label for="tHum" class="font-medium text-gray-900 dark:text-gray-300">Nettoyage (120€)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Forfait de nettoyage intérieur et extérieur</p>
                                 </div>
                             </div>
@@ -319,7 +332,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="tabchaise" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Table et chaises</label>
+                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Table et chaises (5€/jour)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Kit composé d'une table et de 2 chaises en aluminium.</p>
                                 </div>
                             </div>
@@ -330,7 +343,7 @@ export default class Contact extends React.Component {
                                     <input onChange={e => this.handleChange(e)} id="enfant" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                                 </div>
                                 <div class="ml-2 text-sm">
-                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Kit lit enfant</label>
+                                    <label for="tFin" class="font-medium text-gray-900 dark:text-gray-300">Kit lit enfant (10,30€)</label>
                                     <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Kit comprenant un lit pour enfant.</p>
                                 </div>
                             </div>
