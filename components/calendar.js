@@ -204,9 +204,9 @@ export default class Calendar extends React.Component {
                                                 />
                                             </div>
                                         </div>
-                                        <div className='w-full px-4 py-2 pb-16'>
-                                            <div style={{cursor:"pointer"}} onClick={() => this.stateSend} className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100">
-                                                <button onClick={this.stateSend} className="w-full">Envoyer</button>
+                                        <div style={{cursor:"pointer"}} onClick={() => this.stateSend} className='w-full px-4 py-2 pb-16'>
+                                            <div className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100">
+                                                <button /*onClick={this.stateSend}*/ className="w-full">Envoyer</button>
                                             </div>
                                         </div>
                                     </div>
