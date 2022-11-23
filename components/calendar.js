@@ -188,13 +188,11 @@ export default class Calendar extends React.Component {
                                             <textarea value={this.state.rep} rows={3} type="text" id="rep" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-red-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ex: réponse a" name="rep" onChange={this.stateChange} required/>
                                         </div>
                                         <div className="w-full pt-4 px-4">
-                                            <div className="flex flex-wrap">
-                                                <div className='w-2/8'>
+                                            <div className="flex flex-wrap inline">
+                                                <div className='w-full'>
                                                     <input type="checkbox" className="checkbox bg-orange-100"/>
-                                                </div> 
-                                                <div className='w-6/8'>
                                                     <p className="text-orange-100 inline text-orange-100 pl-4">J'accepte les <a href='./' className='underline'>conditions générales de participation</a></p>
-                                                </div>
+                                                </div> 
                                             </div>
                                         </div>
                                         <div className='w-full'>
@@ -207,7 +205,7 @@ export default class Calendar extends React.Component {
                                             </div>
                                         </div>
                                         <div className='w-full px-4 py-2 pb-16'>
-                                            <div className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100">
+                                            <div style={{cursor:"pointer"}} onClick={() => this.stateSend} className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100">
                                                 <button onClick={this.stateSend} className="w-full">Envoyer</button>
                                             </div>
                                         </div>

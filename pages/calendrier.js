@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - RDV Atelier</title>
+                <title>DG8 Camping-cars - Calendrier de l'Avent</title>
                 <meta name="description" content="."/>
             </Helmet>
             <div>
