@@ -129,12 +129,12 @@ export default function NavBar() {
                                 <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/stock?etat=occasion">Occasion</a>
                                 </li>
-                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                <li className="hidden xl:block text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/location">Location</a>
                                 </li>
                                 <li>
                                     <div className="dropdown dropdown-hover">
-                                        <a href='/le-groupe-david-gerbier'>
+                                        <a href='/atelier'>
                                             <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Prendre RDV</label>
                                         </a>
                                         
@@ -144,13 +144,35 @@ export default function NavBar() {
                                         </ul>
                                     </div>
                                 </li>
-                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                <li className='block xl:hidden'>
+                                    <div className="dropdown dropdown-hover">
+                                        <a href='/'>
+                                            <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Services</label>
+                                        </a>
+                                        
+                                        <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
+                                            <li className="block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                                <a href="/rachat-cash">Rachat Cash</a>
+                                            </li>
+                                            <li className="block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                                <a href="/contact">Contact</a>
+                                            </li>
+                                            <li className="block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                                <a href="/location">Location</a>
+                                            </li>
+                                            <li className='block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400'><a href='/guide/le-guide-poids-lourd'>Guide d'achat poids lourd</a></li>
+                                            <li className='block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400'><a href='/guide/le-guide-camping-car'>Guide d'achat Camping-car</a></li>
+                                            <li className='block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400'><a href='/guide/le-guide-van-et-fourgon'>Guide d'achat Van et Fourgon</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li className="hidden xl:block text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/rachat-cash">Rachat Cash</a>
                                 </li>
-                                <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
+                                <li className="hidden xl:block text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/contact">Contact</a>
                                 </li>
-                                <li>
+                                <li className='hidden xl:block'>
                                     <a>
                                         <div className="dropdown dropdown-hover">
                                             <a href='/guide/le-guide-camping-car'>

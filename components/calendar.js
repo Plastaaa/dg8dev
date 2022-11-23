@@ -143,12 +143,12 @@ export default class Calendar extends React.Component {
 
     render(){
         return (
-            <div className="h-screen" style={{ backgroundImage: "url(/bg-calendar.png)", backgroundRepeat: 'no-repeat' }}>
+            <div className="" style={{ backgroundImage: "url(/bg-calendar.png)", backgroundRepeat: 'repeat-y' }}>
                 <div>
                     <div className="flex flex-wrap">
                         <div className="w-1/4">
                         </div>
-                        <div className="w-2/4">
+                        <div className="w-full px-4 md:w-2/4">
                             <div className="pt-10">
                                 <h2 className="p-6 text-2xl tracking-tight font-extrabold text-center bg-orange-100 text-green-900">LE CALENDRIER DE L'AVENT DG8 CAMPING-CAR</h2>
                             </div>
@@ -156,12 +156,12 @@ export default class Calendar extends React.Component {
                                 <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance en répondant à la question du jour !</p>
                             </div>
                             <div className='flex flex-wrap'>
-                                <div className="w-1/2 pt-8">
+                                <div className="w-full xl:w-1/2 pt-8">
                                     <div className=''>
                                         <Image className={"rounded-xl"} src={choixVisuel()} objectFit={"cover"} width={1000} height={1000} alt={"Image camping car"} layout={""}/>
                                     </div>
                                 </div>
-                                <div className='w-1/2'>
+                                <div className='w-full xl:w-1/2'>
                                     <div className='flex flex-wrap'>
                                         <div className="w-1/2 px-4 py-2 pt-8">
                                             <label htmlFor="nom" className="text-orange-1OO"><p className='pb-2 text-orange-100 font-bold'>Nom</p></label>
@@ -206,7 +206,7 @@ export default class Calendar extends React.Component {
                                                 />
                                             </div>
                                         </div>
-                                        <div className='w-full px-4 py-2'>
+                                        <div className='w-full px-4 py-2 pb-16'>
                                             <div className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100">
                                                 <button onClick={this.stateSend} className="w-full">Envoyer</button>
                                             </div>
