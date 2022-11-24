@@ -412,6 +412,14 @@ export default class VehiculeUnique extends React.Component {
                                                         {cc.cylindre + " cm3"}
                                                     </p>
                                                 </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Nombre de couchages
+                                                    </p>
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.nbCouchage}
+                                                    </p>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div className="my-2 px-2 w-1/2 overflow-hidden">
@@ -464,14 +472,7 @@ export default class VehiculeUnique extends React.Component {
                                                         {cc.nbPortes}
                                                     </p>
                                                 </li>
-                                                <li>
-                                                    <p className='text-gray-400'>
-                                                        Nombre de couchages
-                                                    </p>
-                                                    <p className='text-gray-800 dark:text-white px-2'>
-                                                        {cc.nbCouchage}
-                                                    </p>
-                                                </li>
+                                                
                                             </ul>
                                         </div>
                                     </div>

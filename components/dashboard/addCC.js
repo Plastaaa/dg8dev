@@ -98,6 +98,7 @@ export default class AddCC extends React.Component {
                 bdv: this.state.bdv,
                 annee: this.state.annee,
                 nbportes: this.state.nbportes,
+                couchage: this.state.couchage,
                 porteur: this.state.porteur,
                 puissfisc: this.state.puissfisc,
                 puissdin: this.state.puissdin,
