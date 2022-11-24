@@ -200,7 +200,7 @@ export default function NavBar() {
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="/calendrier">
+                                    <a href="/jeuconcours">
                                         <button className='flex flex-wrap text-gray-600 bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
                                             <div className='w-2/8 px-1 pt-0.5'>
                                                 <div className='block dark:hidden pr-2'>

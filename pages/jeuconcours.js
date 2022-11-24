@@ -11,7 +11,7 @@ export default function Home(){
         <div>
             <Helmet>
                 <title>DG8 Camping-cars - Calendrier de l'Avent</title>
-                <meta name="description" content="."/>
+                <meta name="description" content="DG8 camping car organise un jeu concours qui vous permettra de gagner des centaines de cadeaux juste avant les fêtes !"/>
             </Helmet>
             <div>
                 {
