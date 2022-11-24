@@ -166,6 +166,30 @@ function Bed(props){
     return  "Type de lit : " + props.isSet + "."
 }
 
+function nbCouchage(props){
+    const couchage = props.couchage;
+    if(isSet == ""){
+        return <NoCouchage/>
+    }
+    return <Couchage/>
+}
+function NoCouchage(props){
+    return <li></li>
+}
+function Couchage(props){
+    const couchage = props.couchage;
+    return(
+        <li>
+            <p className='text-gray-400'>
+                Nombre de couchages
+            </p>
+            <p className='text-gray-800 dark:text-white px-2'>
+                {cc.nbCouchage}
+            </p>
+        </li>
+    )
+}
+
 export default class VehiculeUnique extends React.Component {
     componentDidMount() {
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[2]}`)
@@ -412,14 +436,8 @@ export default class VehiculeUnique extends React.Component {
                                                         {cc.cylindre + " cm3"}
                                                     </p>
                                                 </li>
-                                                <li>
-                                                    <p className='text-gray-400'>
-                                                        Nombre de couchages
-                                                    </p>
-                                                    <p className='text-gray-800 dark:text-white px-2'>
-                                                        {cc.nbCouchage}
-                                                    </p>
-                                                </li>
+                                                <nbCouchage/>
+                                                
                                             </ul>
                                         </div>
                                         <div className="my-2 px-2 w-1/2 overflow-hidden">
