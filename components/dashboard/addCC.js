@@ -461,6 +461,26 @@ export default class AddCC extends React.Component {
         });
     }
 
+    Bouton(){
+        if(this.state.status1 == "Prêt à l'envoi"){
+            return(
+                <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
+                    <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <button onClick={this.stateSend} className="w-full">Envoyer</button>
+                    </div>
+                </div>
+            )
+        }else{
+            return(
+                <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
+                    <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                        <button onClick={this.onFileUploadAll} className="w-full">Envoyer les photos</button>
+                    </div>
+                </div>
+            )
+        }
+    }
+
     render(){
         const cookies = new Cookies();
         return (
@@ -836,16 +856,9 @@ export default class AddCC extends React.Component {
                             </div>
                         }
                     </div>
-                    <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
-                        <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                            <button onClick={this.onFileUploadAll} className="w-full">Envoyer les photos</button>
-                        </div>
-                    </div>
-                    <div className="w-full xs:w-full sm:w-full md:w-full lg:w-full xl:w-full pt-4 px-4 py-4">
-                        <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                            <button onClick={this.stateSend} className="w-full">Envoyer</button>
-                        </div>
-                    </div>
+                    {
+                        this.Bouton()
+                    }                    
                 </div>
             </div>
         </div>
