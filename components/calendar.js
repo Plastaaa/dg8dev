@@ -83,8 +83,13 @@ export default class Calendar extends React.Component {
         console.log(this.state.rep);
         if((this.state.nom == "" || this.state.nom == undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel == ""  || this.state.tel == undefined) || (this.state.mail == "" || this.state.mail == undefined) || (this.state.cp == ""  || this.state.cp == undefined) || (this.state.rep == "" || this.state.rep == undefined)){
             this.setState({dejaSend: false});
+            console.log("marche po")
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.cp != "" && this.state.cp != undefined) || (this.state.rep != "" && this.state.rep != undefined)){
+            console.log("marche")
+            console.log(this.state.dejaSend)
+            console.log(this.state.resCapt.success)
             if(this.state.dejaSend != true && (this.state.resCapt.success)){
+                console.log("marche 2")
                 this.setState({dejaSend:  true});
                 this.setState({nom: ""});
                 this.setState({prenom: ""});
@@ -242,7 +247,7 @@ export default class Calendar extends React.Component {
                                             </div>
                                         </div>
                                         <div className='w-full px-4 py-2 pb-16'>
-                                            <a href='./jeuconcours' className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onTouchEnd={this.stateSend} onClick={this.stateSend}>Je participe !</a>
+                                            <a className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onTouchEnd={this.stateSend} onClick={this.stateSend}>Je participe !</a>
                                                 {
                                                     //<button className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onClick={this.stateSend}>Envoyer</button>
                                                 }

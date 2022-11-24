@@ -85,9 +85,9 @@ function KM(props){
 }
 
 export default class CardCC extends React.Component{
-    
+
     render(){
-        return (  
+        return (
             <div>
                 <script type="text/javascript" language="javascript" ></script>
                 <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
