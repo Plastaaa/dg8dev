@@ -136,7 +136,7 @@ export default class Calendar extends React.Component {
     onChange = (value) => {
         axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
             params: {
-                secret: '6LcBGZ4iAAAAAGdQHFoM8HVX0Oz_g1Nanzi5jJOy',
+                secret: '6LeWxy8jAAAAAMFdewCcyagVp8sgxmQQkSUfkT9o',
                 response: value,
             }
         })
@@ -239,11 +239,14 @@ export default class Calendar extends React.Component {
                                         </div>
                                         <div className='w-full'>
                                             <div className="pt-4 px-4">
-                                                <ReCAPTCHA
-                                                    sitekey="6LcBGZ4iAAAAAFAjIXUXagKVqG2zOn2TSwXMETc5"
-                                                    onChange={this.onChange}
-                                                    badge="inline"
-                                                />
+                                                {
+                                                    <ReCAPTCHA
+                                                        sitekey="6LeWxy8jAAAAAPQxDYwOSwo8kDlvE2ugyT0EKcQK"
+                                                        onChange={this.onChange}
+                                                        badge="inline"
+                                                    />
+                                                }
+                                                
                                             </div>
                                         </div>
                                         <div className='w-full px-4 py-2 pb-16'>
