@@ -75,6 +75,7 @@ export default class AddCC extends React.Component {
                 gamme: this.state.gamme,
                 annee: this.state.annee,
                 premiere: this.state.premmain,
+                couchage: this.state.couchage,
             }
         })
 
@@ -217,6 +218,7 @@ export default class AddCC extends React.Component {
         this.setState({ tva: "" });
         this.setState({ moteur: "" });
         this.setState({ nbportes: "" });
+        this.setState({ couchage: ""});
         this.setState({ porteur: "" });
         this.setState({ puissdin: "" });
         this.setState({ puissfisc: "" });
@@ -556,13 +558,17 @@ export default class AddCC extends React.Component {
                             <option value={1} key={1}>Oui</option>
                             <option value={0} key={2}>Non</option>
                         </select>                    </div>
-                    <div className="w-1/4 pt-4 px-4">
+                    <div className="w-1/6 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Concession</label>
                         <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Concession" name="concess" onChange={this.stateChange} value={this.state.concess} required/>
                     </div>
-                    <div className="w-1/4 pt-4 px-4">
-                        <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nombre de portes</label>
+                    <div className="w-1/6 pt-4 px-4">
+                        <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Portes</label>
                         <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Portes" name="nbportes" onChange={this.stateChange} value={this.state.nbportes} required/>
+                    </div>
+                    <div className="w-1/6 pt-4 px-4">
+                        <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Couchages</label>
+                        <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Couchage" name="couchage" onChange={this.stateChange} value={this.state.couchage} required/>
                     </div>
                     <div className="w-1/4 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Porteur</label>

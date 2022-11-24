@@ -464,6 +464,14 @@ export default class VehiculeUnique extends React.Component {
                                                         {cc.nbPortes}
                                                     </p>
                                                 </li>
+                                                <li>
+                                                    <p className='text-gray-400'>
+                                                        Nombre de couchages
+                                                    </p>
+                                                    <p className='text-gray-800 dark:text-white px-2'>
+                                                        {cc.nbCouchage}
+                                                    </p>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
