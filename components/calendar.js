@@ -145,6 +145,43 @@ export default class Calendar extends React.Component {
         return (
             <div className="" style={{ backgroundImage: "url(/bg-calendar.png)", backgroundRepeat: 'repeat-y' }}>
                 <div>
+                    <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+                    <div className="modal">
+                        <div className="modal-box relative">
+                            <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                            <h3 className="text-lg font-bold">
+                                Conditions générales de participation
+                            </h3>
+                            <p className="py-4">
+                                Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par C.A.B.+ au 40 Rue Ronsard pour notre calendrier de l'avent. La base légale du traitement est le consentement.
+                            </p>
+                            <p className='py-4'>
+                                Les données collectées seront communiquées aux seuls destinataires suivants : C.A.B.+.
+                            </p>
+                            <p className='py-4'>
+                                Les données sont conservées pendant 1 an.
+                            </p>
+                            <p className='py-4'>
+                                Vous pouvez accéder aux données vous concernant, les rectifier, demander leur effacement ou exercer votre droit à la limitation du traitement de vos données. Vous pouvez retirer à tout moment votre consentement au traitement de vos données ; Vous pouvez également vous opposer au traitement de vos données.
+                            </p>
+                            <p className='py-4'>
+                                Consultez le site cnil.fr pour plus d’informations sur vos droits.
+                            </p>
+                            <p className='py-4'>
+                                Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez contacter (le cas échéant, notre délégué à la protection des données ou le service chargé de l’exercice de ces droits) :
+                            </p>
+                            <p className='py-4'>
+                                <ul>
+                                    <li>Voie postale : C.A.B.+, 40 Rue Ronsard, 64000 Pau</li>
+                                    <li>Voie électronique : contact@dg8campingcar.com</li>
+                                    <li>Voie télephonique : 09 69 39 69 73</li>
+                                </ul>
+                            </p>
+                            <p className='py-4'>
+                                Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.
+                            </p>
+                        </div>
+                    </div>
                     <div className="flex flex-wrap">
                         <div className="w-1/4">
                         </div>
@@ -191,7 +228,7 @@ export default class Calendar extends React.Component {
                                             <div className="flex flex-wrap inline">
                                                 <div className='w-full'>
                                                     <input type="checkbox" className="checkbox bg-orange-100"/>
-                                                    <p className="text-orange-100 inline text-orange-100 pl-4">J'accepte les <a href='./' className='underline'>conditions générales de participation</a></p>
+                                                    <p className="text-orange-100 inline text-orange-100 pl-4">J'accepte les <label htmlFor="my-modal-3" className='underline'>conditions générales de participation</label></p>
                                                 </div> 
                                             </div>
                                         </div>
@@ -205,7 +242,7 @@ export default class Calendar extends React.Component {
                                             </div>
                                         </div>
                                         <div className='w-full px-4 py-2 pb-16'>
-                                            <a className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onClick={this.stateSend}>Je participe !</a>
+                                            <a className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onTouchEnd={this.stateSend} onClick={this.stateSend}>Je participe !</a>
                                                 {
                                                     //<button className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onClick={this.stateSend}>Envoyer</button>
                                                 }
