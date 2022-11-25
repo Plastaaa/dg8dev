@@ -87,8 +87,8 @@ export default class Calendar extends React.Component {
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.cp != "" && this.state.cp != undefined) || (this.state.rep != "" && this.state.rep != undefined)){
             console.log("marche")
             console.log(this.state.dejaSend)
-            console.log(this.state.resCapt.success)
-            if(this.state.dejaSend != true && (this.state.resCapt.success)){
+            //console.log(this.state.resCapt.success)
+            if(this.state.dejaSend != true){
                 console.log("marche 2")
                 this.setState({dejaSend:  true});
                 this.setState({nom: ""});
@@ -133,7 +133,7 @@ export default class Calendar extends React.Component {
         });
     }
 
-    onChange = (value) => {
+    /*onChange = (value) => {
         axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
             params: {
                 secret: '6LeWxy8jAAAAAMFdewCcyagVp8sgxmQQkSUfkT9o',
@@ -144,7 +144,7 @@ export default class Calendar extends React.Component {
             const resCapt = res.data;
             this.setState({ resCapt: resCapt });
         });
-    }
+    }*/
 
     render(){
         return (
