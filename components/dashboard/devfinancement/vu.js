@@ -3,12 +3,12 @@ import axios from 'axios'
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import CardCC from './cardCC';
-import SlideMarc from './slideMarc';
-import Contact from '../components/contactVU'
-import MapBis from '../components/mapBis'
+import SlideMarc from './../../slideMarc';
+import Contact from '../../../components/contactVU'
+import MapBis from '../../../components/mapBis'
 import Image from 'next/image';
-import NavBar from '../../components/navbar'
-import Footer from '../../components/footer'
+import NavBar from '../../../components/navbar'
+import Footer from '../../../components/footer'
 import {Helmet} from "react-helmet";
 
 
@@ -255,6 +255,19 @@ export default class VehiculeUnique extends React.Component {
             this.state.campingcar.map((cc) => (
                 
                 <div>
+                    <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                    <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
+                    {
+                        function() {
+                            initBOXA('VEHICLE');
+                            reloadVehicleData();
+                        }
+                        //<button onClick={initBOXA('VEHICLE')}>coucou1</button>
+                        //<button onClick={reloadVehicleData()}>coucou2</button>
+                    }
+                    
+                        
+                    
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
                     </Helmet>
@@ -294,6 +307,24 @@ export default class VehiculeUnique extends React.Component {
                             <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
+                            <div className='mt-3 items-center font-bold text-xl'>
+                                        A partir de 
+                                        <div class='apartirde'>
+                                            <input 
+                                                type='hidden' 
+                                                name='box-auto-infos' 
+                                                wmname='mozac_loisirs_63200' 
+                                                vehiclecategory="V" 
+                                                vehicleisnewbo="N" 
+                                                datemisecirc="2022-10-10" 
+                                                vehiclemileage="0" 
+                                                proposalprice="57000" 
+                                                vehicleenginerating="4" 
+                                                vehiclehorsepower="130" 
+                                                vehicleenergy="D"
+                                            />
+                                        </div>
+                                    </div>
                         </div>
                         <div>
                             <p className="text-base leading-4 mt-7">

@@ -80,14 +80,18 @@ export default class ListCCAdmin extends React.Component {
                     supp: suppValue
                 }
             })
-    
+
             axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getAllCCByConcessBis.php?concess=${idcc}`)
                 .then(res => {
                     const ccs = res.data;
                     this.setState({ ccs });
                 })
+            
         }
-        //window.location.reload();
+    }
+
+    reloadLaPage(){
+        window.location.reload();
     }
 
     render(){
@@ -170,7 +174,8 @@ export default class ListCCAdmin extends React.Component {
                                                                 <div className="modal-box relative">
                                                                     <label htmlFor={cc.RefDMS} className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                                                                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Suppression</h2>
-                                                                    <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400">Etes vous vraiment sûr de vouloir supprimer ce véhicule ?</p>
+                                                                    <p className="mb-2 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400">Etes vous vraiment sûr de vouloir supprimer ce véhicule ?</p>
+                                                                    <p className="mb-8 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">n° {cc.RefDMS}</p>
 
                                                                     <input value={cc.RefDMS} type={'hidden'} id={"2"} name={"refSupp"}/>
 

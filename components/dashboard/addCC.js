@@ -1,6 +1,6 @@
 import React from "react"
 import axios from "axios";
-import Cookies from "universal-cookie";
+import Cookies from "universal-cookie"; 
 
 export default class AddCC extends React.Component {
 
@@ -51,6 +51,16 @@ export default class AddCC extends React.Component {
     }
     handleChangeGamme = (e) => {
         this.setState({ gamme: e.target.value });
+    }
+    handleChangeConcess = (e) => {
+        if(e.target.value == "ACCS"){
+            this.setState({ concess: 11 });
+        }else if(e.target.value == "Nordmandie CC"){
+            this.setState({ concess: 12 });
+        }else if(e.target.value == "Carpiquet CC"){
+            this.setState({ concess: 13 });
+        }
+        console.log(this.state.concess)
     }
     
     stateSend = () => {
@@ -464,6 +474,24 @@ export default class AddCC extends React.Component {
         });
     }
 
+    Concession(props){
+        const cookies = new Cookies();
+        if(cookies.get('logId') == 101){
+            return(
+                <select onChange={this.handleChangeConcess} className="dropdown bg-gray-50 border border-gray-300 p-3 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="etat" required>
+                    <option key={0}>Concession</option>
+                    <option key={11}>ACCS</option>
+                    <option key={12}>Nordmandie CC</option>
+                    <option key={13}>Carpiquet CC</option>
+                </select>
+            )
+        }else if(props != 11 || props != 12 ||props != 13){
+            return(
+                <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Concession" name="concess" onChange={this.stateChange} value={this.state.concess} required/>
+            )
+        }
+    }
+
     Bouton(){
         if(this.state.status1 == "Prêt à l'envoi"){
             return(
@@ -558,10 +586,13 @@ export default class AddCC extends React.Component {
                             <option key={0}>Première main</option>
                             <option value={1} key={1}>Oui</option>
                             <option value={0} key={2}>Non</option>
-                        </select>                    </div>
+                        </select>                    
+                    </div>
                     <div className="w-1/6 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Concession</label>
-                        <input type="number" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Concession" name="concess" onChange={this.stateChange} value={this.state.concess} required/>
+                        {
+                            this.Concession(this.state.concess)
+                        }
                     </div>
                     <div className="w-1/6 pt-4 px-4">
                         <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Portes</label>

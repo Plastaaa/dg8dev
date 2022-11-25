@@ -437,7 +437,6 @@ export default class VehiculeUnique extends React.Component {
                                                     </p>
                                                 </li>
                                                 <NbCouchage couchage={cc.NbCouchage}/>
-                                                
                                             </ul>
                                         </div>
                                         <div className="my-2 px-2 w-1/2 overflow-hidden">

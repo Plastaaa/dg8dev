@@ -86,15 +86,28 @@ function KM(props){
 
 export default class CardCC extends React.Component{
 
+    componentDidMount(){
+        {
+            //<script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+            //<script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
+        }
+        
+        initBOXA('VEHICLE');
+        reloadVehicleData();
+    }
+
     render(){
         return (
             <div>
                 <script type="text/javascript" language="javascript" ></script>
-                <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
+                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
 
-                <button onClick={initBOXA('VEHICLE')}>coucou1</button>
+
+                {/*
+                    <button onClick={initBOXA('VEHICLE')}>coucou1</button>
                 <button onClick={reloadVehicleData()}>coucou2</button>
+                */}
 
                 <Link href={`/stock/${slugify(this.props.refe)}`}>
                     <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
@@ -132,15 +145,15 @@ export default class CardCC extends React.Component{
                                             <input 
                                                 type='hidden' 
                                                 name='box-auto-infos' 
-                                                wmName='mozac_loisirs_63200' 
-                                                vehicleCategory="V" 
-                                                vehicleIsNewBo="N" 
-                                                dateMiseCirc="2022-10-10" 
-                                                vehicleMileAge="0" 
-                                                proposalPrice="57000" 
-                                                vehicleEngineRating="4" 
-                                                vehicleHorsePower="130" 
-                                                vehicleEnergy="D"
+                                                wmname='mozac_loisirs_63200' 
+                                                vehiclecategory="V" 
+                                                vehicleisnewbo="N" 
+                                                datemisecirc="2022-10-10" 
+                                                vehiclemileage="0" 
+                                                proposalprice="57000" 
+                                                vehicleenginerating="4" 
+                                                vehiclehorsepower="130" 
+                                                vehicleenergy="D"
                                             />
                                         </div>
                                     </div>
