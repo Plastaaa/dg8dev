@@ -75,7 +75,7 @@ export default class Contact extends React.Component {
             this.setState({dejaSend: false});
             console.log(this.state.nom);
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom != "" && this.state.prenom != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.codepostal != "" && this.state.codepostal != undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.immat != "" && this.state.immat != undefined) || (this.state.model != "" && this.state.model != undefined) || (this.state.finition != "" && this.state.finition != undefined) || (this.state.km != "" && this.state.km != undefined) || (this.state.annee != "" && this.state.annee != undefined) || (this.state.optadd != "" && this.state.optadd != undefined) || (this.state.porteur != "" && this.state.porteur != undefined)){
-            if(this.state.dejaSend != true && (this.state.resCapt.success)){
+            if(this.state.dejaSend != true){
                 console.log("passed");
                 this.setState({dejaSend:  true});
                 this.setState({nom: ""});
@@ -120,19 +120,6 @@ export default class Contact extends React.Component {
           [name]: value,
         });
         console.log(f.target);
-    }
-
-    onChange = (value) => {
-        axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
-            params: {
-                secret: '6LcBGZ4iAAAAAGdQHFoM8HVX0Oz_g1Nanzi5jJOy',
-                response: value,
-            }
-        })
-        .then(res => {
-            const resCapt = res.data;
-            this.setState({ resCapt: resCapt });
-        });
     }
 
     componentDidMount(){
@@ -294,15 +281,8 @@ export default class Contact extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='w-1/2 px-4 py-2'>
-                                    <div className="pt-4 px-4">
-                                        <ReCAPTCHA
-                                            sitekey="6LcBGZ4iAAAAAFAjIXUXagKVqG2zOn2TSwXMETc5"
-                                            onChange={this.onChange}
-                                            badge="inline"
-                                        />
-                                    </div>
-                                </div>
+                                <input type="text" id="age" className="hidden" name="age" required/>
+                                
                                 <div className='w-1/2 pt-10 px-8 py-2'>
                                     <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-800 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                         <button onClick={this.stateSend} className="w-full">Envoyer</button>

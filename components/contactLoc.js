@@ -43,7 +43,7 @@ export default class Contact extends React.Component {
         if((this.state.nom == "" || this.state.nom == undefined) || (this.state.prenom == ""  || this.state.prenom == undefined) || (this.state.tel == ""  || this.state.tel == undefined) || (this.state.mail == "" || this.state.mail == undefined) || (this.state.codepostal == ""  || this.state.codepostal == undefined) || (this.state.dateDeb == "" || this.state.dateDeb == undefined) || (this.state.dateFin == "" || this.state.dateFin == undefined) || (this.state.nbPlace == "" || this.state.nbPlace == undefined)){
             this.setState({dejaSend: false});
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom != "" && this.state.prenom != undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.codepostal != "" && this.state.codepostal != undefined) || (this.state.dateDeb != "" && this.state.dateDeb != undefined) || (this.state.dateFin != "" && this.state.dateFin != undefined) || (this.state.nbPlace != "" && this.state.nbPlace != undefined)){
-            if(this.state.dejaSend != true && (this.state.resCapt.success)){
+            if(this.state.dejaSend != true){
                 this.setState({dejaSend:  true});
                 this.setState({nom: ""});
                 this.setState({tel: ""});
@@ -91,19 +91,6 @@ export default class Contact extends React.Component {
         const {name, value} = f.target;
         this.setState({
           [name]: value,
-        });
-    }
-
-    onChange = (value) => {
-        axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
-            params: {
-                secret: '6LcBGZ4iAAAAAGdQHFoM8HVX0Oz_g1Nanzi5jJOy',
-                response: value,
-            }
-        })
-        .then(res => {
-            const resCapt = res.data;
-            this.setState({ resCapt: resCapt });
         });
     }
 
@@ -348,15 +335,8 @@ export default class Contact extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-1/2 xs:w-full sm:w-1/2 md:w-1/2 content-center">
-                            <div className="pt-4 px-4">
-                                <ReCAPTCHA
-                                    sitekey="6LcBGZ4iAAAAAFAjIXUXagKVqG2zOn2TSwXMETc5"
-                                    onChange={this.onChange}
-                                    badge="inline"
-                                />
-                            </div>
-                        </div>
+                        <input type="text" id="age" className="hidden" name="age" required/>
+                        
                         <div className="pt-8 w-1/2 xs:w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 py-4">
                             <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-800 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <button onClick={this.stateSend} className="w-full">Envoyer</button>

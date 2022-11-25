@@ -40,7 +40,7 @@ export default class Contact extends React.Component {
         if((this.state.nom == "" || this.state.nom == undefined) || (this.state.tel == ""  || this.state.tel == undefined) || (this.state.mail == "" || this.state.mail == undefined) || (this.state.codepostal == ""  || this.state.codepostal == undefined) || (this.state.objet == "" || this.state.objet == undefined)){
             this.setState({dejaSend: false});
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.codepostal != "" && this.state.codepostal != undefined) || (this.state.objet != "" && this.state.objet != undefined)){
-            if(this.state.dejaSend != true && (this.state.resCapt.success)){
+            if(this.state.dejaSend != true){
                 this.setState({dejaSend:  true});
                 this.setState({nom: ""});
                 this.setState({tel: ""});
@@ -70,19 +70,6 @@ export default class Contact extends React.Component {
         const {name, value} = f.target;
         this.setState({
           [name]: value,
-        });
-    }
-
-    onChange = (value) => {
-        axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
-            params: {
-                secret: '6LcBGZ4iAAAAAGdQHFoM8HVX0Oz_g1Nanzi5jJOy',
-                response: value,
-            }
-        })
-        .then(res => {
-            const resCapt = res.data;
-            this.setState({ resCapt: resCapt });
         });
     }
 
@@ -122,15 +109,8 @@ export default class Contact extends React.Component {
                             <label htmlFor="objet" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Objet de la demande</label>
                             <textarea value={this.state.objet} rows={3} type="text" id="objet" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-red-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Dites nous comment vous aider." name="objet" onChange={this.stateChange} required/>
                         </div>
-                        <div className="w-full xs:w-full sm:w-full md:w-1/2 content-center">
-                            <div className="pt-4 px-4">
-                                <ReCAPTCHA
-                                    sitekey="6LcBGZ4iAAAAAFAjIXUXagKVqG2zOn2TSwXMETc5"
-                                    onChange={this.onChange}
-                                    badge="inline"
-                                />
-                            </div>
-                        </div>
+                        <input type="text" id="age" className="hidden" name="age" required/>
+                        
                         <div className="w-full px-4 py-4">
                             <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-800 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <button onClick={this.stateSend} className="w-full">Envoyer</button>
