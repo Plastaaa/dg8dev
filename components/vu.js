@@ -168,26 +168,23 @@ function Bed(props){
 
 function NbCouchage(props){
     const couchage = props.couchage;
+    console.log(couchage);
     if(couchage == "" || couchage == undefined){
-        return <NoCouchage/>
+        return(
+            <li></li>
+        )
+    }else{
+        return(
+            <li>
+                <p className='text-gray-400'>
+                    Nombre de couchages
+                </p>
+                <p className='text-gray-800 dark:text-white px-2'>
+                    {props.couchage}
+                </p>
+            </li>
+        )
     }
-    return <Couchage/>
-}
-function NoCouchage(props){
-    return <li></li>
-}
-function Couchage(props){
-    const couchage = props.couchage;
-    return(
-        <li>
-            <p className='text-gray-400'>
-                Nombre de couchages
-            </p>
-            <p className='text-gray-800 dark:text-white px-2'>
-                {props.couchage}
-            </p>
-        </li>
-    )
 }
 
 export default class VehiculeUnique extends React.Component {
@@ -436,7 +433,7 @@ export default class VehiculeUnique extends React.Component {
                                                         {cc.cylindre + " cm3"}
                                                     </p>
                                                 </li>
-                                                <NbCouchage couchage={cc.NbCouchage}/>
+                                                <NbCouchage couchage={cc.nbCouchage}/>
                                             </ul>
                                         </div>
                                         <div className="my-2 px-2 w-1/2 overflow-hidden">

@@ -92,23 +92,22 @@ export default class CardCC extends React.Component{
             //<script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
         }
         
-        initBOXA('VEHICLE');
-        reloadVehicleData();
+        //initBOXA('VEHICLE');
+        //reloadVehicleData();
     }
 
     render(){
         return (
             <div>
                 <script type="text/javascript" language="javascript" ></script>
-                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
-
-
-                {/*
-                    <button onClick={initBOXA('VEHICLE')}>coucou1</button>
-                <button onClick={reloadVehicleData()}>coucou2</button>
-                */}
-
+                {
+                    /*
+                        <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                        <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
+                        <button onClick={initBOXA('VEHICLE')}>coucou1</button>
+                        <button onClick={reloadVehicleData()}>coucou2</button>
+                    */
+                }
                 <Link href={`/stock/${slugify(this.props.refe)}`}>
                     <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
                         <div className="relative overflow-hidden">
@@ -140,7 +139,7 @@ export default class CardCC extends React.Component{
                                 
                                     }
                                     <div className='mt-3 items-center font-bold text-xl'>
-                                        A partir de 
+                                        {/*A partir de 
                                         <div class='apartirde'>
                                             <input 
                                                 type='hidden' 
@@ -155,7 +154,7 @@ export default class CardCC extends React.Component{
                                                 vehiclehorsepower="130" 
                                                 vehicleenergy="D"
                                             />
-                                        </div>
+                                        </div>*/}
                                     </div>
                                 </div>
                                 <div className='w-1/2'>
