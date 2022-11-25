@@ -166,9 +166,9 @@ function Bed(props){
     return  "Type de lit : " + props.isSet + "."
 }
 
-function nbCouchage(props){
+function NbCouchage(props){
     const couchage = props.couchage;
-    if(isSet == ""){
+    if(couchage == "" || couchage == undefined){
         return <NoCouchage/>
     }
     return <Couchage/>
@@ -184,7 +184,7 @@ function Couchage(props){
                 Nombre de couchages
             </p>
             <p className='text-gray-800 dark:text-white px-2'>
-                {cc.nbCouchage}
+                {props.couchage}
             </p>
         </li>
     )
@@ -436,7 +436,7 @@ export default class VehiculeUnique extends React.Component {
                                                         {cc.cylindre + " cm3"}
                                                     </p>
                                                 </li>
-                                                <nbCouchage/>
+                                                <NbCouchage couchage={cc.NbCouchage}/>
                                                 
                                             </ul>
                                         </div>
