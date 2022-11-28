@@ -41,7 +41,7 @@ export default class SimpleSlider extends Component {
                 <a href="./article/venture">
                   <button className='flex flex-wrap bg-green-800 text-white hover:bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-white border-white rounded-lg p-2'>
                     <div className='w-full'>
-                        Découvrir le Ventura S
+                        Découvrir le Venture S
                     </div>
                   </button>
                 </a>

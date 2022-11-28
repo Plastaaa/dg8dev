@@ -31,10 +31,7 @@ export default function Home(){
                         Conditions générales de participation
                     </h3>
                     <p className="py-4">
-                        Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par C.A.B.+ au 40 Rue Ronsard pour notre calendrier de l'avent. La base légale du traitement est le consentement.
-                    </p>
-                    <p className='py-4'>
-                        Les données collectées seront communiquées aux seuls destinataires suivants : C.A.B.+.
+                    les informations recueilli par ce formulaire seront conserver dans un fichier informatisé par DG8 camping-car, qui sera susceptible de vous communiquer des informations promotionnelles. La base légale du traitement est le consentement.
                     </p>
                     <p className='py-4'>
                         Les données sont conservées pendant 1 an.
