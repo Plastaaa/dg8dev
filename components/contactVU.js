@@ -59,7 +59,7 @@ export default class Contact extends React.Component {
                     mail: this.state.mail,
                     cp: this.state.codepostal,
                     msg: this.state.objet,
-                    ref: refe[3],
+                    ref: refe[4],
                 }
                 })
             }

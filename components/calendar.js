@@ -119,7 +119,14 @@ export default class Calendar extends React.Component {
                         jour: cur,
                         mois: curMonth,
                     }
-                })
+                }).then(
+                    
+                    document.getElementById('my-modal-6').checked = true
+
+                    
+                    
+                    
+                )
             }
         }
 
@@ -195,7 +202,7 @@ export default class Calendar extends React.Component {
                                 <h2 className="p-6 text-2xl tracking-tight font-extrabold text-center bg-orange-100 text-green-900">LE CALENDRIER DE L'AVENT DG8 CAMPING-CAR</h2>
                             </div>
                             <div className="pt-4">
-                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance en répondant à la question du jour !</p>
+                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance pour gagner un weekend en camping-car, des trottinettes électrique et bien d’autres lots, en répondant à la question du jour !</p>
                             </div>
                             <div className='flex flex-wrap'>
                                 <div className="w-full xl:w-1/2 pt-8">
@@ -252,8 +259,24 @@ export default class Calendar extends React.Component {
                                         </div>*/}
                                         <div className='w-full px-4 py-2 pb-16'>
                                                 {
-                                                    <button className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onTouchEnd={this.stateSend} onClick={this.stateSend}>Je participe !</button>
+                                                    <label htmlFor="" onClick={this.stateSend} className="btn w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer">
+                                                        Je participe !
+                                                    </label>
+                                                    //<button className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onTouchEnd={this.stateSend} onClick={this.stateSend}>Je participe !</button>
                                                 }
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+                                <div className="modal modal-bottom sm:modal-middle">
+                                    <div className="modal-box">
+                                        <h3 className="font-bold text-lg">Merci pour votre participation !</h3>
+                                        <p className="py-4">Participez chaque jours afin de multiplier vos chances de gagner.</p>
+                                        <p className="">Nous vous contacterons rapidement si vous avez été tiré au sort pour l’un de nos nombreux cadeaux.</p>
+                                        <div className="modal-action">
+                                        <label htmlFor="my-modal-6" className="btn">Compris !</label>
                                         </div>
                                     </div>
                                 </div>
