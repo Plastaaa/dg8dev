@@ -47,10 +47,10 @@ export default class SimpleSlider extends Component {
                 </a>
               </div>
             </SplideSlide>
-          }
-          <SplideSlide>
+          
+          /*<SplideSlide>
             <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img3} width={800} layout="responsive" height={320} quality={100}/>
-          </SplideSlide>
+          </SplideSlide>*/}
           <SplideSlide>
             <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img1} width={800} layout="responsive" height={320} quality={100}/>
           </SplideSlide>
