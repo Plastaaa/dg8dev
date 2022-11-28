@@ -3,6 +3,7 @@ import Connexion from '../../components/dashboard/connexion';
 import React from 'react';
 import AsideMenuBis from './asideMenu';
 import StatDash from './dash'
+import Home from "./home"
 
 function IsLogged(props){
     const cook = props.cookiee;
@@ -19,8 +20,12 @@ function Logged(props){
     return (
         <div>
             <div className='flex'>
-                <AsideMenuBis/>
-                <StatDash/>
+                <div className='w-2/12'>
+                    <AsideMenuBis/>
+                </div>
+                <div className='w-10/12'>
+                    <Home/>
+                </div>
             </div>
         </div>
     )

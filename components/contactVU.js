@@ -50,7 +50,7 @@ export default class Contact extends React.Component {
 
                 var url = window.location.href;
                 var refe = url.split("/");
-                console.log(refe[3]);
+                console.log(refe[4]);
                 
                 axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailContactVU.php`,{
                 params:{
