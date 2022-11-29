@@ -264,28 +264,11 @@ export default class VehiculeUnique extends React.Component {
             this.state.campingcar.map((cc) => (
                 
                 <div>
-                    <link rel="stylesheet" type="text/css" href="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css"></link>
-                    <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                    <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
-
-                    <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                    <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
-                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-                    {
-                        function() {
-                            initBOXA('VEHICLE');
-                            reloadVehicleData();
-                        }
-                        //<button onClick={initBOXA('VEHICLE')}>coucou1</button>
-                        //<button onClick={reloadVehicleData()}>coucou2</button>
-                    }
-                    
-                        
-                    
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
+                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js'></script>
+                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js'></script>
+                        <link rel='stylesheet' href='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css'></link>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
@@ -336,14 +319,9 @@ export default class VehiculeUnique extends React.Component {
                                 
                             
                             </script>
-
-                            <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                            <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
-                            <link rel="stylesheet" type="text/css" href="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css" />
                             <div className='mt-3 items-center font-bold text-xl'>
-                                A partir de 
                                 <div class='apartirde'>
-                                    <input type="hidden" name="box-auto-infos" wmname="expo_clavel_38430" vehiclemileage="3520" vehicleenergy="D" vehicleisnewbo="O" vehiclemodel="CHAUSSON TITANIUM 708" proposalprice="56900" vehicleenginerating="120" vehiclehorsepower="170" vehiclecategory="V" datemisecirc="29072020" vehiclebrand="Chausson"/>
+                                    <input type="hidden" name="box-auto-infos" wmname="expo_clavel_38430" vehiclemileage="3520" vehicleenergy="D" vehicleisnewbo="O" vehiclemodel="CHAUSSON TITANIUM 708" proposalprice="56900" vehicleenginerating="120" vehiclehorsepower="4" vehiclecategory="V" datemisecirc="29072020" vehiclebrand="Chausson"/>
                                 </div>
                             </div>
                         </div>
