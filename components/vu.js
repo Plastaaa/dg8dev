@@ -323,29 +323,26 @@ export default class VehiculeUnique extends React.Component {
                                     <input 
                                         type="hidden" 
                                         name="box-auto-infos" 
-
-                                        wmname="expo_clavel_38430" 
-
-                                        vehiclecategory="V" 
+                                        wmname={"expo_clavel_38430"} 
+                                        vehiclecategory={"V"} 
                                         //vehicleref=""
-
                                         vehiclebrand={cc.marque} 
                                         vehiclemodel={cc.modele} 
-                                        vehicleisnewbo="N" 
-                                        vehiclepro="NPRO" 
-                                        datemisecirc="29072020" 
-                                        vehiclemileage="0" 
+                                        vehicleisnewbo={"N"} 
+                                        vehiclepro={"NPRO"} 
+                                        datemisecirc={"29072020"} 
+                                        vehiclemileage={"0"} 
                                         proposalprice={cc.prixTTC}
                                         //numero eurotax
                                         //vehiclenat=""
                                         //vehiclebodywork=""
-                                        vehiclegearbox="A" 
-                                        vehiclenbdoor="5" 
+                                        vehiclegearbox={"A"} 
+                                        vehiclenbdoor={"5"} 
                                         //vehiclecapacity=""
-                                        vehicleenginerating="4" 
-                                        vehicleenergy="D" 
-                                        rupturetva="O" 
-                                        vehiclehorsepower="120" 
+                                        vehicleenginerating={"4"} 
+                                        vehicleenergy={"D"} 
+                                        rupturetva={"O"} 
+                                        vehiclehorsepower={"120"} 
                                         //accessoriesamount=""
                                         //optionsamount=""
                                         //vehicleversion=""
