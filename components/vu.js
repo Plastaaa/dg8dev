@@ -278,6 +278,9 @@ export default class VehiculeUnique extends React.Component {
                 <div>
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
+                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js'></script>
+                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js'></script>
+                        <link rel='stylesheet' href='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css'></link>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
@@ -315,6 +318,41 @@ export default class VehiculeUnique extends React.Component {
                             <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
+                            <p>
+                                <div class='apartirde'>
+                                    <input 
+                                        type="hidden" 
+                                        name="box-auto-infos" 
+
+                                        wmname="expo_clavel_38430" 
+
+                                        vehiclecategory="V" 
+                                        //vehicleref=""
+
+                                        vehiclebrand={cc.marque} 
+                                        vehiclemodel={cc.modele} 
+                                        vehicleisnewbo="N" 
+                                        vehiclepro="NPRO" 
+                                        datemisecirc="29072020" 
+                                        vehiclemileage="0" 
+                                        proposalprice={cc.prixTTC}
+                                        //numero eurotax
+                                        //vehiclenat=""
+                                        //vehiclebodywork=""
+                                        vehiclegearbox="A" 
+                                        vehiclenbdoor="5" 
+                                        //vehiclecapacity=""
+                                        vehicleenginerating="4" 
+                                        vehicleenergy="D" 
+                                        rupturetva="O" 
+                                        vehiclehorsepower="120" 
+                                        //accessoriesamount=""
+                                        //optionsamount=""
+                                        //vehicleversion=""
+                                        //serialnumber="" 
+                                    />
+                                </div>
+                            </p>
                         </div>
                         <div>
                             <p className="text-base leading-4 mt-7">
