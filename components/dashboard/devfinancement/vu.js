@@ -192,16 +192,6 @@ export default class VehiculeUnique extends React.Component {
             this.setState({ ccsSimi });
         })
 
-        axios.get(`https://boxauto.bnpparibas-pf.com/o/box-auto-ng/box-auto/catalogMonthlyCost`,{
-            params:{
-                marque: this.state.marque,
-            }
-        }).then(res => {
-                const mensualisation = res.data;
-                this.setState({ mensualisation });
-            }
-        )
-
     }
 
     state = {
@@ -321,7 +311,37 @@ export default class VehiculeUnique extends React.Component {
                             </script>
                             <div className='mt-3 items-center font-bold text-xl'>
                                 <div class='apartirde'>
-                                    <input type="hidden" name="box-auto-infos" wmname="expo_clavel_38430" vehiclemileage="3520" vehicleenergy="D" vehicleisnewbo="O" vehiclemodel="CHAUSSON TITANIUM 708" proposalprice="56900" vehicleenginerating="120" vehiclehorsepower="4" vehiclecategory="V" datemisecirc="29072020" vehiclebrand="Chausson"/>
+                                    <input 
+                                        type="hidden" 
+                                        name="box-auto-infos" 
+
+                                        wmname="expo_clavel_38430" 
+
+                                        vehiclecategory="V" 
+                                        vehicleref="5"
+
+                                        vehiclebrand="BURSTNER"
+                                        vehiclemodel="COPA C 500" 
+                                        vehicleisnewbo="O" 
+                                        vehiclepro="NPRO"
+                                        datemisecirc="29072020" 
+                                        vehiclemileage="0" 
+                                        proposalprice="59570" 
+                                        //numero eurotax
+                                        //vehiclenat=""
+                                        //vehiclebodywork=""
+                                        vehiclegearbox="A"
+                                        vehiclenbdoor="5"
+                                        //vehiclecapacity=""
+                                        vehicleenginerating="120" 
+                                        vehicleenergy="D" 
+                                        rupturetva="O"
+                                        vehiclehorsepower="4" 
+                                        //accessoriesamount=""
+                                        //optionsamount=""
+                                        //vehicleversion=""
+                                        //serialnumber=""
+                                    />
                                 </div>
                             </div>
                         </div>
