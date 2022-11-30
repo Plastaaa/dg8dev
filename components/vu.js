@@ -278,8 +278,8 @@ export default class VehiculeUnique extends React.Component {
                 <div>
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
-                        <script type='text/javascript' src='https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js'></script>
-                        <script type='text/javascript' src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js'></script>
+                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js'></script>
                         <link rel='stylesheet' href='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css'></link>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
@@ -323,26 +323,26 @@ export default class VehiculeUnique extends React.Component {
                                     <input 
                                         type="hidden" 
                                         name="box-auto-infos" 
-                                        wmname={"expo_clavel_38430"} 
+                                        wmname={"cap_liberte_63800"} 
                                         vehiclecategory={"V"} 
-                                        //vehicleref=""
+                                        vehicleref={parseInt(cc.RefDMS)}
                                         vehiclebrand={cc.marque} 
                                         vehiclemodel={cc.modele} 
                                         vehicleisnewbo={"N"} 
                                         vehiclepro={"NPRO"} 
-                                        datemisecirc={"29072020"} 
+                                        datemisecirc={parseInt("")} 
                                         vehiclemileage={"0"} 
-                                        proposalprice={cc.prixTTC}
+                                        proposalprice={parseInt(cc.prixTTC)}
                                         //numero eurotax
                                         //vehiclenat=""
                                         //vehiclebodywork=""
                                         vehiclegearbox={"A"} 
                                         vehiclenbdoor={"5"} 
                                         //vehiclecapacity=""
-                                        vehicleenginerating={"4"} 
+                                        vehicleenginerating={"7"} 
                                         vehicleenergy={"D"} 
-                                        rupturetva={"O"} 
-                                        vehiclehorsepower={"120"} 
+                                        rupturetva={"N"} 
+                                        vehiclehorsepower={"140"} 
                                         //accessoriesamount=""
                                         //optionsamount=""
                                         //vehicleversion=""

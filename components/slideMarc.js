@@ -16,7 +16,7 @@ export default class SimpleSlider extends Component {
     state = {
         marque: [],
     }
-    
+
     render() {
         var marqueSend
         return (
@@ -56,7 +56,7 @@ export default class SimpleSlider extends Component {
                             this.state.marque.map(marquee =>
                                     <SplideSlide className="pb-4">
                                         <a href={"../stock?marque="+marquee.marque}>
-                                            <div onClick={console.log(marquee.linkIMG)} className="flex hover:bg-gray-100 items-center dark:border dark:border-gray-400 dark:bg-gray-600 dark:hover:bg-gray-200 rounded-xl shadow-lg hover:shadow-xl justify-center h-36">
+                                            <div className="flex hover:bg-gray-100 items-center dark:border dark:border-gray-400 dark:bg-gray-600 dark:hover:bg-gray-200 rounded-xl shadow-lg hover:shadow-xl justify-center h-36">
                                                 <Image src={marquee.linkIMG} layout={"intrinsic"} height={100} width={300} alt={"LOGO "+marquee.marque} />
                                             </div>
                                         </a>

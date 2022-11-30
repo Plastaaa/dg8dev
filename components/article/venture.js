@@ -1,4 +1,4 @@
-import ventureS from "../../public/article/ventures.jpg"
+import ventureS from "../../public/article/venture.webp"
 import Image from "next/image"
 
 export default function Venture() {
