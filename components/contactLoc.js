@@ -228,10 +228,28 @@ export default class Contact extends React.Component {
                                 <option key={2}>(74330) Curioz Loisirs</option>
                                 <option key={3}>(63370) Evasion 63</option>
                                 <option key={4}>(63800) Cap Liberté</option>
+                                <option key={5}>(14650) Auto Camping Car Service</option>
                             </select>
                         </div>
-                        <div className="w-1/2 pt-8 pl-4 pr-4">
-                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Choisir la concession depuis laquelle vous souhaitez partir.</p>
+                        <div className="w-1/2 pt-8 pl-4 pr-4 indent-6">
+                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                                Louez un camping-car, un van ou un fourgon aménagé au départ d’Annecy, de Grenoble, de Clermont-Ferrand ou encore de Caen ! 4 départs de location au plus proche de la nature.  
+                            </p>
+                        </div>
+                        <div className="w-full pt-2 pl-4 pr-4 indent-6">
+                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                                Que vous souhaitez partir, en famille, entre amis, en couple ou seul... Van, fourgon aménagé ou encore camping-car... vous trouverez très certainement le véhicule idéal pour des vacances exceptionnelles ! 
+                            </p>
+                        </div>
+                        <div className="w-full pt-2 pl-4 pr-4 indent-6">
+                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                                Découvrez le meilleur moyen de voyager, de découvrir un pays ou une région, passez des nuits incroyables au pieds des plus beaux spots, ayez ce sentiment de liberté et partez à l’aventure avec la location DG8 Camping-car ! 
+                            </p>
+                        </div>
+                        <div className="w-full pt-2 pl-4 pr-4 indent-6">
+                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                                De 2 à 6 places, nous vous proposons la location de véhicule de loisirs pour des vacances ou simplement un week-end !  
+                            </p>
                         </div>
                         <div className="w-full">
                             <h2 className="pt-6 text-lg tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Tarifs</h2>
