@@ -191,34 +191,68 @@ function Financement(props){
     if(props.id == 99){
         return(
             <div class="prix-financement">
-                <div class="financement">
-                    <span class="a-partir">A partir de XXX, XX €/mois **</span>
-                    <a class="btn btn-jaune btn-fiancement">Simuler votre financement</a>
-                </div>
-                <div class="prix">
-                    <span class="prix-base">Prix de base véhicule : 65 390 €</span>
-                    <span>72 720 €</span>
-                </div>
-                <div class="apartirde financement">
-                    <input 
-                        type="hidden" 
-                        name= "box-auto-infos" 
-                        wmName="cap_liberte_63800" 
-                        vehicleModel="T7400 QBC" 
-                        vehicleRef="ETRUSCOT7400" 
-                        vehicleBrand="Citroën"
-                        vehicleCategory="V" 
-                        vehicleIsNewBo="N" 
-                        dateMisecirc="'" 
-                        vehicleMileAge="0" 
-                        proposalPrice="72720"
-                        vehicleEngineRating="7" 
-                        vehicleEnergy="D" 
-                        vehicleHorsePower="140" 
-                        ruptureTVA="N" 
-                        vehicleNat=""
-                    />
-                </div>
+                {
+                    <div class="prix-financement">
+                        <div class="financement">
+                            <span class="a-partir">À partir de XXX,XX €/mois **</span>
+                            <a class="btn btn-jaune btn-fiancement">Simuler votre financement</a>
+                        </div>
+                        <div class="prix">
+                            <span>52 900 €</span>
+                        </div>
+                        <div class="apartirde financement">
+                            <input 
+                                type="hidden" 
+                                name= "box-auto-infos" 
+                                wmName="cap_liberte_63800" 
+                                vehicleModel="T7400 QBC" 
+                                vehicleRef="ETRUSCOT7400" 
+                                vehicleBrand="Citroën"
+                                vehicleCategory="V" 
+                                vehicleIsNewBo="N" 
+                                dateMisecirc="'" 
+                                vehicleMileAge="0" 
+                                proposalPrice="72720"
+                                vehicleEngineRating="7" 
+                                vehicleEnergy="D" 
+                                vehicleHorsePower="140" 
+                                ruptureTVA="N" 
+                                vehicleNat=""
+                            />
+                        </div>
+                    </div>                    
+                }
+                {
+                    /*<div class="div-box">
+                    <div class="apartirde">
+                        <span name="box-auto-rent-label"></span>
+                        {
+                        //    <span name="box-auto-rent-value" id='box-auto-rent-value0'></span>
+                        }
+                        <a class="btn btn-jaune btn-fiancement box-auto-simulation-button">Simuler votre financement</a>
+                        <input 
+                            type="hidden" 
+                            name= "box-auto-infos" 
+                            wmName="cap_liberte_63800" 
+                            vehicleModel="T7400 QBC" 
+                            vehicleRef="ETRUSCOT7400" 
+                            vehicleBrand="Citroën"
+                            vehicleCategory="V" 
+                            vehicleIsNewBo="N" 
+                            dateMisecirc="'" 
+                            vehicleMileAge="0" 
+                            proposalPrice="72720"
+                            vehicleEngineRating="7" 
+                            vehicleEnergy="D" 
+                            vehicleHorsePower="140" 
+                            ruptureTVA="N" 
+                            vehicleNat=""
+                        />
+                    </div>
+                    <div id="box-auto-simulation-button"></div>
+                </div>*/
+                }
+                
             </div>
         )
     }else{
