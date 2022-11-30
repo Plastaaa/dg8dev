@@ -318,7 +318,7 @@ export default class VehiculeUnique extends React.Component {
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
                             <p>
-                                <div class='apartirde'>
+                                <div class="apartirde" style="padding-left: 14px;">
                                     <input 
                                         type="hidden" 
                                         name= "box-auto-infos" 
@@ -337,7 +337,9 @@ export default class VehiculeUnique extends React.Component {
                                         ruptureTVA="N" 
                                         vehicleNat=""
                                     />
-                                </div>
+								</div>
+								<div id="box-auto-simulation-button"></div>
+
                             </p>
                         </div>
                         <div>
