@@ -318,6 +318,11 @@ export default class VehiculeUnique extends React.Component {
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
                             <p>
+                                <div className='pt-4'>
+                                    <button className='p-2 bg-green-700 text-white rounded-2xl' id='box-auto-simulation-button'>
+                                        Financer mon véhicule
+                                    </button>
+                                </div>
                                 
 
                                 <div class='apartirde'>
