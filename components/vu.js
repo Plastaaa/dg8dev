@@ -10,6 +10,7 @@ import Image from 'next/image';
 import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 import {Helmet} from "react-helmet";
+import Cookies from 'universal-cookie';
 
 
 function IsThereHeight(props){
@@ -186,6 +187,45 @@ function NbCouchage(props){
     }
 }
 
+function Financement(props){
+    if(props.id == 99){
+        return(
+            <div class="prix-financement">
+                <div class="financement">
+                    <span class="a-partir">A partir de XXX, XX €/mois **</span>
+                    <a class="btn btn-jaune btn-fiancement">Simuler votre financement</a>
+                </div>
+                <div class="prix">
+                    <span class="prix-base">Prix de base véhicule : 65 390 €</span>
+                    <span>72 720 €</span>
+                </div>
+                <div class="apartirde financement">
+                    <input 
+                        type="hidden" 
+                        name= "box-auto-infos" 
+                        wmName="cap_liberte_63800" 
+                        vehicleModel="T7400 QBC" 
+                        vehicleRef="ETRUSCOT7400" 
+                        vehicleBrand="Citroën"
+                        vehicleCategory="V" 
+                        vehicleIsNewBo="N" 
+                        dateMisecirc="'" 
+                        vehicleMileAge="0" 
+                        proposalPrice="72720"
+                        vehicleEngineRating="7" 
+                        vehicleEnergy="D" 
+                        vehicleHorsePower="140" 
+                        ruptureTVA="N" 
+                        vehicleNat=""
+                    />
+                </div>
+            </div>
+        )
+    }else{
+        return null
+    }
+}
+
 export default class VehiculeUnique extends React.Component {
     componentDidMount() {
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[2]}`)
@@ -235,7 +275,13 @@ export default class VehiculeUnique extends React.Component {
         }        
     };
 
+    
+
+
     render() {
+        const cookie = new Cookies;
+        var idUser = cookie.get('logId');
+
         if(this.state.show == true){
             return (
                 <div className='px-8 md:px-16 lg:px-32'>
@@ -318,14 +364,11 @@ export default class VehiculeUnique extends React.Component {
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
                             <p>
-                                <div className='pt-4'>
-                                    <button className='p-2 bg-green-700 text-white rounded-2xl' id='box-auto-simulation-button'>
-                                        Financer mon véhicule
-                                    </button>
-                                </div>
-                                
 
-                                <div class='apartirde'>
+                                <Financement id={idUser}/>
+                                
+                                {
+                                    /*<div class='apartirde'>
                                     <input 
                                         type="hidden" 
                                         name= "box-auto-infos" 
@@ -344,7 +387,10 @@ export default class VehiculeUnique extends React.Component {
                                         ruptureTVA="N" 
                                         vehicleNat=""
                                     />
-                                </div>
+                                </div>*/
+                                }
+
+                                
                             </p>
                         </div>
                         <div>
