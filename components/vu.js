@@ -207,17 +207,17 @@ function Financement(props){
                                 wmName="cap_liberte_63800" 
                                 vehicleModel="T7400 QBC" 
                                 vehicleRef="ETRUSCOT7400" 
-                                vehicleBrand="Citroën"
+                                vehicleBrand="Citroën" 
                                 vehicleCategory="V" 
                                 vehicleIsNewBo="N" 
                                 dateMisecirc="'" 
                                 vehicleMileAge="0" 
-                                proposalPrice="72720"
+                                proposalPrice="72720" 
                                 vehicleEngineRating="7" 
                                 vehicleEnergy="D" 
                                 vehicleHorsePower="140" 
                                 ruptureTVA="N" 
-                                vehicleNat=""
+                                vehicleNat="" 
                             />
                         </div>
                     </div>                    

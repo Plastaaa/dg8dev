@@ -44,6 +44,11 @@ export default function Venture() {
                         }
                     </div>
                 </div>
+                <div className="w-full p-8">
+                    <video autoPlay loop className="rounded-xl">
+                        <source src="/vid.mp4"/>
+                    </video>
+                </div>
             </div>
         </div>
     )

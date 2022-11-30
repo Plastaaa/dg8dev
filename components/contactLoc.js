@@ -234,6 +234,54 @@ export default class Contact extends React.Component {
                             <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Choisir la concession depuis laquelle vous souhaitez partir.</p>
                         </div>
                         <div className="w-full">
+                            <h2 className="pt-6 text-lg tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Tarifs</h2>
+                        </div>
+
+                        <div className="w-full pt-6">
+                            <table className="table w-full">
+                                <thead>
+                                    <tr className="text-center">
+                                        <th>Véhicule</th>
+                                        <th>Tarif Haute Saison</th>
+                                        <th>Tarif Basse Saison</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="text-center hover">
+                                        <td>Intégral</td>
+                                        <td>214 € / jour</td>
+                                        <td>140 € / jour</td>
+                                    </tr>
+                                    <tr className="text-center hover">
+                                        <td>Capucine</td>
+                                        <td>214 € / jour</td>
+                                        <td>140 € / jour</td>
+                                    </tr>
+                                    <tr className="text-center hover">
+                                        <td>Profilé 4 couchages</td>
+                                        <td>205 € / jour</td>
+                                        <td>131 € / jour</td>
+                                    </tr>
+                                    <tr className="text-center hover">
+                                        <td>Profilé 2/3 couchages</td>
+                                        <td>195 € / jour</td>
+                                        <td>123 € / jour</td>
+                                    </tr>
+                                    <tr className="text-center hover">
+                                        <td>Van</td>
+                                        <td>164 € / jour</td>
+                                        <td>108 € / jour</td>
+                                    </tr>
+                                    <tr className="text-center hover">
+                                        <td>Fourgon</td>
+                                        <td>164 € / jour</td>
+                                        <td>108 € / jour</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div className="w-full">
                             <h2 className="pt-6 text-lg tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Options</h2>
                         </div>
                         <div className='w-1/3 px-4 py-2'>

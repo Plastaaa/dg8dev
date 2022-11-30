@@ -5,6 +5,7 @@ import Image from "next/image";
 import img1 from '../public/slider/slide1.jpg';
 import img2 from '../public/slider/slidercalendar.jpg';
 import img3 from '../public/slider/slider3.png';
+import img5 from '../public/slider/slide5.jpg';
 import img4 from '../public/slider/slider4.jpg';
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
