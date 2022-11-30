@@ -168,7 +168,6 @@ function Bed(props){
 
 function NbCouchage(props){
     const couchage = props.couchage;
-    console.log(couchage);
     if(couchage == "" || couchage == undefined){
         return(
             <li></li>
@@ -278,8 +277,8 @@ export default class VehiculeUnique extends React.Component {
                 <div>
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
-                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js'></script>
-                        <script type='text/javascript' src='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js'></script>
+                        <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                        <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
                         <link rel='stylesheet' href='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css'></link>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
@@ -322,31 +321,21 @@ export default class VehiculeUnique extends React.Component {
                                 <div class='apartirde'>
                                     <input 
                                         type="hidden" 
-                                        name="box-auto-infos" 
-                                        wmname={"cap_liberte_63800"} 
-                                        vehiclecategory={"V"} 
-                                        vehicleref={parseInt(cc.RefDMS)}
-                                        vehiclebrand={cc.marque} 
-                                        vehiclemodel={cc.modele} 
-                                        vehicleisnewbo={"N"} 
-                                        vehiclepro={"NPRO"} 
-                                        datemisecirc={parseInt("")} 
-                                        vehiclemileage={"0"} 
-                                        proposalprice={parseInt(cc.prixTTC)}
-                                        //numero eurotax
-                                        //vehiclenat=""
-                                        //vehiclebodywork=""
-                                        vehiclegearbox={"A"} 
-                                        vehiclenbdoor={"5"} 
-                                        //vehiclecapacity=""
-                                        vehicleenginerating={"7"} 
-                                        vehicleenergy={"D"} 
-                                        rupturetva={"N"} 
-                                        vehiclehorsepower={"140"} 
-                                        //accessoriesamount=""
-                                        //optionsamount=""
-                                        //vehicleversion=""
-                                        //serialnumber="" 
+                                        name= "box-auto-infos" 
+                                        wmName="cap_liberte_63800" 
+                                        vehicleModel="T7400 QBC" 
+                                        vehicleRef="ETRUSCOT7400" 
+                                        vehicleBrand="Citroën"
+                                        vehicleCategory="V" 
+                                        vehicleIsNewBo="N" 
+                                        dateMisecirc="'" 
+                                        vehicleMileAge="0" 
+                                        proposalPrice="72720"
+                                        vehicleEngineRating="7" 
+                                        vehicleEnergy="D" 
+                                        vehicleHorsePower="140" 
+                                        ruptureTVA="N" 
+                                        vehicleNat=""
                                     />
                                 </div>
                             </p>
