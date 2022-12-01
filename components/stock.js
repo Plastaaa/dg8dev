@@ -107,7 +107,7 @@ export default class Stock extends React.Component {
 
 
           <div className="w-full lg:w-1/5 px-16 pt-8 pb-8 md:px-48 md:pt-8 md:pb-8 lg:pl-4 lg:pt-4 lg:pr-4">
-          <div className="flex flex-wrap overflow-hidden border border-gray-200 rounded-lg shadow-lg">
+          <div className="sticky top-6 flex flex-wrap overflow-hidden border border-gray-200 rounded-lg shadow-lg">
             <div className="w-full overflow-hidden">
               <h1 className="text-center pt-4 pb-4 text-2xl font-bold">
                 Rechercher : 

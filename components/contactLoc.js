@@ -401,8 +401,8 @@ export default class Contact extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <input type="text" id="age" className="hidden" name="age" required/>
                         
+                        <input type="text" id="age" className="hidden" name="age" required/>
                         <div className="pt-8 w-full px-4 py-4">
                             <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-800 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <button onClick={this.stateSend} className="w-full">Envoyer</button>
@@ -410,7 +410,7 @@ export default class Contact extends React.Component {
                         </div>
                         <div className="w-full pt-2 pl-4 pr-4 indent-6">
                             <p class="text-xs font-normal text-gray-500 dark:text-gray-300">
-                                Les tarifs haute saison s'appliquent sur les mois de Avril, Juillet et Aout.
+                                * Les tarifs haute saison s'appliquent sur les mois de Avril, Juillet et Aout.
                             </p>
                         </div>
                     </div>
