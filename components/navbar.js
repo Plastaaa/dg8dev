@@ -70,7 +70,7 @@ export default function NavBar() {
                         </div>
                     </a>
                 </div>
-                <div className="justify-between px-4 mx-auto lg:items-center lg:flex lg:px-8">
+                <div className="justify-between mt-0 md:-mt-6 px-4 mx-auto lg:items-center lg:flex lg:px-8">
                     <div>
                         <div className="flex items-center justify-between py-2 lg:py-2 lg:block">
                                 <div className=''>
