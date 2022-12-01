@@ -81,9 +81,6 @@ export default class Calendar extends React.Component {
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.cp != "" && this.state.cp != undefined) || (this.state.rep != "" && this.state.rep != undefined)){
             console.log("marche")
             console.log(this.state.dejaSend)
-            if(this.state.checkbox.checked){
-                checkedForm = "oui"
-            }
             //console.log(this.state.resCapt.success)
             if(this.state.dejaSend != true){
                 console.log("marche 2")
@@ -94,7 +91,6 @@ export default class Calendar extends React.Component {
                 this.setState({tel: ""})
                 this.setState({cp: ""});
                 this.setState({rep: ""});
-                this.setState({checkbox: ""});
                 axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailCalendar.php`,{
                 params:{
                     nom: this.state.nom,
@@ -103,7 +99,6 @@ export default class Calendar extends React.Component {
                     tel: this.state.tel,
                     cp: this.state.cp,
                     rep: this.state.rep,
-                    checkbox: checkedForm
                 }
                 })
 
