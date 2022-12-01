@@ -75,18 +75,15 @@ export default class Calendar extends React.Component {
 	    var cur = date.getDate();
         var curMonth = date.getMonth()+1;
 
-        console.log(this.state.nom);
-        console.log(this.state.prenom);
-        console.log(this.state.mail);
-        console.log(this.state.tel);
-        console.log(this.state.cp);
-        console.log(this.state.rep);
         if((this.state.nom == "" || this.state.nom == undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel == ""  || this.state.tel == undefined) || (this.state.mail == "" || this.state.mail == undefined) || (this.state.cp == ""  || this.state.cp == undefined) || (this.state.rep == "" || this.state.rep == undefined)){
             this.setState({dejaSend: false});
             console.log("marche po")
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.cp != "" && this.state.cp != undefined) || (this.state.rep != "" && this.state.rep != undefined)){
             console.log("marche")
             console.log(this.state.dejaSend)
+            if(this.state.checkbox.checked){
+                checkedForm = "oui"
+            }
             //console.log(this.state.resCapt.success)
             if(this.state.dejaSend != true){
                 console.log("marche 2")
@@ -97,6 +94,7 @@ export default class Calendar extends React.Component {
                 this.setState({tel: ""})
                 this.setState({cp: ""});
                 this.setState({rep: ""});
+                this.setState({checkbox: ""});
                 axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailCalendar.php`,{
                 params:{
                     nom: this.state.nom,
@@ -105,6 +103,7 @@ export default class Calendar extends React.Component {
                     tel: this.state.tel,
                     cp: this.state.cp,
                     rep: this.state.rep,
+                    checkbox: checkedForm
                 }
                 })
 
@@ -240,29 +239,16 @@ export default class Calendar extends React.Component {
                                         <div className="w-full pt-4 px-4">
                                             <div className="flex flex-wrap inline">
                                                 <div className='w-full'>
-                                                    <input type="checkbox" className="checkbox bg-orange-100"/>
+                                                    <input type="checkbox" value={this.state.checkbox} className="checkbox bg-orange-100"/>
                                                     <p className="text-orange-100 inline text-orange-100 pl-4">J'accepte les <label htmlFor="my-modal-3" className='underline'>conditions générales de participation</label></p>
                                                 </div> 
                                             </div>
-                                        </div>{/*
-                                        <div className='w-full'>
-                                            <div className="pt-4 px-4">
-                                                
-                                                    <ReCAPTCHA
-                                                        sitekey="6LeWxy8jAAAAAPQxDYwOSwo8kDlvE2ugyT0EKcQK"
-                                                        onChange={this.onChange}
-                                                        badge="inline"
-                                                    />
-                                                
-                                                
-                                            </div>
-                                        </div>*/}
+                                        </div>
                                         <div className='w-full px-4 py-2 pb-16'>
                                                 {
                                                     <label htmlFor="" onClick={this.stateSend} className="btn w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer">
                                                         Je participe !
                                                     </label>
-                                                    //<button className="w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-orange-100 hover:bg-orange-50 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-orange-100 dark:hover:bg-orange-100 dark:focus:ring-orange-100 cursor-pointer" onTouchEnd={this.stateSend} onClick={this.stateSend}>Je participe !</button>
                                                 }
                                         </div>
                                     </div>

@@ -31,6 +31,7 @@ export default class Calendar extends React.Component {
                     </div>
                     
                     <div className='w-10/12 pl-4 pt-4'>
+                        
                         <div className="overflow-x-auto p-8">
                         <table className="table w-full">
                             <thead>

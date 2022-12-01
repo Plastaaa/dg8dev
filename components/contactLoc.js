@@ -165,8 +165,28 @@ export default class Contact extends React.Component {
         return (
             <div className="overflow-hidden pt-16">
                 <div className="py-2 lg:py-2 px-4 mx-auto max-w-screen-md">
-                    <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Location</h2>
-                    <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Je prends contact pour parler de mon projet de location.</p>
+                    <h2 className="pb-6 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Location</h2>
+                    <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Je prends contact pour parler de mon projet de location.</p>
+                    <div className="w-full pt-8 pl-4 pr-4 indent-6">
+                        <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                            Louez un camping-car, un van ou un fourgon aménagé au départ d’Annecy, de Grenoble, de Clermont-Ferrand ou encore de Caen ! 4 départs de location au plus proche de la nature.  
+                        </p>
+                    </div>
+                    <div className="w-full pt-2 pl-4 pr-4 indent-6">
+                        <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                            Que vous souhaitez partir, en famille, entre amis, en couple ou seul... Van, fourgon aménagé ou encore camping-car... vous trouverez très certainement le véhicule idéal pour des vacances exceptionnelles ! 
+                        </p>
+                    </div>
+                    <div className="w-full pt-2 pl-4 pr-4 indent-6">
+                        <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                            Découvrez le meilleur moyen de voyager, de découvrir un pays ou une région, passez des nuits incroyables au pieds des plus beaux spots, ayez ce sentiment de liberté et partez à l’aventure avec la location DG8 Camping-car ! 
+                        </p>
+                    </div>
+                    <div className="w-full pt-2 pl-4 pr-4 indent-6">
+                        <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                            De 2 à 6 places, nous vous proposons la location de véhicule de loisirs pour des vacances ou simplement un week-end !  
+                        </p>
+                    </div>
                     <CVideOuQuoiLaVariable 
                         dejaSend={this.state.dejaSend}
                         isSetName={this.state.nom} 
@@ -231,26 +251,6 @@ export default class Contact extends React.Component {
                                 <option key={5}>(14650) Auto Camping Car Service</option>
                             </select>
                         </div>
-                        <div className="w-1/2 pt-8 pl-4 pr-4 indent-6">
-                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
-                                Louez un camping-car, un van ou un fourgon aménagé au départ d’Annecy, de Grenoble, de Clermont-Ferrand ou encore de Caen ! 4 départs de location au plus proche de la nature.  
-                            </p>
-                        </div>
-                        <div className="w-full pt-2 pl-4 pr-4 indent-6">
-                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
-                                Que vous souhaitez partir, en famille, entre amis, en couple ou seul... Van, fourgon aménagé ou encore camping-car... vous trouverez très certainement le véhicule idéal pour des vacances exceptionnelles ! 
-                            </p>
-                        </div>
-                        <div className="w-full pt-2 pl-4 pr-4 indent-6">
-                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
-                                Découvrez le meilleur moyen de voyager, de découvrir un pays ou une région, passez des nuits incroyables au pieds des plus beaux spots, ayez ce sentiment de liberté et partez à l’aventure avec la location DG8 Camping-car ! 
-                            </p>
-                        </div>
-                        <div className="w-full pt-2 pl-4 pr-4 indent-6">
-                            <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">
-                                De 2 à 6 places, nous vous proposons la location de véhicule de loisirs pour des vacances ou simplement un week-end !  
-                            </p>
-                        </div>
                         <div className="w-full">
                             <h2 className="pt-6 text-lg tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Tarifs</h2>
                         </div>
@@ -260,7 +260,7 @@ export default class Contact extends React.Component {
                                 <thead>
                                     <tr className="text-center">
                                         <th>Véhicule</th>
-                                        <th>Tarif Haute Saison</th>
+                                        <th>Tarif Haute Saison*</th>
                                         <th>Tarif Basse Saison</th>
                                     </tr>
                                 </thead>
@@ -403,10 +403,15 @@ export default class Contact extends React.Component {
                         </div>
                         <input type="text" id="age" className="hidden" name="age" required/>
                         
-                        <div className="pt-8 w-1/2 xs:w-full sm:w-full md:w-full lg:w-1/2 xl:w-1/2 px-4 py-4">
+                        <div className="pt-8 w-full px-4 py-4">
                             <div className="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-800 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
                                 <button onClick={this.stateSend} className="w-full">Envoyer</button>
                             </div>
+                        </div>
+                        <div className="w-full pt-2 pl-4 pr-4 indent-6">
+                            <p class="text-xs font-normal text-gray-500 dark:text-gray-300">
+                                Les tarifs haute saison s'appliquent sur les mois de Avril, Juillet et Aout.
+                            </p>
                         </div>
                     </div>
                 </div>
