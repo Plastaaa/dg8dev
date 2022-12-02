@@ -192,8 +192,9 @@ function Financement(props){
         return(
             <div class="prix-financement">
                 {
-                    <div class="prix-financement">
-                        <div class="apartirde financement">
+                    <div className="prix-financement">
+                        <div id="box-auto-simulation-button"></div>
+                        <div className="apartirde">
                             <input 
                                 type="hidden" 
                                 name= "box-auto-infos" 
@@ -279,7 +280,36 @@ export default class VehiculeUnique extends React.Component {
             this.setState({ ccsSimi });
         })
 
+        //financement
+        axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js')
+            .then(
+                res => {
+                
+                //const resu = res.data;
+                //console.log(res.data);
+                //'load', res.initBOXA('VEHICLE')
+                //reloadVehicleData();
+        })
+        
+        /*
+        axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js')
+            .then(res =>{
+                console.log(res);
+        })
+        axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/commons.js')
+            .then(res =>{
+                console.log(res);
+        })
 
+        window.addEventListener(
+            'load', initBOXA('VEHICLE')            
+        )
+
+        window.addEventListener(
+            'load', reloadVehicleData()            
+        )*/
+
+        
     }
 
     state = {
@@ -301,9 +331,6 @@ export default class VehiculeUnique extends React.Component {
             });
         }        
     };
-
-    
-
 
     render() {
         const cookie = new Cookies;

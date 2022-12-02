@@ -124,6 +124,10 @@ export default class Calendar extends React.Component {
         });
     }
 
+    openModalDeux = () => {
+        document.getElementById('my-modal-7').checked = true
+    }
+
     /*onChange = (value) => {
         axios.post('https://www.google.com/recaptcha/api/siteverify',undefined, {
             params: {
@@ -236,9 +240,14 @@ export default class Calendar extends React.Component {
                                                     </label>
                                                 }
                                         </div>
+                                        
                                     </div>
                                 </div>
-
+                                <div className='w-full pb-16'>
+                                    <label htmlFor="" onClick={this.openModalDeux} className="btn w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:text-white dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-orange-100 cursor-pointer">
+                                        Voir les gagnants des jours précédents !
+                                    </label>
+                                </div>
 
                                 <input type="checkbox" id="my-modal-6" className="modal-toggle" />
                                 <div className="modal modal-bottom sm:modal-middle">
@@ -248,6 +257,16 @@ export default class Calendar extends React.Component {
                                         <p className="">Nous vous contacterons rapidement si vous avez été tiré au sort pour l’un de nos nombreux cadeaux.</p>
                                         <div className="modal-action">
                                         <label htmlFor="my-modal-6" className="btn">Compris !</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" id="my-modal-7" className="modal-toggle" />
+                                <div className="modal modal-bottom sm:modal-middle">
+                                    <div className="modal-box">
+                                        <h3 className="font-bold text-lg"></h3>
+                                        <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour1.jpg"} objectFit={""} width={1000} height={1850} alt={"Image camping car"} layout={"responsive"}/>
+                                        <div className="modal-action">
+                                        <label htmlFor="my-modal-7" className="w-full bg-red-700 dark:bg-red-700 text-white hover:bg-red-800 text-center p-6 rounded-xl shadow-lg">Fermer</label>
                                         </div>
                                     </div>
                                 </div>
