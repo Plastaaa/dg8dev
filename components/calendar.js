@@ -77,13 +77,8 @@ export default class Calendar extends React.Component {
 
         if((this.state.nom == "" || this.state.nom == undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel == ""  || this.state.tel == undefined) || (this.state.mail == "" || this.state.mail == undefined) || (this.state.cp == ""  || this.state.cp == undefined) || (this.state.rep == "" || this.state.rep == undefined)){
             this.setState({dejaSend: false});
-            console.log("marche po")
         }else if((this.state.nom != "" && this.state.nom != undefined) || (this.state.prenom == "" || this.state.prenom == undefined) || (this.state.tel != "" && this.state.tel != undefined) || (this.state.mail != "" && this.state.mail != undefined) || (this.state.cp != "" && this.state.cp != undefined) || (this.state.rep != "" && this.state.rep != undefined)){
-            console.log("marche")
-            console.log(this.state.dejaSend)
-            //console.log(this.state.resCapt.success)
             if(this.state.dejaSend != true){
-                console.log("marche 2")
                 this.setState({dejaSend:  true});
                 this.setState({nom: ""});
                 this.setState({prenom: ""});
@@ -92,14 +87,14 @@ export default class Calendar extends React.Component {
                 this.setState({cp: ""});
                 this.setState({rep: ""});
                 axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/sendMailCalendar.php`,{
-                params:{
-                    nom: this.state.nom,
-                    prenom: this.state.prenom,
-                    mail: this.state.mail,
-                    tel: this.state.tel,
-                    cp: this.state.cp,
-                    rep: this.state.rep,
-                }
+                    params:{
+                        nom: this.state.nom,
+                        prenom: this.state.prenom,
+                        mail: this.state.mail,
+                        tel: this.state.tel,
+                        cp: this.state.cp,
+                        rep: this.state.rep,
+                    }
                 })
 
                 axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/addCalendar.php`,{
@@ -114,12 +109,7 @@ export default class Calendar extends React.Component {
                         mois: curMonth,
                     }
                 }).then(
-                    
                     document.getElementById('my-modal-6').checked = true
-
-                    
-                    
-                    
                 )
             }
         }
