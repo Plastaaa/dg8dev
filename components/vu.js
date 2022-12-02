@@ -193,13 +193,6 @@ function Financement(props){
             <div class="prix-financement">
                 {
                     <div class="prix-financement">
-                        <div class="financement">
-                            <span class="a-partir">À partir de XXX,XX €/mois **</span>
-                            <a class="btn btn-jaune btn-fiancement">Simuler votre financement</a>
-                        </div>
-                        <div class="prix">
-                            <span>52 900 €</span>
-                        </div>
                         <div class="apartirde financement">
                             <input 
                                 type="hidden" 
@@ -357,9 +350,9 @@ export default class VehiculeUnique extends React.Component {
                 <div>
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
-                        <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
-                        <script src="https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js"></script>
-                        <link rel='stylesheet' href='https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css'></link>
+                        <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"></script>
+                        <script src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"></script>
+                        <link rel="stylesheet" type="text/css" href="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css"/>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
