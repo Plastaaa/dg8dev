@@ -34,9 +34,9 @@ export default class SimpleSlider extends Component {
                 </a>
               </div>
             </SplideSlide>
-          }
           
-            <SplideSlide>
+          
+            /*<SplideSlide>
               <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img4} width={800} layout="responsive" height={320} quality={100}/>
               <div className="absolute text-sm md:text-xl lg:text-2xl text-gray right-4 bottom-4">
                 <a href="./article/venture">
@@ -47,8 +47,8 @@ export default class SimpleSlider extends Component {
                   </button>
                 </a>
               </div>
-            </SplideSlide>
-          
+            </SplideSlide>*/
+          }
           <SplideSlide>
             <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img3} width={800} layout="responsive" height={320} quality={100}/>
           </SplideSlide>

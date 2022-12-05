@@ -76,6 +76,28 @@ export default class Calendar extends React.Component {
                                     <option key={0}>Choix du jour</option>
                                     <option key={1}>1</option>
                                     <option key={2}>2</option>
+                                    <option key={2}>3</option>
+                                    <option key={2}>4</option>
+                                    <option key={2}>5</option>
+                                    <option key={2}>6</option>
+                                    <option key={2}>7</option>
+                                    <option key={1}>8</option>
+                                    <option key={2}>9</option>
+                                    <option key={2}>10</option>
+                                    <option key={2}>11</option>
+                                    <option key={2}>12</option>
+                                    <option key={2}>13</option>
+                                    <option key={2}>14</option>
+                                    <option key={2}>15</option>
+                                    <option key={2}>16</option>
+                                    <option key={2}>17</option>
+                                    <option key={2}>18</option>
+                                    <option key={1}>19</option>
+                                    <option key={2}>20</option>
+                                    <option key={2}>21</option>
+                                    <option key={2}>22</option>
+                                    <option key={2}>23</option>
+                                    <option key={2}>24</option>
                                 </select>
                             </div>
                         </div>
