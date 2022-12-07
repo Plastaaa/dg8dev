@@ -11,7 +11,7 @@ import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 import {Helmet} from "react-helmet";
 import Cookies from 'universal-cookie';
-
+import Script from 'next/script';
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -191,30 +191,37 @@ function Financement(props){
     if(props.id == 99){
         return(
             <div class="prix-financement">
+                <Script 
+                    strategy='lazyOnload'
+                    src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"
+                    onLoad={() => {
+                        <div className="prix-financement">
+                            <div id="box-auto-simulation-button"></div>
+                            <div className="apartirde">
+                                <input 
+                                    type="hidden" 
+                                    name= "box-auto-infos" 
+                                    wmName="cap_liberte_63800" 
+                                    vehicleModel="T7400 QBC" 
+                                    vehicleRef="ETRUSCOT7400" 
+                                    vehicleBrand="Citroën" 
+                                    vehicleCategory="V" 
+                                    vehicleIsNewBo="N" 
+                                    dateMisecirc="'" 
+                                    vehicleMileAge="0" 
+                                    proposalPrice="72720" 
+                                    vehicleEngineRating="7" 
+                                    vehicleEnergy="D" 
+                                    vehicleHorsePower="140" 
+                                    ruptureTVA="N" 
+                                    vehicleNat="" 
+                                />
+                            </div>
+                        </div>     
+                    }}
+                />
                 {
-                    <div className="prix-financement">
-                        <div id="box-auto-simulation-button"></div>
-                        <div className="apartirde">
-                            <input 
-                                type="hidden" 
-                                name= "box-auto-infos" 
-                                wmName="cap_liberte_63800" 
-                                vehicleModel="T7400 QBC" 
-                                vehicleRef="ETRUSCOT7400" 
-                                vehicleBrand="Citroën" 
-                                vehicleCategory="V" 
-                                vehicleIsNewBo="N" 
-                                dateMisecirc="'" 
-                                vehicleMileAge="0" 
-                                proposalPrice="72720" 
-                                vehicleEngineRating="7" 
-                                vehicleEnergy="D" 
-                                vehicleHorsePower="140" 
-                                ruptureTVA="N" 
-                                vehicleNat="" 
-                            />
-                        </div>
-                    </div>                    
+                                   
                 }
                 {
                     /*<div class="div-box">
@@ -281,15 +288,15 @@ export default class VehiculeUnique extends React.Component {
         })
 
         //financement
-        axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js')
-            .then(
-                res => {
+        //axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js')
+        //    .then(
+        //        res => {
                 
                 //const resu = res.data;
                 //console.log(res.data);
                 //'load', res.initBOXA('VEHICLE')
                 //reloadVehicleData();
-        })
+        //})
         
         /*
         axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js')
@@ -302,7 +309,7 @@ export default class VehiculeUnique extends React.Component {
         })
 
         window.addEventListener(
-            'load', initBOXA('VEHICLE')            
+            'load', ajax.js.initBOXA('VEHICLE')            
         )
 
         window.addEventListener(
@@ -393,6 +400,7 @@ export default class VehiculeUnique extends React.Component {
                                     type: "loop",
                                     autoplay: true,
                                     heightRatio: 0.7,
+                                    lazyLoad: false,
                                     }}
                                 >
                                     {

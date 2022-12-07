@@ -3,6 +3,8 @@ import LogRocket from 'logrocket'
 LogRocket.init('6xe330/dg8-cc');
 import ReactGA from 'react-ga';
 import React from 'react';
+import Script from 'next/script';
+import Head from 'next/head';
 const TRACKING_ID = "UA-155362359-1"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
@@ -16,6 +18,9 @@ function MyApp({ Component, pageProps }) {
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
     <link rel="manifest" href="/site.webmanifest"/>
 
+
+    
+    
 
     <Component {...pageProps}/>
     <div>

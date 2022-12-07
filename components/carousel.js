@@ -7,6 +7,7 @@ import img2 from '../public/slider/slidercalendar.jpg';
 import img3 from '../public/slider/pap.jpg';
 import img5 from '../public/slider/slide5.jpg';
 import img4 from '../public/slider/slider4.jpg';
+import img6 from "../public/slider/slider6.png"
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -34,21 +35,21 @@ export default class SimpleSlider extends Component {
                 </a>
               </div>
             </SplideSlide>
+          }
           
-          
-            /*<SplideSlide>
-              <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img4} width={800} layout="responsive" height={320} quality={100}/>
+            <SplideSlide>
+              <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img6} width={800} layout="responsive" height={320} quality={100}/>
               <div className="absolute text-sm md:text-xl lg:text-2xl text-gray right-4 bottom-4">
-                <a href="./article/venture">
-                  <button className='flex flex-wrap bg-green-800 text-white hover:bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-white border-white rounded-lg p-2'>
+                <a href="./article/marche-noel/accs">
+                  <button className='flex flex-wrap bg-red-900 text-white hover:bg-red-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-white border-white rounded-lg p-2'>
                     <div className='w-full'>
-                        Découvrir le Venture S
+                        Découvrir
                     </div>
                   </button>
                 </a>
               </div>
-            </SplideSlide>*/
-          }
+            </SplideSlide>
+          
           <SplideSlide>
             <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img3} width={800} layout="responsive" height={320} quality={100}/>
           </SplideSlide>
