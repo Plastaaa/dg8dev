@@ -4,11 +4,25 @@ import axios from 'axios';
 import Image from 'next/image'
 import React from 'react';
 
-export default class Gagnants extends React.Component {
-    //componentDidMount(){
-    //    const [src, setSrc] = React.useState("");
-    //}
+function JourSelect(props){
+    var jour = props.jour;
+    console.log(jour);
 
+    if(jour > 0 && jour < 25 ){
+        return(
+            <div className='flex justify-center'>
+                <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour"+jour+".png"} className={"rounded-xl content-center p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
+            </div>
+        )
+    }else{
+        return(
+            <Image src={"/slider/slidercalendar.jpg"} className={"rounded-xl content-center p-8"} objectFit={"fill"} width={1500} height={(700)} alt={"Image camping car"} layout={"responsive"}/>
+        )
+    }
+        
+}
+
+export default class Gagnants extends React.Component {
     state = {
         resCapt: [],
     }
@@ -41,60 +55,44 @@ export default class Gagnants extends React.Component {
                                 <div className="pt-10 pb-10">
                                     <h2 className="p-6 text-2xl tracking-tight font-extrabold text-center bg-orange-100 text-green-900">Gagnants du grand jeu DG8 Camping-car !</h2>
                                 </div>
+                                <div className="pt-4">
+                                    <p className="font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance pour gagner un weekend en camping-car, des trottinettes électriques et bien d’autres lots, en répondant à la question du jour !</p>
+                                </div>
                                 <div className='flex flex-wrap'>
-                                    <div className="hidden w-full xl:w-1/2 pt-8 pr-8">
+                                    <div className=" w-full xl:pt-8 pb-8">
                                         <div className=''>
                                             <label className="block mb-2 text-sm font-medium text-white">Voir les gagnants du jour</label>
                                             <select value={this.state.jour} onChange={this.handleChange} className="dropdown bg-gray-50 border border-gray-300 p-3 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500" name="jour" required>
                                                 <option key={0}>Choix du jour</option>
                                                 <option key={1}>1</option>
                                                 <option key={2}>2</option>
-                                                <option key={2}>3</option>
-                                                <option key={2}>4</option>
-                                                <option key={2}>5</option>
-                                                <option key={2}>6</option>
-                                                <option key={2}>7</option>
-                                                <option className='hidden' key={1}>8</option>
-                                                <option className='hidden' key={2}>9</option>
-                                                <option className='hidden' key={2}>10</option>
-                                                <option className='hidden' key={2}>11</option>
-                                                <option className='hidden' key={2}>12</option>
-                                                <option className='hidden' key={2}>13</option>
-                                                <option className='hidden' key={2}>14</option>
-                                                <option className='hidden' key={2}>15</option>
-                                                <option className='hidden' key={2}>16</option>
-                                                <option className='hidden' key={2}>17</option>
-                                                <option className='hidden' key={2}>18</option>
-                                                <option className='hidden' key={1}>19</option>
-                                                <option className='hidden' key={2}>20</option>
-                                                <option className='hidden' key={2}>21</option>
-                                                <option className='hidden' key={2}>22</option>
-                                                <option className='hidden' key={2}>23</option>
-                                                <option className='hidden' key={2}>24</option>
+                                                <option key={3}>3</option>
+                                                <option key={4}>4</option>
+                                                <option key={5}>5</option>
+                                                <option key={6}>6</option>
+                                                <option key={7}>7</option>
+                                                <option key={8}>8</option>
+                                                <option key={9}>9</option>
+                                                <option key={10}>10</option>
+                                                <option key={11}>11</option>
+                                                <option key={12}>12</option>
+                                                <option key={13}>13</option>
+                                                <option key={14}>14</option>
+                                                <option key={15}>15</option>
+                                                <option key={16}>16</option>
+                                                <option key={17}>17</option>
+                                                <option key={18}>18</option>
+                                                <option key={19}>19</option>
+                                                <option key={20}>20</option>
+                                                <option key={21}>21</option>
+                                                <option key={22}>22</option>
+                                                <option key={23}>23</option>
+                                                <option key={24}>24</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div className="hidden w-full xl:w-1/2 pt-8 pl-8">
-                                        <div className=''>
-                                            <label className="block mb-2 text-sm font-medium text-white text-right">Rechercher</label>
-                                            <button onClick={this.stateSearch} className='p-2.5 bg-orange-50 w-full rounded-lg'>
-                                                Voir !
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className='w-full xl:w-full rounded-xl'>
-                                        <div className='flex items-center bg-gray-100 rounded-xl'>
-                                            <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour1.jpg"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                            <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour2.png"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                            <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour3.png"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                            <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour4.png"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                        </div>
-                                        <div className='flex items-center bg-gray-100 rounded-xl'>
-                                            <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour5.png"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                            <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour6.png"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                            <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour7.png"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                            <Image /*onError={() => setSrc('/asset/error/blurerrorjour.png')}*/ src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour8.png"} className={"rounded-xl p-8"} objectFit={""} width={300} height={600} alt={"Image camping car"} layout={""}/>
-                                        </div>
+                                    <div className='w-full xl:w-full rounded-xl pb-8'>
+                                        <JourSelect jour={this.state.jour}/>
                                     </div>
                                 </div>
                             </div>
