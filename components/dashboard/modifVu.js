@@ -16,14 +16,6 @@ export default class Stat extends React.Component {
         });
     }
 
-    handleStatement = () => {
-        //this.state.ccs.map(cc =>
-            //this.setState({ refdms: cc.idCC }),
-            //this.setState({ typeLit: cc.typeLit}),
-            //this.setState({ reservoirSale: cc.reservoirSale}),
-        //)
-    }
-
     componentDidMount() {
         const queryParams = new URLSearchParams(window.location.search);
         const idURL = queryParams.get('id');
@@ -44,8 +36,6 @@ export default class Stat extends React.Component {
             const imgCC = res.data;
             this.setState({ imgCC });
         });
-
-        this.handleStatement();
     }
 
     render(){
@@ -58,6 +48,7 @@ export default class Stat extends React.Component {
                     <div className="w-10/12">
                         {
                             this.state.ccs.map(cc => 
+                                
                             <div className="pt-8">
                                 <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Modifier le véhicule {cc.idCC}</h2>
                                 <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">{cc.marque + " " + cc.modele}.</p>
@@ -66,12 +57,12 @@ export default class Stat extends React.Component {
                                         <div className="w-1/6 pt-4 px-4 py-2">
                                             <label htmlFor="nom" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ref</label>
                                             <div className="flex">
-                                                <input type="text" id="nom" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={this.state.ref} required/>
+                                                <input type="text" id="ref" className="w-full shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Ref" name="ref" onChange={this.stateChange} value={cc.idCC} required/>
                                             </div>
                                         </div>
                                         <div className="w-2/6 pt-4 px-4 py-2">
                                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Marque</label>
-                                            <input type="text" id="mail" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Marque" name="marque" onChange={this.stateChange} value={cc.marque} required/>
+                                            <input type="text" id="mail" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Marque" name="marque" onChange={this.stateChange} value={this.s} required/>
                                         </div>
                                         <div className="w-3/6 pt-4 px-4 py-2">
                                             <label htmlFor="tel" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Modèle</label>

@@ -270,6 +270,9 @@ export default class Calendar extends React.Component {
                                         <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour2.png"} objectFit={""} width={1000} height={1850} alt={"Image camping car"} layout={"responsive"}/>
                                         <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour3.png"} objectFit={""} width={1000} height={1850} alt={"Image camping car"} layout={"responsive"}/>
                                         <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour4.png"} objectFit={""} width={1000} height={1850} alt={"Image camping car"} layout={"responsive"}/>
+                                        <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour5.png"} objectFit={""} width={1000} height={1850} alt={"Image camping car"} layout={"responsive"}/>
+                                        <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour6.png"} objectFit={""} width={1000} height={1850} alt={"Image camping car"} layout={"responsive"}/>
+                                        <Image src={"http://nunesaccount.alwaysdata.net/APIDG8/IMG/VISUELS/jour7.png"} objectFit={""} width={1000} height={1850} alt={"Image camping car"} layout={"responsive"}/>
                                         <div className="modal-action">
                                             <label htmlFor="my-modal-7" className="w-full bg-red-700 dark:bg-red-700 text-white hover:bg-red-800 text-center p-6 rounded-xl shadow-lg">Fermer</label>
                                         </div>
