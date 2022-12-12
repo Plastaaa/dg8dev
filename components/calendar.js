@@ -190,8 +190,8 @@ export default class Calendar extends React.Component {
                                 <h2 className="p-6 text-2xl tracking-tight font-extrabold text-center bg-orange-100 text-green-900">LE CALENDRIER DE L'AVENT DG8 CAMPING-CAR</h2>
                             </div>
                             <div className="pt-4">
-                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance pour gagner un weekend en camping-car, des trottinettes électrique et bien d’autres lots, en répondant à la question du jour !</p>
-                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Toutes les réponses aparaissent sur notre site dans un délai de 72h !</p>
+                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance pour gagner un weekend en camping-car, des trottinettes électriques et bien d’autres lots, en répondant à la question du jour !</p>
+                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tous les gagnants aparaissent sur notre site dans un délai de 96h !</p>
                             </div>
                             <div className='flex flex-wrap'>
                                 <div className="w-full xl:w-1/2 pt-8">
@@ -245,7 +245,7 @@ export default class Calendar extends React.Component {
                                     </div>
                                 </div>
                                 <div className='w-full pb-16'>
-                                    <label htmlFor="" onClick={this.openModalDeux} className="btn w-full py-3 px-5 text-sm font-medium text-center text-black rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:text-white dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-orange-100 cursor-pointer">
+                                    <label htmlFor="" onClick={this.openModalDeux} className="btn w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:text-white dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-orange-100 cursor-pointer">
                                         Voir les gagnants des jours précédents !
                                     </label>
                                 </div>
