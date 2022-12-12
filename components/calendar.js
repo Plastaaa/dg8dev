@@ -245,9 +245,11 @@ export default class Calendar extends React.Component {
                                     </div>
                                 </div>
                                 <div className='w-full pb-16'>
-                                    <label htmlFor="" onClick={this.openModalDeux} className="btn w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:text-white dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-orange-100 cursor-pointer">
-                                        Voir les gagnants des jours précédents !
-                                    </label>
+                                    <a href='/jeuconcours/gagnants'>
+                                        <label htmlFor="" onClick={this.openModalDeux} className="btn w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:text-white dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-orange-100 cursor-pointer">
+                                            Voir les gagnants des jours précédents !
+                                        </label>
+                                    </a>
                                 </div>
 
                                 <input type="checkbox" id="my-modal-6" className="modal-toggle" />
