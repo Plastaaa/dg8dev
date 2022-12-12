@@ -19,7 +19,7 @@ export default class HomePage extends React.Component {
                 <div>
                     <Navbar/>
                 </div>
-                <div className="flex flex-wrap mx-2 overflow-hidden">
+                <div className="flex flex-wrap overflow-hidden">
                     <div className="my-2 w-full overflow-hidden">
                         <Carou/>
                     </div>

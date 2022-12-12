@@ -118,11 +118,11 @@ export default function NavBar() {
                     </div>
                     <div>
                         <div
-                            className={`flex-1 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
+                            className={`flex-1 justify-self-center pb-3  lg:block lg:pb-0 lg:mt-0 ${
                                 navbar ? "block" : "hidden"
                             }`}
                         >
-                            <ul className="items-center justify-center space-y-8 lg:flex lg:space-x-4 lg:space-y-0">
+                            <ul className="items-center justify-center space-y-2 lg:flex lg:space-x-4 lg:space-y-0">
                                 <li className="text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/stock?etat=neuf">Neuf</a>
                                 </li>
@@ -132,10 +132,11 @@ export default function NavBar() {
                                 <li className="hidden xl:block text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/location">Location</a>
                                 </li>
-                                <li>
+
+                                <li className='hidden xl:block'>
                                     <div className="dropdown dropdown-hover">
                                         <a href='/atelier'>
-                                            <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Prendre RDV</label>
+                                            <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400">Prendre RDV</label>
                                         </a>
                                         
                                         <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
@@ -146,9 +147,19 @@ export default function NavBar() {
                                 </li>
                                 <li className='block xl:hidden'>
                                     <div className="dropdown dropdown-hover">
-                                        <a href='/'>
-                                            <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Services</label>
-                                        </a>
+                                        
+                                        <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400">Prendre RDV</label>
+                                        
+                                        <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
+                                            <li><a href='/atelier'>Rendez-vous atelier</a></li>
+                                            <li><a href='/controle-humidite'>Contrôle d'humidité</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li className='block xl:hidden'>
+                                    <div className="dropdown dropdown-hover cursor-pointer">
+                                        <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400">Services</label>
                                         
                                         <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
                                             <li className="block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400">
@@ -166,6 +177,7 @@ export default function NavBar() {
                                         </ul>
                                     </div>
                                 </li>
+
                                 <li className="hidden xl:block text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                     <a href="/rachat-cash">Rachat Cash</a>
                                 </li>
@@ -176,7 +188,7 @@ export default function NavBar() {
                                     <a>
                                         <div className="dropdown dropdown-hover">
                                             <a href='/guide/le-guide-camping-car'>
-                                                <a href='/guide/le-guide-camping-car' tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Guide d'achat</a>
+                                                <a href='/guide/le-guide-camping-car' tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400">Guide d'achat</a>
                                             </a>
                                             <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-64">
                                                 <li><a href='/guide/le-guide-poids-lourd'>Guide d'achat poids lourd</a></li>
@@ -188,55 +200,57 @@ export default function NavBar() {
                                 </li>
                                 <li>
                                     <div className="dropdown dropdown-hover">
-                                        <a href='/le-groupe-david-gerbier'>
-                                            <a href='/le-groupe-david-gerbier' tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400 m-1">Groupe David Gerbier</a>
-                                        </a>
+                                        <a tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400">Groupe David Gerbier</a>
                                         
                                         <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
+                                            <li><a href='/le-groupe-david-gerbier'>Groupe David Gerbier</a></li>
                                             <li><a href='/nos-concessions'>Nos concessions</a></li>
                                             <li><a href='/marques'>Marques distribuées</a></li>
                                             <li><a href='/recrutement'>Recrutement</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li>
-                                    <a href="/jeuconcours">
-                                        <button className='flex flex-wrap text-gray-600 bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
-                                            <div className='w-2/8 px-1 pt-0.5'>
-                                                <div className='block dark:hidden pr-2'>
-                                                    <Image height={16} width={16} src={whitegift} objectFit={"contain"} alt={"Gift logo"} className={"px-4"}/>
+                                <li className='flex flex-wrap'>
+                                    <li className='px-2'>
+                                        <a href="/jeuconcours">
+                                            <button className='flex flex-wrap text-gray-600 bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
+                                                <div className='w-2/8 px-1 pt-0.5'>
+                                                    <div className='block dark:hidden pr-2'>
+                                                        <Image height={16} width={16} src={whitegift} objectFit={"contain"} alt={"Gift logo"} className={"px-4"}/>
+                                                    </div>
+                                                    <div className='hidden dark:block'>
+                                                        <Image height={16} width={16} src={whitegift} objectFit={"contain"} alt={"Gift logo dark"} className={"px-4"}/>
+                                                    </div>
                                                 </div>
-                                                <div className='hidden dark:block'>
-                                                    <Image height={16} width={16} src={whitegift} objectFit={"contain"} alt={"Gift logo dark"} className={"px-4"}/>
+                                                <div className='w-6/8'>
+                                                    <p className='text-white pr-2'>
+                                                        JEU CONCOURS
+                                                    </p>
                                                 </div>
-                                            </div>
-                                            <div className='w-6/8'>
-                                                <p className='text-white pr-2'>
-                                                    JEU CONCOURS
-                                                </p>
-                                            </div>
-                                        </button>
-                                    </a>
+                                            </button>
+                                        </a>
+                                    </li>
+                                    {
+                                    <li className='px-2'>
+                                        <a href="tel:+33 0969396973">
+                                            <button className='flex flex-wrap text-gray-600 hover:bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
+                                                <div className='w-2/8 px-1 pt-0.5'>
+                                                    <div className='block dark:hidden'>
+                                                        <Image height={16} width={16} src={phoneIMG} objectFit={"contain"} alt={"Phone logo"} className={"px-4"}/>
+                                                    </div>
+                                                    <div className='hidden dark:block'>
+                                                        <Image height={16} width={16} src={whitephoneIMG} objectFit={"contain"} alt={"Phone logo dark"} className={"px-4"}/>
+                                                    </div>
+                                                </div>
+                                                <div className='w-6/8'>
+                                                    09 69 39 69 73
+                                                </div>
+                                            </button>
+                                        </a>
+                                    </li>
+                                    }
                                 </li>
-                                {
-                                <li>
-                                    <a href="tel:+33 0969396973">
-                                        <button className='flex flex-wrap text-gray-600 hover:bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
-                                            <div className='w-2/8 px-1 pt-0.5'>
-                                                <div className='block dark:hidden'>
-                                                    <Image height={16} width={16} src={phoneIMG} objectFit={"contain"} alt={"Phone logo"} className={"px-4"}/>
-                                                </div>
-                                                <div className='hidden dark:block'>
-                                                    <Image height={16} width={16} src={whitephoneIMG} objectFit={"contain"} alt={"Phone logo dark"} className={"px-4"}/>
-                                                </div>
-                                            </div>
-                                            <div className='w-6/8'>
-                                                09 69 39 69 73
-                                            </div>
-                                        </button>
-                                    </a>
-                                </li>
-                                }
+                                
                             </ul>
                         </div>
                     </div>
