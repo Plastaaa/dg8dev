@@ -201,8 +201,10 @@ span[name="box-auto-rent-label"] {
     pointer-events: auto;
     visibility: visible;
     opacity: 1;
-    background-color: #d1d1d1;
+    background-color: #ffffff;
     border-radius: 16px;
+
+    box-shadow: 100px 100px 100000px 100000px #00000099;
 
 }
 
