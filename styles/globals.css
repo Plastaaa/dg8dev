@@ -112,3 +112,10 @@
     transform: rotate(360deg);
   }
 }
+
+span[name="box-auto-rent-label"] {
+    font-weight: bolder;
+    background-color: rgb(156, 170, 255);
+    border-radius: 2px;
+    border-color: #000;
+}

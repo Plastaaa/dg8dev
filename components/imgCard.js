@@ -14,11 +14,11 @@ export default function imgCard(props) {
                 layout={"responsive"} 
                 height={800} 
                 width={1000}
-                priority={100} 
                 quality={100}
                 className={'rounded-xl'}
                 placeholder={"blur"}
                 blurDataURL={"/asset/error/blur.png"}
+                loading={"lazy"}
             />
         </div>
     )

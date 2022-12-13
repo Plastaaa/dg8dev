@@ -188,6 +188,27 @@ function NbCouchage(props){
 }
 
 function Financement(props){
+    var concession = ""
+    if(props.concess == "Cap Liberté"){
+        concession = "cap_liberte_63800";
+    }else if(props.concess == "Evasion 63"){
+        concession = "evasion_63_63370";
+    }else if(props.concess == "Mozac Loisirs"){
+        concession = "mozac_loisirs_63200";
+    }else if(props.concess == ""){
+        concession = "grenoble_camping_car_38340";
+    }else if(props.concess == ""){
+        concession = "expo_clavel_38430";
+    }else if(props.concess == ""){
+        concession = "curioz_loisirs_38430";
+    }else if(props.concess == ""){
+        concession = "eldorado_camping_car_74600";
+    }else if(props.concess == ""){
+        concession = "gmsa_camping_car_73490";
+    }else{
+        concession = "cap_liberte_63800"
+    }
+
     if(props.id == 99){
         return(
             <div class="prix-financement">
@@ -196,7 +217,6 @@ function Financement(props){
                     <div className="apartirde">
                         {
                             /*
-                            concess={cc.libelle}
                             etat={cc.etat}
                             date={cc.annee}
                             */
@@ -204,7 +224,7 @@ function Financement(props){
                         <input 
                             type="hidden" 
                             name= "box-auto-infos" 
-                            wmName="cap_liberte_63800" 
+                            wmName={concession}
                             vehicleModel={props.model}
                             vehicleRef={props.ref}
                             vehicleBrand={props.marque}
