@@ -195,7 +195,6 @@ span[name="box-auto-rent-label"] {
     max-height: 60% !important;
     overflow-y: auto !important;
 
-
     display: flex;
     justify-content: center;
     z-index: 999;
@@ -205,6 +204,14 @@ span[name="box-auto-rent-label"] {
     background-color: #d1d1d1;
     border-radius: 16px;
 
+}
+
+#box-auto-mention-legal-body {
+    padding: 30px;
+}
+
+#box-auto-mention-legal-close-div {
+    padding-right: 30px;
 }
 
 .modal-action {
