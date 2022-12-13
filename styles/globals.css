@@ -209,14 +209,14 @@ footer {
 
     position: fixed !important;
     
-    top: 20%;
-    right: 20%;
-    bottom: 20%;
-    left: 20%;
-    max-width: 60%;
-    max-height: 60%;
+    top: 20% !important;
+    right: 20% !important;
+    bottom: 20% !important;
+    left: 20% !important;
+    max-width: 60% !important;
+    max-height: 60% !important;
 
-    
+
     display: flex;
     justify-content: center;
     z-index: 999;
