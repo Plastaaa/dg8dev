@@ -221,6 +221,7 @@ footer {
     background-color: #FFFFFF;
 
     border: 2px fixed;
+    border-color: #000;
     border-radius: 16px;
 }
 
