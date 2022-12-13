@@ -145,19 +145,6 @@ span[name="box-auto-rent-label"] {
   vertical-align: middle;
 }
 
-/* Le contenu de la modale */
-#box-auto-mention-legal-modal {
-  margin: 2px;
-  background-color: #f3f3f3;
-  position: absolute !important;
-  padding: 0;
-  outline: 0;
-  border: 1px rgb(0, 0, 0) solid !important;
-  border-radius: 8px;
-  text-align: justify;
-  width: 80% !important;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-}
 
 /* Bouton servant à fermer la fenêtre modale */
 #box-auto-mention-legal-close {
