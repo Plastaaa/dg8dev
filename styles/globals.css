@@ -121,12 +121,6 @@ span[name="box-auto-rent-label"] {
 }
 
 
-
-@keyframes slideDownFadeIN {
-    from {top:-100px;opacity: 0;}
-    to {top:0px;opacity:1;}
-}
-
 /* Foncer l'arrière-plan de la fenêtre modale */
 .modal {
   display: none; 
@@ -153,18 +147,15 @@ span[name="box-auto-rent-label"] {
 
 /* Le contenu de la modale */
 .box-auto-mention-legal-modal {
-  margin: auto;
+  margin: 2px;
   background-color: #f3f3f3;
-  position: relative;
+  position: absolute !important;
   padding: 0;
   outline: 0;
-  border: 1px #777 solid;
+  border: 1px #777 solid !important;
   text-align: justify;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
-  animation-name: slideDownFadeIN;
-  animation-duration: 0.5s;
+  width: 80% !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 /* Bouton servant à fermer la fenêtre modale */
@@ -176,8 +167,8 @@ span[name="box-auto-rent-label"] {
   color: #fff;
 }
 
-.closebtn:hover,
-.closebtn:focus {
+.box-auto-mention-legal-close:hover,
+.box-auto-mention-legal-close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
