@@ -122,7 +122,7 @@ span[name="box-auto-rent-label"] {
 
 
 /* Foncer l'arrière-plan de la fenêtre modale */
-.modal {
+#modal {
   display: none; 
   left: 0;
   top: 0;
@@ -140,13 +140,13 @@ span[name="box-auto-rent-label"] {
 }
 
 /* la fenêtre modale  */
-.modal-dialog {
+#modal-dialog {
   display: table-cell;
   vertical-align: middle;
 }
 
 /* Le contenu de la modale */
-.box-auto-mention-legal-modal {
+#box-auto-mention-legal-modal {
   margin: 2px;
   background-color: #f3f3f3;
   position: absolute !important;
@@ -159,7 +159,7 @@ span[name="box-auto-rent-label"] {
 }
 
 /* Bouton servant à fermer la fenêtre modale */
-.box-auto-mention-legal-close {
+#box-auto-mention-legal-close {
   text-decoration: none;
   float: right;
   font-size: 35px;
@@ -167,8 +167,8 @@ span[name="box-auto-rent-label"] {
   color: #fff;
 }
 
-.box-auto-mention-legal-close:hover,
-.box-auto-mention-legal-close:focus {
+#box-auto-mention-legal-close:hover,
+#box-auto-mention-legal-close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
