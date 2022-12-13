@@ -191,69 +191,29 @@ function Financement(props){
     if(props.id == 99){
         return(
             <div class="prix-financement">
-                <Script 
-                    strategy='lazyOnload'
-                    src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"
-                    onLoad={() => {
-                        <div className="prix-financement">
-                            <div id="box-auto-simulation-button"></div>
-                            <div className="apartirde">
-                                <input 
-                                    type="hidden" 
-                                    name= "box-auto-infos" 
-                                    wmName="cap_liberte_63800" 
-                                    vehicleModel="T7400 QBC" 
-                                    vehicleRef="ETRUSCOT7400" 
-                                    vehicleBrand="Citroën" 
-                                    vehicleCategory="V" 
-                                    vehicleIsNewBo="N" 
-                                    dateMisecirc="'" 
-                                    vehicleMileAge="0" 
-                                    proposalPrice="72720" 
-                                    vehicleEngineRating="7" 
-                                    vehicleEnergy="D" 
-                                    vehicleHorsePower="140" 
-                                    ruptureTVA="N" 
-                                    vehicleNat="" 
-                                />
-                            </div>
-                        </div>     
-                    }}
-                />
-                {
-                                   
-                }
-                {
-                    /*<div class="div-box">
-                    <div class="apartirde">
-                        <span name="box-auto-rent-label"></span>
-                        {
-                        //    <span name="box-auto-rent-value" id='box-auto-rent-value0'></span>
-                        }
-                        <a class="btn btn-jaune btn-fiancement box-auto-simulation-button">Simuler votre financement</a>
+                <div className="prix-financement">
+                    <div id="box-auto-simulation-button"></div>
+                    <div className="apartirde">
                         <input 
                             type="hidden" 
                             name= "box-auto-infos" 
                             wmName="cap_liberte_63800" 
                             vehicleModel="T7400 QBC" 
                             vehicleRef="ETRUSCOT7400" 
-                            vehicleBrand="Citroën"
+                            vehicleBrand="Citroën" 
                             vehicleCategory="V" 
                             vehicleIsNewBo="N" 
                             dateMisecirc="'" 
                             vehicleMileAge="0" 
-                            proposalPrice="72720"
+                            proposalPrice="72720" 
                             vehicleEngineRating="7" 
                             vehicleEnergy="D" 
                             vehicleHorsePower="140" 
                             ruptureTVA="N" 
-                            vehicleNat=""
+                            vehicleNat="" 
                         />
                     </div>
-                    <div id="box-auto-simulation-button"></div>
-                </div>*/
-                }
-                
+                </div>     
             </div>
         )
     }else{
@@ -287,35 +247,14 @@ export default class VehiculeUnique extends React.Component {
             this.setState({ ccsSimi });
         })
 
-        //financement
-        //axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js')
-        //    .then(
-        //        res => {
-                
-                //const resu = res.data;
-                //console.log(res.data);
-                //'load', res.initBOXA('VEHICLE')
-                //reloadVehicleData();
-        //})
-        
-        /*
-        axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js')
-            .then(res =>{
-                console.log(res);
-        })
-        axios.post('https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/commons.js')
-            .then(res =>{
-                console.log(res);
-        })
-
-        window.addEventListener(
-            'load', ajax.js.initBOXA('VEHICLE')            
-        )
-
-        window.addEventListener(
-            'load', reloadVehicleData()            
-        )*/
-
+        const script = document.createElement("script");
+        script.src = "https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js";
+        script.async = false;
+        document.head.appendChild(script)
+        const script2 = document.createElement("script");
+        script2.src = "https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js";
+        script2.async = false;
+        document.head.appendChild(script2)
         
     }
 
@@ -384,6 +323,8 @@ export default class VehiculeUnique extends React.Component {
                 <div>
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
+                        <script>{initBOXA('VEHICLE')}</script>
+                        <script>{reloadVehicleData()}</script>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>

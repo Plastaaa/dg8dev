@@ -6,8 +6,6 @@ export default function Home(props){
 
     return (
         <div>
-            <Script strategy='lazyOnload' src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js"/>
-            <Script strategy='lazyOnload' src="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/staging/ajax.js"/>
             <VehiculeUnique/>
         </div>
     )
