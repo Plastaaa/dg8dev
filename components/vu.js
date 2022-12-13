@@ -194,21 +194,28 @@ function Financement(props){
                 <div className="prix-financement">
                     <div id="box-auto-simulation-button"></div>
                     <div className="apartirde">
+                        {
+                            /*
+                            concess={cc.libelle}
+                            etat={cc.etat}
+                            date={cc.annee}
+                            */
+                        }
                         <input 
                             type="hidden" 
                             name= "box-auto-infos" 
                             wmName="cap_liberte_63800" 
-                            vehicleModel="T7400 QBC" 
-                            vehicleRef="ETRUSCOT7400" 
-                            vehicleBrand="Citroën" 
+                            vehicleModel={props.model}
+                            vehicleRef={props.ref}
+                            vehicleBrand={props.marque}
                             vehicleCategory="V" 
                             vehicleIsNewBo="N" 
                             dateMisecirc="'" 
-                            vehicleMileAge="0" 
-                            proposalPrice="72720" 
-                            vehicleEngineRating="7" 
+                            vehicleMileAge={props.km} 
+                            proposalPrice={props.prix}
+                            vehicleEngineRating={props.chevauxFisc} 
                             vehicleEnergy="D" 
-                            vehicleHorsePower="140" 
+                            vehicleHorsePower={props.chevaux}
                             ruptureTVA="N" 
                             vehicleNat="" 
                         />
@@ -365,7 +372,19 @@ export default class VehiculeUnique extends React.Component {
                             </h1>
                             <p>
 
-                                <Financement id={idUser}/>
+                                <Financement 
+                                    id={idUser}
+                                    concess={cc.libelle}
+                                    model={cc.modele + cc.version}
+                                    ref={cc.idCC + cc.marque}
+                                    marque={cc.marque}
+                                    etat={cc.etat}
+                                    date={cc.annee}
+                                    km={cc.kilometrage}
+                                    prix={cc.prixTTC}
+                                    chevauxFisc={cc.puissFisc}
+                                    chevaux={cc.puissDin}
+                                />
                                 
                                 {
                                     /*<div class='apartirde'>
