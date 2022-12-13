@@ -208,10 +208,15 @@ footer {
 #box-auto-mention-legal-modal {
 
     position: fixed !important;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    
+    top: 20%;
+    right: 20%;
+    bottom: 20%;
+    left: 20%;
+    max-width: 60%;
+    max-height: 60%;
+
+    
     display: flex;
     justify-content: center;
     z-index: 999;
