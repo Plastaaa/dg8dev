@@ -206,7 +206,8 @@ footer {
 }
 
 #box-auto-mention-legal-modal {
-    position: fixed;
+
+    position: fixed !important;
     top: 0px;
     right: 0px;
     bottom: 0px;
@@ -217,7 +218,12 @@ footer {
     pointer-events: auto;
     visibility: visible;
     opacity: 1;
+    background-color: #FFFFFF;
+
+    border: 2px fixed;
+    border-radius: 16px;
 }
+
 .modal-action {
     display: flex;
 }
