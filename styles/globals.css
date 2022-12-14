@@ -373,13 +373,14 @@ span[name="box-auto-rent-value"] {
 	position: relative;
 	display: inline-block;
 	text-align: center;
-    width: 17px;
-    height: 17px;
+    width: 26px;
+    height: 26px;
     border: solid 1px #1e4c2c;
     border-radius: 10px;
     left: 3px;
     font-family: "Times New Roman", Times, serif;
-    font-weight: bold;
+    font-weight: bolder;
+    color: #1e4c2c;
 }
 
 .box-auto-i-span {
@@ -426,7 +427,7 @@ span[name="box-auto-rent-value"] {
 } 
 
 .apartirde {
-	color:#ffffff;
+	color:#9d9d9d;
 }
 
 .apartirde span{
