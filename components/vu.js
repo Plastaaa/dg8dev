@@ -13,6 +13,38 @@ import {Helmet} from "react-helmet";
 import Cookies from 'universal-cookie';
 import Script from 'next/script';
 
+https://boxauto.bnpparibas-pf.com/widget/web/guest/box/-/BoxAutoSimulationViewPortlet_INSTANCE_uPvjflFSmQ21?
+
+wmName=caravanes_loisirs_maine_53940
+vehicleRef=696
+vehicleCategory=V
+vehicleBrand=Peugeot
+vehicleModel=696
+vehicleIsNewBo=true
+vehiclePro=false
+dateMiseCirc=
+vehicleMileAge=0
+proposalPrice=78390
+vehicleNat=
+vehicleBodyWork=null
+vehicleGearBox=null
+vehicleNbDoor=null
+vehicleCapacity=null
+vehicleEngineRating=7
+vehicleEnergy=D
+vehicleHorsePower=140
+accessoriesAmount=null
+optionsAmount=null
+vehicleVersion=null
+serialNumber=null
+ruptureTVA=N
+leadTvei=null
+customerFirstName=null
+customerLastName=null
+customerMail=null
+customerCivility=null
+customerPhone=null
+
 function IsThereHeight(props){
     const isSet = props.isSet;
     if(isSet == ""){
@@ -236,8 +268,23 @@ function Financement(props){
                             vehicleEngineRating={props.chevauxFisc} 
                             vehicleEnergy="D" 
                             vehicleHorsePower={props.chevaux}
-                            ruptureTVA={true} 
-                            vehicleNat="TESTA162Z7TDF76"
+                            ruptureTVA={"N"} 
+                            vehicleNat=""
+                            vehiclePro={false}
+                            vehicleBodyWork={null}
+                            vehicleGearBox={null}
+                            vehicleNbDoor={null}
+                            vehicleCapacity={null}
+                            accessoriesAmount={null}
+                            optionsAmount={null}
+                            vehicleVersion={null}
+                            serialNumber={null}
+                            leadTvei={null}
+                            customerFirstName={null}
+                            customerLastName={null}
+                            customerMail={null}
+                            customerCivility={null}
+                            customerPhone={null}
                         />
                     </div>
                 </div>     
