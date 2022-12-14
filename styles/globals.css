@@ -194,7 +194,7 @@ span[name="box-auto-rent-label"] {
     max-width: 80% !important;
     min-width: 50% !important;
     max-height: 60% !important;
-    /*overflow-y: auto !important;*/
+    overflow-y: auto;
 
     display: flex;
     justify-content: center;
