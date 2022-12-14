@@ -318,11 +318,7 @@ span[name="box-auto-rent-value"] {
 .box-auto-modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 5px 10px 5px 10px;
-    min-width: 300px; 
-    max-width: 1440px;
     background-color: #fff;
-    border: 1px solid transparent;
     border-radius: 6px;
     -webkit-box-shadow: 0 3px 9px rgba(0,0,0,0.5);
     box-shadow: 0 3px 9px rgba(0,0,0,0.5);
