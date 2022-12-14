@@ -12,6 +12,7 @@ export default class Home extends React.Component{
         script2.src = "https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/rx.min.js";
         script2.async = false;
         document.head.appendChild(script2)
+
         
     }
 

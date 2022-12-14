@@ -237,8 +237,7 @@ function Financement(props){
                             vehicleEnergy="D" 
                             vehicleHorsePower={props.chevaux}
                             ruptureTVA="N" 
-                            vehicleNat=""
-
+                            vehicleNat="TESTA162Z7TDF76"
                         />
                     </div>
                 </div>     
@@ -344,7 +343,6 @@ export default class VehiculeUnique extends React.Component {
                         <script>{initBOXA('VEHICLE')}</script>
                         <script>{reloadVehicleData()}</script>
                         <link rel="stylesheet" type="text/css" href="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css"/>
-
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
