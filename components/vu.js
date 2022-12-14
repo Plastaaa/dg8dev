@@ -382,7 +382,8 @@ export default class VehiculeUnique extends React.Component {
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
                         <script>{initBOXA('VEHICLE')}</script>
                         <script>{reloadVehicleData()}</script>
-                        <link rel="stylesheet" type="text/css" href="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css"/>
+                        
+                        {/*<link rel="stylesheet" type="text/css" href="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css"/>*/}
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
