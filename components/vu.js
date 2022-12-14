@@ -247,12 +247,6 @@ function Financement(props){
                             optionsAmount={null}
                             vehicleVersion={null}
                             serialNumber={null}
-                            leadTvei={null}
-                            customerFirstName={null}
-                            customerLastName={null}
-                            customerMail={null}
-                            customerCivility={null}
-                            customerPhone={null}
                         />
                     </div>
                 </div>     
