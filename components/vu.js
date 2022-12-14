@@ -221,36 +221,7 @@ function Financement(props){
                             date={cc.annee}
 
 
-                            type="hidden" 
-                            name= "box-auto-infos" 
-                            wmName={concession}
-                            vehicleModel={props.model}
-                            vehicleRef={props.ref}
-                            vehicleBrand={props.marque}
-                            vehicleCategory="V" 
-                            vehicleIsNewBo="N" 
-                            dateMisecirc="'" 
-                            vehicleMileAge={props.km} 
-                            proposalPrice={props.prix}
-                            vehicleEngineRating={props.chevauxFisc} 
-                            vehicleEnergy="D" 
-                            vehicleHorsePower={props.chevaux}
-                            ruptureTVA={"N"} 
-                            vehicleNat=""
-                            vehiclePro={false}
-                            vehicleBodyWork={null}
-                            vehicleGearBox={null}
-                            vehicleNbDoor={null}
-                            vehicleCapacity={null}
-                            accessoriesAmount={null}
-                            optionsAmount={null}
-                            vehicleVersion={null}
-                            serialNumber={null}
-
-
-                            */
-                        }
-                        <input 
+                            <input 
                             type="hidden" 
                             name= "box-auto-infos" 
                             wmName="cap_liberte_63800"
@@ -265,6 +236,37 @@ function Financement(props){
                             vehicleEngineRating="6"
                             vehicleEnergy="D" 
                             vehicleHorsePower="150"
+                            ruptureTVA={"N"} 
+                            vehicleNat=""
+                            vehiclePro={false}
+                            vehicleBodyWork={null}
+                            vehicleGearBox={null}
+                            vehicleNbDoor={null}
+                            vehicleCapacity={null}
+                            accessoriesAmount={null}
+                            optionsAmount={null}
+                            vehicleVersion={null}
+                            serialNumber={null}
+                        />
+
+
+                            */
+                        }
+                        <input 
+                            type="hidden" 
+                            name= "box-auto-infos" 
+                            wmName={concession}
+                            vehicleModel={props.model}
+                            vehicleRef={props.ref}
+                            vehicleBrand={props.marque}
+                            vehicleCategory="V" 
+                            vehicleIsNewBo="0" 
+                            dateMisecirc={"0101" + props.date} 
+                            vehicleMileAge={props.km}
+                            proposalPrice={props.prix}
+                            vehicleEngineRating={props.chevauxFisc}
+                            vehicleEnergy="D" 
+                            vehicleHorsePower={props.chevaux}
                             ruptureTVA={"N"} 
                             vehicleNat=""
                             vehiclePro={false}
