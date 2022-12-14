@@ -430,10 +430,6 @@ span[name="box-auto-rent-value"] {
 	
 }
 
-#box-auto-simulation-button .btn-box {
-	display: inline-block;
-}
-
 #box-auto-simulation-button .btn input {
     border-radius: 20px;
     border-color: #1e4c2c;
@@ -450,8 +446,8 @@ span[name="box-auto-rent-value"] {
 }
 
 #box-auto-simulation-button .btn input:disabled {
-	border-color: #ccc;
-	background: #ccc;
+	border-color: #1e4c2c;
+	background: #1e4c2c;
 }
 
 #box-auto-mention-legal-modal .whitespace-nowrap {
