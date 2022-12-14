@@ -312,6 +312,13 @@ span[name="box-auto-rent-value"] {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     font-family: Arial, Helvetica, sans-serif;
+
+    max-width: 60%;
+    left: 20%;
+    right: 20%;
+    border-radius: 32px;
+    border: 1px solid;
+    box-shadow: 100px 100px 10000px 100000px #00000099;
 }
 
 /* Modal Content */
