@@ -50,6 +50,11 @@ export default class Stock extends React.Component {
           this.setState({
             affiche: true,
           });
+
+
+
+            
+            
     }
 
     stateChange = (f) => {

@@ -2,6 +2,7 @@ import ImgCard from './imgCard'
 import { slugify } from '../utils/helpers'
 import Link from 'next/link';
 import Image from 'next/image';
+import { Helmet } from 'react-helmet';
 
 function BotInfoBdv(props){
     const bdv = props.bdv;
@@ -92,8 +93,17 @@ function KM(props){
 }
 
 export default function CardCC(props) {
+    
     return (  
         <div>
+            {
+                /*
+                <Helmet>
+                    <script>{initBOXA('CATALOG')}</script>
+                    <script>{reloadVehicleData()}</script>
+                </Helmet>*/
+            }
+            
             <a href={`/stock/${slugify(props.refe)}`}>
                 <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden">
                     <div className="relative overflow-hidden">
@@ -116,6 +126,42 @@ export default function CardCC(props) {
                             {props.libelle}
                         </p>
                         <div className="mt-3 flex items-center">
+                            <span className="font-bold dark:text-gray-200 text-xl">
+                                {
+                                    <div className="apartirde">
+                                        <input 
+                                            type="hidden" 
+                                            name= "box-auto-infos" 
+                                            wmName={concession}
+                                            vehicleModel={props.model}
+                                            vehicleRef={props.ref}
+                                            vehicleBrand={props.marque}
+                                            vehicleCategory="V" 
+                                            vehicleIsNewBo={"N"}
+                                            dateMisecirc={"1506" + props.date} 
+                                            vehicleMileAge={props.km}
+                                            proposalPrice={props.prix}
+                                            vehicleEngineRating={props.chevauxFisc}
+                                            vehicleEnergy="D" 
+                                            vehicleHorsePower={props.chevaux}
+                                            ruptureTVA={"N"} 
+        
+                                            vehicleNat={""}
+                                            /*
+                                            vehiclePro={false}
+                                            vehicleBodyWork={null}
+                                            vehicleGearBox={null}
+                                            vehicleNbDoor={null}
+                                            vehicleCapacity={null}
+                                            accessoriesAmount={null}
+                                            optionsAmount={null}
+                                            vehicleVersion={null}
+                                            serialNumber={null}
+                                            */
+                                        />
+                                    </div>
+                                }
+                            </span>
                             <span className="font-bold dark:text-gray-200 text-xl">
                                 {
                                     Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(props.prix)
