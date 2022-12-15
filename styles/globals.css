@@ -492,3 +492,12 @@ div[name="box-auto-simulation-button"] {
     padding-left: 10px;
     color: #15803d;
 }
+
+#box-auto-modal-body{
+    border-radius: 32px;
+    width: 80%;
+}
+
+#box-auto-modal{
+    max-width: 80% !important;
+}

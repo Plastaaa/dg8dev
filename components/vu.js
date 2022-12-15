@@ -217,6 +217,7 @@ function Financement(props){
     }
 
     console.log("ref" + props.ref)
+    console.log(props.etat)
 
     if(props.id == 99){
         return(
@@ -242,7 +243,7 @@ function Financement(props){
                                     vehicleEnergy="D" 
                                     vehicleHorsePower={props.chevaux}
                                     ruptureTVA={"N"} 
-                                    
+
                                     vehicleNat={""}
                                     /*
                                     vehiclePro={false}
