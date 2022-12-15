@@ -234,7 +234,7 @@ function Financement(props){
                                     vehicleRef={props.ref}
                                     vehicleBrand={props.marque}
                                     vehicleCategory="V" 
-                                    vehicleIsNewBo={"O"}
+                                    vehicleIsNewBo={"N"}
                                     dateMisecirc={"1506" + props.date} 
                                     vehicleMileAge={props.km}
                                     proposalPrice={props.prix}
@@ -242,7 +242,9 @@ function Financement(props){
                                     vehicleEnergy="D" 
                                     vehicleHorsePower={props.chevaux}
                                     ruptureTVA={"N"} 
-                                    vehicleNat=""
+                                    
+                                    vehicleNat={""}
+                                    /*
                                     vehiclePro={false}
                                     vehicleBodyWork={null}
                                     vehicleGearBox={null}
@@ -252,6 +254,7 @@ function Financement(props){
                                     optionsAmount={null}
                                     vehicleVersion={null}
                                     serialNumber={null}
+                                    */
                                 />
                             </div>
                         </div>     
