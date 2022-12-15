@@ -215,43 +215,6 @@ function Financement(props){
                 <div className="prix-financement">
                     <div id="box-auto-simulation-button"></div>
                     <div className="apartirde">
-                        {
-                            /*
-                            etat={cc.etat}
-                            date={cc.annee}
-
-
-                            <input 
-                            type="hidden" 
-                            name= "box-auto-infos" 
-                            wmName="cap_liberte_63800"
-                            vehicleModel="ETRUSCO TEST"
-                            vehicleRef="39202193"
-                            vehicleBrand="ETRUSCO"
-                            vehicleCategory="V" 
-                            vehicleIsNewBo="0" 
-                            dateMisecirc="01012018" 
-                            vehicleMileAge="10000"
-                            proposalPrice="72000"
-                            vehicleEngineRating="6"
-                            vehicleEnergy="D" 
-                            vehicleHorsePower="150"
-                            ruptureTVA={"N"} 
-                            vehicleNat=""
-                            vehiclePro={false}
-                            vehicleBodyWork={null}
-                            vehicleGearBox={null}
-                            vehicleNbDoor={null}
-                            vehicleCapacity={null}
-                            accessoriesAmount={null}
-                            optionsAmount={null}
-                            vehicleVersion={null}
-                            serialNumber={null}
-                        />
-
-
-                            */
-                        }
                         <input 
                             type="hidden" 
                             name= "box-auto-infos" 
