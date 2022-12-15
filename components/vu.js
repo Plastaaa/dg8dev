@@ -213,7 +213,7 @@ function Financement(props){
         return(
             <div className=''>
                 <div className="">
-                    <div className="border-t prix-financement">
+                    <div className="prix-financement">
                         <div className="prix-financement">
                             <div id="box-auto-simulation-button"></div>
                             <div className="apartirde">
