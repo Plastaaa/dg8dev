@@ -481,3 +481,7 @@ span[name="box-auto-rent-value"] {
         right: 45px;
     }
 }
+
+.btn{
+    background-color: #1e4c2c !important;
+}

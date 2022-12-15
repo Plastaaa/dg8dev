@@ -357,7 +357,6 @@ export default class VehiculeUnique extends React.Component {
                                             <a onClick={e => {this.showModal();}}>
                                                 {
                                                     <Image src={img.linkIMG} objectFit={"contain"} alt={"image camping car"} layout={"fill"}/>
-                                                    //<img src={img.linkIMG}></img>
                                                 }
                                             </a>
                                         </SplideSlide>
@@ -382,8 +381,6 @@ export default class VehiculeUnique extends React.Component {
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
                         <script>{initBOXA('VEHICLE')}</script>
                         <script>{reloadVehicleData()}</script>
-                        
-                        {/*<link rel="stylesheet" type="text/css" href="https://staging.boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/css/export/box-auto.css"/>*/}
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>
@@ -415,7 +412,6 @@ export default class VehiculeUnique extends React.Component {
                             </Splide>
                         }
                     </div>
-                     
                     <div className="xl:w-2/5 md:w-2/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
                         <div className="border-b border-gray-200 pb-6">
                             <p className="text-sm leading-none text-gray-600 dark:text-gray-300">{cc.famille}</p>
@@ -423,7 +419,6 @@ export default class VehiculeUnique extends React.Component {
                                 {cc.marque + " " + cc.modele + " " + cc.version}
                             </h1>
                             <p>
-
                                 <Financement 
                                     id={idUser}
                                     concess={cc.libelle}
@@ -437,31 +432,6 @@ export default class VehiculeUnique extends React.Component {
                                     chevauxFisc={cc.puissFisc}
                                     chevaux={cc.puissDin}
                                 />
-                                
-                                {
-                                    /*<div class='apartirde'>
-                                    <input 
-                                        type="hidden" 
-                                        name= "box-auto-infos" 
-                                        wmName="cap_liberte_63800" 
-                                        vehicleModel="T7400 QBC" 
-                                        vehicleRef="ETRUSCOT7400" 
-                                        vehicleBrand="Citroën"
-                                        vehicleCategory="V" 
-                                        vehicleIsNewBo="N" 
-                                        dateMisecirc="'" 
-                                        vehicleMileAge="0" 
-                                        proposalPrice="72720"
-                                        vehicleEngineRating="7" 
-                                        vehicleEnergy="D" 
-                                        vehicleHorsePower="140" 
-                                        ruptureTVA="N" 
-                                        vehicleNat=""
-                                    />
-                                </div>*/
-                                }
-
-                                
                             </p>
                         </div>
                         <div>
