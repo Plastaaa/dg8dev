@@ -210,9 +210,9 @@ function Financement(props){
         concession = "cap_liberte_63800"
     }
 
-    if(props.etat = "Neuf"){
+    if(props.etat == "Neuf"){
         etat = "N"
-    }else if(props.etat = "Occasion"){
+    }else if(props.etat == "Occasion"){
         etat = "O"
     }
 
