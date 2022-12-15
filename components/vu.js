@@ -211,9 +211,9 @@ function Financement(props){
     }
 
     if(props.etat == "Neuf"){
-        etat = "0"
+        etat = "N"
     }else if(props.etat == "Occasion"){
-        etat = "1"
+        etat = "O"
     }
 
     console.log("ref" + props.ref)
