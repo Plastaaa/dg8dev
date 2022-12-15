@@ -484,4 +484,11 @@ span[name="box-auto-rent-value"] {
 
 .btn{
     background-color: #15803d !important;
+    font-weight: bolder;
+}
+
+div[name="box-auto-simulation-button"] {
+    font-weight: bolder;
+    padding-left: 10px;
+    color: #15803d;
 }
