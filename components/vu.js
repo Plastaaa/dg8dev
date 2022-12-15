@@ -189,6 +189,7 @@ function NbCouchage(props){
 
 function Financement(props){
     var concession = ""
+    var etat = ""
     if(props.concess == "Cap Liberté"){
         concession = "cap_liberte_63800";
     }else if(props.concess == "Evasion 63"){
@@ -209,6 +210,18 @@ function Financement(props){
         concession = "cap_liberte_63800"
     }
 
+    if(props.etat = "Neuf"){
+        return (
+            etat = "N"
+        )
+    }else if(props.etat = "Occasion"){
+        return(
+            etat = "O"
+        )
+    }
+
+    console.log("ref" + props.ref)
+
     if(props.id == 99){
         return(
             <div className=''>
@@ -225,7 +238,7 @@ function Financement(props){
                                     vehicleRef={props.ref}
                                     vehicleBrand={props.marque}
                                     vehicleCategory="V" 
-                                    vehicleIsNewBo="0" 
+                                    vehicleIsNewBo={etat}
                                     dateMisecirc={"0101" + props.date} 
                                     vehicleMileAge={props.km}
                                     proposalPrice={props.prix}
