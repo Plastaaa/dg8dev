@@ -469,7 +469,7 @@ export default class VehiculeUnique extends React.Component {
                         <div>
                             <div className="border-t flex flex-wrap border-b py-4 mt-7 border-gray-200">
                                 <div className='w-1/2 px-4'>
-                                    <button className="bg-green-700 hover:bg-green-800 text-white w-full font-bold py-2 px-4 rounded-lg">
+                                    <button className="bg-green-700 hover:bg-greenHov text-white w-full font-bold py-2 px-4 rounded-lg">
                                         {
                                             Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(cc.prixTTC)
                                         }
