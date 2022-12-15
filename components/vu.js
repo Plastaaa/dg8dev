@@ -401,7 +401,7 @@ export default class VehiculeUnique extends React.Component {
                                     id={idUser}
                                     concess={cc.libelle}
                                     model={cc.modele + "" + cc.version}
-                                    ref={cc.idCC + cc.marque}
+                                    ref={cc.idCC + "_" + cc.marque}
                                     marque={cc.marque}
                                     etat={cc.etat}
                                     date={cc.annee}
