@@ -211,39 +211,43 @@ function Financement(props){
 
     if(props.id == 99){
         return(
-            <div class="border-t prix-financement">
-                <div className="prix-financement">
-                    <div id="box-auto-simulation-button"></div>
-                    <div className="apartirde">
-                        <input 
-                            type="hidden" 
-                            name= "box-auto-infos" 
-                            wmName={concession}
-                            vehicleModel={props.model}
-                            vehicleRef={props.ref}
-                            vehicleBrand={props.marque}
-                            vehicleCategory="V" 
-                            vehicleIsNewBo="0" 
-                            dateMisecirc={"0101" + props.date} 
-                            vehicleMileAge={props.km}
-                            proposalPrice={props.prix}
-                            vehicleEngineRating={props.chevauxFisc}
-                            vehicleEnergy="D" 
-                            vehicleHorsePower={props.chevaux}
-                            ruptureTVA={"N"} 
-                            vehicleNat=""
-                            vehiclePro={false}
-                            vehicleBodyWork={null}
-                            vehicleGearBox={null}
-                            vehicleNbDoor={null}
-                            vehicleCapacity={null}
-                            accessoriesAmount={null}
-                            optionsAmount={null}
-                            vehicleVersion={null}
-                            serialNumber={null}
-                        />
+            <div className='py-4 mt-7'>
+                <div className="border-t">
+                    <div className="border-t prix-financement">
+                        <div className="prix-financement">
+                            <div id="box-auto-simulation-button"></div>
+                            <div className="apartirde">
+                                <input 
+                                    type="hidden" 
+                                    name= "box-auto-infos" 
+                                    wmName={concession}
+                                    vehicleModel={props.model}
+                                    vehicleRef={props.ref}
+                                    vehicleBrand={props.marque}
+                                    vehicleCategory="V" 
+                                    vehicleIsNewBo="0" 
+                                    dateMisecirc={"0101" + props.date} 
+                                    vehicleMileAge={props.km}
+                                    proposalPrice={props.prix}
+                                    vehicleEngineRating={props.chevauxFisc}
+                                    vehicleEnergy="D" 
+                                    vehicleHorsePower={props.chevaux}
+                                    ruptureTVA={"N"} 
+                                    vehicleNat=""
+                                    vehiclePro={false}
+                                    vehicleBodyWork={null}
+                                    vehicleGearBox={null}
+                                    vehicleNbDoor={null}
+                                    vehicleCapacity={null}
+                                    accessoriesAmount={null}
+                                    optionsAmount={null}
+                                    vehicleVersion={null}
+                                    serialNumber={null}
+                                />
+                            </div>
+                        </div>     
                     </div>
-                </div>     
+                </div>
             </div>
         )
     }else{
