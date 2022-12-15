@@ -382,9 +382,11 @@ export default class VehiculeUnique extends React.Component {
                     <div className="xl:w-2/5 md:w-2/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
                         <div className="border-b border-gray-200 pb-6">
                             <p className="text-sm leading-none text-gray-600 dark:text-gray-300">{cc.famille}</p>
-                            <h1 className="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
-                                {cc.marque + " " + cc.modele + " " + cc.version}
-                            </h1>
+                            <div className='pb-10'>
+                                <h1 className="pb-10 border-b lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
+                                    {cc.marque + " " + cc.modele + " " + cc.version}
+                                </h1>
+                            </div>
                             <p>
                                 <Financement 
                                     id={idUser}
