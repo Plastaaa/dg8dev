@@ -127,7 +127,7 @@ export default function CardCC(props) {
                         </p>
                         <div className="mt-3 flex items-center">
                             <span className="font-bold dark:text-gray-200 text-xl">
-                                {
+                                {/*
                                     <div className="apartirde">
                                         <input 
                                             type="hidden" 
@@ -157,9 +157,9 @@ export default function CardCC(props) {
                                             optionsAmount={null}
                                             vehicleVersion={null}
                                             serialNumber={null}
-                                            */
+                                            
                                         />
-                                    </div>
+                                    </div>*/
                                 }
                             </span>
                             <span className="font-bold dark:text-gray-200 text-xl">
