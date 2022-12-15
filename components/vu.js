@@ -234,7 +234,7 @@ function Financement(props){
                                     vehicleRef={props.ref}
                                     vehicleBrand={props.marque}
                                     vehicleCategory="V" 
-                                    vehicleIsNewBo={etat}
+                                    vehicleIsNewBo={"0"}
                                     dateMisecirc={"0101" + props.date} 
                                     vehicleMileAge={props.km}
                                     proposalPrice={props.prix}
