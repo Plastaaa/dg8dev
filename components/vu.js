@@ -211,7 +211,7 @@ function Financement(props){
 
     if(props.id == 99){
         return(
-            <div class="prix-financement">
+            <div class="border-t prix-financement">
                 <div className="prix-financement">
                     <div id="box-auto-simulation-button"></div>
                     <div className="apartirde">
