@@ -272,7 +272,7 @@ function Financement(props){
 }
 
 function TestFunction(){
-    console.log(initBOXA())
+    console.log(JSON.stringify(initBOXA()))
     if(typeof initBOXA() !== "undefined"){
         return (
             <Helmet>
