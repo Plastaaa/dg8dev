@@ -186,17 +186,9 @@ export default function CardCC(props) {
     }
 
     return (  
-        <div>
-            {
-                /*
-                <Helmet>
-                    <script>{initBOXA('CATALOG')}</script>
-                    <script>{reloadVehicleData()}</script>
-                </Helmet>*/
-            }
-            
+        <div className='c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden'>
             <a href={`/stock/${slugify(props.refe)}`}>
-                <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden">
+                <div className="">
                     <div className="relative overflow-hidden">
                         <ImgCard link={props.photo} nom={props.marque+""+props.modele+""+props.ver}/>
                     </div>
@@ -216,6 +208,12 @@ export default function CardCC(props) {
                         <p className="text-sm dark:text-gray-200">
                             {props.libelle}
                         </p>
+                    </div>
+                </div>
+            </a>
+            <a href={`/stock/${slugify(props.refe)}`}>
+                <div>
+                    <div>
                         <div className="mt-3 flex flex-wrap items-center">
                             <div className='w-1/2'>
                                 <span className="font-bold dark:text-gray-200 text-xl">
@@ -235,8 +233,8 @@ export default function CardCC(props) {
                                     }
                                 </span>
                             </div>
-                            <div className='w-1/2 text-right'>
-                                <span className="font-bold dark:text-gray-200 text-xl">
+                            <div className='w-1/2 text-right pb-4'>
+                                <span className="font-bold dark:text-gray-200 text-xl pr-4">
                                     {
                                         Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(props.prix)
                                     }
