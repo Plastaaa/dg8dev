@@ -6,6 +6,8 @@ export default function imgCard(props) {
 
     return (
         <div className="cardImageWrapper">
+            {
+            /*
             <Image 
                 onError={() => setSrc('/asset/error/error.jpg')}
                 //alt={props.nom} 
@@ -20,6 +22,23 @@ export default function imgCard(props) {
                 blurDataURL={"/asset/error/blur.png"}
                 loading={"lazy"}
             />
+            */
+
+            <Image 
+                //onError={() => setSrc('/asset/error/error.jpg')}
+                //alt={props.nom} 
+                src={props.link} 
+                objectFit={"cover"} 
+                layout={"responsive"} 
+                height={800} 
+                width={1000}
+                quality={100}
+                className={'rounded-xl'}
+                placeholder={"blur"}
+                blurDataURL={"/asset/error/blur.png"}
+                loading={"lazy"}
+            />
+            }
         </div>
     )
 }

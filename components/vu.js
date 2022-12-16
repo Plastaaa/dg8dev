@@ -219,53 +219,50 @@ function Financement(props){
     console.log("ref" + props.ref)
     console.log(props.etat)
 
-    if(props.id == 99){
-        return(
-            <div className=''>
-                <div className="">
+    
+    return(
+        <div className=''>
+            <div className="">
+                <div className="prix-financement">
                     <div className="prix-financement">
-                        <div className="prix-financement">
-                            <div id="box-auto-simulation-button"></div>
-                            <div className="apartirde">
-                                <input 
-                                    type="hidden" 
-                                    name= "box-auto-infos" 
-                                    wmName={concession}
-                                    vehicleModel={props.model}
-                                    vehicleRef={props.ref}
-                                    vehicleBrand={props.marque}
-                                    vehicleCategory="V" 
-                                    vehicleIsNewBo={"N"}
-                                    dateMisecirc={"1506" + props.date} 
-                                    vehicleMileAge={props.km}
-                                    proposalPrice={props.prix}
-                                    vehicleEngineRating={props.chevauxFisc}
-                                    vehicleEnergy="D" 
-                                    vehicleHorsePower={props.chevaux}
-                                    ruptureTVA={"N"} 
+                        <div id="box-auto-simulation-button"></div>
+                        <div className="apartirde">
+                            <input 
+                                type="hidden" 
+                                name= "box-auto-infos" 
+                                wmName={concession}
+                                vehicleModel={props.model}
+                                vehicleRef={props.ref}
+                                vehicleBrand={props.marque}
+                                vehicleCategory="V" 
+                                vehicleIsNewBo={"N"}
+                                dateMisecirc={"1506" + props.date} 
+                                vehicleMileAge={props.km}
+                                proposalPrice={props.prix}
+                                vehicleEngineRating={props.chevauxFisc}
+                                vehicleEnergy="D" 
+                                vehicleHorsePower={props.chevaux}
+                                ruptureTVA={"N"} 
 
-                                    vehicleNat={""}
-                                    /*
-                                    vehiclePro={false}
-                                    vehicleBodyWork={null}
-                                    vehicleGearBox={null}
-                                    vehicleNbDoor={null}
-                                    vehicleCapacity={null}
-                                    accessoriesAmount={null}
-                                    optionsAmount={null}
-                                    vehicleVersion={null}
-                                    serialNumber={null}
-                                    */
-                                />
-                            </div>
-                        </div>     
-                    </div>
+                                vehicleNat={""}
+                                /*
+                                vehiclePro={false}
+                                vehicleBodyWork={null}
+                                vehicleGearBox={null}
+                                vehicleNbDoor={null}
+                                vehicleCapacity={null}
+                                accessoriesAmount={null}
+                                optionsAmount={null}
+                                vehicleVersion={null}
+                                serialNumber={null}
+                                */
+                            />
+                        </div>
+                    </div>     
                 </div>
             </div>
-        )
-    }else{
-        return null
-    }
+        </div>
+    )
 }
 
 export default class VehiculeUnique extends React.Component {
