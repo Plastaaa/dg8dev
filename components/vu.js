@@ -299,36 +299,12 @@ export default class VehiculeUnique extends React.Component {
 
     testFunction(){
         console.log("coucou test function" + initBOXA('VEHICLE'))
-        //if(typeof initBOXA('VEHICLE') !== "undefined"){
-            return (
-                <div>
-                    <script>
-                        try {
-                            initBOXA('VEHICLE')
-                        } catch (error) {
-                            console.log(console.log(error))
-                        }
-                        {
-                            //reloadVehicleData()
-                        }
-                    </script>
-                    <script>
-                        try {
-                            reloadVehicleData()
-                        } catch (error) {
-                            console.log(error)
-                        }
-                        {
-                        //initBOXA('VEHICLE')
-                        }
-                    </script>
-                </div>
-            )
-        //}else{
-        //    return (
-        //        null
-        //    )
-        //}
+        try{
+            initBOXA('VEHICLE')
+            reloadVehicleData()
+        }catch (error) {
+            console.error(error)
+        }
     }
 
     state = {
