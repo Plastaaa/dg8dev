@@ -272,7 +272,7 @@ function Financement(props){
 }
 
 function TestFunction(){
-    if(typeof initBOXA('VEHICLE') === "function"){
+    if(typeof initBOXA('VEHICLE') !== "undefined"){
         return (
             <Helmet>
                 <script>{reloadVehicleData()}</script>
