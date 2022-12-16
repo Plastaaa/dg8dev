@@ -92,90 +92,6 @@ function KM(props){
     )
 }
 
-function Financement(props){
-    var concession = ""
-    var etat = ""
-    if(props.concess == "Cap Liberté"){
-        concession = "cap_liberte_63800";
-    }else if(props.concess == "Evasion 63"){
-        concession = "evasion_63_63370";
-    }else if(props.concess == "Mozac Loisirs"){
-        concession = "mozac_loisirs_63200";
-    }else if(props.concess == "Grenoble Camping-car"){
-        concession = "grenoble_camping_car_38340";
-    }else if(props.concess == "Expo Clavel"){
-        concession = "expo_clavel_38430";
-    }else if(props.concess == "Curioz Loisirs"){
-        concession = "curioz_loisirs_38430";
-    }else if(props.concess == "Eldorado Camping car"){
-        concession = "eldorado_camping_car_74600";
-    }else if(props.concess == "DG8 Camping Car 73"){
-        concession = "gmsa_camping_car_73490";
-    }else if(props.concess == "Auto Camping-Car Service"){
-        concession = "auto_camping_car_service_14760_2"
-    }else if(props.concess == "Normandie Camping-Car"){
-        concession = "normandie_camping_car_14650_2"
-    }else if(props.concess == "Carpiquet Camping-Car"){
-        concession = "carpiquet_camping_car_14650_2"
-    }else{
-        concession = "cap_liberte_63800"
-    }
-
-    if(props.etat == "Neuf"){
-        etat = "N"
-    }else if(props.etat == "Occasion"){
-        etat = "O"
-    }
-
-    console.log("ref" + props.refe)
-    console.log(props.etat)
-
-    
-    return(
-        <div className=''>
-            <div className="">
-                <div className="prix-financement">
-                    <div className="prix-financement">
-                        <div id="box-auto-simulation-button"></div>
-                        <div className="apartirde">
-                            <input 
-                                type="hidden" 
-                                name= "box-auto-infos" 
-                                wmName={concession}
-                                vehicleModel={props.model}
-                                vehicleRef={props.refe}
-                                vehicleBrand={props.marque}
-                                vehicleCategory="V" 
-                                vehicleIsNewBo={"N"}
-                                dateMisecirc={"1506" + props.date} 
-                                vehicleMileAge={props.km}
-                                proposalPrice={props.prix}
-                                vehicleEngineRating={props.chevauxFisc}
-                                vehicleEnergy="D" 
-                                vehicleHorsePower={props.chevaux}
-                                ruptureTVA={"N"} 
-
-                                vehicleNat={""}
-                                /*
-                                vehiclePro={false}
-                                vehicleBodyWork={null}
-                                vehicleGearBox={null}
-                                vehicleNbDoor={null}
-                                vehicleCapacity={null}
-                                accessoriesAmount={null}
-                                optionsAmount={null}
-                                vehicleVersion={null}
-                                serialNumber={null}
-                                */
-                            />
-                        </div>
-                    </div>     
-                </div>
-            </div>
-        </div>
-    )
-}
-
 export default function CardCC(props) {
     
     return (  
@@ -189,18 +105,6 @@ export default function CardCC(props) {
             }
             
             <a href={`/stock/${slugify(props.refe)}`}>
-                <Helmet>
-                        <script>
-                            {
-                                initBOXA('CATALOG')
-                            }
-                        </script>
-                        <script>
-                            {
-                                reloadVehicleData()
-                            }
-                        </script>
-                </Helmet>
                 <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden">
                     <div className="relative overflow-hidden">
                         <ImgCard link={props.photo} nom={props.marque+""+props.modele+""+props.ver}/>
@@ -221,32 +125,48 @@ export default function CardCC(props) {
                         <p className="text-sm dark:text-gray-200">
                             {props.libelle}
                         </p>
-                        <div className="mt-3 flex flex-wrap items-center">
-                            <div className='w-1/2'>
-                                <span className="font-bold dark:text-gray-200 text-xl">
-                                    {
-                                        <Financement 
-                                            concess={props.libelle}
-                                            model={props.modele + "" + props.version}
-                                            refe={props.marque + props.refe}
-                                            marque={props.marque}
-                                            etat={props.etat}
-                                            date={props.annee}
-                                            km={props.km}
-                                            prix={props.prix}
-                                            chevauxFisc={props.puissFisc}
-                                            chevaux={props.puissDin}
+                        <div className="mt-3 flex items-center">
+                            <span className="font-bold dark:text-gray-200 text-xl">
+                                {
+                                    /*<div className="apartirde">
+                                        <input 
+                                            type="hidden" 
+                                            name= "box-auto-infos" 
+                                            wmName={concession}
+                                            vehicleModel={props.model}
+                                            vehicleRef={props.ref}
+                                            vehicleBrand={props.marque}
+                                            vehicleCategory="V" 
+                                            vehicleIsNewBo={"N"}
+                                            dateMisecirc={"1506" + props.date} 
+                                            vehicleMileAge={props.km}
+                                            proposalPrice={props.prix}
+                                            vehicleEngineRating={props.chevauxFisc}
+                                            vehicleEnergy="D" 
+                                            vehicleHorsePower={props.chevaux}
+                                            ruptureTVA={"N"} 
+        
+                                            vehicleNat={""}
+                                            /*
+                                            vehiclePro={false}
+                                            vehicleBodyWork={null}
+                                            vehicleGearBox={null}
+                                            vehicleNbDoor={null}
+                                            vehicleCapacity={null}
+                                            accessoriesAmount={null}
+                                            optionsAmount={null}
+                                            vehicleVersion={null}
+                                            serialNumber={null}
+                                            
                                         />
-                                    }
-                                </span>
-                            </div>
-                            <div className='w-1/2 text-right'>
-                                <span className="font-bold dark:text-gray-200 text-xl">
-                                    {
-                                        Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(props.prix)
-                                    }
-                                </span>
-                            </div>
+                                    </div>*/
+                                }
+                            </span>
+                            <span className="font-bold dark:text-gray-200 text-xl">
+                                {
+                                    Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(props.prix)
+                                }
+                            </span>
                         </div>
                     </div>
                     <div className="p-4 dark:border-gray-600 dark:text-gray-200 border-t border-b text-xs text-gray-700">
