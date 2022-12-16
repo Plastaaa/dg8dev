@@ -272,7 +272,7 @@ function Financement(props){
 }
 
 function TestFunction(){
-    console.log(JSON.stringify(initBOXA()))
+    console.log("coucou test function" + initBOXA())
     if(typeof initBOXA() !== "undefined"){
         return (
             <Helmet>
