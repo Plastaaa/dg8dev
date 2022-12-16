@@ -196,16 +196,22 @@ function Financement(props){
         concession = "evasion_63_63370";
     }else if(props.concess == "Mozac Loisirs"){
         concession = "mozac_loisirs_63200";
-    }else if(props.concess == ""){
+    }else if(props.concess == "Grenoble Camping-car"){
         concession = "grenoble_camping_car_38340";
-    }else if(props.concess == ""){
+    }else if(props.concess == "Expo Clavel"){
         concession = "expo_clavel_38430";
-    }else if(props.concess == ""){
+    }else if(props.concess == "Curioz Loisirs"){
         concession = "curioz_loisirs_38430";
-    }else if(props.concess == ""){
+    }else if(props.concess == "Eldorado Camping car"){
         concession = "eldorado_camping_car_74600";
-    }else if(props.concess == ""){
+    }else if(props.concess == "DG8 Camping Car 73"){
         concession = "gmsa_camping_car_73490";
+    }else if(props.concess == "Auto Camping-Car Service"){
+        concession = "auto_camping_car_service_14760_2"
+    }else if(props.concess == "Normandie Camping-Car"){
+        concession = "normandie_camping_car_14650_2"
+    }else if(props.concess == "Carpiquet Camping-Car"){
+        concession = "carpiquet_camping_car_14650_2"
     }else{
         concession = "cap_liberte_63800"
     }

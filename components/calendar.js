@@ -191,7 +191,7 @@ export default class Calendar extends React.Component {
                             </div>
                             <div className="pt-4">
                                 <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance pour gagner un weekend en camping-car, des trottinettes électriques et bien d’autres lots, en répondant à la question du jour !</p>
-                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tous les gagnants aparaissent sur notre site dans un délai de 96h !</p>
+                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tous les gagnants apparaissent sur notre site dans un délai de 96h !</p>
                             </div>
                             <div className='flex flex-wrap'>
                                 <div className="w-full xl:w-1/2 pt-8">

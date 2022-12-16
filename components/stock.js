@@ -2,6 +2,7 @@ import React from "react";
 import axios from 'axios';
 import NoSearchMarque from "./search/searchResult";
 import SearchFiltered from "./search/searchResultFiltered";
+import { Helmet } from "react-helmet";
 
 function IsSearch(props){
   const ccsBis = props.ccs;
@@ -108,8 +109,6 @@ export default class Stock extends React.Component {
     render() {
         return (
         <div className="flex flex-wrap">
-          
-
 
           <div className="w-full lg:w-1/5 px-16 pt-8 pb-8 md:px-48 md:pt-8 md:pb-8 lg:pl-4 lg:pt-4 lg:pr-4">
           <div className="sticky top-6 flex flex-wrap overflow-hidden border border-gray-200 rounded-lg shadow-lg">
