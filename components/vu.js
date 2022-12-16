@@ -11,7 +11,6 @@ import NavBar from '../components/navbar'
 import Footer from '../components/footer'
 import {Helmet} from "react-helmet";
 import Cookies from 'universal-cookie';
-import Script from 'next/script';
 
 function IsThereHeight(props){
     const isSet = props.isSet;
@@ -299,12 +298,30 @@ export default class VehiculeUnique extends React.Component {
     }
 
     testFunction(){
-        //console.log("coucou test function" + initBOXA('VEHICLE'))
+        console.log("coucou test function" + initBOXA('VEHICLE'))
         //if(typeof initBOXA('VEHICLE') !== "undefined"){
             return (
                 <div>
-                    <script>{reloadVehicleData()}</script>
-                    <script>{initBOXA('VEHICLE')}</script>
+                    <script>
+                        try {
+                            initBOXA('VEHICLE')
+                        } catch (error) {
+                            console.log(console.log(error))
+                        }
+                        {
+                            //reloadVehicleData()
+                        }
+                    </script>
+                    <script>
+                        try {
+                            reloadVehicleData()
+                        } catch (error) {
+                            console.log(error)
+                        }
+                        {
+                        //initBOXA('VEHICLE')
+                        }
+                    </script>
                 </div>
             )
         //}else{
@@ -418,6 +435,11 @@ export default class VehiculeUnique extends React.Component {
                             <div className='pb-4'>
                                 <h1 className="pb-4 border-b lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
                                     {cc.marque + " " + cc.modele + " " + cc.version}
+                                </h1>
+                            </div>
+                            <div>
+                                <h1 className="lg:text-xs text-xs font-semibold lg:leading-6 leading-7 text-gray-400 text-center dark:text-white">
+                                    Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager
                                 </h1>
                             </div>
                             <p>
