@@ -179,7 +179,7 @@ function Financement(props){
 export default function CardCC(props) {
     
     try{
-        initBOXA('VEHICLE')
+        initBOXA('CATALOG')
         reloadVehicleData()
     }catch (error) {
         console.error(error)
