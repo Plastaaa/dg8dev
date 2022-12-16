@@ -185,6 +185,8 @@ export default function CardCC(props) {
         console.error(error)
     }
 
+    const css = ".apartirde {color: #15803d\; padding-bottom: 1rem; padding-left: 1rem} .apartirde span{font-weight: 300;}"
+
     return (  
         <div className='c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden'>
             <a href={`/stock/${slugify(props.refe)}`}>
@@ -209,10 +211,7 @@ export default function CardCC(props) {
                             {props.libelle}
                         </p>
                     </div>
-                </div>
-            </a>
-            <a href={`/stock/${slugify(props.refe)}`}>
-                <div>
+
                     <div>
                         <div className="mt-3 flex flex-wrap items-center">
                             <div className='w-1/2'>
@@ -242,6 +241,10 @@ export default function CardCC(props) {
                             </div>
                         </div>
                     </div>
+                </div>
+            </a>
+            <a href={`/stock/${slugify(props.refe)}`}>
+                <div>
                     <div className="p-4 dark:border-gray-600 dark:text-gray-200 border-t border-b text-xs text-gray-700">
                         <div className="flex flex-wrap overflow-hidden">
                         {
@@ -254,6 +257,11 @@ export default function CardCC(props) {
                     </div>
                 </div>
             </a>
+            <style>
+                {
+                    css
+                }
+            </style>
         </div>
     )
 }
