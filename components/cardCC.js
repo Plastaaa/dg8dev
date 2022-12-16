@@ -189,18 +189,6 @@ export default function CardCC(props) {
             }
             
             <a href={`/stock/${slugify(props.refe)}`}>
-                <Helmet>
-                        <script>
-                            {
-                                initBOXA('CATALOG')
-                            }
-                        </script>
-                        <script>
-                            {
-                                reloadVehicleData()
-                            }
-                        </script>
-                </Helmet>
                 <div className="c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden">
                     <div className="relative overflow-hidden">
                         <ImgCard link={props.photo} nom={props.marque+""+props.modele+""+props.ver}/>
@@ -225,7 +213,7 @@ export default function CardCC(props) {
                             <div className='w-1/2'>
                                 <span className="font-bold dark:text-gray-200 text-xl">
                                     {
-                                        <Financement 
+                                        /*<Financement 
                                             concess={props.libelle}
                                             model={props.modele + "" + props.version}
                                             refe={props.marque + props.refe}
@@ -236,7 +224,7 @@ export default function CardCC(props) {
                                             prix={props.prix}
                                             chevauxFisc={props.puissFisc}
                                             chevaux={props.puissDin}
-                                        />
+                                        />*/
                                     }
                                 </span>
                             </div>

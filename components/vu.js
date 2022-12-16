@@ -271,6 +271,24 @@ function Financement(props){
     )
 }
 
+function TestFunction(){
+    if(typeof initBOXA('VEHICLE') === "function"){
+        return (
+            <Helmet>
+                <script>{reloadVehicleData()}</script>
+                <script>{initBOXA('VEHICLE')}</script>
+            </Helmet>
+        )
+    }else{
+        return (
+            null
+        )
+    }
+}
+    
+
+    
+
 export default class VehiculeUnique extends React.Component {
     componentDidMount() {
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[2]}`)
@@ -362,8 +380,7 @@ export default class VehiculeUnique extends React.Component {
                 <div>
                     <Helmet>
                         <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
-                        <script>{initBOXA('VEHICLE')}</script>
-                        <script>{reloadVehicleData()}</script>
+                        <TestFunction/>
                     </Helmet>
                     <div className="text-sm breadcrumbs w-full 2xl:px-16 md:px-6 px-4">
                         <ul>

@@ -6,7 +6,7 @@ import ReactGA from 'react-ga';
 import {Helmet} from "react-helmet";
 
 export default class Home extends React.Component{
-    componentDidMount(){
+    /*componentDidMount(){
         const script = document.createElement("script");
         script.src = "https://boxauto.bnpparibas-pf.com/o/BoxAutoNG-Theme/js/export/ajax.js";
         script.async = false;
@@ -16,7 +16,7 @@ export default class Home extends React.Component{
         script2.async = false;
         document.head.appendChild(script2)
 
-    }
+    }*/
 
     render(){
         //useEffect (() => {ReactGA.pageview("Stock");}, []);
