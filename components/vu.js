@@ -300,7 +300,7 @@ export default class VehiculeUnique extends React.Component {
 
     testFunction(){
         console.log("coucou test function" + initBOXA())
-        if(typeof initBOXA() !== "undefined"){
+        if(typeof initBOXA('VEHICLE') !== "undefined"){
             return (
                 <Helmet>
                     <script>{reloadVehicleData()}</script>
