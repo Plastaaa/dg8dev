@@ -298,7 +298,6 @@ export default class VehiculeUnique extends React.Component {
     }
 
     testFunction(){
-        console.log("coucou test function" + initBOXA('VEHICLE'))
         try{
             initBOXA('VEHICLE')
             reloadVehicleData()

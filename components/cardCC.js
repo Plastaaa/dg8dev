@@ -178,6 +178,13 @@ function Financement(props){
 
 export default function CardCC(props) {
     
+    try{
+        initBOXA('VEHICLE')
+        reloadVehicleData()
+    }catch (error) {
+        console.error(error)
+    }
+
     return (  
         <div>
             {
@@ -213,7 +220,7 @@ export default function CardCC(props) {
                             <div className='w-1/2'>
                                 <span className="font-bold dark:text-gray-200 text-xl">
                                     {
-                                        /*<Financement 
+                                        <Financement 
                                             concess={props.libelle}
                                             model={props.modele + "" + props.version}
                                             refe={props.marque + props.refe}
@@ -224,7 +231,7 @@ export default function CardCC(props) {
                                             prix={props.prix}
                                             chevauxFisc={props.puissFisc}
                                             chevaux={props.puissDin}
-                                        />*/
+                                        />
                                     }
                                 </span>
                             </div>
