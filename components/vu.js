@@ -413,9 +413,9 @@ export default class VehiculeUnique extends React.Component {
                                 </h1>
                             </div>
                             <div>
-                                <h1 className="lg:text-xs text-xs font-semibold lg:leading-6 leading-7 text-gray-400 text-center dark:text-white">
+                                <h2 className="lg:text-xs text-xs font-semibold lg:leading-6 leading-7 text-gray-400 text-center dark:text-white">
                                     Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager
-                                </h1>
+                                </h2>
                             </div>
                             <p>
                                 <Financement 

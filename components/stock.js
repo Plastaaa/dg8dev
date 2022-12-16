@@ -108,8 +108,11 @@ export default class Stock extends React.Component {
   
     render() {
         return (
-        <div className="flex flex-wrap">
-
+          <div>
+            <h2 className="lg:text-xs pt-4 text-xs font-semibold lg:leading-6 leading-7 text-gray-400 text-center dark:text-white">
+              Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager
+            </h2>
+            <div className="flex flex-wrap">
           <div className="w-full lg:w-1/5 px-16 pt-8 pb-8 md:px-48 md:pt-8 md:pb-8 lg:pl-4 lg:pt-4 lg:pr-4">
           <div className="sticky top-6 flex flex-wrap overflow-hidden border border-gray-200 rounded-lg shadow-lg">
             <div className="w-full overflow-hidden">
@@ -255,6 +258,7 @@ export default class Stock extends React.Component {
         }
       
         </div>
+          </div>
       );
     }
   }
