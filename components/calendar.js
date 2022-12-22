@@ -71,6 +71,32 @@ function choixVisuel(){
     }
 }
 
+function LastChristmas(){
+    var date = new Date();
+	var cur = date.getDate();
+    var curMonth = date.getMonth()+1;
+
+    if(curMonth == 12){
+        if(cur >= 24 && cur <= 31){
+            return(
+                <p className="font-bold text-center text-white dark:text-white sm:text-l">Pour cette dernière question participez exceptionnellement jusqu'au 2 janvier 2023.</p>
+            )
+        }else{
+            return(
+                ''
+            )
+        }
+    }else if(curMonth == 1){
+        if((cur == 1) || (cur == 2)){
+            <p className="font-bold text-center text-white dark:text-white sm:text-l">Pour cette dernière question participez exceptionnellement jusqu'au 2 janvier 2023.</p>
+        }else{
+            return(
+                ""
+            )
+        }
+    }
+}
+
 export default class Calendar extends React.Component {
     state = {
         resCapt: [],
@@ -197,7 +223,9 @@ export default class Calendar extends React.Component {
                             </div>
                             <div className="pt-4">
                                 <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tentez votre chance pour gagner un weekend en camping-car, des trottinettes électriques et bien d’autres lots, en répondant à la question du jour !</p>
-                                <p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tous les gagnants apparaissent sur notre site dans un délai de 96h !</p>
+                                {/*<p className="lg:mb-8 font-light text-center text-white dark:text-white sm:text-l">Tous les gagnants apparaissent sur notre site dans un délai de 96h !</p>*/}
+                                <p className="font-light text-center text-white dark:text-white sm:text-l">Prenez rendez vous à votre convenance à partir du 9 janvier pour venir récupérer votre goodies.</p>
+                                <LastChristmas/>
                             </div>
                             <div className='flex flex-wrap'>
                                 <div className="w-full xl:w-1/2 pt-8">
