@@ -215,16 +215,12 @@ function Financement(props){
         concession = "cap_liberte_63800"
     }
 
-    if(props.etat == "Neuf"){
-        etate = "N"
-    }else if(props.etat == "Occasion"){
-        etate = "O"
-    }
-
     console.log("ref" + props.ref)
     console.log(props.etat)
 
-    
+    var etatee = props.etat == "Neuf" ? "N" : "O"
+    console.log(props.etat)
+    console.log(etatee)
     return(
         <div className=''>
             <div className="">
@@ -240,7 +236,7 @@ function Financement(props){
                                 vehicleRef={props.ref}
                                 vehicleBrand={props.marque}
                                 vehicleCategory="V" 
-                                vehicleIsNewBo={etate}
+                                vehicleIsNewBo={etatee}
                                 dateMisecirc={"1506" + props.date} 
                                 vehicleMileAge={props.km}
                                 proposalPrice={props.prix}
@@ -268,6 +264,10 @@ function Financement(props){
             </div>
         </div>
     )
+}
+
+function Etat(props) {
+    return props.etat === "Neuf" ? "N" : "O";
 }
 
 export default class VehiculeUnique extends React.Component {
@@ -418,13 +418,14 @@ export default class VehiculeUnique extends React.Component {
                                 </h2>
                             </div>
                             <p>
+                                
                                 <Financement 
                                     id={idUser}
                                     concess={cc.libelle}
                                     model={cc.modele + "" + cc.version}
                                     ref={cc.idCC + "_" + cc.marque}
                                     marque={cc.marque}
-                                    etat={cc.etat}
+                                    etat={cc.typeVehicule}
                                     date={cc.annee}
                                     km={cc.kilometrage}
                                     prix={cc.prixTTC}

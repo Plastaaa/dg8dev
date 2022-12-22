@@ -121,17 +121,8 @@ function Financement(props){
         concession = "cap_liberte_63800"
     }
 
-    if(props.etat == "Neuf"){
-        etate = "N"
-    }else if(props.etat == "Occasion"){
-        etate = "O"
-    }else{
-        etate = "O"
-    }
-
     console.log("ref" + props.refe)
     console.log(props.etat)
-
     
     return(
         <div className=''>
@@ -148,7 +139,7 @@ function Financement(props){
                                 vehicleRef={props.refe}
                                 vehicleBrand={props.marque}
                                 vehicleCategory="V" 
-                                vehicleIsNewBo={etate}
+                                vehicleIsNewBo={props.etat}
                                 dateMisecirc={"1506" + props.date} 
                                 vehicleMileAge={props.km}
                                 proposalPrice={props.prix}
@@ -165,6 +156,14 @@ function Financement(props){
             </div>
         </div>
     )
+}
+
+function Etat(props){
+    if(props.etat == "Neuf"){
+        return("N")
+    }else if(props.etat == "Occasion"){
+        return("O")
+    }
 }
 
 export default function CardCC(props) {
@@ -215,7 +214,12 @@ export default function CardCC(props) {
                                             model={props.modele + "" + props.version}
                                             refe={props.marque + props.refe}
                                             marque={props.marque}
-                                            etat={props.etat}
+                                            etat=
+                                            {
+                                                <Etat
+                                                    etat={props.etat}
+                                                />      
+                                            }
                                             date={props.annee}
                                             km={props.km}
                                             prix={props.prix}
