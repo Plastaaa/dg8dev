@@ -18,6 +18,21 @@ function DroitCalendar(props){
     }
 }
 
+function DroitLocation(props){
+    if(props.id == 99){
+        return(
+            <li>
+                <a href="/dashboard/location" className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 hover:rounded-xl  dark:hover:bg-gray-700">
+                    <svg aria-hidden="true" className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    <span className="flex-1 ml-3 whitespace-nowrap">Location</span>
+                </a>
+            </li>       
+        )
+    }else{
+        return null
+    }
+}
+
 function DroitCampingCar(props){
     if((props.id < 14  && props.id >0 ) || (props.id == 101) || (props.id == 99)){
         return(
@@ -91,6 +106,8 @@ export default class AsideMenu extends React.Component {
                             <DroitCampingCar id={idcc}/>
                             
                             <DroitActualite id={idcc}/>
+
+                            <DroitLocation id={idcc}/>
 
                             <DroitCalendar id={idcc}/>
                             <li>

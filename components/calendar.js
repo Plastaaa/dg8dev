@@ -55,12 +55,18 @@ function choixVisuel(){
             return('/calendar/22.jpg')
         }if(cur == 23){
             return('/calendar/23.jpg')
-        }if(cur == 24){
+        }if(cur >= 24 && cur <= 31){
             return('/calendar/24.jpg')
         }else{
             return('/calendar/00.jpg')
         }
-    }else{
+    }else if(curMonth == 01){
+        if(cur == 01 || cur == 02){
+            return('/calendar/24.jpg')
+        }else{
+            return('/calendar/00.jpg')
+        }
+    }{
         return('/calendar/00.jpg')
     }
 }
