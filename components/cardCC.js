@@ -125,6 +125,8 @@ function Financement(props){
         etate = "N"
     }else if(props.etat == "Occasion"){
         etate = "O"
+    }else{
+        etate = "O"
     }
 
     console.log("ref" + props.refe)
@@ -156,17 +158,6 @@ function Financement(props){
                                 ruptureTVA={"N"} 
 
                                 vehicleNat={""}
-                                /*
-                                vehiclePro={false}
-                                vehicleBodyWork={null}
-                                vehicleGearBox={null}
-                                vehicleNbDoor={null}
-                                vehicleCapacity={null}
-                                accessoriesAmount={null}
-                                optionsAmount={null}
-                                vehicleVersion={null}
-                                serialNumber={null}
-                                */
                             />
                         </div>
                     </div>     
