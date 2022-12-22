@@ -216,9 +216,9 @@ function Financement(props){
     }
 
     if(props.etat == "Neuf"){
-        etat = "N"
+        etate = "N"
     }else if(props.etat == "Occasion"){
-        etat = "O"
+        etate = "O"
     }
 
     console.log("ref" + props.ref)
@@ -240,7 +240,7 @@ function Financement(props){
                                 vehicleRef={props.ref}
                                 vehicleBrand={props.marque}
                                 vehicleCategory="V" 
-                                vehicleIsNewBo={etat}
+                                vehicleIsNewBo={etate}
                                 dateMisecirc={"1506" + props.date} 
                                 vehicleMileAge={props.km}
                                 proposalPrice={props.prix}
