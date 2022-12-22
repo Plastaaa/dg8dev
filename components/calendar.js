@@ -60,8 +60,8 @@ function choixVisuel(){
         }else{
             return('/calendar/00.jpg')
         }
-    }else if(curMonth == 01){
-        if(cur == 01 || cur == 02){
+    }else if(curMonth == 1){
+        if((cur == 1) || (cur == 2)){
             return('/calendar/24.jpg')
         }else{
             return('/calendar/00.jpg')
