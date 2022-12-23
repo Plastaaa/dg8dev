@@ -221,6 +221,7 @@ function Financement(props){
     var etatee = props.etat == "Neuf" ? "N" : "O"
     console.log(props.etat)
     console.log(etatee)
+    
     return(
         <div className=''>
             <div className="">

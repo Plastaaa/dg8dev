@@ -123,6 +123,8 @@ function Financement(props){
 
     console.log("ref" + props.refe)
     console.log(props.etat)
+
+    var etatee = props.etat == "Neuf" ? "N" : "O"
     
     return(
         <div className=''>
@@ -139,7 +141,7 @@ function Financement(props){
                                 vehicleRef={props.refe}
                                 vehicleBrand={props.marque}
                                 vehicleCategory="V" 
-                                vehicleIsNewBo={props.etat}
+                                vehicleIsNewBo={etatee}
                                 dateMisecirc={"1506" + props.date} 
                                 vehicleMileAge={props.km}
                                 proposalPrice={props.prix}
@@ -214,12 +216,7 @@ export default function CardCC(props) {
                                             model={props.modele + "" + props.version}
                                             refe={props.marque + props.refe}
                                             marque={props.marque}
-                                            etat=
-                                            {
-                                                <Etat
-                                                    etat={props.etat}
-                                                />      
-                                            }
+                                            etat={props.etat}
                                             date={props.annee}
                                             km={props.km}
                                             prix={props.prix}
