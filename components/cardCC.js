@@ -226,8 +226,8 @@ export default function CardCC(props) {
                                     }
                                 </span>
                             </div>
-                            <div className='w-1/2 text-right pb-4'>
-                                <span className="font-bold dark:text-gray-200 text-xl pr-4">
+                            <div className='w-1/2 text-right pb-2'>
+                                <span className="font-semibold dark:text-gray-200 text pr-4">
                                     {
                                         Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(props.prix)
                                     }

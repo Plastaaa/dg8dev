@@ -221,7 +221,7 @@ function Financement(props){
     var etatee = props.etat == "Neuf" ? "N" : "O"
     console.log(props.etat)
     console.log(etatee)
-    
+
     return(
         <div className=''>
             <div className="">
@@ -633,7 +633,7 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="my-2 pt-16 px-2 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+                    <div className="my-2 pt-16 px-2 w-full overflow-hidden sm:w-full md:w-full lg:w-full xl:w-1/2">
                         <div className="flex flex-wrap overflow-hidden">
                             <div className="w-full overflow-hidden">
                                 <div className="text-xl font-medium 2xl:px-20 xl:px-20 md:px-8 px-4">
@@ -665,7 +665,7 @@ export default class VehiculeUnique extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="my-2 pb-4 pt-12 pr-8 px-8 w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+                    <div className="my-2 pb-4 pt-12 pr-8 px-8 w-full overflow-hidden sm:w-full md:w-full lg:w-full xl:w-1/2">
                         <div className='border dark:border-gray-100 border-gray-200 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 rounded-2xl shadow-lg'>
                             <p className='pb-2 pt-2 font-bold text-center dark:text-white'>{cc.tel}</p>
                             <MapBis concess={cc.libelle} latitude={cc.latitude} longitude={cc.longitude}/>
