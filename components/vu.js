@@ -267,10 +267,6 @@ function Financement(props){
     )
 }
 
-function Etat(props) {
-    return props.etat === "Neuf" ? "N" : "O";
-}
-
 export default class VehiculeUnique extends React.Component {
     componentDidMount() {
         axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCDetailById.php?id=${window.location.pathname.split('/')[2]}`)
@@ -296,6 +292,8 @@ export default class VehiculeUnique extends React.Component {
             const ccsSimi = res.data;
             this.setState({ ccsSimi });
         })
+
+        this.testFunction()
     }
 
     testFunction(){
