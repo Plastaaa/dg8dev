@@ -99,7 +99,7 @@ export default function PoidsLourd() {
                     </p><br></br>
                 </div>
                 <div className="w-full">
-                    <p className="text-center stat-title text-sm">
+                    <p className="text-center font-extralight text-sm">
                         D’autres critères peuvent également rentrer en compte tels l’aménagement intérieur, l’isolation, la soute, les rangements, etc. Notre équipe commerciale se tient à votre disposition si vous souhaitez de plus amples informations.
                     </p>
                     <p className="text-center pt-8">

@@ -64,8 +64,8 @@ export default function VanFourgon() {
                         Le choix du porteur Fiat, Ford, Citroën… est important car c’est lui qui définira les équipements et la motorisation.  En fonction de votre utilisation, prenez le temps de les comparer pour trouver le véhicule le mieux adapté à vos besoins. 
                     </p><br></br>
                 </div>
-                <div className="w-full">
-                    <p className="text-center stat-title text-sm">
+                <div className="w-full xl:w-full">
+                    <p className="text-center font-extralight text-sm">
                         D’autres critères peuvent également rentrer en compte tels l’aménagement intérieur, l’isolation, la soute, les rangements, etc. Notre équipe commerciale se tient à votre disposition si vous souhaitez de plus amples informations.
                     </p>
                     <p className="text-center pt-8">

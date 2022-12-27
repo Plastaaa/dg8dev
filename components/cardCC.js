@@ -160,11 +160,12 @@ function Financement(props){
     )
 }
 
-function Etat(props){
-    if(props.etat == "Neuf"){
-        return("N")
-    }else if(props.etat == "Occasion"){
-        return("O")
+function testFunction(){
+    try{
+        initBOXA('VEHICLE')
+        reloadVehicleData()
+    }catch (error) {
+        console.error(error)
     }
 }
 
@@ -181,6 +182,9 @@ export default function CardCC(props) {
 
     return (  
         <div className='c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden'>
+            {
+                testFunction()
+            }
             <a href={`/stock/${slugify(props.refe)}`}>
                 <div className="">
                     <div className="relative overflow-hidden">
@@ -211,7 +215,7 @@ export default function CardCC(props) {
                             <div className='w-1/2'>
                                 <span className="font-bold dark:text-gray-200 text-xl">
                                     {
-                                        <Financement 
+                                        /*<Financement 
                                             concess={props.libelle}
                                             model={props.modele + "" + props.version}
                                             refe={props.marque + props.refe}
@@ -222,7 +226,7 @@ export default function CardCC(props) {
                                             prix={props.prix}
                                             chevauxFisc={props.puissFisc}
                                             chevaux={props.puissDin}
-                                        />
+                                        />*/
                                     }
                                 </span>
                             </div>
