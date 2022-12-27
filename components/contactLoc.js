@@ -255,7 +255,7 @@ export default class Contact extends React.Component {
                             <h2 className="pt-6 text-lg tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Tarifs</h2>
                         </div>
 
-                        <div className="w-full pt-6">
+                        <div className="w-full pt-6 overflow-x-auto">
                             <table className="table w-full">
                                 <thead>
                                     <tr className="text-center">

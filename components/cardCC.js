@@ -170,16 +170,14 @@ function testFunction(){
 }
 
 export default function CardCC(props) {
-    
     try{
         initBOXA('CATALOG')
         reloadVehicleData()
     }catch (error) {
         console.error(error)
     }
-
     const css = ".apartirde {color: #15803d\; padding-bottom: 1rem; padding-left: 1rem; font-size: 18px;} .apartirde span{font-weight: 300;}"
-
+    
     return (  
         <div className='c-card block dark:bg-gray-800 dark:border dark:border-gray-600 bg-white shadow-md hover:shadow-xl rounded-xl overflow-hidden'>
             {
