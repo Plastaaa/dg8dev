@@ -8,6 +8,8 @@ import img2 from '../public/slider/slidercalendar.jpg';
 import img2mobile from '../public/slider/slidercalendar-mobile.jpg'
 import img3 from '../public/slider/pap.jpg';
 import img3mobile from '../public/slider/pap-mobile.png';
+import img4 from '../public/slider/img4.jpg';
+import img4mobile from '../public/slider/img4mobile.jpg';
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -23,6 +25,10 @@ export default class SimpleSlider extends Component {
             }}
             className={"border border-gray-400 rounded-2xl shadow-xl"}
           >
+
+            <SplideSlide>
+              <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img4} width={800} layout="responsive" height={320} quality={100}/>
+            </SplideSlide>
             {
               <SplideSlide>
                 <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img2} width={800} layout="responsive" height={320} quality={100}/>
@@ -58,6 +64,9 @@ export default class SimpleSlider extends Component {
             }}
             className={"border border-gray-400 rounded-2xl shadow-xl"}
           >
+              <SplideSlide>
+                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img4mobile} width={414} layout="responsive" height={414} quality={100}/>
+              </SplideSlide>
               <SplideSlide>
                 <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img2mobile} width={414} layout="responsive" height={414} quality={100}/>
                 <div className="absolute text-sm md:text-xl lg:text-2xl text-gray left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2">

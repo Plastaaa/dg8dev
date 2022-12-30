@@ -68,14 +68,6 @@ export default class Stock extends React.Component {
     }
 
     stateSend = (props) => {
-      const cookies = new Cookies();
-      cookies.set('searchMarque', this.state.marque, {path: '/', expires: new Date(Date.now()+4592000)});
-
-      const queryParams = new URLSearchParams(window.location.search);
-      const etatURL = queryParams.get('etat');
-      const gammeURL = queryParams.get('gamme');
-      const marqueURL = queryParams.get('marque');
-
       axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getCCByParam.php`,{
         params:{
           marque: this.state.marque,

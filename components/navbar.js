@@ -161,7 +161,7 @@ export default function NavBar() {
                                     <div className="dropdown dropdown-hover cursor-pointer">
                                         <label tabIndex={0} className="text-gray-600 dark:text-gray-100 hover:text-gray-400">Services</label>
                                         
-                                        <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-52">
+                                        <ul tabIndex={0} className="dropdown-content card p-2 shadow dark:bg-gray-800 bg-gray-100 rounded-box w-80">
                                             <li className="block xl:hidden text-gray-600 dark:text-gray-100 hover:text-gray-400">
                                                 <a href="/rachat-cash">Rachat Cash</a>
                                             </li>
