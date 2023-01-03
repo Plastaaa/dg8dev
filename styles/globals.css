@@ -370,12 +370,12 @@ span[name="box-auto-rent-value"] {
 	text-align: center;
     width: 26px;
     height: 26px;
-    border: solid 1px #15803d;
+    border: solid 1px #ff0000;
     border-radius: 151px;
     left: 3px;
     font-family: "Times New Roman", Times, serif;
     font-weight: bolder;
-    color: #15803d;
+    color: #ff0000;
 }
 
 .box-auto-i-span {
@@ -412,7 +412,7 @@ span[name="box-auto-rent-value"] {
 }
 
 #box-auto-mention-legal-modal table th {
-	color: #15803d;
+	color: #ff0000;
 	font-size:20px;
 }
 
@@ -422,7 +422,7 @@ span[name="box-auto-rent-value"] {
 } 
 
 .apartirde {
-	color:#15803d;
+	color:#ff0000;
 }
 
 .apartirde span{
@@ -432,8 +432,8 @@ span[name="box-auto-rent-value"] {
 
 #box-auto-simulation-button .btn input {
     border-radius: 20px;
-    border-color: #15803d;
-    background-color: #15803d;
+    border-color: #ff0000;
+    background-color: #ff0000;
     color: #fff;
     font-weight:bold;
     height: 40px;
@@ -446,8 +446,8 @@ span[name="box-auto-rent-value"] {
 }
 
 #box-auto-simulation-button .btn input:disabled {
-	border-color: #15803d;
-	background: #15803d;
+	border-color: #ff0000;
+	background: #ff0000;
 }
 
 #box-auto-mention-legal-modal .whitespace-nowrap {
@@ -483,7 +483,7 @@ span[name="box-auto-rent-value"] {
 }
 
 .btn{
-    background-color: #15803d !important;
+    background-color: #323232 !important;
     font-weight: bolder;
 }
 

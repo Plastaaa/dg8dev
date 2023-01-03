@@ -2,8 +2,9 @@ import React from "react";
 import axios from 'axios';
 import NoSearchMarque from "./search/searchResult";
 import SearchFiltered from "./search/searchResultFiltered";
-import { Helmet } from "react-helmet";
-import Cookies from "universal-cookie";
+import phoneIMG from '../public/phone.png'
+import whitephoneIMG from '../public/whitephone.png'
+import Image from "next/image";
 
 function IsSearch(props){
   const ccsBis = props.ccs;
@@ -11,6 +12,44 @@ function IsSearch(props){
       return <NoSearchMarque/>
   }
   return <SearchFiltered ccs={ccsBis}/>
+}
+
+function IsStock(props){
+  console.log(props.ccs.length)
+  const ccsBis = props.ccs;
+  if(props.ccs.length == 0){
+    return(
+      <div className="text-center">
+        <h2 className="text-center pt-16 font-bold">
+          Il semblerait qu'il n'y ait rien pour cette demande.
+        </h2>
+        <p className="pb-2">
+          Vous pouvez toujours nous appeler, nous pourrons vous orienter vers le modèle parfait pour vos besoins : 
+        </p>
+        <button className="px-2 py-2 text-white font-bold rounded-xl bg-green-700">
+          <a href="tel:+33 0969396973">
+            <button className='flex flex-wrap rounded-lg'>
+                <div className='w-2/8 px-1 pt-0.5'>
+                    <div className='block dark:hidden'>
+                        <Image height={16} width={16} src={phoneIMG} objectFit={"contain"} alt={"Phone logo"} className={"px-4"}/>
+                    </div>
+                    <div className='hidden dark:block'>
+                        <Image height={16} width={16} src={whitephoneIMG} objectFit={"contain"} alt={"Phone logo dark"} className={"px-4"}/>
+                    </div>
+                </div>
+                <div className='w-6/8'>
+                    09 69 39 69 73
+                </div>
+            </button>
+          </a>
+        </button>
+      </div>
+    )
+  }/*else{
+    return(
+
+    )
+  }*/
 }
 
 export default class Stock extends React.Component {
@@ -251,6 +290,9 @@ export default class Stock extends React.Component {
             <div className="container mx-auto w-full lg:w-4/5">
               {
                 <IsSearch affiche={this.state.affiche} ccs={this.state.ccs2}/>
+              }
+              {
+                <IsStock ccs={this.state.ccs2}/>
               }
             </div>
         }
