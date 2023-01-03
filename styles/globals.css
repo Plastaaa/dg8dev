@@ -115,13 +115,13 @@
 
 span[name="box-auto-rent-label"] {
     font-weight: bolder;
-    border-color: #15803d;
+    border-color: #ff0000;
 }
 
 span[name="box-auto-rent-value"] {
-    font-weight: bolder;
+    font-weight: bold;
     padding-right: 8px;
-    color: #15803d;
+    color: #ff0000;
 }
 
 .box-auto-i-div{
@@ -482,13 +482,13 @@ span[name="box-auto-rent-value"] {
     }
 }
 
-.btn{
-    background-color: #323232 !important;
+.btn-BOX{
+    background-color: #ff0000 !important;
     font-weight: bolder;
 }
 
 div[name="box-auto-simulation-button"] {
     font-weight: bolder;
     padding-left: 10px;
-    color: #15803d;
+    color: #FF0000;
 }
