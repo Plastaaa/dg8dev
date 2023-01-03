@@ -486,7 +486,6 @@ span[name="box-auto-rent-value"] {
 .btn-box{
     background-color: #d50000 !important;
     font-weight: bolder;
-    display: inline-block;
 }
 
 div[name="box-auto-simulation-button"] {
