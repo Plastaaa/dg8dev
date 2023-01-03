@@ -1,5 +1,6 @@
 
 export default function Footer() {
+    var date = new Date();
         return (
             
             <footer className="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
@@ -34,7 +35,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://dg8campingcar.com" className="hover:underline">Groupe David Gerbier™</a>. Tous droits réservés.
+                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© {date.getFullYear()} <a href="https://dg8campingcar.com" className="hover:underline">Groupe David Gerbier™</a>. Tous droits réservés.
                 </span>
             </footer>
 
