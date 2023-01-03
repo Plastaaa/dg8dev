@@ -114,13 +114,13 @@
 }
 
 span[name="box-auto-rent-label"] {
-    font-weight: bolder;
+    font-weight: 900;
     border-color: #d50000;
     color: #d50000;
 }
 
 span[name="box-auto-rent-value"] {
-    font-weight: bold;
+    font-weight: 900;
     padding-right: 8px;
     color: #d50000;
 }
@@ -371,7 +371,7 @@ span[name="box-auto-rent-value"] {
 	text-align: center;
     width: 26px;
     height: 26px;
-    border: solid 1px #d50000;
+    border: solid 2px #d50000;
     border-radius: 151px;
     left: 3px;
     font-family: "Times New Roman", Times, serif;
