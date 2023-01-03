@@ -415,6 +415,16 @@ export default class VehiculeUnique extends React.Component {
                                     Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager
                                 </h2>
                             </div>
+                        </div>
+                    </div>
+                    <div className="xl:w-2/5 md:w-2/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
+                        <div className="border-b border-gray-200 pb-6">
+                            <p className="text-sm leading-none text-gray-600 dark:text-gray-300">{cc.famille}</p>
+                            <div className='pb-4'>
+                                <h1 className="pb-4 border-b lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
+                                    {cc.marque + " " + cc.modele + " " + cc.version}
+                                </h1>
+                            </div>
                             <p>
                                 <Financement 
                                     id={idUser}
@@ -430,16 +440,6 @@ export default class VehiculeUnique extends React.Component {
                                     chevaux={cc.puissDin}
                                 />
                             </p>
-                        </div>
-                    </div>
-                    <div className="xl:w-2/5 md:w-2/5 lg:ml-8 md:ml-6 md:mt-0 mt-6">
-                        <div className="border-b border-gray-200 pb-6">
-                            <p className="text-sm leading-none text-gray-600 dark:text-gray-300">{cc.famille}</p>
-                            <div className='pb-4'>
-                                <h1 className="pb-4 border-b lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 dark:text-white">
-                                    {cc.marque + " " + cc.modele + " " + cc.version}
-                                </h1>
-                            </div>
                         </div>
                         <div>
                             <p className="text-base leading-4 mt-7">
