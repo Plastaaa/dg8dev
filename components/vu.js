@@ -387,7 +387,7 @@ export default class VehiculeUnique extends React.Component {
                         </ul>
                     </div>
                 <div className="md:flex items-start justify-center 2xl:px-16 md:px-6 px-4">
-                    <div className="md:w-3/6 xl:w-3/6 lg:w-3/5 md:block">
+                    <div className="md:w-4/6 xl:w-3/6 lg:w-3/5 md:block">
                         {
                             <Splide
                                 options={{
