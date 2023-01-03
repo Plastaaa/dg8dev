@@ -427,7 +427,7 @@ span[name="box-auto-rent-value"] {
 }
 
 .apartirde span{
-	font-weight: 700;
+	font-weight: 700 !important;
 }
 
 #box-auto-simulation-button .btn input {
