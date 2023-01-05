@@ -189,12 +189,16 @@ export default class ConcessionUnique extends React.Component {
         ccs: [],
     }
     
+    
     render() {
         return (
             <div className=''>
                 {
                 this.state.concess.map((concess) => (
                     <div>
+                        {
+                            useEffect (() => {ReactGA.pageview("Concession unique" + concess.libelle);}, [])
+                        }
                         <Helmet>
                             <title>DG8 Camping-car - {concess.libelle}</title>
                             <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
