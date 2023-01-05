@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import Image from 'next/image';
 import CardCC from './cardCC';
 import MapBis from '../components/mapBis';
 import {Helmet} from "react-helmet";
+import ReactGA from 'react-ga'
 
 function IsThereStock(props){
     const ccs = props.ccs;
@@ -188,17 +189,19 @@ export default class ConcessionUnique extends React.Component {
         concess: [],
         ccs: [],
     }
-    
-    
+
     render() {
+        try {
+            ReactGA.pageview("Concession unique" + this.state.concess[0].societe)
+        } catch (error) {
+            console.log(error)
+        }
+        
         return (
             <div className=''>
                 {
                 this.state.concess.map((concess) => (
                     <div>
-                        {
-                            useEffect (() => {ReactGA.pageview("Concession unique" + concess.libelle);}, [])
-                        }
                         <Helmet>
                             <title>DG8 Camping-car - {concess.libelle}</title>
                             <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
