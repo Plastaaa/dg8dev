@@ -211,6 +211,7 @@ export default function NavBar() {
                                     </div>
                                 </li>
                                 <li className='flex flex-wrap'>
+                                    {/*
                                     <li className='px-2'>
                                         <a href="/jeuconcours">
                                             <button className='flex flex-wrap text-gray-600 bg-green-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-green-500 border-green-700 rounded-lg p-2'>
@@ -229,7 +230,8 @@ export default function NavBar() {
                                                 </div>
                                             </button>
                                         </a>
-                                    </li>
+                                    </li>*/
+                                    }
                                     {
                                     <li className='px-2'>
                                         <a href="tel:+33 0969396973">
