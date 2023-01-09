@@ -19,7 +19,11 @@ export default class Home extends React.Component{
     }*/
 
     render(){
-        //useEffect (() => {ReactGA.pageview("Stock");}, []);
+        try {
+            ReactGA.pageview("Stock")
+        } catch (error) {
+            console.log(error)
+        }
         return (
             <div>
                 <Helmet>

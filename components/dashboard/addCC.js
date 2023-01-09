@@ -749,7 +749,6 @@ export default class AddCC extends React.Component {
                             // Test d'import fichier
                             <div className="">
                                 <h2 className="mb-4 text-2xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Section photos</h2>
-                                <p className="mb-8 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Pensez à bien ajouter chaque photo une par une.</p>
                                 <div className="flex flex-wrap bg-gray-100 rounded-xl">
                                     <div className="w-1/2">
                                         {/*Import 1*/}
