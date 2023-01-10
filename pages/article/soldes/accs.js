@@ -6,7 +6,7 @@ import ArticleSoldeHiver from '../../../components/article/soldes-accs';
 import {Helmet} from "react-helmet";
 
 export default function Home(){
-    useEffect (() => {ReactGA.pageview("MarchéNoel ACCS");}, []);
+    useEffect (() => {ReactGA.pageview("Soldes ACCS");}, []);
     return (
         <div>
             <Helmet>

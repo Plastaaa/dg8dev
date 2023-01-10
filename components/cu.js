@@ -199,293 +199,482 @@ export default class ConcessionUnique extends React.Component {
         }
 
         return (
-            <div className=''>
-                {
-                this.state.concess.map((concess) => (
-                    <div>
-                        <Helmet>
-                            <title>DG8 Camping-car - {concess.libelle}</title>
-                            <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
-                        </Helmet>
-                        <div>
-                        {
-                            /*
+            <div>
+                <div className='lg:block hidden'>
+                    {
+                    this.state.concess.map((concess) => (
+                        <div className=''>
+                            <Helmet>
+                                <title>DG8 Camping-car - {concess.libelle}</title>
+                                <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
+                            </Helmet>
+                            <div>
+                            {
+                                /*
 
-                            <div class="e0_90">
-                                <div class="e0_91">
-                                    <div class="e0_92">
+                                <div class="e0_90">
+                                    <div class="e0_91">
+                                        <div class="e0_92">
+
+                                        </div>
+                                        <span class="e0_93">
+                                        Financement
+                                        </span>
+                                        <div class="e0_94">
+
+                                        </div>
+                                    </div>
+                                    <div class="e0_95">
+                                        <div  class="e0_96">
+
+                                        </div>
+                                        <span class="e0_97">
+                                        Atelier
+                                        </span>
+                                        <div class="e0_98">
+
+                                        </div>
+                                    </div>
+                                    <div class="e0_99">
+                                        <div class="e0_100">
+
+                                        </div>
+                                        <span class="e0_101">
+                                        Atout 3
+                                        </span>
+                                        <div class="e0_102">
+
+                                        </div>
+                                    </div>
+                                    <div class="e0_103">
+                                        <div class="e0_104">
+
+                                        </div>
+                                        <span class="e0_105">
+                                        Atout 4
+                                        </span>
+                                        <div class="e0_106">
+
+                                        </div>
+                                    </div>
+                                    <div class="e0_74">
 
                                     </div>
-                                    <span class="e0_93">
-                                    Financement
-                                    </span>
-                                    <div class="e0_94">
+                                    
+                                    <div class="e0_75">
 
+                                    </div>
+                                    <div class="e6_2">
+
+                                    </div>
+                                    <div class="e0_79">
+                                        <Image width={350} height={350} src={concess.linkIMGConcess}/>
+                                        {
+                                            console.log(concess.linkIMGConcess)
+                                        }
+
+                                    </div>
+                                    <div class="e0_80">
+                                        <div  class="e0_81">
+
+                                        </div>
+                                        <div class="e0_82">
+                                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" class="svgwhite" clip-rule="evenodd">
+                                                <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z"/>
+                                            </svg>                                        
+                                        </div>
+                                        <span  class="e0_85">
+                                            Voir le stock
+                                        </span>
+                                    </div>
+                                    <span  class="e0_88">
+                                        {concess.libelle}
+                                    </span>
+                                    <div>
+                                        <p>
+                                            coucou
+                                        </p>
+                                    </div>
+                                    </div>
+                                    */
+                            }
+                            </div>
+                                <div className='flex flex-wrap'>
+                                    <div className='w-2/5 bg-green-800'>
+                                        <Image objectFit={"cover"} height={400} width={400} layout={"responsive"} src={nature}/>
+                                    </div>
+                                    <div className='w-3/5 bg-orange-100'>
+                                        
                                     </div>
                                 </div>
-                                <div class="e0_95">
-                                    <div  class="e0_96">
+                                <div className="absolute h-72 w-full text-sm md:text-xl lg:text-2xl text-gray top-44 md:top-56">
+                                    <div className='flex flex-wrap '>
+                                        <div className='w-1/4'>
 
-                                    </div>
-                                    <span class="e0_97">
-                                    Atelier
-                                    </span>
-                                    <div class="e0_98">
-
-                                    </div>
-                                </div>
-                                <div class="e0_99">
-                                    <div class="e0_100">
-
-                                    </div>
-                                    <span class="e0_101">
-                                    Atout 3
-                                    </span>
-                                    <div class="e0_102">
-
+                                        </div>
+                                        <div className='w-1/4'>
+                                            <div>
+                                                <Image className={"rounded-full bg-white"} src={concess.linkIMGConcess} height={400} width={400} alt={"Image camping car"} layout={"intrinsic"}/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className='w-1/4 pt-2 sm:pt-8'>
+                                            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.libelle}</h2>
+                                            <p className="hidden lg:block mb-8 lg:mb-8 font-light text-gray-500 dark:text-gray-400 sm:text-xl">{concess.desc1}</p>
+                                        </div>
+                                        <div className='lg:hidden block w-full pt-2 pb-2 bg-orange-100 sm:pt-8 px-4'>
+                                            <p className=" mb-8 lg:mb-8 text-justify text-gray-500 dark:text-gray-400 sm:text-xl">{concess.desc1}</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="e0_103">
-                                    <div class="e0_104">
 
-                                    </div>
-                                    <span class="e0_105">
-                                    Atout 4
-                                    </span>
-                                    <div class="e0_106">
+                                <div className='pt-8 -top-32 md:pt-8 pb-8'>
+                                    <div className='flex flex-wrap'>
+                                        <div className='w-1/6 rounded-xl'>
 
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./atelier'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Atelier</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={atelier} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./article/financement'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Financement</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={financement} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./rachat-cash'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Rachat Cash</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={rachat} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Équipe à l'écoute</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={equipe} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='w-1/6 rounded-xl '>
+
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="e0_74">
 
+                                <div className='flex flex-wrap'>
+
+                                    <div className='w-full px-4 md:w-2/3 md:pl-32 md:pr-4'>
+                                        <h2 className="mb-4 text-xl md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted1}</h2>
+                                        <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 md:text-xl indent-8">{concess.desc1 + " " + concess.desc2}</p>
+                                    </div>
+                                    <div className='w-full px-4 md:w-1/3 md:pr-32 md:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img1} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
+                                    </div>
+
+                                    <div className='hidden md:block md:w-1/3 md:pl-32 md:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img2} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
+                                    </div>
+                                    <div className='w-full px-4 md:w-2/3 md:pr-32 md:pl-4'>
+                                        <h2 className="mb-4 text-xl pt-4 md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted2}</h2>
+                                        <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 md:text-xl indent-8">{concess.desc3 + " " + concess.desc4}</p>
+                                    </div>
+
+                                    <div className='md:hidden w-full px-4 pb-4 block md:w-1/3 md:pl-32 md:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img2} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
+                                    </div>
+
+                                    <div className='w-full px-4 md:w-2/3 md:pl-32 md:pr-4'>
+                                        <h2 className="mb-4 text-xl md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted3}</h2>
+                                        <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 md:text-xl indent-8">{concess.desc5 + " " + concess.desc6}</p>
+                                    </div>
+                                    <div className='w-full px-4 pb-4 md:w-1/3 md:pr-32 md:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img3} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
+                                    </div>
+                                </div>
+
+                                <div className='flex flex-wrap'>
+                                    <div className='w-full md:w-1/2 pb-10'>
+                                        <h2 className="mb-4 text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">Nos horaires :</h2>
+                                        <IsThereHoraire 
+                                            lundiEte={concess.lundiEte}
+                                            lundi={concess.lundi}
+                                            mardi={concess.mardi}
+                                            mercredi={concess.mercredi}
+                                            jeudi={concess.jeudi}
+                                            vendredi={concess.vendredi}
+                                            samedi={concess.samedi}
+                                            dimanche={concess.dimanche}
+                                            dateEte={concess.dateEte}
+                                            dateHiver={concess.dateHiver}
+                                            lundiE={concess.lundiEte}
+                                            mardiE={concess.mardiEte}
+                                            mercrediE={concess.mercrediEte}
+                                            jeudiE={concess.jeudiEte}
+                                            vendrediE={concess.vendrediEte}
+                                            samediE={concess.samediEte}
+                                            dimancheE={concess.dimancheEte}
+                                        />
+                                    </div>
+                                    <div className='w-full md:w-1/2'>
+                                        <div className='md:pr-16 px-4 pb-10'>
+                                            <h2 className="mb-4 text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">Nous trouver :</h2>
+                                            <MapBis concess={concess.libelle} latitude={concess.latitude} longitude={concess.longitude}/>
+                                        </div>
+                                    </div>
                                 </div>
                                 
-                                <div class="e0_75">
-
-                                </div>
-                                <div class="e6_2">
-
-                                </div>
-                                <div class="e0_79">
-                                    <Image width={350} height={350} src={concess.linkIMGConcess}/>
-                                    {
-                                        console.log(concess.linkIMGConcess)
-                                    }
-
-                                </div>
-                                <div class="e0_80">
-                                    <div  class="e0_81">
-
-                                    </div>
-                                    <div class="e0_82">
-                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" class="svgwhite" clip-rule="evenodd">
-                                            <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm-3 5.753l6.44 5.247-6.44 5.263.678.737 7.322-6-7.335-6-.665.753z"/>
-                                        </svg>                                        
-                                    </div>
-                                    <span  class="e0_85">
-                                        Voir le stock
-                                    </span>
-                                </div>
-                                <span  class="e0_88">
-                                    {concess.libelle}
-                                </span>
                                 <div>
-                                    <p>
-                                        coucou
-                                    </p>
+                                    <h2 className="w-full mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                                        <IsThereStock libelle={concess.libelle} ccs={this.state.ccs}/>
+                                    </h2>
                                 </div>
-                                </div>
-                                */
-                        }
-                        </div>
-                            <div className='flex flex-wrap'>
-                                <div className='w-2/5 bg-green-800'>
-                                    <Image objectFit={"cover"} height={800} width={800} layout={"responsive"} src={nature}/>
-                                </div>
-                                <div className='w-3/5 bg-orange-100'>
-                                    
-                                </div>
-                            </div>
-                            <div className="absolute h-72 w-full text-sm md:text-xl lg:text-2xl text-gray top-44 md:top-56">
-                                <div className='flex flex-wrap '>
-                                    <div className='w-1/4'>
-
-                                    </div>
-                                    <div className='w-1/4'>
-                                        <div>
-                                            <Image className={"rounded-full bg-white"} src={concess.linkIMGConcess} height={400} width={400} alt={"Image camping car"} layout={"intrinsic"}/>
+                                <div className='px-16'>
+                                    <div className="flex flex-wrap overflow-hidden">
+                                        <div className="w-full overflow-hidden">
+                                            <div className="flex flex-wrap -mx-1 overflow-hidden">
+                                                {
+                                                    this.state.ccs.map(cc =>
+                                                        <div className="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                                                            <CardCC 
+                                                                refe={cc.RefDMS}
+                                                                marque={cc.marque} 
+                                                                modele={cc.modele} 
+                                                                ver={cc.ver} 
+                                                                prix={cc.prixTTC} 
+                                                                photo={cc.linkIMG} 
+                                                                km={cc.kilometrage} 
+                                                                bdv={cc.boitedevitesse}
+                                                                etat={cc.etat}
+                                                                famille={cc.famille}
+                                                                gamme={cc.gamme}
+                                                                annee={cc.année}
+                                                                premiereMain={cc.premiereMain}
+                                                            />
+                                                        </div>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className='w-1/4 pt-2 sm:pt-8'>
-                                        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.libelle}</h2>
-                                        <p className="hidden lg:block mb-8 lg:mb-8 font-light text-gray-500 dark:text-gray-400 sm:text-xl">{concess.desc1}</p>
-                                    </div>
-                                    <div className='lg:hidden block w-full pt-2 pb-2 bg-orange-100 sm:pt-8 px-4'>
-                                        <p className=" mb-8 lg:mb-8 text-justify text-gray-500 dark:text-gray-400 sm:text-xl">{concess.desc1}</p>
+                                </div>
+                                
+                        </div>
+                                
+                            ))
+                            }
+                </div>
+                <div className='lg:hidden block'>
+                    {
+                    this.state.concess.map((concess) => (
+                        <div className=''>
+                            <Helmet>
+                                <title>DG8 Camping-car - {concess.libelle}</title>
+                                <meta name="description" content="Découvrez tous nos véhicules neufs et d'occasions. Plusieurs modèles vous sont proposés afin que vous trouviez la marque qui vous correspond !  "/>
+                            </Helmet>
+                                <div className="w-full text-sm md:text-xl lg:text-2xl text-gray">
+                                    <div className='flex flex-wrap '>
+                                        <div className='w-1/6'>
+
+                                        </div>
+                                        <div className='w-full sm:w-2/6'>
+                                            <div className='text-center'>
+                                                <Image className={"rounded-full bg-white"} src={concess.linkIMGConcess} height={400} width={400} alt={"Image camping car"} layout={"intrinsic"}/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className='w-full sm:w-2/6 pt-2 sm:pt-8'>
+                                            <h2 className="text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">{concess.libelle}</h2>
+                                            <p className="block mb-2 lg:mb-8 font-light text-justify px-8 text-gray-500 dark:text-gray-400 sm:text-xl">{concess.desc1}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div className='pt-32 md:pt-8 pb-8'>
+                                <div className='pt-8 md:pt-8 pb-8'>
+                                    <div className='flex flex-wrap'>
+                                        <div className='w-1/6 rounded-xl'>
+
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./atelier'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Atelier</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={atelier} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./article/financement'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Financement</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={financement} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./rachat-cash'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Rachat Cash</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={rachat} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='lg:w-1/6 w-full px-8 py-4 content-center'>
+                                            <a href='./'>
+                                                <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
+                                                    <p className="pt-2 font-bold text-center sm:text-xl">Équipe à l'écoute</p>
+                                                    <div className='pt-2 text-center'>
+                                                        <div className='rounded-full'>
+                                                            <Image className={"rounded-full bg-white border-2 border-black"} src={equipe} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='w-1/6 rounded-xl '>
+
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div className='flex flex-wrap'>
-                                    <div className='w-1/6 rounded-xl'>
 
+                                    <div className='w-full px-4 lg:w-2/3 lg:pl-32 lg:pr-4'>
+                                        <h2 className="mb-4 text-xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted1}</h2>
+                                        <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 lg:text-xl indent-8">{concess.desc1 + " " + concess.desc2}</p>
                                     </div>
-                                    <div className='md:w-1/6 w-full px-8 py-4 content-center'>
-                                        <a href='./atelier'>
-                                            <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
-                                                <p className="pt-2 font-bold text-center sm:text-xl">Atelier</p>
-                                                <div className='pt-2 text-center'>
-                                                    <div className='rounded-full'>
-                                                        <Image className={"rounded-full bg-white border-2 border-black"} src={atelier} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
+                                    <div className='w-full px-4 lg:w-1/3 lg:pr-32 lg:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img1} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
                                     </div>
-                                    <div className='md:w-1/6 w-full px-8 py-4 content-center'>
-                                        <a href='./article/financement'>
-                                            <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
-                                                <p className="pt-2 font-bold text-center sm:text-xl">Financement</p>
-                                                <div className='pt-2 text-center'>
-                                                    <div className='rounded-full'>
-                                                        <Image className={"rounded-full bg-white border-2 border-black"} src={financement} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className='md:w-1/6 w-full px-8 py-4 content-center'>
-                                        <a href='./rachat-cash'>
-                                            <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
-                                                <p className="pt-2 font-bold text-center sm:text-xl">Rachat Cash</p>
-                                                <div className='pt-2 text-center'>
-                                                    <div className='rounded-full'>
-                                                        <Image className={"rounded-full bg-white border-2 border-black"} src={rachat} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className='md:w-1/6 w-full px-8 py-4 content-center'>
-                                        <a href='./'>
-                                            <div className='bg-green-800 w-full rounded-2xl text-white pb-2'>
-                                                <p className="pt-2 font-bold text-center sm:text-xl">Équipe à l'écoute</p>
-                                                <div className='pt-2 text-center'>
-                                                    <div className='rounded-full'>
-                                                        <Image className={"rounded-full bg-white border-2 border-black"} src={equipe} height={100} width={100} alt={"Image camping car"} layout={"fixed"}/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div className='w-1/6 rounded-xl '>
 
+                                    <div className='hidden lg:block lg:w-1/3 lg:pl-32 lg:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img2} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
+                                    </div>
+                                    <div className='w-full px-4 lg:w-2/3 lg:pr-32 lg:pl-4'>
+                                        <h2 className="mb-4 text-xl pt-4 lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted2}</h2>
+                                        <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 lg:text-xl indent-8">{concess.desc3 + " " + concess.desc4}</p>
+                                    </div>
+
+                                    <div className='lg:hidden w-full px-4 pb-4 block lg:w-1/3 lg:pl-32 lg:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img2} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
+                                    </div>
+
+                                    <div className='w-full px-4 lg:w-2/3 lg:pl-32 lg:pr-4'>
+                                        <h2 className="mb-4 text-xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted3}</h2>
+                                        <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 lg:text-xl indent-8">{concess.desc5 + " " + concess.desc6}</p>
+                                    </div>
+                                    <div className='w-full px-4 pb-4 lg:w-1/3 lg:pr-32 lg:pb-8'>
+                                        <Image className={"rounded-xl"} src={concess.img3} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div className='flex flex-wrap'>
-
-                                <div className='w-full px-4 md:w-2/3 md:pl-32 md:pr-4'>
-                                    <h2 className="mb-4 text-xl md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted1}</h2>
-                                    <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 md:text-xl indent-8">{concess.desc1 + " " + concess.desc2}</p>
-                                </div>
-                                <div className='w-full px-4 md:w-1/3 md:pr-32 md:pb-8'>
-                                    <Image className={"rounded-xl"} src={concess.img1} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
-                                </div>
-
-                                <div className='hidden md:block md:w-1/3 md:pl-32 md:pb-8'>
-                                    <Image className={"rounded-xl"} src={concess.img2} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
-                                </div>
-                                <div className='w-full px-4 md:w-2/3 md:pr-32 md:pl-4'>
-                                    <h2 className="mb-4 text-xl pt-4 md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted2}</h2>
-                                    <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 md:text-xl indent-8">{concess.desc3 + " " + concess.desc4}</p>
-                                </div>
-
-                                <div className='md:hidden w-full px-4 pb-4 block md:w-1/3 md:pl-32 md:pb-8'>
-                                    <Image className={"rounded-xl"} src={concess.img2} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
-                                </div>
-
-                                <div className='w-full px-4 md:w-2/3 md:pl-32 md:pr-4'>
-                                    <h2 className="mb-4 text-xl md:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{concess.fonted3}</h2>
-                                    <p className="mb-8 lg:mb-8 font-light text-justify text-gray-500 dark:text-gray-400 md:text-xl indent-8">{concess.desc5 + " " + concess.desc6}</p>
-                                </div>
-                                <div className='w-full px-4 pb-4 md:w-1/3 md:pr-32 md:pb-8'>
-                                    <Image className={"rounded-xl"} src={concess.img3} objectFit={"cover"} alt={"Image camping car"} height={1000} width={2000} layout={"responsive"}/>
-                                </div>
-                            </div>
-
-                            <div className='flex flex-wrap'>
-                                <div className='w-full md:w-1/2 pb-10'>
-                                    <h2 className="mb-4 text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">Nos horaires :</h2>
-                                    <IsThereHoraire 
-                                        lundiEte={concess.lundiEte}
-                                        lundi={concess.lundi}
-                                        mardi={concess.mardi}
-                                        mercredi={concess.mercredi}
-                                        jeudi={concess.jeudi}
-                                        vendredi={concess.vendredi}
-                                        samedi={concess.samedi}
-                                        dimanche={concess.dimanche}
-                                        dateEte={concess.dateEte}
-                                        dateHiver={concess.dateHiver}
-                                        lundiE={concess.lundiEte}
-                                        mardiE={concess.mardiEte}
-                                        mercrediE={concess.mercrediEte}
-                                        jeudiE={concess.jeudiEte}
-                                        vendrediE={concess.vendrediEte}
-                                        samediE={concess.samediEte}
-                                        dimancheE={concess.dimancheEte}
-                                    />
-                                </div>
-                                <div className='w-full md:w-1/2'>
-                                    <div className='md:pr-16 px-4 pb-10'>
-                                        <h2 className="mb-4 text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">Nous trouver :</h2>
-                                        <MapBis concess={concess.libelle} latitude={concess.latitude} longitude={concess.longitude}/>
+                                <div className='flex flex-wrap'>
+                                    <div className='w-full lg:w-1/2 pb-10'>
+                                        <h2 className="mb-4 text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">Nos horaires :</h2>
+                                        <IsThereHoraire 
+                                            lundiEte={concess.lundiEte}
+                                            lundi={concess.lundi}
+                                            mardi={concess.mardi}
+                                            mercredi={concess.mercredi}
+                                            jeudi={concess.jeudi}
+                                            vendredi={concess.vendredi}
+                                            samedi={concess.samedi}
+                                            dimanche={concess.dimanche}
+                                            dateEte={concess.dateEte}
+                                            dateHiver={concess.dateHiver}
+                                            lundiE={concess.lundiEte}
+                                            mardiE={concess.mardiEte}
+                                            mercrediE={concess.mercrediEte}
+                                            jeudiE={concess.jeudiEte}
+                                            vendrediE={concess.vendrediEte}
+                                            samediE={concess.samediEte}
+                                            dimancheE={concess.dimancheEte}
+                                        />
                                     </div>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <h2 className="w-full mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-                                    <IsThereStock libelle={concess.libelle} ccs={this.state.ccs}/>
-                                </h2>
-                            </div>
-                            <div className='px-16'>
-                                <div className="flex flex-wrap overflow-hidden">
-                                    <div className="w-full overflow-hidden">
-                                        <div className="flex flex-wrap -mx-1 overflow-hidden">
-                                            {
-                                                this.state.ccs.map(cc =>
-                                                    <div className="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
-                                                        <CardCC 
-                                                            refe={cc.RefDMS}
-                                                            marque={cc.marque} 
-                                                            modele={cc.modele} 
-                                                            ver={cc.ver} 
-                                                            prix={cc.prixTTC} 
-                                                            photo={cc.linkIMG} 
-                                                            km={cc.kilometrage} 
-                                                            bdv={cc.boitedevitesse}
-                                                            etat={cc.etat}
-                                                            famille={cc.famille}
-                                                            gamme={cc.gamme}
-                                                            annee={cc.année}
-                                                            premiereMain={cc.premiereMain}
-                                                        />
-                                                    </div>
-                                            )}
+                                    <div className='w-full lg:w-1/2'>
+                                        <div className='lg:pr-16 px-4 pb-10'>
+                                            <h2 className="mb-4 text-4xl tracking-tight text-center font-extrabold text-gray-900 dark:text-white">Nous trouver :</h2>
+                                            <MapBis concess={concess.libelle} latitude={concess.latitude} longitude={concess.longitude}/>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
+                                
+                                <div>
+                                    <h2 className="w-full mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                                        <IsThereStock libelle={concess.libelle} ccs={this.state.ccs}/>
+                                    </h2>
+                                </div>
+                                <div className='px-16'>
+                                    <div className="flex flex-wrap overflow-hidden">
+                                        <div className="w-full overflow-hidden">
+                                            <div className="flex flex-wrap -mx-1 overflow-hidden">
+                                                {
+                                                    this.state.ccs.map(cc =>
+                                                        <div className="w-screen items-center sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+                                                            <CardCC 
+                                                                refe={cc.RefDMS}
+                                                                marque={cc.marque} 
+                                                                modele={cc.modele} 
+                                                                ver={cc.ver} 
+                                                                prix={cc.prixTTC} 
+                                                                photo={cc.linkIMG} 
+                                                                km={cc.kilometrage} 
+                                                                bdv={cc.boitedevitesse}
+                                                                etat={cc.etat}
+                                                                famille={cc.famille}
+                                                                gamme={cc.gamme}
+                                                                annee={cc.année}
+                                                                premiereMain={cc.premiereMain}
+                                                            />
+                                                        </div>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                         </div>
-                            
-                        ))
-                        }
-                    </div>
+                                
+                            ))
+                            }
+                </div>
+            </div>
         )
     }
 }
