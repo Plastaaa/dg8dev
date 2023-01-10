@@ -4,12 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import img1 from '../public/slider/slide1.jpg';
 import img1mobile from '../public/slider/slide1-mobile.png';
-import img2 from '../public/slider/slidercalendar.jpg';
-import img2mobile from '../public/slider/slidercalendar-mobile.jpg'
 import img3 from '../public/slider/pap.jpg';
 import img3mobile from '../public/slider/pap-mobile.png';
-import img4 from '../public/slider/img4.jpg';
-import img4mobile from '../public/slider/img4mobile.jpg';
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 

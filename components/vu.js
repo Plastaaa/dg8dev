@@ -293,7 +293,7 @@ export default class VehiculeUnique extends React.Component {
             this.setState({ equips });
         })
 
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/get2CCSimi.php?id=${window.location.pathname.split('/')[2]}`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/get2CCSimi.php?id=${window.location.pathname.split('/')[2]}&concess=0`)
           .then(res => {
             const ccsSimi = res.data;
             this.setState({ ccsSimi });
