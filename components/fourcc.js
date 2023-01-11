@@ -4,7 +4,11 @@ import CardCC from "./cardCC";
 
 export default class MiniSearch extends React.Component {
     componentDidMount(){
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/get4CCByConcess?concess=0.php`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/get4CCByConcess.php`,{
+            params:{
+                concess: 0
+            }
+        })
             .then(res => {
                 const ccs = res.data;
                 this.setState({ ccs });
