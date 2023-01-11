@@ -6,6 +6,10 @@ import img1 from '../public/slider/slide1.jpg';
 import img1mobile from '../public/slider/slide1-mobile.png';
 import img3 from '../public/slider/pap.jpg';
 import img3mobile from '../public/slider/pap-mobile.png';
+import img4 from '../public/slider/slider.png';
+import img4mobile from '../public/slider/slidermobile.png';
+import img5 from '../public/slider/slide8.jpg';
+import img5mobile from '../public/slider/slidemobile8.jpg';
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -22,12 +26,16 @@ export default class SimpleSlider extends Component {
             className={"border border-gray-400 rounded-2xl shadow-xl"}
           >
 
-{
-  /*
+          {
             <SplideSlide>
               <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img4} width={800} layout="responsive" height={320} quality={100}/>
-            </SplideSlide>*/
-}
+            </SplideSlide>
+          }
+          {
+            <SplideSlide>
+              <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img5} width={800} layout="responsive" height={320} quality={100}/>
+            </SplideSlide>
+          }
             
             {/*
               <SplideSlide>
@@ -64,10 +72,15 @@ export default class SimpleSlider extends Component {
             }}
             className={"border border-gray-400 rounded-2xl shadow-xl"}
           >
-            {/*
+            {
               <SplideSlide>
                 <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img4mobile} width={414} layout="responsive" height={414} quality={100}/>
-              </SplideSlide>*/
+              </SplideSlide>
+            }
+            {
+              <SplideSlide>
+                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img5mobile} width={414} layout="responsive" height={414} quality={100}/>
+              </SplideSlide>
             }
               {
                 /*
