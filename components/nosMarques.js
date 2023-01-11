@@ -4,7 +4,7 @@ import MarqueCard from "./marqueCard";
 
 export default class Concessions extends React.Component {
     componentDidMount() {
-        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getMarques.php`)
+        axios.get(`https://nunesaccount.alwaysdata.net/APIDG8/getMarques.php?concess=0`)
           .then(res => {
             const marque = res.data;
             this.setState({ marque });
