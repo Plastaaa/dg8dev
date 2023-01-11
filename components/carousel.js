@@ -10,6 +10,9 @@ import img4 from '../public/slider/slider.png';
 import img4mobile from '../public/slider/slidermobile.png';
 import img5 from '../public/slider/slide8.jpg';
 import img5mobile from '../public/slider/slidemobile8.jpg';
+import img6mobile from '../public/slider/slide5Mobile.png'
+import img6 from '../public/slider/slide5.png'
+
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
@@ -26,34 +29,33 @@ export default class SimpleSlider extends Component {
             className={"border border-gray-400 rounded-2xl shadow-xl"}
           >
 
+
+
           {
             <SplideSlide>
               <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img4} width={800} layout="responsive" height={320} quality={100}/>
             </SplideSlide>
+          }
+
+{
+              <SplideSlide>
+                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img6} width={800} layout="responsive" height={320} quality={100}/>
+                <div className="absolute text-sm md:text-xl lg:text-2xl text-gray left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2">
+                  <a href="./article/soldes/accs">
+                    <button className='flex flex-wrap bg-red-900 text-white hover:bg-red-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-white border-white rounded-lg p-2'>
+                      <div className='w-full'>
+                        Découvrir les soldes !
+                      </div>
+                    </button>
+                  </a>
+                </div>
+              </SplideSlide>
           }
           {
             <SplideSlide>
               <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img5} width={800} layout="responsive" height={320} quality={100}/>
             </SplideSlide>
           }
-            
-            {/*
-              <SplideSlide>
-                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img2} width={800} layout="responsive" height={320} quality={100}/>
-                <div className="absolute text-sm md:text-xl lg:text-2xl text-gray left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2">
-                  <a href="./jeuconcours">
-                    <button className='flex flex-wrap bg-red-900 text-white hover:bg-red-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-white border-white rounded-lg p-2'>
-                      <div className='w-full'>
-                          Je veux jouer !
-                      </div>
-                    </button>
-                  </a>
-                </div>
-              </SplideSlide>
-          */}
-            
-              
-            
             <SplideSlide>
               <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img3} width={800} layout="responsive" height={320} quality={100}/>
             </SplideSlide>
@@ -78,27 +80,26 @@ export default class SimpleSlider extends Component {
               </SplideSlide>
             }
             {
-              <SplideSlide>
-                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img5mobile} width={414} layout="responsive" height={414} quality={100}/>
-              </SplideSlide>
-            }
-              {
-                /*
                 <SplideSlide>
-                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img2mobile} width={414} layout="responsive" height={414} quality={100}/>
+                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img6mobile} width={414} layout="responsive" height={414} quality={100}/>
                 <div className="absolute text-sm md:text-xl lg:text-2xl text-gray left-1/2 bottom-0 -translate-x-1/2 -translate-y-1/2">
-                  <a href="./jeuconcours">
+                  <a href="./article/soldes/accs">
                     <button className='flex flex-wrap bg-red-900 text-white hover:bg-red-800 hover:dark:text-white hover:dark:bg-green-700 dark:text-gray-100 hover:text-white border shadow-lg hover:border-white border-white rounded-lg p-2'>
                       <div className='w-full'>
-                          Je veux jouer !
+                          Découvrir les soldes !
                       </div>
                     </button>
                   </a>
                 </div>
-              </SplideSlide>*/
+              </SplideSlide>
               }
+            {
+              <SplideSlide>
+                <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img5mobile} width={414} layout="responsive" height={414} quality={100}/>
+              </SplideSlide>
+            }
               
-              
+
               <SplideSlide>
                 <Image className="rounded-2xl border border-gray-500" alt="Image Slider" priority={true} src={img3mobile} width={414} layout="responsive" height={414} quality={100}/>
               </SplideSlide>
