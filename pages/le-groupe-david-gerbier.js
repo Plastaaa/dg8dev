@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - Groupe David Gerbier</title>
+                <title>DG8 Camping-car - Groupe David Gerbier</title>
                 <meta name="description" content="Spécialiste dans le secteur automobile, le groupe Gerbier s'est développer il y a 10ans dans les véhicules de loisir et créé la filiale DG8 camping-car."/>
             </Helmet>
             <div>

@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - Guide d'achat Van et Fourgon</title>
+                <title>DG8 Camping-car - Guide d'achat Van et Fourgon</title>
                 <meta name="description" content="Le guide d'achat du van et du fourgon, toit relevable, 4x4 baroudeurs, soyez sûr de ce qui vous convient le mieux !"/>
             </Helmet>
             <NavBar/>

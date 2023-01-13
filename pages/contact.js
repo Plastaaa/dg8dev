@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - Contact</title>
+                <title>DG8 Camping-car - Contact</title>
                 <meta name="description" content="Prenez contact avec notre équipe, afin de parler de votre projet d'acquisition ou de vente de véhicule. Elle sera heureuse de répondre à vos questions."/>
             </Helmet>
             <div>

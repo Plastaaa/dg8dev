@@ -374,7 +374,7 @@ export default class VehiculeUnique extends React.Component {
                 
                 <div>
                     <Helmet>
-                        <title>DG8 Camping-cars - {cc.marque + " " + cc.modele + " " + cc.version}</title>
+                        <title>DG8 Camping-car - {cc.marque + " " + cc.modele + " " + cc.version}</title>
                         {
                             this.testFunction()
                         }

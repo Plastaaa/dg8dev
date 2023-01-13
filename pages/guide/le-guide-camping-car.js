@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - Guide d'achat camping car</title>
+                <title>DG8 Camping-car - Guide d'achat camping car</title>
                 <meta name="description" content="Le guide d'achat du camping-car, intégral, profilé, capucine soyez sûr de ce qui vous convient le mieux !"/>
             </Helmet>
             <NavBar/>

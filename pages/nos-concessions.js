@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - Nos concessions</title>
+                <title>DG8 Camping-car - Nos concessions</title>
                 <meta name="description" content="Découvrez nos différentes concessions, plus d'une dizaines situées de la frontière Suisse jusqu'à Lyon. Contactez nous pour plus d'informations. "/>
             </Helmet>
             <div>

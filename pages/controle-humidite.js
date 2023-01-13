@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - Contrôle d'humidité</title>
+                <title>DG8 Camping-car - Contrôle d'humidité</title>
                 <meta name="description" content="Prenez contact avec notre équipe, afin de parler de votre contrôle d'humidité."/>
             </Helmet>
             <NavBar/>

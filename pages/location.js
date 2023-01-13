@@ -10,7 +10,7 @@ export default function Home(){
     return (
         <div className='h-screen'>
             <Helmet>
-                <title>DG8 Camping-cars - Location</title>
+                <title>DG8 Camping-car - Location</title>
                 <meta name="description" content="Pour partir en vacances plus sereinement, découvrez notre gamme de camping car en location. Prenez contact pour discuter de votre projet voyage. "/>
             </Helmet>
             <div>

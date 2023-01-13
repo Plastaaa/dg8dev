@@ -130,7 +130,7 @@ export default class Contact extends React.Component {
         return(
             <div>
                 <Helmet>
-                    <title>DG8 Camping-cars - Rachat Cash</title>
+                    <title>DG8 Camping-car - Rachat Cash</title>
                     <meta name="description" content="Vous désirez vendre votre véhicules ? DG8 camping car vous propose un service de rachat cash. Prenez contact avec notre équipe. "/>
                 </Helmet>
                 <div>

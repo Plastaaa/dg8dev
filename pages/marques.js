@@ -11,7 +11,7 @@ export default function Home(){
     return (
         <div>
             <Helmet>
-                <title>DG8 Camping-cars - Marques ditribuées</title>
+                <title>DG8 Camping-car - Marques ditribuées</title>
                 <meta name="description" content="DG8 camping-car à su depuis sa création se créer un réseaux, plus de quarante marques lui font confiance. Découvrez toutes nos marques partenaires. "/>
             </Helmet>
             
